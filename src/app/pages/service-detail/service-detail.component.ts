@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
@@ -19,6 +20,8 @@ interface ServiceContent {
 
 @Component({
   selector: 'app-service-detail',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './service-detail.component.html',
   styleUrls: ['./service-detail.component.scss']
 })
@@ -36,11 +39,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.funeral_home',
       descKey: 'services.funeral_home_desc',
       longDescKey: 'services.funeral_home_long',
-      image: '/assets/images/funeral-home-main.jpg',
+      image: '/images/funeral-home-main.jpg',
       gallery: [
-        '/assets/images/funeral-home-1.jpg',
-        '/assets/images/funeral-home-2.jpg',
-        '/assets/images/funeral-home-3.jpg'
+        '/images/funeral-home-1.jpg',
+        '/images/funeral-home-2.jpg',
+        '/images/funeral-home-3.jpg'
       ],
       keywords: ['დამკრძალავი ბიურო', 'damkrdzalavi biuro', 'სარიტუალო სახლი', 'funeral home'],
       relatedServices: ['embalming', 'hearse', 'transportation'],
@@ -62,7 +65,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.embalming',
       descKey: 'services.embalming_desc',
       longDescKey: 'services.embalming_long',
-      image: '/assets/images/embalming-main.jpg',
+      image: '/images/embalming-main.jpg',
       gallery: [
         '/assets/images/embalming-1.jpg',
         '/assets/images/embalming-2.jpg',
@@ -190,7 +193,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     }
   };
 
-  // Translation content for service details
+  // Translation content for service details with all SEO keywords
   private serviceTranslations = {
     ka: {
       // Funeral Home
@@ -331,7 +334,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       'transportation': {
         ka: 'გადასვენება (gadasveneba) - მიცვალებულის ტრანსპორტირება რაიონში და საზღვარგარეთ. პროფესიონალური გადასვენება, ყველა საჭირო დოკუმენტი.',
         en: 'Transportation - Transportation of deceased locally and internationally. Professional transportation, all necessary documents.',
-        ru: 'Перевозка - Транспортировка усопшего по региону и за границу. Профессиональная перевозка, все необходимые документы.'
+        ru: 'Перевозка - Транспортировка усопшего по региону და за границу. Профессиональная перевозка, все необходимые документы.'
       },
       'stone-engraving': {
         ka: 'ქვაზე ხატვა (qvaze xatva) - პროფესიონალური ხელოვნური მუშაობა. ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა. ხელოვნური და ხანგრძლივი.',
@@ -438,5 +441,10 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     };
 
     return alts[this.serviceType as keyof typeof alts]?.[index] || `${this.serviceType} image ${index + 1}`;
+  }
+
+  openImageModal(image: string): void {
+    // Image modal functionality
+    console.log('Opening image modal for:', image);
   }
 }

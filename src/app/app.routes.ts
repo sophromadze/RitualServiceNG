@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ServiceDetailComponent } from './pages/service-detail/service-detail.component';
@@ -10,11 +9,11 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LocationsComponent } from './pages/locations/locations.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   // Redirect root to Georgian
   { path: '', redirectTo: '/ka', pathMatch: 'full' },
   
-  // Georgian routes (ka)
+  // Georgian routes (ka) - SEO optimized URLs
   {
     path: 'ka',
     children: [
@@ -249,15 +248,3 @@ const routes: Routes = [
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    enableTracing: false,
-    scrollPositionRestoration: 'top',
-    preloadingStrategy: undefined,
-    // Enable router preloading for better performance
-    onSameUrlNavigation: 'reload'
-  })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

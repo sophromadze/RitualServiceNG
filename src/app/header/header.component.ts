@@ -1,9 +1,15 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../services/language.service';
+import { LanguageSelectorComponent } from '../shared/components/language-selector/language-selector.component';
+import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
+
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [CommonModule, RouterModule, LanguageSelectorComponent, BreadcrumbComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

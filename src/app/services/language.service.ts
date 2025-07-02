@@ -391,10 +391,53 @@ export class LanguageService {
             { name: 'Холодильники', url: '/ru/products/refrigeration', desc: 'Гробы-холодильники для длительного хранения' }
           ]
         }
-      }
+      },
+
+      about: {
+        ka: {
+          title: 'ჩვენს შესახებ - 20 წლიანი გამოცდილება | რიტუალ სერვისი',
+          description: '20 წლიანი გამოცდილება სარიტუალო მომსახურებაში. პროფესიონალური დამკრძალავი ბიურო.',
+          keywords: 'რიტუალ სერვისი ისტორია, გამოცდილება, damkrdzalavi biuro',
+          h1: 'ჩვენს შესახებ - რიტუალ სერვისი'
+        },
+        en: {
+          title: 'About Us - 20 Years Experience | Ritual Service',
+          description: '20 years of experience in funeral services. Professional funeral home.',
+          keywords: 'Ritual Service history, experience, funeral home',
+          h1: 'About Ritual Service'
+        },
+        ru: {
+          title: 'О нас - 20 лет опыта | Ритуал Сервис',
+          description: '20 лет опыта в ритуальных услугах. Профессиональный похоронный дом.',
+          keywords: 'история Ритуал Сервис, опыт, похоронный дом',
+          h1: 'О Ритуал Сервис'
+        }
+      },
+      
+      contact: {
+        ka: {
+          title: 'კონტაქტი - 24/7 მომსახურება | რიტუალ სერვისი',
+          description: 'დაგვიკავშირდით 24/7. პროფესიონალური კონსულტაცია, სწრაფი რეაგირება.',
+          keywords: 'კონტაქტი, 24/7 მომსახურება, damkrdzalavi biuro',
+          h1: 'კონტაქტი - რიტუალ სერვისი'
+        },
+        en: {
+          title: 'Contact - 24/7 Service | Ritual Service',
+          description: 'Contact us 24/7. Professional consultation, quick response.',
+          keywords: 'contact, 24/7 service, funeral home',
+          h1: 'Contact Ritual Service'
+        },
+        ru: {
+          title: 'Контакт - 24/7 обслуживание | Ритуал Сервис',
+          description: 'Свяжитесь с нами 24/7. Профессиональная консультация, быстрый ответ.',
+          keywords: 'контакт, 24/7 обслуживание, похоронный дом',
+          h1: 'Контакт Ритуал Сервис'
+        }
+      },
+      
     };
 
-    return seoContent[contentType][lang] || seoContent[contentType]['ka'];
+    return (seoContent[contentType] as any)[lang] || seoContent[contentType]['ka'];
   }
 
   // Get formatted keywords for different pages
@@ -449,6 +492,7 @@ export class LanguageService {
       }
     };
 
-    return pageKeywords[page]?.[lang] || pageKeywords[page]?.['ka'] || [];
+    return pageKeywords[page as keyof typeof pageKeywords]?.[lang as keyof typeof pageKeywords['home']] || 
+       pageKeywords[page as keyof typeof pageKeywords]?.['ka'] || [];
   }
 }

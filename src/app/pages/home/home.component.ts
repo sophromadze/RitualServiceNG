@@ -1,13 +1,16 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+declare const Swiper: any;
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -15,51 +18,51 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   
   currentLanguage: string = 'ka';
   private subscriptions: Subscription = new Subscription();
-  private swiper?: Swiper;
+  private swiper?: any;
 
-  // SEO-focused content structure
+  // SEO-focused content structure with maximum keywords
   heroSlides = [
     {
       id: 'main-service',
       titleKey: 'home.title',
       subtitleKey: 'home.subtitle',
-      image: '/assets/images/kuboebi2.jpg',
-      alt: 'დამკრძალავი ბიურო - სარიტუალო სახლი'
+      image: '/images/kuboebi2.jpg',
+      alt: 'დამკრძალავი ბიურო - სარიტუალო სახლი - damkrdzalavi biuro'
     },
     {
       id: 'coffins-slide',
       titleKey: 'products.coffins',
       subtitleKey: 'products.coffins_desc',
-      images: ['/assets/images/kuboebi3.jpg', '/assets/images/kuboebi4.jpg'],
-      alt: 'სასახლეები - ხარისხიანი სასახლეები'
+              images: ['/images/kuboebi3.jpg', '/images/kuboebi4.jpg'],
+      alt: 'სასახლეები - ხარისხიანი სასახლეები - sasaxleebi'
     },
     {
       id: 'hearse-slide', 
       titleKey: 'services.hearse',
       subtitleKey: 'services.hearse_desc',
-      images: ['/assets/images/katafalkebi2.jpg', '/assets/images/katafalkebi3.jpg'],
-      alt: 'კატაფალკა - კატაფალკის მომსახურება'
+              images: ['/images/katafalkebi2.jpg', '/images/katafalkebi3.jpg'],
+      alt: 'კატაფალკა - კატაფალკის მომსახურება - katafalka'
     },
     {
       id: 'embalming-slide',
       titleKey: 'services.embalming',
       subtitleKey: 'services.embalming_desc', 
-      image: '/assets/images/darbazebi1.jpg',
-      alt: 'ბალზამირება - პროფესიონალური ბალზამირება'
+      image: '/images/darbazebi1.jpg',
+      alt: 'ბალზამირება - პროფესიონალური ბალზამირება - balzamireba'
     },
     {
       id: 'stone-engraving-slide',
       titleKey: 'services.stone_engraving',
       subtitleKey: 'services.stone_engraving_desc',
-      image: '/assets/images/grave.jpg',
-      alt: 'ქვაზე ხატვა - საფლავის მოპირკეთება'
+      image: '/images/grave.jpg',
+      alt: 'ქვაზე ხატვა - საფლავის მოპირკეთება - qvaze xatva - mopirketeba'
     },
     {
       id: 'transportation-slide',
       titleKey: 'services.transportation', 
       subtitleKey: 'services.transportation_desc',
-      image: '/assets/images/microbus.jpg',
-      alt: 'გადასვენება - ტრანსპორტირება'
+      image: '/images/microbus.jpg',
+      alt: 'გადასვენება - ტრანსპორტირება - gadasveneba'
     }
   ];
 
@@ -82,34 +85,34 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   ];
 
-  // Service cards with SEO-optimized URLs
+  // Service cards with SEO-optimized URLs and keywords
   serviceCards = [
     {
       titleKey: 'services.embalming',
       descKey: 'services.embalming_desc',
       url: '/services/balzamireba',
-      image: '/assets/images/embalming-card.jpg',
+      image: '/images/embalming.jpg',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
     },
     {
       titleKey: 'services.hearse',
       descKey: 'services.hearse_desc', 
       url: '/services/katafalka',
-      image: '/assets/images/hearse-card.jpg',
+      image: '/images/katafalkebi.jpg',
       keywords: 'კატაფალკა, katafalka, კატაფალკის მომსახურება'
     },
     {
       titleKey: 'services.transportation',
       descKey: 'services.transportation_desc',
       url: '/services/gadasveneba', 
-      image: '/assets/images/transportation-card.jpg',
+      image: '/images/microbus.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.stone_engraving',
       descKey: 'services.stone_engraving_desc',
       url: '/services/qvaze-xatva',
-      image: '/assets/images/stone-engraving-card.jpg', 
+      image: '/images/stonepainting.jpg', 
       keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
     }
   ];
@@ -147,13 +150,60 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.initializeSwiper();
+    // Load Swiper from CDN and initialize
+    this.loadSwiper();
   }
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
     if (this.swiper) {
       this.swiper.destroy();
+    }
+  }
+
+  private loadSwiper(): void {
+    // Check if Swiper is already loaded
+    if (typeof Swiper !== 'undefined') {
+      this.initializeSwiper();
+      return;
+    }
+
+    // Load Swiper CSS
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+    document.head.appendChild(link);
+
+    // Load Swiper JS
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+    script.onload = () => {
+      this.initializeSwiper();
+    };
+    document.head.appendChild(script);
+  }
+
+  private initializeSwiper(): void {
+    try {
+      this.swiper = new Swiper('.hero-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    } catch (error) {
+      console.error('Error initializing Swiper:', error);
     }
   }
 
@@ -214,8 +264,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
         "saritualo saxli"
       ],
       "url": `https://ritualservice.ge/${this.currentLanguage}`,
-      "logo": "https://ritualservice.ge/assets/images/logo.png",
-      "image": "https://ritualservice.ge/assets/images/logo300.png",
+      "logo": "https://ritualservice.ge/images/logo.png",
+      "image": "https://ritualservice.ge/images/logo300.png",
       "telephone": "+995599069898",
       "description": this.getSEODescription(),
       "address": [
@@ -299,28 +349,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       ],
       "priceRange": "$$"
     };
-  }
-
-  private initializeSwiper(): void {
-    Swiper.use([Navigation, Pagination, Autoplay]);
-    
-    this.swiper = new Swiper('.hero-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
   }
 
   // Methods for template

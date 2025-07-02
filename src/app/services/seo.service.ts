@@ -67,7 +67,7 @@ export class SeoService {
     // Update Open Graph tags
     this.updateMetaTag('og:title', data.ogTitle || data.title || this.defaultSEO[language as keyof typeof this.defaultSEO]?.title);
     this.updateMetaTag('og:description', data.ogDescription || data.description || this.defaultSEO[language as keyof typeof this.defaultSEO]?.description);
-    this.updateMetaTag('og:image', data.ogImage || 'https://ritualservice.ge/assets/images/logo300.png');
+    this.updateMetaTag('og:image', data.ogImage || 'https://ritualservice.ge/images/logo300.png');
     this.updateMetaTag('og:url', data.ogUrl || this.getCurrentUrl());
     this.updateMetaTag('og:type', 'website');
     this.updateMetaTag('og:site_name', 'Ritual Service');
@@ -76,7 +76,7 @@ export class SeoService {
     this.updateMetaTag('twitter:card', 'summary_large_image');
     this.updateMetaTag('twitter:title', data.title || this.defaultSEO[language as keyof typeof this.defaultSEO]?.title);
     this.updateMetaTag('twitter:description', data.description || this.defaultSEO[language as keyof typeof this.defaultSEO]?.description);
-    this.updateMetaTag('twitter:image', data.ogImage || 'https://ritualservice.ge/assets/images/logo300.png');
+    this.updateMetaTag('twitter:image', data.ogImage || 'https://ritualservice.ge/images/logo300.png');
     
     // Language and alternate links
     this.updateMetaTag('language', language);
@@ -163,8 +163,8 @@ export class SeoService {
         "Ritual Service Funeral Home"
       ],
       "url": "https://ritualservice.ge",
-      "logo": "https://ritualservice.ge/assets/images/logo.png",
-      "image": "https://ritualservice.ge/assets/images/logo300.png",
+      "logo": "https://ritualservice.ge/images/logo.png",
+      "image": "https://ritualservice.ge/images/logo300.png",
       "telephone": "+995599069898",
       "description": this.getMultiLanguageDescription(),
       "address": [

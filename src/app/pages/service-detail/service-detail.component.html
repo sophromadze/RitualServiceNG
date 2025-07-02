@@ -146,7 +146,7 @@
     <div class="container">
       <h3>ფოტო გალერეა</h3>
       <div class="gallery-grid">
-        <div class="gallery-item" *ngFor="let image of serviceContent.gallery; let i = index">
+        <div class="gallery-item" *ngFor="let image of serviceContent?.gallery; let i = index">
           <img [src]="image" 
                [alt]="getGalleryImageAlt(i)"
                loading="lazy"
@@ -162,8 +162,8 @@
       <h3>მსგავსი სერვისები</h3>
       <div class="related-grid">
         <div class="related-item" 
-             *ngFor="let related of serviceContent.relatedServices"
-             (click)="navigateToService(related)">
+            *ngFor="let related of serviceContent?.relatedServices"
+            (click)="navigateToService(related)">
           
           <!-- Dynamic content based on related service -->
           <div [ngSwitch]="related">

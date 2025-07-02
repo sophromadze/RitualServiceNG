@@ -1,1 +1,243 @@
-<p>about works!</p>
+<!-- SEO Headers -->
+<div class="seo-headers">
+    <h1>{{translate('nav.about')}} - {{translate('header.company_name')}}</h1>
+    <h2 class="seo-hidden">20 წლიანი გამოცდილება დამკრძალავი ბიურო - damkrdzalavi biuro</h2>
+    <h3 class="seo-hidden">პროფესიონალური სარიტუალო სახლი - saritualo saxli</h3>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>ჩვენს შესახებ - რიტუალ სერვისი</h1>
+        <p class="hero-description">
+          <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) რიტუალ სერვისი - 
+          20 წლიანი გამოცდილების მქონე <strong>სარიტუალო სახლი</strong> (saritualo saxli) 
+          თბილისში. ჩვენ ვზრუნავთ <strong>მიცვალებულის</strong> (micvalebuli) ღირსეულ 
+          მომზადებაზე და <strong>სამგლოვიარო ცერემონიების</strong> (samgloviaro) 
+          პროფესიონალურ ორგანიზებაზე.
+        </p>
+        
+        <div class="hero-stats">
+          <div class="stat-item" *ngFor="let stat of companyStats">
+            <div class="stat-number">{{stat.number}}</div>
+            <div class="stat-label">{{translate(stat.labelKey)}}</div>
+            <small class="stat-desc">{{translate(stat.descKey)}}</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="/assets/images/about-hero.jpg" 
+             alt="რიტუალ სერვისი - დამკრძალავი ბიურო - 20 წლიანი გამოცდილება"
+             loading="eager">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Company History Section -->
+  <section class="company-history">
+    <div class="container">
+      <div class="section-header">
+        <h2>ჩვენი ისტორია და მისია</h2>
+        <p>20 წლიანი გამოცდილება <strong>დაკრძალვის სერვისებში</strong> და <strong>სარიტუალო მომსახურებაში</strong></p>
+      </div>
+      
+      <div class="history-content">
+        <div class="history-text">
+          <h3>დამკრძალავი ბიურო - damkrdzalavi biuro დაარსება</h3>
+          <p>
+            2004 წელს დაარსებული ჩვენი <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) 
+            იყო პირველი <strong>სარიტუალო სახლი</strong> (saritualo saxli) თბილისში, 
+            რომელმაც შემოიტანა ევროპული სტანდარტები <strong>დაკრძალვის სერვისებში</strong> 
+            (dakrdzalva servisebi). ჩვენი მისია არის უზრუნველვყოთ ღირსეული და 
+            პროფესიონალური <strong>სამგლოვიარო ცერემონიები</strong> (samgloviaro cerimoniis).
+          </p>
+          
+          <h4>ჩვენი ძირითადი ღირებულებები:</h4>
+          <ul>
+            <li><strong>თანაგრძნობა</strong> - ოჯახებისადმი მგრძნობიარე დამოკიდებულება</li>
+            <li><strong>პროფესიონალიზმი</strong> - გამოცდილი გუნდი ყველა სფეროში</li>
+            <li><strong>ღირსება</strong> - მიცვალებულის პატივისცემა</li>
+            <li><strong>ხელმისაწვდომობა</strong> - 24/7 მომსახურება</li>
+          </ul>
+  
+          <h4>სპეციალიზაცია:</h4>
+          <ul>
+            <li><strong>ბალზამირება</strong> (balzamireba) - მიცვალებულის პროფესიონალური მომზადება</li>
+            <li><strong>კატაფალკა</strong> (katafalka) - კატაფალკის მომსახურება ყველა მიმართულებით</li>
+            <li><strong>ქვაზე ხატვა</strong> (qvaze xatva) - ხელოვნური მემორიალური მუშაობა</li>
+            <li><strong>გადასვენება</strong> (gadasveneba) - რაიონში და საზღვარგარეთ ტრანსპორტირება</li>
+            <li><strong>საფლავის მოპირკეთება</strong> (mopirketeba) - კომპლექსური მემორიალური სამუშაოები</li>
+          </ul>
+        </div>
+        
+        <div class="history-timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">2004</div>
+            <div class="timeline-content">
+              <h4>დაარსება</h4>
+              <p>რიტუალ სერვისის დაარსება როგორც <strong>დამკრძალავი ბიურო</strong></p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2008</div>
+            <div class="timeline-content">
+              <h4>გაფართოება</h4>
+              <p>თბილისში მეორე ფილიალის გახსნა და <strong>ბალზამირების</strong> სერვისის დამატება</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content">
+              <h4>მოდერნიზაცია</h4>
+              <p><strong>ქვაზე ხატვისა</strong> და <strong>მემორიალური სამუშაოების</strong> განყოფილების გახსნა</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content">
+              <h4>ციფრული სერვისები</h4>
+              <p>ონლაინ კონსულტაცია და 24/7 მხარდაჭერის სისტემის დანერგვა</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>ჩვენი პროფესიონალური გუნდი</h2>
+        <p>გამოცდილი სპეციალისტები <strong>სარიტუალო მომსახურებაში</strong></p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member" *ngFor="let member of teamMembers">
+          <div class="member-photo">
+            <img src="/assets/images/team/{{member.name | lowercase}}.jpg" 
+                 [alt]="member.name + ' - ' + member.position"
+                 loading="lazy">
+          </div>
+          <div class="member-info">
+            <h3>{{member.name}}</h3>
+            <h4>{{member.position}}</h4>
+            <p class="experience">{{member.experience}}</p>
+            <p class="specialization">{{member.specialization}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Overview -->
+  <section class="services-overview">
+    <div class="container">
+      <div class="section-header">
+        <h2>ჩვენი მომსახურების სპექტრი</h2>
+        <p>სრული სარიტუალო მომსახურება - დამკრძალავი ბიუროს მიერ</p>
+      </div>
+      
+      <div class="services-categories">
+        <div class="service-category">
+          <h3>ძირითადი სერვისები</h3>
+          <ul>
+            <li><strong>დამკრძალავი ბიურო</strong> - damkrdzalavi biuro სრული მომსახურება</li>
+            <li><strong>ბალზამირება</strong> - balzamireba პროფესიონალური მიდგომით</li>
+            <li><strong>მიცვალებულის ჩაცმა</strong> - micvalebulis chacma ღირსეულად</li>
+            <li><strong>კატაფალკა</strong> - katafalka მომსახურება 24/7</li>
+          </ul>
+        </div>
+        
+        <div class="service-category">
+          <h3>ტრანსპორტირება</h3>
+          <ul>
+            <li><strong>გადასვენება</strong> - gadasveneba ყველა მიმართულებით</li>
+            <li>რაიონში გადასვენება</li>
+            <li>საზღვარგარეთ გადასვენება</li>
+            <li>ყველა საჭირო დოკუმენტი</li>
+          </ul>
+        </div>
+        
+        <div class="service-category">
+          <h3>მემორიალური სამუშაოები</h3>
+          <ul>
+            <li><strong>ქვაზე ხატვა</strong> - qvaze xatva ხელოვნური</li>
+            <li><strong>საფლავის მოპირკეთება</strong> - mopirketeba</li>
+            <li>ფერადი სურათის დამზადება</li>
+            <li>ლითონის ასოებით წარწერა</li>
+          </ul>
+        </div>
+        
+        <div class="service-category">
+          <h3>დარბაზები და ღონისძიებები</h3>
+          <ul>
+            <li><strong>საპანაშვიდე</strong> - sapanashvide დარბაზი</li>
+            <li>საბანკეტო დარბაზი</li>
+            <li><strong>სამგლოვიარო</strong> - samgloviaro ცერემონიები</li>
+            <li>მემორიალური ღონისძიებები</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certifications and Awards -->
+  <section class="certifications">
+    <div class="container">
+      <div class="section-header">
+        <h2>სერტიფიკატები და აღიარებები</h2>
+        <p>ჩვენი პროფესიონალიზმი აღიარებულია</p>
+      </div>
+      
+      <div class="certs-grid">
+        <div class="cert-item">
+          <h4>ISO 9001:2015</h4>
+          <p>ხარისხის მენეჯმენტის სისტემა</p>
+        </div>
+        <div class="cert-item">
+          <h4>საქართველოს ჯანდაცვის სამინისტრო</h4>
+          <p>ბალზამირების ლიცენზია</p>
+        </div>
+        <div class="cert-item">
+          <h4>თბილისის მერია</h4>
+          <p>სარიტუალო მომსახურების ლიცენზია</p>
+        </div>
+        <div class="cert-item">
+          <h4>საუკეთესო მომსახურება 2023</h4>
+          <p>კლიენტების შეფასებით</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <h3>დაგვიკავშირდით ახლავე</h3>
+      <p>20 წლიანი გამოცდილება თქვენს სერვისში - <strong>დამკრძალავი ბიურო</strong> რიტუალ სერვისი</p>
+      <div class="cta-buttons">
+        <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+          <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
+        </a>
+        <a [routerLink]="['/'+currentLanguage+'/contact']" class="btn btn-secondary">
+          {{translate('contact.free_consultation')}}
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SEO Keywords -->
+  <div class="seo-keywords" aria-hidden="true">
+    <span>dakrdzalva</span>
+    <span>micvalebuli</span>
+    <span>sudara</span>
+    <span>sasaxleebi</span>
+    <span>sarkofagi</span>
+    <span>macivrеbi</span>
+  </div>

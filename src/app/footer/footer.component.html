@@ -1,1 +1,265 @@
-<p>footer works!</p>
+<footer class="site-footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-content">
+          
+          <!-- Company Info -->
+          <div class="footer-section company-info">
+            <div class="footer-logo">
+              <img src="/images/logo.png" alt="რიტუალ სერვისი - დამკრძალავი ბიურო">
+              <h3>{{translate('header.company_name')}}</h3>
+            </div>
+            <p class="company-description">
+              <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) რიტუალ სერვისი - 
+              20 წლიანი გამოცდილების მქონე <strong>სარიტუალო სახლი</strong> (saritualo saxli) 
+              თბილისში. პროფესიონალური <strong>სამგლოვიარო ცერემონიები</strong> და 
+              <strong>დასაფლავების მომსახურება</strong> 24/7.
+            </p>
+            
+            <div class="footer-contact">
+              <a href="tel:+995599069898" class="footer-phone">
+                <i class="fa-solid fa-phone"></i>
+                <span>+(995) 599 06 98 98</span>
+              </a>
+              <div class="footer-hours">
+                <i class="fa-solid fa-clock"></i>
+                <span>24/7 მომსახურება</span>
+              </div>
+            </div>
+            
+            <div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=100075978162042" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="social-link facebook"
+                 title="Facebook">
+                <i class="fa-brands fa-square-facebook fa-2x"></i>
+              </a>
+              <a href="https://www.memento.ge/" 
+                 target="_blank"
+                 rel="noopener noreferrer" 
+                 class="social-link memento"
+                 title="Memento">
+                <img src="/images/memento.svg" 
+                     alt="Memento"
+                     width="34"
+                     height="34">
+              </a>
+            </div>
+          </div>
+  
+          <!-- Services Links -->
+          <div class="footer-section services-links">
+            <h4>სარიტუალო მომსახურება</h4>
+            <ul>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'damkrdzalavi-biuro']">
+                  <strong>დამკრძალავი ბიურო</strong> - damkrdzalavi biuro
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'balzamireba']">
+                  <strong>ბალზამირება</strong> - balzamireba
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'katafalka']">
+                  <strong>კატაფალკა</strong> - katafalka
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'gadasveneba']">
+                  <strong>გადასვენება</strong> - gadasveneba
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'qvaze-xatva']">
+                  <strong>ქვაზე ხატვა</strong> - qvaze xatva
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'services', 'mopirketeba']">
+                  <strong>საფლავის მოპირკეთება</strong> - mopirketeba
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <!-- Products Links -->
+          <div class="footer-section products-links">
+            <h4>სარიტუალო პროდუქცია</h4>
+            <ul>
+              <li>
+                <a [routerLink]="[currentLanguage, 'products', 'sasaxleebi']">
+                  <strong>სასახლეები</strong> - sasaxleebi
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'products', 'sudarebi']">
+                  <strong>სუდარები</strong> - sudarebi, sudara
+                </a>
+              </li>
+              <li>
+                <a [routerLink]="[currentLanguage, 'products', 'macivrеbi']">
+                  <strong>მაცივრები</strong> - macivrеbi
+                </a>
+              </li>
+            </ul>
+  
+            <h5>დამატებითი სერვისები</h5>
+            <ul class="additional-services">
+              <li><strong>მიცვალებულის ჩაცმა</strong> - micvalebulis chacma</li>
+              <li><strong>საპანაშვიდე</strong> - sapanashvide დარბაზი</li>
+              <li><strong>საბანკეტო დარბაზი</strong></li>
+              <li><strong>ფერადი სურათის დამზადება</strong></li>
+              <li><strong>ლითონის ასოებით წარწერა</strong></li>
+            </ul>
+          </div>
+  
+          <!-- Locations -->
+          <div class="footer-section locations">
+            <h4>ფილიალები თბილისში</h4>
+            <div class="location-item">
+              <h5>დიღომის ფილიალი</h5>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                14 ნოდარ ბოხუას ქუჩა, თბილისი
+              </p>
+            </div>
+            <div class="location-item">
+              <h5>გლდნის ფილიალი</h5>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                4 გრ. ოშკელის ქუჩა, თბილისი
+              </p>
+            </div>
+            <div class="location-item">
+              <h5>ჯიქიას ფილიალი</h5>
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                96 ალექსანდრე იოსელიანის ქუჩა, თბილისი
+              </p>
+            </div>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="footer-section quick-links">
+            <h4>სწრაფი ლინკები</h4>
+            <ul>
+              <li><a [routerLink]="[currentLanguage]">მთავარი</a></li>
+              <li><a [routerLink]="[currentLanguage, 'services']">მომსახურება</a></li>
+              <li><a [routerLink]="[currentLanguage, 'products']">პროდუქცია</a></li>
+              <li><a [routerLink]="[currentLanguage, 'about']">ჩვენს შესახებ</a></li>
+              <li><a [routerLink]="[currentLanguage, 'contact']">კონტაქტი</a></li>
+              <li><a [routerLink]="[currentLanguage, 'locations']">ფილიალები</a></li>
+            </ul>
+  
+            <h5>სპეციალიზებული სერვისები</h5>
+            <ul class="specialized-services">
+              <li><strong>დაკრძალვის სერვისები</strong> - dakrdzalva</li>
+              <li><strong>სამგლოვიარო ცერემონიები</strong> - samgloviaro</li>
+              <li><strong>დასაფლავების მომსახურება</strong> - dasaflaveba</li>
+              <li><strong>მიცვალებული</strong> - micvalebuli მომზადება</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- SEO Keywords Section -->
+    <div class="footer-seo-section">
+      <div class="container">
+        <div class="seo-keywords-footer">
+          <h5>ძიების სიტყვები - Search Keywords</h5>
+          <div class="keywords-grid">
+            <div class="keywords-column">
+              <h6>ქართული Keywords</h6>
+              <p>
+                <strong>დამკრძალავი ბიურო</strong>, <strong>ბალზამირება</strong>, 
+                <strong>კატაფალკა</strong>, <strong>ქვაზე ხატვა</strong>, 
+                <strong>გადასვენება</strong>, <strong>საფლავის მოპირკეთება</strong>, 
+                <strong>მიცვალებულის ჩაცმა</strong>, <strong>სუდარა</strong>, 
+                <strong>სასახლეები</strong>, <strong>მაცივრები</strong>, 
+                <strong>საპანაშვიდე</strong>, <strong>სამგლოვიარო</strong>, 
+                <strong>დაკრძალვა</strong>, <strong>დასაფლავება</strong>, 
+                <strong>მიცვალებული</strong>, <strong>სარიტუალო სახლი</strong>
+              </p>
+            </div>
+            
+            <div class="keywords-column">
+              <h6>Transliteration Keywords</h6>
+              <p>
+                <strong>damkrdzalavi biuro</strong>, <strong>balzamireba</strong>, 
+                <strong>katafalka</strong>, <strong>qvaze xatva</strong>, 
+                <strong>gadasveneba</strong>, <strong>mopirketeba</strong>, 
+                <strong>micvalebulis chacma</strong>, <strong>sudara</strong>, 
+                <strong>sasaxleebi</strong>, <strong>macivrеbi</strong>, 
+                <strong>sapanashvide</strong>, <strong>samgloviaro</strong>, 
+                <strong>dakrdzalva</strong>, <strong>dasaflaveba</strong>, 
+                <strong>micvalebuli</strong>, <strong>saritualo saxli</strong>
+              </p>
+            </div>
+  
+            <div class="keywords-column">
+              <h6>Russian Keywords</h6>
+              <p>
+                <strong>похоронный дом</strong>, <strong>бальзамирование</strong>, 
+                <strong>катафалк</strong>, <strong>роспись на камне</strong>, 
+                <strong>перевозка покойного</strong>, <strong>благоустройство могил</strong>, 
+                <strong>одевание усопшего</strong>, <strong>саван</strong>, 
+                <strong>гробы</strong>, <strong>холодильники</strong>, 
+                <strong>траурный зал</strong>, <strong>траурные церемонии</strong>, 
+                <strong>похороны</strong>, <strong>погребение</strong>, 
+                <strong>покойный</strong>, <strong>ритуальные услуги</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            <p>&copy; 2025 <strong>{{translate('header.company_name')}}</strong> - ყველა უფლება დაცულია</p>
+            <p class="seo-text">
+              <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) - 
+              პროფესიონალური <strong>სარიტუალო სახლი</strong> თბილისში
+            </p>
+          </div>
+          
+          <div class="footer-legal">
+            <a href="/privacy-policy">კონფიდენციალურობის პოლიტიკა</a>
+            <a href="/terms-of-service">მომსახურების წესები</a>
+            <a href="/sitemap">საიტის რუკა</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Hidden SEO Content -->
+    <div class="seo-hidden-content" aria-hidden="true">
+      <h3>რიტუალ სერვისი - დამკრძალავი ბიურო თბილისში</h3>
+      <p>
+        სრული სარიტუალო მომსახურება: ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, 
+        საფლავის მოპირკეთება, მიცვალებულის ჩაცმა, საპანაშვიდე დარბაზი, 
+        ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა
+      </p>
+      <ul>
+        <li>damkrdzalavi biuro - პროფესიონალური დამკრძალავი ბიურო</li>
+        <li>balzamireba - ბალზამირება გამოცდილი სპეციალისტების მიერ</li>
+        <li>katafalka - კატაფალკა 24/7 მომსახურება</li>
+        <li>qvaze xatva - ქვაზე ხატვა ხელოვნური მუშაობა</li>
+        <li>gadasveneba - გადასვენება რაიონში და საზღვარგარეთ</li>
+        <li>mopirketeba - საფლავის მოპირკეთება კომპლექსური</li>
+        <li>micvalebuli - მიცვალებული ღირსეული მომზადება</li>
+        <li>sudara - სუდარა ხარისხიანი მასალებით</li>
+        <li>sasaxleebi - სასახლეები ყველა სტილში</li>
+        <li>samgloviaro - სამგლოვიარო ცერემონიები</li>
+        <li>dakrdzalva - დაკრძალვა პროფესიონალურად</li>
+        <li>sapanashvide - საპანაშვიდე დარბაზი</li>
+      </ul>
+    </div>
+  </footer>
