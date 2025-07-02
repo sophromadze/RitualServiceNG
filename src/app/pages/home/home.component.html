@@ -1,0 +1,275 @@
+<!-- SEO-focused hidden headings for better keyword indexing -->
+<h1 class="seo-hidden">{{translate('home.funeral_home')}} - {{translate('header.company_name')}}</h1>
+<h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}} - damkrdzalavi biuro</h2>
+<h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}}</h3>
+
+<!-- Hero Section with Swiper -->
+<main class="hero-section">
+  <div class="swiper hero-swiper">
+    <div class="swiper-wrapper">
+      
+      <!-- Main Service Slide -->
+      <div class="swiper-slide" id="main-service-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h1>{{translate('home.title')}}</h1>
+            <p>{{translate('home.subtitle')}}</p>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <img class="slide-image" 
+               [src]="heroSlides[0].image" 
+               [alt]="heroSlides[0].alt"
+               loading="eager">
+        </div>
+      </div>
+
+      <!-- Coffins Slide -->
+      <div class="swiper-slide" id="coffins-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h2>{{translate('products.coffins')}}</h2>
+            <p>{{translate('products.coffins_desc')}}</p>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <div class="slide-images">
+            <img [src]="heroSlides[1].images?.[0]" 
+                 alt="სასახლეები - ხარისხიანი სასახლეები"
+                 loading="lazy">
+            <img [src]="heroSlides[1].images?.[1]" 
+                 alt="sasaxleebi - კუბო"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Hearse Slide -->
+      <div class="swiper-slide" id="hearse-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h2>{{translate('services.hearse')}}</h2>
+            <p>{{translate('services.hearse_desc')}}</p>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <div class="slide-images">
+            <img [src]="heroSlides[2].images?.[0]" 
+                 alt="კატაფალკა - katafalka მომსახურება"
+                 loading="lazy">
+            <img [src]="heroSlides[2].images?.[1]" 
+                 alt="კატაფალკის მომსახურება"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Embalming/Mourning Hall Slide -->
+      <div class="swiper-slide" id="mourning-hall-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h2>{{translate('seo.mourning_hall')}}</h2>
+            <p>{{translate('services.embalming_desc')}}</p>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <div class="slide-images">
+            <img [src]="'/assets/images/darbazebi1.jpg'" 
+                 alt="საპანაშვიდე დარბაზი - samgloviaro დარბაზი"
+                 loading="lazy">
+            <img [src]="'/assets/images/darbazebi2.jpg'" 
+                 alt="საბანკეტო დარბაზი"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- Cemetery Services Slide -->
+      <div class="swiper-slide" id="cemetery-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h2>{{translate('seo.cemetery')}} {{translate('services.stone_engraving')}}</h2>
+            <ul class="service-list">
+              <li>{{translate('services.grave_decoration')}}</li>
+              <li>ქვაზე ხატვა - qvaze xatva</li>
+              <li>{{translate('seo.colored_photo')}}</li>
+              <li>{{translate('seo.metal_letters')}}</li>
+              <li>საფლავის მოპირკეთება - mopirketeba</li>
+            </ul>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <img class="slide-image" 
+               [src]="'/assets/images/grave.jpg'" 
+               [alt]="'საფლავის მოპირკეთება - ქვაზე ხატვა'"
+               loading="lazy">
+        </div>
+      </div>
+
+      <!-- Transportation Slide -->
+      <div class="swiper-slide" id="transportation-slide">
+        <div class="slide-content">
+          <div class="slide-text">
+            <h2>{{translate('services.transportation')}}</h2>
+            <p>გადასვენება - gadasveneba რაიონში და საზღვარგარეთ</p>
+            <div class="cta-buttons">
+              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+              </a>
+            </div>
+          </div>
+          <img class="slide-image" 
+               [src]="'/assets/images/microbus.jpg'" 
+               [alt]="'ტრანსპორტირება - გადასვენება'"
+               loading="lazy">
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- Swiper navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</main>
+
+<!-- Services Section with Keywords -->
+<section id="services-section" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{translate('nav.services')}} - {{translate('seo.funeral_services')}}</h2>
+      <p>{{translate('services.embalming')}} - ბალზამირება, {{translate('services.hearse')}} - კატაფალკა, {{translate('services.stone_engraving')}} - ქვაზე ხატვა</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of serviceCards" 
+           (click)="navigateToService(service.url)">
+        <div class="card-image">
+          <img [src]="service.image" 
+               [alt]="translate(service.titleKey)"
+               loading="lazy">
+        </div>
+        <div class="card-content">
+          <h3>{{translate(service.titleKey)}}</h3>
+          <p>{{translate(service.descKey)}}</p>
+          <div class="keywords" [attr.aria-label]="service.keywords">
+            <small>{{service.keywords}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>რატომ უნდა აირჩიოთ {{translate('header.company_name')}}?</h2>
+      <p>{{translate('home.damkrdzalavi_biuro')}} - damkrdzalavi biuro პროფესიონალური გუნდით</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of whyChooseUsFeatures">
+        <i [class]="feature.icon"></i>
+        <h3>{{translate(feature.titleKey)}}</h3>
+        <p>{{translate(feature.descKey)}}</p>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+        <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Content Section with All Keywords -->
+<section class="seo-content-section">
+  <div class="container">
+    <div class="seo-content">
+      <h2>{{translate('home.ritual_house')}} - სარიტუალო სახლი მომსახურება</h2>
+      
+      <div class="seo-text">
+        <h3>დამკრძალავი ბიურო - damkrdzalavi biuro თბილისში</h3>
+        <p>
+          {{translate('header.company_name')}} არის პროფესიონალური <strong>დამკრძალავი ბიურო</strong> და 
+          <strong>სარიტუალო სახლი</strong> თბილისში. ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა:
+          <strong>ბალზამირება</strong> (balzamireba), <strong>კატაფალკა</strong> (katafalka), 
+          <strong>ქვაზე ხატვა</strong> (qvaze xatva), <strong>გადასვენება</strong> (gadasveneba).
+        </p>
+        
+        <h4>ჩვენი მთავარი სერვისები:</h4>
+        <ul>
+          <li><strong>მიცვალებულის ჩაცმა</strong> - პროფესიონალური მომზადება</li>
+          <li><strong>ბალზამირება</strong> - balzamireba თანამედროვე მეთოდებით</li>
+          <li><strong>კატაფალკა</strong> - katafalka მომსახურება 24/7</li>
+          <li><strong>ქვაზე ხატვა</strong> - qvaze xatva და ხელოვნური მუშაობა</li>
+          <li><strong>საფლავის მოპირკეთება</strong> - mopirketeba კომპლექსური</li>
+          <li><strong>გადასვენება</strong> - gadasveneba რაიონში და საზღვარგარეთ</li>
+          <li><strong>ფერადი სურათის დამზადება</strong> მაღალი ხარისხით</li>
+          <li><strong>ლითონის ასოებით წარწერა</strong> ღირსეული</li>
+        </ul>
+
+        <h4>სარიტუალო პროდუქცია:</h4>
+        <ul>
+          <li><strong>სასახლეები</strong> - sasaxleebi ყველა სტილში</li>
+          <li><strong>სუდარები</strong> - sudarebi ტრადიციული და თანამედროვე</li>
+          <li><strong>სუდარა</strong> - sudara ხარისხიანი მასალებით</li>
+          <li><strong>მაცივრები</strong> - სასახლე მაცივრები</li>
+        </ul>
+
+        <h4>ფილიალები თბილისში:</h4>
+        <ul>
+          <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა</li>
+          <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა</li>
+          <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა</li>
+        </ul>
+
+        <h4>რატომ ვართ ლიდერები:</h4>
+        <ul>
+          <li>20 წლიანი გამოცდილება <strong>დაკრძალვის</strong> სფეროში</li>
+          <li><strong>სამგლოვიარო ცერემონიების</strong> ორგანიზება</li>
+          <li><strong>დასაფლავების მომსახურება</strong> ყველა დონეზე</li>
+          <li><strong>საპანაშვიდე დარბაზი</strong> - samgloviaro დარბაზი</li>
+          <li><strong>საბანკეტო დარბაზი</strong> ღირსეული პირობებით</li>
+          <li>24/7 <strong>დამკრძალავი</strong> მომსახურება</li>
+        </ul>
+
+        <p>
+          ჩვენი <strong>სარიტუალო სახლი</strong> (saritualo saxli) უზრუნველყოფს <strong>მიცვალებულის</strong> 
+          ღირსეულ მომსახურებას. <strong>damkrdzalavi biuro</strong> რიტუალ სერვისი - თქვენი დანდობილი პარტნერი 
+          რთულ დროს. დაგვიკავშირდით <strong>+(995) 599 06 98 98</strong> - ჩვენ ვართ 24 საათის განმავლობაში 
+          თქვენი გვერდით.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Keywords for better indexing -->
+<div class="seo-keywords" aria-hidden="true">
+  <span>dakrdzalva</span>
+  <span>micvalebuli</span>
+  <span>micvalebulis chacma</span>
+  <span>sapanashvide</span>
+  <span>dasaflaveba</span>
+  <span>samgloviaro</span>
+</div>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://ritualservice.ge/ka</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka"/>
+    <image:image>
+      <image:loc>https://ritualservice.ge/assets/images/logo300.png</image:loc>
+      <image:title>რიტუალ სერვისი - დამკრძალავი ბიურო</image:title>
+      <image:caption>damkrdzalavi biuro - სარიტუალო სახლი</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka"/>
+  </url>
+
+  <!-- Services Main Pages -->
+  <url>
+    <loc>https://ritualservice.ge/ka/services</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services"/>
+  </url>
+
+  <!-- Service Detail Pages - Georgian -->
+  <url>
+    <loc>https://ritualservice.ge/ka/services/damkrdzalavi-biuro</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/damkrdzalavi-biuro"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/funeral-home"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/funeral-home"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/balzamireba</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/balzamireba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/embalming"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/embalming"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/katafalka</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/katafalka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/hearse"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/hearse"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/gadasveneba</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/gadasveneba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/transportation"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/transportation"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/qvaze-xatva</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/qvaze-xatva"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/stone-engraving"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/stone-engraving"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/mopirketeba</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/mopirketeba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/grave-decoration"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/grave-decoration"/>
+  </url>
+
+  <!-- Service Detail Pages - English -->
+  <url>
+    <loc>https://ritualservice.ge/en/services/funeral-home</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/damkrdzalavi-biuro"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/funeral-home"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/funeral-home"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services/embalming</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/balzamireba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/embalming"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/embalming"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services/hearse</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/katafalka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/hearse"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/hearse"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services/transportation</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/gadasveneba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/transportation"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/transportation"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services/stone-engraving</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/qvaze-xatva"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/stone-engraving"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/stone-engraving"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/en/services/grave-decoration</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/mopirketeba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/grave-decoration"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/grave-decoration"/>
+  </url>
+
+  <!-- Service Detail Pages - Russian -->
+  <url>
+    <loc>https://ritualservice.ge/ru/services/funeral-home</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/damkrdzalavi-biuro"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/funeral-home"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/funeral-home"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services/embalming</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/balzamireba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/embalming"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/embalming"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services/hearse</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/katafalka"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/hearse"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/hearse"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services/transportation</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/gadasveneba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/transportation"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/transportation"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services/stone-engraving</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/qvaze-xatva"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/stone-engraving"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/stone-engraving"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ru/services/grave-decoration</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/services/mopirketeba"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/services/grave-decoration"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/services/grave-decoration"/>
+  </url>
+
+  <!-- Products Pages -->
+  <url>
+    <loc>https://ritualservice.ge/ka/products</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/products"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/products"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/products"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/products/sasaxleebi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/products/sasaxleebi"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/products/coffins"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/products/coffins"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/products/sudarebi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/products/sudarebi"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/products/shrouds"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/products/shrouds"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/products/macivrеbi</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/products/macivrеbi"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/products/refrigeration"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/products/refrigeration"/>
+  </url>
+
+  <!-- About Pages -->
+  <url>
+    <loc>https://ritualservice.ge/ka/about</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/about"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/about"/>
+  </url>
+
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://ritualservice.ge/ka/contact</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/contact"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/contact"/>
+  </url>
+
+  <!-- Locations Pages -->
+  <url>
+    <loc>https://ritualservice.ge/ka/locations</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ka-GE" href="https://ritualservice.ge/ka/locations"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://ritualservice.ge/en/locations"/>
+    <xhtml:link rel="alternate" hreflang="ru-RU" href="https://ritualservice.ge/ru/locations"/>
+  </url>
+
+</urlset>

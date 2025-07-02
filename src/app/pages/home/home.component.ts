@@ -1,0 +1,342 @@
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { SeoService } from '../../services/seo.service';
+import { LanguageService } from '../../services/language.service';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  
+  currentLanguage: string = 'ka';
+  private subscriptions: Subscription = new Subscription();
+  private swiper?: Swiper;
+
+  // SEO-focused content structure
+  heroSlides = [
+    {
+      id: 'main-service',
+      titleKey: 'home.title',
+      subtitleKey: 'home.subtitle',
+      image: '/assets/images/kuboebi2.jpg',
+      alt: 'დამკრძალავი ბიურო - სარიტუალო სახლი'
+    },
+    {
+      id: 'coffins-slide',
+      titleKey: 'products.coffins',
+      subtitleKey: 'products.coffins_desc',
+      images: ['/assets/images/kuboebi3.jpg', '/assets/images/kuboebi4.jpg'],
+      alt: 'სასახლეები - ხარისხიანი სასახლეები'
+    },
+    {
+      id: 'hearse-slide', 
+      titleKey: 'services.hearse',
+      subtitleKey: 'services.hearse_desc',
+      images: ['/assets/images/katafalkebi2.jpg', '/assets/images/katafalkebi3.jpg'],
+      alt: 'კატაფალკა - კატაფალკის მომსახურება'
+    },
+    {
+      id: 'embalming-slide',
+      titleKey: 'services.embalming',
+      subtitleKey: 'services.embalming_desc', 
+      image: '/assets/images/darbazebi1.jpg',
+      alt: 'ბალზამირება - პროფესიონალური ბალზამირება'
+    },
+    {
+      id: 'stone-engraving-slide',
+      titleKey: 'services.stone_engraving',
+      subtitleKey: 'services.stone_engraving_desc',
+      image: '/assets/images/grave.jpg',
+      alt: 'ქვაზე ხატვა - საფლავის მოპირკეთება'
+    },
+    {
+      id: 'transportation-slide',
+      titleKey: 'services.transportation', 
+      subtitleKey: 'services.transportation_desc',
+      image: '/assets/images/microbus.jpg',
+      alt: 'გადასვენება - ტრანსპორტირება'
+    }
+  ];
+
+  // Why choose us section with SEO keywords
+  whyChooseUsFeatures = [
+    {
+      icon: 'fa-solid fa-user-tie fa-4x',
+      titleKey: 'about.20_years_experience',
+      descKey: 'about.professional_team'
+    },
+    {
+      icon: 'fa-regular fa-star fa-4x', 
+      titleKey: 'about.quality_service',
+      descKey: 'about.individual_approach'
+    },
+    {
+      icon: 'fa-regular fa-clock fa-4x',
+      titleKey: 'contact.24_7_service',
+      descKey: 'contact.agent_visit'
+    }
+  ];
+
+  // Service cards with SEO-optimized URLs
+  serviceCards = [
+    {
+      titleKey: 'services.embalming',
+      descKey: 'services.embalming_desc',
+      url: '/services/balzamireba',
+      image: '/assets/images/embalming-card.jpg',
+      keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
+    },
+    {
+      titleKey: 'services.hearse',
+      descKey: 'services.hearse_desc', 
+      url: '/services/katafalka',
+      image: '/assets/images/hearse-card.jpg',
+      keywords: 'კატაფალკა, katafalka, კატაფალკის მომსახურება'
+    },
+    {
+      titleKey: 'services.transportation',
+      descKey: 'services.transportation_desc',
+      url: '/services/gadasveneba', 
+      image: '/assets/images/transportation-card.jpg',
+      keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
+    },
+    {
+      titleKey: 'services.stone_engraving',
+      descKey: 'services.stone_engraving_desc',
+      url: '/services/qvaze-xatva',
+      image: '/assets/images/stone-engraving-card.jpg', 
+      keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
+    }
+  ];
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private seoService: SeoService,
+    private languageService: LanguageService
+  ) {}
+
+  ngOnInit(): void {
+    // Subscribe to language changes
+    this.subscriptions.add(
+      this.languageService.currentLanguage$.subscribe(language => {
+        this.currentLanguage = language;
+        this.updateSEO();
+      })
+    );
+
+    // Subscribe to route data for SEO
+    this.subscriptions.add(
+      this.route.data.subscribe(data => {
+        if (data) {
+          this.updateSEO(data);
+        }
+      })
+    );
+
+    // Set language from route
+    const urlSegments = this.router.url.split('/');
+    if (urlSegments.length > 1 && ['ka', 'en', 'ru'].includes(urlSegments[1])) {
+      this.languageService.setLanguage(urlSegments[1]);
+    }
+  }
+
+  ngAfterViewInit(): void {
+    this.initializeSwiper();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
+    if (this.swiper) {
+      this.swiper.destroy();
+    }
+  }
+
+  private updateSEO(routeData?: any): void {
+    const seoData = routeData || {
+      title: this.getSEOTitle(),
+      description: this.getSEODescription(),
+      keywords: this.getSEOKeywords()
+    };
+
+    // Add structured data for home page
+    const structuredData = this.generateHomeStructuredData();
+    
+    this.seoService.updateSEO({
+      ...seoData,
+      structuredData: structuredData
+    }, this.currentLanguage);
+  }
+
+  private getSEOTitle(): string {
+    const titles = {
+      ka: 'რიტუალ სერვისი - დამკრძალავი ბიურო | სარიტუალო სახლი თბილისში',
+      en: 'Ritual Service - Funeral Home | Professional Funeral Services in Tbilisi',
+      ru: 'Ритуал Сервис - Похоронный дом | Профессиональные ритуальные услуги в Тбилиси'
+    };
+    return titles[this.currentLanguage as keyof typeof titles] || titles.ka;
+  }
+
+  private getSEODescription(): string {
+    const descriptions = {
+      ka: 'რიტუალ სერვისი - პროფესიონალური დამკრძალავი ბიურო თბილისში. ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, მიცვალებულის ჩაცმა. სარიტუალო მომსახურება 24/7. damkrdzalavi biuro.',
+      en: 'Ritual Service - Professional funeral home in Tbilisi. Embalming, hearse services, stone engraving, transportation, dressing and preparation. 24/7 funeral services.',
+      ru: 'Ритуал Сервис - профессиональный похоронный дом в Тбилиси. Бальзамирование, катафалк, роспись на камне, перевозка, одевание усопшего. Ритуальные услуги 24/7.'
+    };
+    return descriptions[this.currentLanguage as keyof typeof descriptions] || descriptions.ka;
+  }
+
+  private getSEOKeywords(): string {
+    const keywords = {
+      ka: 'დამკრძალავი ბიურო, სარიტუალო სახლი, ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა, balzamireba, katafalka, qvaze xatva, gadasveneba, mopirketeba, micvalebuli, sudara, samgloviaro, dasaflaveba, dakrdzalva, sapanashvide, saritualo saxli',
+      en: 'funeral home, funeral services, embalming, hearse, stone engraving, transportation, burial services, memorial services, grave decoration, colored photo creation, metal letter inscriptions, dressing and preparation, mourning hall, banquet hall',
+      ru: 'похоронный дом, ритуальные услуги, похоронные услуги, бальзамирование, катафалк, роспись на камне, перевозка покойного, благоустройство могил, изготовление цветного фото, надписи металлическими буквами, одевание усопшего, траурный зал, банкетный зал, траурные церемонии, погребение, похороны, похоронное бюро, кладбище, саван, покойный, перевозка по региону, международная перевозка'
+    };
+    return keywords[this.currentLanguage as keyof typeof keywords] || keywords.ka;
+  }
+
+  private generateHomeStructuredData(): any {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FuneralHome",
+      "name": this.languageService.translate('header.company_name'),
+      "alternateName": [
+        "დამკრძალავი ბიურო რიტუალ სერვისი",
+        "damkrdzalavi biuro",
+        "Похоронный дом Ритуал Сервис",
+        "Ritual Service Funeral Home",
+        "სარიტუალო სახლი",
+        "saritualo saxli"
+      ],
+      "url": `https://ritualservice.ge/${this.currentLanguage}`,
+      "logo": "https://ritualservice.ge/assets/images/logo.png",
+      "image": "https://ritualservice.ge/assets/images/logo300.png",
+      "telephone": "+995599069898",
+      "description": this.getSEODescription(),
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "14 ნოდარ ბოხუას ქუჩა",
+          "addressLocality": "თბილისი",
+          "addressRegion": "თბილისი",
+          "addressCountry": "GE",
+          "name": "დიღომის ფილიალი"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "4 გრ. ოშკელის ქუჩა", 
+          "addressLocality": "თბილისი",
+          "addressRegion": "თბილისი",
+          "addressCountry": "GE",
+          "name": "გლდნის ფილიალი"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "96 ალექსანდრე იოსელიანის ქუჩა",
+          "addressLocality": "თბილისი",
+          "addressRegion": "თბილისი", 
+          "addressCountry": "GE",
+          "name": "ჯიქიას ფილიალი"
+        }
+      ],
+      "geo": [
+        {
+          "@type": "GeoCoordinates",
+          "latitude": "41.78013878162857",
+          "longitude": "44.7705123053155"
+        },
+        {
+          "@type": "GeoCoordinates", 
+          "latitude": "41.81655515468242",
+          "longitude": "44.82321041488827"
+        },
+        {
+          "@type": "GeoCoordinates",
+          "latitude": "41.72027280349609", 
+          "longitude": "44.7002050838214"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "availableService": [
+        {
+          "@type": "Service",
+          "name": this.languageService.translate('services.embalming'),
+          "description": this.languageService.translate('services.embalming_desc'),
+          "url": `https://ritualservice.ge/${this.currentLanguage}/services/balzamireba`
+        },
+        {
+          "@type": "Service", 
+          "name": this.languageService.translate('services.hearse'),
+          "description": this.languageService.translate('services.hearse_desc'),
+          "url": `https://ritualservice.ge/${this.currentLanguage}/services/katafalka`
+        },
+        {
+          "@type": "Service",
+          "name": this.languageService.translate('services.transportation'),
+          "description": this.languageService.translate('services.transportation_desc'),
+          "url": `https://ritualservice.ge/${this.currentLanguage}/services/gadasveneba`
+        },
+        {
+          "@type": "Service",
+          "name": this.languageService.translate('services.stone_engraving'),
+          "description": this.languageService.translate('services.stone_engraving_desc'),
+          "url": `https://ritualservice.ge/${this.currentLanguage}/services/qvaze-xatva`
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100075978162042",
+        "https://www.memento.ge/"
+      ],
+      "priceRange": "$$"
+    };
+  }
+
+  private initializeSwiper(): void {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+    
+    this.swiper = new Swiper('.hero-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  // Methods for template
+  translate(key: string): string {
+    return this.languageService.translate(key);
+  }
+
+  getServiceUrl(serviceUrl: string): string {
+    return `/${this.currentLanguage}${serviceUrl}`;
+  }
+
+  navigateToService(serviceUrl: string): void {
+    this.router.navigate([this.currentLanguage, ...serviceUrl.split('/').filter(s => s)]);
+  }
+
+  callPhone(): void {
+    window.location.href = 'tel:+995599069898';
+  }
+}

@@ -1,0 +1,349 @@
+<!-- SEO Header Section -->
+<div class="seo-headers">
+    <h1 *ngIf="serviceContent">{{translate(serviceContent.titleKey)}}</h1>
+    
+    <!-- Service-specific SEO headers -->
+    <h2 class="seo-hidden" *ngIf="serviceType === 'funeral-home'">
+      დამკრძალავი ბიურო - damkrdzalavi biuro თბილისში
+    </h2>
+    <h2 class="seo-hidden" *ngIf="serviceType === 'embalming'">
+      ბალზამირება - balzamireba პროფესიონალური მომსახურება
+    </h2>
+    <h2 class="seo-hidden" *ngIf="serviceType === 'hearse'">
+      კატაფალკა - katafalka მომსახურება 24/7
+    </h2>
+    <h2 class="seo-hidden" *ngIf="serviceType === 'transportation'">
+      გადასვენება - gadasveneba რაიონში და საზღვარგარეთ
+    </h2>
+    <h2 class="seo-hidden" *ngIf="serviceType === 'stone-engraving'">
+      ქვაზე ხატვა - qvaze xatva ხელოვნური მუშაობა
+    </h2>
+    <h2 class="seo-hidden" *ngIf="serviceType === 'grave-decoration'">
+      საფლავის მოპირკეთება - mopirketeba მემორიალური სამუშაოები
+    </h2>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="service-hero" *ngIf="serviceContent">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{translate(serviceContent.titleKey)}}</h1>
+        <p class="hero-description">{{translate(serviceContent.descKey)}}</p>
+        
+        <!-- Service-specific keyword content -->
+        <div class="service-keywords" [ngSwitch]="serviceType">
+          
+          <!-- Funeral Home Keywords -->
+          <div *ngSwitchCase="'funeral-home'" class="keyword-content">
+            <p>
+              <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) რიტუალ სერვისი - 
+              თქვენი დანდობილი <strong>სარიტუალო სახლი</strong> (saritualo saxli) თბილისში. 
+              ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა.
+            </p>
+          </div>
+          
+          <!-- Embalming Keywords -->
+          <div *ngSwitchCase="'embalming'" class="keyword-content">
+            <p>
+              <strong>ბალზამირება</strong> (balzamireba) - <strong>მიცვალებულის</strong> (micvalebuli) 
+              პროფესიონალური მომზადება. <strong>მიცვალებულის ჩაცმა</strong> (micvalebulis chacma) 
+              გამოცდილი სპეციალისტების მიერ.
+            </p>
+          </div>
+          
+          <!-- Hearse Keywords -->
+          <div *ngSwitchCase="'hearse'" class="keyword-content">
+            <p>
+              <strong>კატაფალკა</strong> (katafalka) - პროფესიონალური კატაფალკის მომსახურება. 
+              <strong>გადასვენება</strong> (gadasveneba) ნებისმიერ მიმართულებით 24/7.
+            </p>
+          </div>
+          
+          <!-- Transportation Keywords -->
+          <div *ngSwitchCase="'transportation'" class="keyword-content">
+            <p>
+              <strong>გადასვენება</strong> (gadasveneba) - <strong>მიცვალებულის</strong> 
+              ტრანსპორტირება რაიონში და საზღვარგარეთ. <strong>კატაფალკა</strong> (katafalka) 
+              უსაფრთხო ტრანსპორტირებისთვის.
+            </p>
+          </div>
+          
+          <!-- Stone Engraving Keywords -->
+          <div *ngSwitchCase="'stone-engraving'" class="keyword-content">
+            <p>
+              <strong>ქვაზე ხატვა</strong> (qvaze xatva) - ხელოვნური მემორიალური მუშაობა. 
+              <strong>ფერადი სურათის დამზადება</strong>, <strong>ლითონის ასოებით წარწერა</strong> 
+              უმაღლესი ხარისხით.
+            </p>
+          </div>
+          
+          <!-- Grave Decoration Keywords -->
+          <div *ngSwitchCase="'grave-decoration'" class="keyword-content">
+            <p>
+              <strong>საფლავის მოპირკეთება</strong> (mopirketeba) - კომპლექსური მემორიალური სამუშაოები. 
+              <strong>ქვაზე ხატვა</strong> (qvaze xatva), ლანდშაფტური დიზაინი, 
+              <strong>ფერადი სურათის დამზადება</strong>.
+            </p>
+          </div>
+          
+        </div>
+        
+        <div class="hero-cta">
+          <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+            <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+          </a>
+          <a [routerLink]="['/'+currentLanguage+'/contact']" class="btn btn-secondary">
+            {{translate('contact.free_consultation')}}
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img [src]="serviceContent.image" 
+             [alt]="translate(serviceContent.titleKey)"
+             loading="eager">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Service Details Section -->
+  <section class="service-details" *ngIf="serviceContent">
+    <div class="container">
+      
+      <!-- Long Description -->
+      <div class="service-description">
+        <h2>{{translate(serviceContent.titleKey)}} - დეტალურად</h2>
+        <p>{{translate(serviceContent.longDescKey)}}</p>
+      </div>
+      
+      <!-- Features Section -->
+      <div class="service-features">
+        <h3>ჩვენი უპირატესობები</h3>
+        <div class="features-grid">
+          <div class="feature-item" *ngFor="let feature of serviceContent.features">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>{{translate(feature)}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Process Section -->
+      <div class="service-process">
+        <h3>მუშაობის პროცესი</h3>
+        <div class="process-steps">
+          <div class="process-step" *ngFor="let step of serviceContent.process; let i = index">
+            <div class="step-number">{{i + 1}}</div>
+            <p>{{translate(step)}}</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section class="service-gallery" *ngIf="serviceContent?.gallery">
+    <div class="container">
+      <h3>ფოტო გალერეა</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let image of serviceContent.gallery; let i = index">
+          <img [src]="image" 
+               [alt]="getGalleryImageAlt(i)"
+               loading="lazy"
+               (click)="openImageModal(image)">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Related Services -->
+  <section class="related-services" *ngIf="serviceContent?.relatedServices">
+    <div class="container">
+      <h3>მსგავსი სერვისები</h3>
+      <div class="related-grid">
+        <div class="related-item" 
+             *ngFor="let related of serviceContent.relatedServices"
+             (click)="navigateToService(related)">
+          
+          <!-- Dynamic content based on related service -->
+          <div [ngSwitch]="related">
+            <div *ngSwitchCase="'embalming'">
+              <h4>{{translate('services.embalming')}}</h4>
+              <p>ბალზამირება - balzamireba</p>
+            </div>
+            <div *ngSwitchCase="'hearse'">
+              <h4>{{translate('services.hearse')}}</h4>
+              <p>კატაფალკა - katafalka</p>
+            </div>
+            <div *ngSwitchCase="'transportation'">
+              <h4>{{translate('services.transportation')}}</h4>
+              <p>გადასვენება - gadasveneba</p>
+            </div>
+            <div *ngSwitchCase="'stone-engraving'">
+              <h4>{{translate('services.stone_engraving')}}</h4>
+              <p>ქვაზე ხატვა - qvaze xatva</p>
+            </div>
+            <div *ngSwitchCase="'grave-decoration'">
+              <h4>{{translate('services.grave_decoration')}}</h4>
+              <p>საფლავის მოპირკეთება - mopirketeba</p>
+            </div>
+            <div *ngSwitchCase="'funeral-home'">
+              <h4>{{translate('services.funeral_home')}}</h4>
+              <p>დამკრძალავი ბიურო - damkrdzalavi biuro</p>
+            </div>
+          </div>
+          
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SEO Content Section -->
+  <section class="seo-content-section">
+    <div class="container">
+      <div class="seo-content" [ngSwitch]="serviceType">
+        
+        <!-- Funeral Home SEO Content -->
+        <div *ngSwitchCase="'funeral-home'" class="service-seo-content">
+          <h3>დამკრძალავი ბიურო - damkrdzalavi biuro რიტუალ სერვისი</h3>
+          <p>
+            ჩვენი <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) წარმოადგენს 
+            <strong>სარიტუალო სახლს</strong> (saritualo saxli), სადაც თქვენ მიიღებთ 
+            ყველა საჭირო მომსახურებას. <strong>დაკრძალვის სერვისები</strong>, 
+            <strong>მიცვალებულის ჩაცმა</strong> (micvalebulis chacma), 
+            <strong>ბალზამირება</strong> (balzamireba), <strong>კატაფალკა</strong> (katafalka) - 
+            ყველაფერი ერთ ადგილას.
+          </p>
+          
+          <h4>სარიტუალო მომსახურება მოიცავს:</h4>
+          <ul>
+            <li><strong>მიცვალებულის ჩაცმა</strong> და მოწესრიგება</li>
+            <li><strong>ბალზამირება</strong> (balzamireba) თანამედროვე მეთოდებით</li>
+            <li><strong>კატაფალკა</strong> (katafalka) მომსახურება</li>
+            <li><strong>გადასვენება</strong> (gadasveneba) ნებისმიერ მიმართულებით</li>
+            <li><strong>საპანაშვიდე დარბაზი</strong> (sapanashvide) ღირსეული პირობებით</li>
+            <li><strong>საბანკეტო დარბაზი</strong> მემორიალური ღონისძიებებისთვის</li>
+          </ul>
+        </div>
+        
+        <!-- Embalming SEO Content -->
+        <div *ngSwitchCase="'embalming'" class="service-seo-content">
+          <h3>ბალზამირება - balzamireba პროფესიონალური მომსახურება</h3>
+          <p>
+            <strong>ბალზამირება</strong> (balzamireba) არის <strong>მიცვალებულის</strong> (micvalebuli) 
+            სხეულის კონსერვაციის პროცესი. ჩვენი გამოცდილი სპეციალისტები ახორციელებენ 
+            <strong>მიცვალებულის ჩაცმას</strong> (micvalebulis chacma) და ბალზამირებას 
+            უმაღლესი ხარისხით.
+          </p>
+          
+          <h4>ბალზამირების უპირატესობები:</h4>
+          <ul>
+            <li>ხანგრძლივი შენახვა</li>
+            <li>ბუნებრივი იერის დაცვა</li>
+            <li>ჰიგიენური უსაფრთხოება</li>
+            <li>ღირსეული გამოსამშვიდობებელი ცერემონია</li>
+          </ul>
+        </div>
+        
+        <!-- Hearse SEO Content -->
+        <div *ngSwitchCase="'hearse'" class="service-seo-content">
+          <h3>კატაფალკა - katafalka მომსახურება 24/7</h3>
+          <p>
+            <strong>კატაფალკა</strong> (katafalka) - ჩვენი თანამედროვე კატაფალკების პარკი 
+            მზადაა ნებისმიერ დროს. კატაფალკის მომსახურება მოიცავს <strong>გადასვენებას</strong> 
+            (gadasveneba) როგორც ქალაქში, ისე რაიონებსა და საზღვარგარეთ.
+          </p>
+          
+          <h4>კატაფალკის სერვისი:</h4>
+          <ul>
+            <li>თანამედროვე კატაფალკები</li>
+            <li>24/7 ხელმისაწვდომობა</li>
+            <li>გადასვენება ნებისმიერ მიმართულებით</li>
+            <li>გამოცდილი მძღოლები</li>
+          </ul>
+        </div>
+        
+        <!-- Transportation SEO Content -->
+        <div *ngSwitchCase="'transportation'" class="service-seo-content">
+          <h3>გადასვენება - gadasveneba რაიონში და საზღვარგარეთ</h3>
+          <p>
+            <strong>გადასვენება</strong> (gadasveneba) - ჩვენ უზრუნველვყოფთ <strong>მიცვალებულის</strong> 
+            (micvalebuli) უსაფრთხო ტრანსპორტირებას. <strong>კატაფალკა</strong> (katafalka) 
+            მომსახურება ხელმისაწვდომია ყველა მიმართულებით.
+          </p>
+          
+          <h4>გადასვენების სერვისი:</h4>
+          <ul>
+            <li>რაიონებში გადასვენება</li>
+            <li>საზღვარგარეთ გადასვენება</li>
+            <li>ყველა საჭირო დოკუმენტი</li>
+            <li>სრული იურიდიული მხარდაჭერა</li>
+          </ul>
+        </div>
+        
+        <!-- Stone Engraving SEO Content -->
+        <div *ngSwitchCase="'stone-engraving'" class="service-seo-content">
+          <h3>ქვაზე ხატვა - qvaze xatva ხელოვნური მუშაობა</h3>
+          <p>
+            <strong>ქვაზე ხატვა</strong> (qvaze xatva) - ჩვენი ხელოვანები ქმნიან ღირსეულ 
+            მემორიალურ ნამუშევრებს. <strong>ფერადი სურათის დამზადება</strong>, 
+            <strong>ლითონის ასოებით წარწერა</strong> და ხელოვნური ორნამენტები.
+          </p>
+          
+          <h4>ქვაზე ხატვის სერვისები:</h4>
+          <ul>
+            <li>ფერადი სურათის დამზადება</li>
+            <li>ლითონის ასოებით წარწერა</li>
+            <li>ხელოვნური ორნამენტები</li>
+            <li>მემორიალური კომპოზიციები</li>
+          </ul>
+        </div>
+        
+        <!-- Grave Decoration SEO Content -->
+        <div *ngSwitchCase="'grave-decoration'" class="service-seo-content">
+          <h3>საფლავის მოპირკეთება - mopirketeba მემორიალური სამუშაოები</h3>
+          <p>
+            <strong>საფლავის მოპირკეთება</strong> (mopirketeba) - კომპლექსური მემორიალური სამუშაოები. 
+            <strong>ქვაზე ხატვა</strong> (qvaze xatva), ლანდშაფტური დიზაინი, 
+            <strong>ფერადი სურათის დამზადება</strong>, <strong>ლითონის ასოებით წარწერა</strong>.
+          </p>
+          
+          <h4>მოპირკეთების სერვისები:</h4>
+          <ul>
+            <li>ლანდშაფტური დიზაინი</li>
+            <li>ქვის მუშაობა</li>
+            <li>მემორიალური ინსტალაციები</li>
+            <li>ღირსეული მემორიალები</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact CTA Section -->
+  <section class="contact-cta">
+    <div class="container">
+      <h3>{{translate('contact.free_consultation')}}</h3>
+      <p>დაგვიკავშირდით ახლავე - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით</p>
+      <div class="cta-buttons">
+        <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+          <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
+        </a>
+        <a [routerLink]="['/'+currentLanguage+'/contact']" class="btn btn-secondary">
+          {{translate('contact.free_consultation')}}
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Additional SEO Keywords (Hidden) -->
+  <div class="seo-keywords" aria-hidden="true">
+    <span *ngIf="serviceType === 'funeral-home'">damkrdzalavi, saritualo saxli, micvalebuli, samgloviaro</span>
+    <span *ngIf="serviceType === 'embalming'">balzamireba, micvalebulis chacma, micvalebuli</span>
+    <span *ngIf="serviceType === 'hearse'">katafalka, gadasveneba</span>
+    <span *ngIf="serviceType === 'transportation'">gadasveneba, micvalebuli</span>
+    <span *ngIf="serviceType === 'stone-engraving'">qvaze xatva, mopirketeba</span>
+    <span *ngIf="serviceType === 'grave-decoration'">mopirketeba, qvaze xatva</span>
+  </div>
