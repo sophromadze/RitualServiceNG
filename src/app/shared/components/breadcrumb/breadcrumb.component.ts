@@ -8,54 +8,8 @@ import { filter } from 'rxjs/operators';
   selector: 'app-breadcrumb',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  template: `
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol class="breadcrumb-list">
-        <li class="breadcrumb-item">
-          <a [routerLink]="[currentLanguage]">
-            <i class="fa-solid fa-home"></i>
-            {{translate('nav.home')}}
-          </a>
-        </li>
-        <li class="breadcrumb-item" *ngFor="let crumb of breadcrumbs; let last = last" [class.active]="last">
-          <span class="separator">/</span>
-          <a *ngIf="!last" [routerLink]="crumb.url">{{crumb.label}}</a>
-          <span *ngIf="last">{{crumb.label}}</span>
-        </li>
-      </ol>
-    </nav>
-  `,
-  styles: [`
-    .breadcrumb {
-      padding: 8px 0;
-      background-color: #f8f9fa;
-    }
-    .breadcrumb-list {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .breadcrumb-item {
-      display: flex;
-      align-items: center;
-    }
-    .breadcrumb-item a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    .breadcrumb-item a:hover {
-      text-decoration: underline;
-    }
-    .breadcrumb-item.active span {
-      color: #6c757d;
-    }
-    .separator {
-      margin: 0 8px;
-      color: #6c757d;
-    }
-  `]
+  templateUrl: './breadcrumb.component.html',
+  styleUrls: ['./breadcrumb.component.scss']
 })
 export class BreadcrumbComponent implements OnInit {
   @Input() currentLanguage: string = 'ka';

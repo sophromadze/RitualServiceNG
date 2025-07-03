@@ -70,18 +70,18 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   whyChooseUsFeatures = [
     {
       icon: 'fa-solid fa-user-tie fa-4x',
-      titleKey: 'about.20_years_experience',
-      descKey: 'about.professional_team'
+      titleKey: 'why_choose.experience',
+      descKey: 'why_choose.subtitle'
     },
     {
       icon: 'fa-regular fa-star fa-4x', 
-      titleKey: 'about.quality_service',
-      descKey: 'about.individual_approach'
+      titleKey: 'why_choose.quality',
+      descKey: 'why_choose.individual_approach'
     },
     {
       icon: 'fa-regular fa-clock fa-4x',
       titleKey: 'contact.24_7_service',
-      descKey: 'contact.agent_visit'
+      descKey: 'why_choose.agent_visit'
     }
   ];
 
@@ -95,11 +95,11 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
     },
     {
-      titleKey: 'services.hearse',
-      descKey: 'services.hearse_desc', 
-      url: '/services/katafalka',
-      image: '/images/katafalkebi.jpg',
-      keywords: 'კატაფალკა, katafalka, კატაფალკის მომსახურება'
+      titleKey: 'services.dressing',
+      descKey: 'services.dressing_desc',
+      url: '/services/micvalebulis-chacma',
+      image: '/images/suit.jpg',
+      keywords: 'მიცვალებულის ჩაცმა, micvalebulis chacma, მოწესრიგება'
     },
     {
       titleKey: 'services.transportation',
@@ -114,6 +114,20 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       url: '/services/qvaze-xatva',
       image: '/images/stonepainting.jpg', 
       keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
+    },
+    {
+      titleKey: 'services.grave_decoration',
+      descKey: 'services.grave_decoration_desc',
+      url: '/services/samarkhis-motsqoba',
+      image: '/images/grave.jpg',
+      keywords: 'სამარხის მოწყობა, samarkhis motsqoba, საფლავის მოპირკეთება'
+    },
+    {
+      titleKey: 'services.metal_letters',
+      descKey: 'services.metal_letters_desc',
+      url: '/services/litonis-asoebit-tsartsera',
+      image: '/images/tomb.jpg',
+      keywords: 'ლითონის ასოებით წარწერა, litonis asoebit tsartsera, მეტალის ასოები'
     }
   ];
 
@@ -130,6 +144,10 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       this.languageService.currentLanguage$.subscribe(language => {
         this.currentLanguage = language;
         this.updateSEO();
+        // Reinitialize Swiper after language change to ensure proper rendering
+        setTimeout(() => {
+          this.reinitializeSwiper();
+        }, 300);
       })
     );
 
@@ -156,7 +174,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
-    if (this.swiper) {
+    if (this.swiper && typeof this.swiper.destroy === 'function') {
       this.swiper.destroy();
     }
   }
@@ -185,10 +203,46 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   private initializeSwiper(): void {
     try {
+      // Check if Swiper container exists
+      const swiperContainer = document.querySelector('.hero-swiper');
+      if (!swiperContainer) {
+        console.warn('Swiper container not found');
+        return;
+      }
+
+      // Check if Swiper is available
+      if (typeof Swiper === 'undefined') {
+        console.warn('Swiper not loaded yet');
+        return;
+      }
+
+      // Check if slides are properly loaded
+      const slides = document.querySelectorAll('.hero-swiper .swiper-slide');
+      
+      if (slides.length < 2) {
+        setTimeout(() => this.initializeSwiper(), 100);
+        return;
+      }
+
+      // Check if slides have proper dimensions (not 0x0)
+      const firstSlide = slides[0] as HTMLElement;
+      if (firstSlide.offsetWidth === 0 || firstSlide.offsetHeight === 0) {
+        setTimeout(() => this.initializeSwiper(), 100);
+        return;
+      }
+
+      // Destroy existing swiper instance if it exists
+      if (this.swiper && typeof this.swiper.destroy === 'function') {
+        this.swiper.destroy();
+      }
+
+      // Enable loop mode since we have 6 slides with proper dimensions
+      const shouldUseLoop = true;
+
       this.swiper = new Swiper('.hero-swiper', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
+        loop: shouldUseLoop,
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
@@ -204,6 +258,16 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       });
     } catch (error) {
       console.error('Error initializing Swiper:', error);
+    }
+  }
+
+  private reinitializeSwiper(): void {
+    // Only reinitialize if Swiper is already loaded
+    if (typeof Swiper !== 'undefined') {
+      // Add a longer delay to ensure DOM is fully updated after language change
+      setTimeout(() => {
+        this.initializeSwiper();
+      }, 200);
     }
   }
 
@@ -366,5 +430,13 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   callPhone(): void {
     window.location.href = 'tel:+995599069898';
+  }
+
+  goToServicePage(): void {
+    this.router.navigate([this.currentLanguage, 'services']);
+  }
+
+  goToPlanningPage(): void {
+    this.router.navigate([this.currentLanguage, 'contact']);
   }
 }

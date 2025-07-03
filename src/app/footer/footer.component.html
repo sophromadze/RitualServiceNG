@@ -10,10 +10,10 @@
               <h3>{{translate('header.company_name')}}</h3>
             </div>
             <p class="company-description">
-              <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) რიტუალ სერვისი - 
-              20 წლიანი გამოცდილების მქონე <strong>სარიტუალო სახლი</strong> (saritualo saxli) 
-              თბილისში. პროფესიონალური <strong>სამგლოვიარო ცერემონიები</strong> და 
-              <strong>დასაფლავების მომსახურება</strong> 24/7.
+              <strong>{{translate('home.funeral_home')}}</strong> {{translate('header.company_name')}} - 
+              {{translate('about.20_years_experience')}} <strong>{{translate('home.ritual_house')}}</strong> 
+              {{translate('locations.tbilisi_branches')}}. {{translate('seo.memorial_ceremonies')}} და 
+              <strong>{{translate('seo.burial_services')}}</strong> 24/7.
             </p>
             
             <div class="footer-contact">
@@ -23,7 +23,7 @@
               </a>
               <div class="footer-hours">
                 <i class="fa-solid fa-clock"></i>
-                <span>24/7 მომსახურება</span>
+                <span>{{translate('footer.24_7_service')}}</span>
               </div>
             </div>
             
@@ -50,36 +50,36 @@
   
           <!-- Services Links -->
           <div class="footer-section services-links">
-            <h4>სარიტუალო მომსახურება</h4>
+            <h4>{{translate('footer.ritual_services')}}</h4>
             <ul>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'damkrdzalavi-biuro']">
-                  <strong>დამკრძალავი ბიურო</strong> - damkrdzalavi biuro
+                  <strong>{{translate('home.funeral_home')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'balzamireba']">
-                  <strong>ბალზამირება</strong> - balzamireba
+                  <strong>{{translate('services.embalming')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'katafalka']">
-                  <strong>კატაფალკა</strong> - katafalka
+                  <strong>{{translate('services.hearse')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'gadasveneba']">
-                  <strong>გადასვენება</strong> - gadasveneba
+                  <strong>{{translate('services.transportation')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'qvaze-xatva']">
-                  <strong>ქვაზე ხატვა</strong> - qvaze xatva
+                  <strong>{{translate('services.stone_engraving')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'services', 'mopirketeba']">
-                  <strong>საფლავის მოპირკეთება</strong> - mopirketeba
+                  <strong>{{translate('services.grave_decoration')}}</strong>
                 </a>
               </li>
             </ul>
@@ -87,80 +87,67 @@
   
           <!-- Products Links -->
           <div class="footer-section products-links">
-            <h4>სარიტუალო პროდუქცია</h4>
+            <h4>{{translate('footer.ritual_products')}}</h4>
             <ul>
-              <li>
+                            <li>
                 <a [routerLink]="[currentLanguage, 'products', 'sasaxleebi']">
-                  <strong>სასახლეები</strong> - sasaxleebi
+                  <strong>{{translate('products.coffins')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'products', 'sudarebi']">
-                  <strong>სუდარები</strong> - sudarebi, sudara
+                  <strong>{{translate('products.shrouds')}}</strong>
                 </a>
               </li>
               <li>
                 <a [routerLink]="[currentLanguage, 'products', 'macivrеbi']">
-                  <strong>მაცივრები</strong> - macivrеbi
+                  <strong>{{translate('products.refrigeration')}}</strong>
                 </a>
               </li>
             </ul>
-  
-            <h5>დამატებითი სერვისები</h5>
-            <ul class="additional-services">
-              <li><strong>მიცვალებულის ჩაცმა</strong> - micvalebulis chacma</li>
-              <li><strong>საპანაშვიდე</strong> - sapanashvide დარბაზი</li>
-              <li><strong>საბანკეტო დარბაზი</strong></li>
-              <li><strong>ფერადი სურათის დამზადება</strong></li>
-              <li><strong>ლითონის ასოებით წარწერა</strong></li>
-            </ul>
+
+
           </div>
   
           <!-- Locations -->
           <div class="footer-section locations">
-            <h4>ფილიალები თბილისში</h4>
+            <h4>{{translate('footer.branches_tbilisi')}}</h4>
             <div class="location-item">
-              <h5>დიღომის ფილიალი</h5>
+              <h5>{{translate('footer.dighomi_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
-                14 ნოდარ ბოხუას ქუჩა, თბილისი
+                {{translate('locations.dighomi')}}
               </p>
             </div>
             <div class="location-item">
-              <h5>გლდნის ფილიალი</h5>
+              <h5>{{translate('footer.gldani_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
-                4 გრ. ოშკელის ქუჩა, თბილისი
+                {{translate('locations.gldani')}}
               </p>
             </div>
             <div class="location-item">
-              <h5>ჯიქიას ფილიალი</h5>
+              <h5>{{translate('footer.jiqia_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
-                96 ალექსანდრე იოსელიანის ქუჩა, თბილისი
+                {{translate('locations.jiqia')}}
               </p>
             </div>
           </div>
   
           <!-- Quick Links -->
           <div class="footer-section quick-links">
-            <h4>სწრაფი ლინკები</h4>
-            <ul>
-              <li><a [routerLink]="[currentLanguage]">მთავარი</a></li>
-              <li><a [routerLink]="[currentLanguage, 'services']">მომსახურება</a></li>
-              <li><a [routerLink]="[currentLanguage, 'products']">პროდუქცია</a></li>
-              <li><a [routerLink]="[currentLanguage, 'about']">ჩვენს შესახებ</a></li>
-              <li><a [routerLink]="[currentLanguage, 'contact']">კონტაქტი</a></li>
-              <li><a [routerLink]="[currentLanguage, 'locations']">ფილიალები</a></li>
+            <h4>{{translate('footer.quick_links')}}</h4>
+                        <ul>
+              <li><a [routerLink]="[currentLanguage]">{{translate('nav.home')}}</a></li>
+              <li><a [routerLink]="[currentLanguage, 'services']">{{translate('nav.services')}}</a></li>
+              <li><a [routerLink]="[currentLanguage, 'products']">{{translate('nav.products')}}</a></li>
+              <li><a [routerLink]="[currentLanguage, 'about']">{{translate('nav.about')}}</a></li>
+              <li><a [routerLink]="[currentLanguage, 'contact']">{{translate('nav.contact')}}</a></li>
+              <li><a [routerLink]="[currentLanguage, 'locations']">{{translate('nav.locations')}}</a></li>
             </ul>
-  
-            <h5>სპეციალიზებული სერვისები</h5>
-            <ul class="specialized-services">
-              <li><strong>დაკრძალვის სერვისები</strong> - dakrdzalva</li>
-              <li><strong>სამგლოვიარო ცერემონიები</strong> - samgloviaro</li>
-              <li><strong>დასაფლავების მომსახურება</strong> - dasaflaveba</li>
-              <li><strong>მიცვალებული</strong> - micvalebuli მომზადება</li>
-            </ul>
+
+
           </div>
         </div>
       </div>
@@ -170,10 +157,10 @@
     <div class="footer-seo-section">
       <div class="container">
         <div class="seo-keywords-footer">
-          <h5>ძიების სიტყვები - Search Keywords</h5>
+          <h5>{{translate('footer.search_keywords')}}</h5>
           <div class="keywords-grid">
             <div class="keywords-column">
-              <h6>ქართული Keywords</h6>
+              <h6>{{translate('footer.georgian_keywords')}}</h6>
               <p>
                 <strong>დამკრძალავი ბიურო</strong>, <strong>ბალზამირება</strong>, 
                 <strong>კატაფალკა</strong>, <strong>ქვაზე ხატვა</strong>, 
@@ -187,7 +174,7 @@
             </div>
             
             <div class="keywords-column">
-              <h6>Transliteration Keywords</h6>
+              <h6>{{translate('footer.transliteration_keywords')}}</h6>
               <p>
                 <strong>damkrdzalavi biuro</strong>, <strong>balzamireba</strong>, 
                 <strong>katafalka</strong>, <strong>qvaze xatva</strong>, 
@@ -201,7 +188,7 @@
             </div>
   
             <div class="keywords-column">
-              <h6>Russian Keywords</h6>
+              <h6>{{translate('footer.russian_keywords')}}</h6>
               <p>
                 <strong>похоронный дом</strong>, <strong>бальзамирование</strong>, 
                 <strong>катафалк</strong>, <strong>роспись на камне</strong>, 
@@ -223,17 +210,17 @@
       <div class="container">
         <div class="footer-bottom-content">
           <div class="copyright">
-            <p>&copy; 2025 <strong>{{translate('header.company_name')}}</strong> - ყველა უფლება დაცულია</p>
+            <p>&copy; 2025 <strong>{{translate('header.company_name')}}</strong> - {{translate('footer.all_rights_reserved')}}</p>
             <p class="seo-text">
-              <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) - 
-              პროფესიონალური <strong>სარიტუალო სახლი</strong> თბილისში
+              <strong>{{translate('home.funeral_home')}}</strong> - 
+              {{translate('about.professional_team')}} <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}
             </p>
           </div>
           
           <div class="footer-legal">
-            <a href="/privacy-policy">კონფიდენციალურობის პოლიტიკა</a>
-            <a href="/terms-of-service">მომსახურების წესები</a>
-            <a href="/sitemap">საიტის რუკა</a>
+            <a href="/privacy-policy">{{translate('footer.privacy_policy')}}</a>
+            <a href="/terms-of-service">{{translate('footer.terms_of_service')}}</a>
+            <a href="/sitemap">{{translate('footer.sitemap')}}</a>
           </div>
         </div>
       </div>

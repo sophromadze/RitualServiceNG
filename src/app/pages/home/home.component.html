@@ -1,6 +1,6 @@
 <!-- SEO-focused hidden headings for better keyword indexing -->
 <h1 class="seo-hidden">{{translate('home.funeral_home')}} - {{translate('header.company_name')}}</h1>
-<h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}} - damkrdzalavi biuro</h2>
+<h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}}</h2>
 <h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}}</h3>
 
 <!-- Hero Section with Swiper -->
@@ -103,10 +103,9 @@
             <h2>{{translate('seo.cemetery')}} {{translate('services.stone_engraving')}}</h2>
             <ul class="service-list">
               <li>{{translate('services.grave_decoration')}}</li>
-              <li>ქვაზე ხატვა - qvaze xatva</li>
+              <li>{{translate('services.stone_engraving')}}</li>
               <li>{{translate('seo.colored_photo')}}</li>
               <li>{{translate('seo.metal_letters')}}</li>
-              <li>საფლავის მოპირკეთება - mopirketeba</li>
             </ul>
             <div class="cta-buttons">
               <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
@@ -126,7 +125,7 @@
         <div class="slide-content">
           <div class="slide-text">
             <h2>{{translate('services.transportation')}}</h2>
-            <p>გადასვენება - gadasveneba რაიონში და საზღვარგარეთ</p>
+            <p>გადასვენება - რაიონში და საზღვარგარეთ</p>
             <div class="cta-buttons">
               <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
                 <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
@@ -149,12 +148,40 @@
   </div>
 </main>
 
+<!-- What Makes Us Different Section -->
+<section id="what-makes-us-different" class="what-makes-us-section">
+  <div class="container">
+    <div class="diff-container">
+      <div class="diff-head">
+        <h3>{{translate('what_makes_us.title')}}</h3>
+        <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
+      </div>
+      <div class="diff-content">
+        <div class="diff-feature">
+          <img src="/images/experience.png" alt="გამოცდილება" class="feature-icon">
+          <h3>{{translate('what_makes_us.professionalism.title')}}</h3>
+          <p>{{translate('what_makes_us.professionalism.desc')}}</p>
+        </div>
+        <div class="diff-feature">
+          <img src="/images/trust.png" alt="სანდოობა" class="feature-icon">
+          <h3>{{translate('what_makes_us.trust.title')}}</h3>
+          <p>{{translate('what_makes_us.trust.desc')}}</p>
+        </div>
+        <div class="diff-feature">
+          <img src="/images/care1.png" alt="ზრუნვა" class="feature-icon">
+          <h3>{{translate('what_makes_us.care.title')}}</h3>
+          <p>{{translate('what_makes_us.care.desc')}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Services Section with Keywords -->
 <section id="services-section" class="services-section">
   <div class="container">
     <div class="section-header">
       <h2>{{translate('nav.services')}} - {{translate('seo.funeral_services')}}</h2>
-      <p>{{translate('services.embalming')}} - ბალზამირება, {{translate('services.hearse')}} - კატაფალკა, {{translate('services.stone_engraving')}} - ქვაზე ხატვა</p>
     </div>
     
     <div class="services-grid">
@@ -177,43 +204,80 @@
   </div>
 </section>
 
-<!-- Why Choose Us Section -->
-<section id="why-choose-us" class="why-choose-section">
+<!-- Ritual Service Description Section -->
+<section class="rs-description-section">
   <div class="container">
-    <div class="section-header">
-      <h2>რატომ უნდა აირჩიოთ {{translate('header.company_name')}}?</h2>
-      <p>{{translate('home.damkrdzalavi_biuro')}} - damkrdzalavi biuro პროფესიონალური გუნდით</p>
-    </div>
-    
-    <div class="features-grid">
-      <div class="feature-card" *ngFor="let feature of whyChooseUsFeatures">
-        <i [class]="feature.icon"></i>
-        <h3>{{translate(feature.titleKey)}}</h3>
-        <p>{{translate(feature.descKey)}}</p>
+    <div class="rs-description">
+      <div class="rs-description-img"></div>
+      <div class="rs-description-content">
+        <h3>{{translate('ritual_service.title')}}</h3>
+        <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
+        <p>{{translate('ritual_service.description')}}</p>
+        <button class="btn btn-primary" (click)="goToServicePage()">
+          <i class="fa-solid fa-arrow-right"></i>
+          {{translate('ritual_service.view_services')}}
+        </button>
       </div>
-    </div>
-    
-    <div class="cta-section">
-      <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-        <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-      </a>
     </div>
   </div>
 </section>
 
-<!-- SEO Content Section with All Keywords -->
-<section class="seo-content-section">
+
+
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-section">
+  <div class="container">
+    <div class="why-rs-container">
+      <div class="why-rs-title">
+        <h2>{{translate('why_choose_ritual.title')}}</h2>
+        <p>{{translate('why_choose_ritual.subtitle')}}</p>
+      </div>
+      
+      <div class="why-rs-content">
+        <div class="why-rs-feature">
+          <i class="fa-solid fa-user-tie fa-4x"></i>
+          <h4>{{translate('why_choose_ritual.experience.title')}}</h4>
+          <p>{{translate('why_choose_ritual.experience.desc')}}</p>
+        </div>
+        <div class="why-rs-feature">
+          <i class="fa-regular fa-star fa-4x"></i>
+          <h4>{{translate('why_choose_ritual.quality.title')}}</h4>
+          <p>{{translate('why_choose_ritual.quality.desc')}}</p>
+        </div>
+        <div class="why-rs-feature">
+          <i class="fa-regular fa-clock fa-4x"></i>
+          <h4>{{translate('why_choose_ritual.support.title')}}</h4>
+          <p>{{translate('why_choose_ritual.support.desc')}}</p>
+        </div>
+      </div>
+      
+      <div class="why-rs-btns">
+        <button class="btn btn-primary" (click)="goToPlanningPage()">
+          <i class="fa-solid fa-calendar-check"></i>
+          {{translate('why_choose_ritual.plan_funeral')}}
+        </button>
+        <a href="tel:+995599069898" class="btn btn-accent" (click)="callPhone()">
+          <i class="fa-solid fa-phone-volume"></i>
+          {{translate('why_choose_ritual.contact_24_7')}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO Content Section with All Keywords - Hidden from users but accessible to search engines -->
+<section class="seo-content-section seo-hidden">
   <div class="container">
     <div class="seo-content">
       <h2>{{translate('home.ritual_house')}} - სარიტუალო სახლი მომსახურება</h2>
       
       <div class="seo-text">
-        <h3>დამკრძალავი ბიურო - damkrdzalavi biuro თბილისში</h3>
+        <h3>{{translate('home.funeral_home')}} {{translate('locations.tbilisi_branches')}}</h3>
         <p>
-          {{translate('header.company_name')}} არის პროფესიონალური <strong>დამკრძალავი ბიურო</strong> და 
-          <strong>სარიტუალო სახლი</strong> თბილისში. ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა:
-          <strong>ბალზამირება</strong> (balzamireba), <strong>კატაფალკა</strong> (katafalka), 
-          <strong>ქვაზე ხატვა</strong> (qvaze xatva), <strong>გადასვენება</strong> (gadasveneba).
+          {{translate('header.company_name')}} არის პროფესიონალური <strong>{{translate('home.funeral_home')}}</strong> და 
+          <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}. ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა:
+          <strong>{{translate('services.embalming')}}</strong>, <strong>{{translate('services.hearse')}}</strong>, 
+          <strong>{{translate('services.stone_engraving')}}</strong>, <strong>{{translate('services.transportation')}}</strong>.
         </p>
         
         <h4>ჩვენი მთავარი სერვისები:</h4>
@@ -255,8 +319,8 @@
 
         <p>
           ჩვენი <strong>სარიტუალო სახლი</strong> (saritualo saxli) უზრუნველყოფს <strong>მიცვალებულის</strong> 
-          ღირსეულ მომსახურებას. <strong>damkrdzalavi biuro</strong> რიტუალ სერვისი - თქვენი დანდობილი პარტნერი 
-          რთულ დროს. დაგვიკავშირდით <strong>+(995) 599 06 98 98</strong> - ჩვენ ვართ 24 საათის განმავლობაში 
+          ღირსეულ მომსახურებას. <strong>{{translate('home.damkrdzalavi_biuro')}}</strong> {{translate('header.company_name')}} - თქვენი დანდობილი პარტნერი 
+          რთულ დროს. დაგვიკავშირდით <strong>{{translate('header.phone')}}</strong> - ჩვენ ვართ 24 საათის განმავლობაში 
           თქვენი გვერდით.
         </p>
       </div>

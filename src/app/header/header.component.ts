@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isServicesDropdownOpen = false;
   isProductsDropdownOpen = false;
+  lastClickedLink: string | null = null;
 
   // Navigation structure with SEO-focused URLs
   navigation = {
@@ -128,5 +129,13 @@ export class HeaderComponent implements OnInit {
 
   getCurrentProducts() {
     return this.navigation[this.currentLanguage as keyof typeof this.navigation]?.products || this.navigation.ka.products;
+  }
+
+  onLinkClick(linkId: string): void {
+    this.lastClickedLink = linkId;
+  }
+
+  isLinkActive(linkId: string): boolean {
+    return this.lastClickedLink === linkId;
   }
 }

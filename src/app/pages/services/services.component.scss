@@ -48,8 +48,7 @@
 }
 
 .service-item:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-color);
 }
 
@@ -83,7 +82,7 @@
 }
 
 .service-item:hover .service-image img {
-  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .service-overlay {
@@ -219,8 +218,7 @@
 }
 
 .category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
@@ -232,7 +230,6 @@
 }
 
 .category-card:hover i {
-  transform: scale(1.1);
   color: var(--primary-color);
 }
 

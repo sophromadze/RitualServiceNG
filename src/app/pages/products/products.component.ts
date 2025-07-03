@@ -24,7 +24,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       titleKey: 'products.coffins',
       descKey: 'products.coffins_desc',
       url: 'sasaxleebi',
-      image: '/assets/images/coffins.jpg',
+      image: '/images/coffins.jpg',
       keywords: 'სასახლეები, sasaxleebi, კუბო, sarkofagi',
       types: ['ქართული სტილი', 'უკრაინული სტილი', 'იტალიური სტილი', 'ხის სასახლეები', 'ლუქს სასახლეები']
     },
@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       titleKey: 'products.shrouds',
       descKey: 'products.shrouds_desc',
       url: 'sudarebi',
-      image: '/assets/images/shrouds.jpg',
+      image: '/images/shrouds.jpg',
       keywords: 'სუდარები, sudarebi, sudara, სუდარა',
       types: ['ტრადიციული სუდარები', 'თანამედროვე სუდარები', 'ბრინჯაოს სუდარები', 'შავი სუდარები', 'თეთრი სუდარები']
     },
@@ -42,7 +42,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
       titleKey: 'products.refrigeration',
       descKey: 'products.refrigeration_desc',
       url: 'macivrеbi',
-      image: '/assets/images/refrigeration.jpg',
+      image: '/images/refrigeration.jpg',
       keywords: 'მაცივრები, macivrеbi, სასახლე მაცივარი',
       types: ['ამერიკული მაცივრები', 'სტანდარტული მაცივრები', 'სასახლე-მაცივრები', 'ლუქს მაცივრები']
     }

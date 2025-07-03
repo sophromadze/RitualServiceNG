@@ -53,8 +53,7 @@
 }
 
 .category-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-color);
 }
 
@@ -88,7 +87,7 @@
 }
 
 .category-card:hover .category-image img {
-  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .category-overlay {
@@ -220,8 +219,7 @@
 }
 
 .product-item:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
@@ -255,7 +253,7 @@
 }
 
 .product-item:hover .product-image img {
-  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .product-content {

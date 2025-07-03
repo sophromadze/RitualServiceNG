@@ -6,8 +6,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="language-dropdown">
-      <button class="dropdown-button" (click)="toggleDropdown()">
+    <div class="language-dropdown" 
+         (mouseenter)="isOpen = true" 
+         (mouseleave)="isOpen = false">
+      <button class="dropdown-button">
         <img [src]="getFlagSrc()" [alt]="currentLanguage" class="flag-img">
         <span>{{getLanguageName()}}</span>
         <i class="fa-solid fa-chevron-down"></i>
@@ -39,6 +41,9 @@ import { CommonModule } from '@angular/common';
       background: white;
       cursor: pointer;
     }
+    .dropdown-button:focus {
+      outline: none !important;
+    }
     .dropdown-content {
       position: absolute;
       top: 100%;
@@ -63,6 +68,9 @@ import { CommonModule } from '@angular/common';
     .language-option:hover {
       background-color: #f5f5f5;
     }
+    .language-option:focus {
+      outline: none !important;
+    }
     .language-option.hidden {
       display: none;
     }
@@ -83,10 +91,6 @@ export class LanguageSelectorComponent {
     { code: 'en', name: 'ENG', flag: '/images/gb.svg' },
     { code: 'ru', name: 'РУС', flag: '/images/ru.svg' }
   ];
-
-  toggleDropdown() {
-    this.isOpen = !this.isOpen;
-  }
 
   selectLanguage(langCode: string) {
     this.languageChange.emit(langCode);

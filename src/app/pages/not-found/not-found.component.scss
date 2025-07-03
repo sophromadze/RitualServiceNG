@@ -114,8 +114,6 @@
 
 .search-button:hover {
   background: var(--accent-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 /* Quick Links */
@@ -153,8 +151,6 @@
 .quick-link:hover {
   background: var(--primary-color);
   color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 

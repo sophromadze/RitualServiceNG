@@ -1,284 +1,262 @@
 <header class="site-header">
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <div class="nav-container">
-        
-        <!-- Logo and Company Name -->
-        <div class="logo-section">
-          <a [routerLink]="[currentLanguage]" class="logo-link">
-            <img src="/images/logo.png" 
-                 alt="რიტუალ სერვისი - დამკრძალავი ბიურო" 
-                 class="logo-img"
-                 width="60" 
-                 height="60">
-            <h1 class="company-name">{{translate('header.company_name')}}</h1>
-          </a>
-        </div>
-  
-        <!-- Desktop Navigation -->
-        <div class="desktop-nav">
-          <div class="nav-menu">
-            
-            <!-- Services Dropdown -->
-            <div class="dropdown nav-item" 
-                 [class.active]="isServicesDropdownOpen"
-                 (mouseenter)="toggleServicesDropdown()"
-                 (mouseleave)="closeAllDropdowns()">
-              <button class="dropdown-trigger" 
-                      [attr.aria-expanded]="isServicesDropdownOpen"
-                      aria-haspopup="true">
-                {{translate('nav.services')}} 
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              
-              <div class="dropdown-menu services-dropdown" 
-                   [class.show]="isServicesDropdownOpen"
-                   role="menu">
-                <div class="dropdown-header">
-                  <h3>{{translate('seo.funeral_services')}}</h3>
-                  <p>დამკრძალავი ბიურო - damkrdzalavi biuro</p>
-                </div>
-                
-                <div class="dropdown-grid">
-                  <a *ngFor="let service of getCurrentServices()" 
-                     [href]="service.url"
-                     class="dropdown-item service-item"
-                     (click)="navigateTo(service.url); $event.preventDefault()"
-                     role="menuitem">
-                    <span class="service-name">{{service.name}}</span>
-                    <small class="service-keywords">{{service.keywords}}</small>
-                  </a>
-                </div>
-                
-                <div class="dropdown-footer">
-                  <a [href]="'/' + currentLanguage + '/services'" 
-                     class="view-all-link"
-                     (click)="navigateTo('/' + currentLanguage + '/services'); $event.preventDefault()">
-                    {{translate('cta.learn_more')}} →
-                  </a>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Products Dropdown -->
-            <div class="dropdown nav-item"
-                 [class.active]="isProductsDropdownOpen"
-                 (mouseenter)="toggleProductsDropdown()"
-                 (mouseleave)="closeAllDropdowns()">
-              <button class="dropdown-trigger"
-                      [attr.aria-expanded]="isProductsDropdownOpen" 
-                      aria-haspopup="true">
-                {{translate('nav.products')}}
-                <i class="fa-solid fa-chevron-down"></i>
-              </button>
-              
-              <div class="dropdown-menu products-dropdown"
-                   [class.show]="isProductsDropdownOpen"
-                   role="menu">
-                <div class="dropdown-header">
-                  <h3>სარიტუალო პროდუქცია</h3>
-                  <p>სასახლეები, სუდარები, მაცივრები</p>
-                </div>
-                
-                <div class="dropdown-grid">
-                  <a *ngFor="let product of getCurrentProducts()"
-                     [href]="product.url" 
-                     class="dropdown-item product-item"
-                     (click)="navigateTo(product.url); $event.preventDefault()"
-                     role="menuitem">
-                    <span class="product-name">{{product.name}}</span>
-                    <small class="product-keywords">{{product.keywords}}</small>
-                  </a>
-                </div>
-                
-                <div class="dropdown-footer">
-                  <a [href]="'/' + currentLanguage + '/products'"
-                     class="view-all-link"
-                     (click)="navigateTo('/' + currentLanguage + '/products'); $event.preventDefault()">
-                    {{translate('cta.learn_more')}} →
-                  </a>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Direct Navigation Links -->
-            <a [routerLink]="[currentLanguage, 'about']" 
-               class="nav-link"
-               routerLinkActive="active">
-              {{translate('nav.about')}}
-            </a>
-            
-            <a [routerLink]="[currentLanguage, 'contact']"
-               class="nav-link" 
-               routerLinkActive="active">
-              {{translate('nav.contact')}}
-            </a>
-            
-            <a [routerLink]="[currentLanguage, 'locations']"
-               class="nav-link"
-               routerLinkActive="active">
-              {{translate('nav.locations')}}
-            </a>
-          </div>
-  
-          <!-- Phone and Language -->
-          <div class="header-actions">
-            <a href="tel:+995599069898" 
-               class="phone-link"
-               (click)="callPhone(); $event.preventDefault()"
-               title="{{translate('header.call_24_7')}}">
-              <i class="fa-solid fa-phone"></i>
-              <span class="phone-number">{{translate('header.phone')}}</span>
-            </a>
-            
-            <app-language-selector 
-              [currentLanguage]="currentLanguage"
-              (languageChange)="onLanguageChange($event)">
-            </app-language-selector>
-            
-            <!-- Social Links -->
-            <div class="social-links">
-              <a href="https://www.facebook.com/profile.php?id=100075978162042" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="social-link facebook"
-                 title="Facebook">
-                <i class="fa-brands fa-square-facebook fa-2x"></i>
-              </a>
-              <a href="https://www.memento.ge/" 
-                 target="_blank"
-                 rel="noopener noreferrer" 
-                 class="social-link memento"
-                 title="Memento">
-                <img src="/images/memento.svg" 
-                     alt="Memento"
-                     width="34"
-                     height="34">
-              </a>
-            </div>
-          </div>
-        </div>
-  
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <!-- Brand Logo -->
+      <div class="navbar-brand">
+        <a [routerLink]="[currentLanguage]" 
+           class="brand-link"
+           [attr.aria-label]="translate('header.company_name')">
+          <img src="/images/logo.png" 
+               alt="Ritual Service Logo"
+               class="brand-logo"
+               width="40" 
+               height="40">
+          <span class="brand-text">{{translate('header.company_name')}}</span>
+        </a>
+      </div>
+
+      <!-- Right side elements -->
+      <div class="navbar-right">
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle"
-                (click)="toggleMobileMenu()"
+                type="button"
+                [class.active]="isMenuOpen"
+                (click)="isMenuOpen = !isMenuOpen"
                 [attr.aria-expanded]="isMenuOpen"
-                aria-label="Toggle mobile menu">
+                aria-controls="mobile-menu"
+                aria-label="Toggle navigation menu">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
         </button>
-      </div>
-  
-      <!-- Mobile Navigation -->
-      <div class="mobile-nav" 
-           [class.open]="isMenuOpen"
-           role="navigation"
-           aria-label="Mobile navigation">
-        
-        <!-- Mobile Services -->
-        <div class="mobile-nav-section">
-          <button class="mobile-section-toggle"
-                  (click)="toggleServicesDropdown()">
-            {{translate('nav.services')}}
-            <i class="fa-solid fa-chevron-down" 
-               [class.rotated]="isServicesDropdownOpen"></i>
-          </button>
-          
-          <div class="mobile-dropdown" 
-               [class.open]="isServicesDropdownOpen">
-            <div class="mobile-dropdown-header">
-              <h4>დამკრძალავი ბიურო - damkrdzalavi biuro</h4>
-            </div>
-            <a *ngFor="let service of getCurrentServices()"
-               [href]="service.url"
-               class="mobile-nav-link"
-               (click)="navigateTo(service.url); $event.preventDefault()">
-              {{service.name}}
-              <small>{{service.keywords}}</small>
+
+        <!-- Desktop Navigation -->
+        <div class="navbar-nav desktop-nav">
+          <!-- Services Dropdown -->
+          <div class="nav-item dropdown"
+               (mouseenter)="isServicesDropdownOpen = true"
+               (mouseleave)="isServicesDropdownOpen = false">
+            <a [routerLink]="[currentLanguage, 'services']" 
+               class="nav-link dropdown-toggle"
+               [class.active]="isServicesDropdownOpen"
+               [attr.aria-expanded]="isServicesDropdownOpen"
+               aria-haspopup="true">
+              {{translate('nav.services')}}
+              <i class="fa-solid fa-chevron-down"></i>
             </a>
-          </div>
-        </div>
-  
-        <!-- Mobile Products -->
-        <div class="mobile-nav-section">
-          <button class="mobile-section-toggle"
-                  (click)="toggleProductsDropdown()">
-            {{translate('nav.products')}}
-            <i class="fa-solid fa-chevron-down"
-               [class.rotated]="isProductsDropdownOpen"></i>
-          </button>
-          
-          <div class="mobile-dropdown"
-               [class.open]="isProductsDropdownOpen">
-            <div class="mobile-dropdown-header">
-              <h4>სასახლეები, სუდარები, მაცივრები</h4>
+            
+            <div class="dropdown-menu" 
+                 [class.show]="isServicesDropdownOpen"
+                 role="menu">
+              <div class="dropdown-header">
+                <h4>{{translate('seo.funeral_services')}}</h4>
+              </div>
+              <a *ngFor="let service of getCurrentServices()"
+                 [href]="service.url"
+                 class="dropdown-item"
+                 role="menuitem"
+                 (click)="navigateTo(service.url); $event.preventDefault()">
+                {{service.name}}
+                <!-- Hidden SEO keywords -->
+                <span class="seo-hidden-content">{{service.keywords}}</span>
+              </a>
             </div>
-            <a *ngFor="let product of getCurrentProducts()"
-               [href]="product.url"
-               class="mobile-nav-link"
-               (click)="navigateTo(product.url); $event.preventDefault()">
-              {{product.name}}
-              <small>{{product.keywords}}</small>
-            </a>
           </div>
-        </div>
-  
-        <!-- Mobile Direct Links -->
-        <a [routerLink]="[currentLanguage, 'about']" 
-           class="mobile-nav-link main-link"
-           (click)="isMenuOpen = false">
-          {{translate('nav.about')}}
-        </a>
-        
-        <a [routerLink]="[currentLanguage, 'contact']"
-           class="mobile-nav-link main-link"
-           (click)="isMenuOpen = false">
-          {{translate('nav.contact')}}
-        </a>
-        
-        <a [routerLink]="[currentLanguage, 'locations']"
-           class="mobile-nav-link main-link"
-           (click)="isMenuOpen = false">
-          {{translate('nav.locations')}}
-        </a>
-  
-        <!-- Mobile Phone -->
-        <div class="mobile-contact">
-          <a href="tel:+995599069898" 
-             class="mobile-phone-link"
-             (click)="callPhone(); $event.preventDefault()">
-            <i class="fa-solid fa-phone-volume"></i>
-            {{translate('header.call_24_7')}}
+
+          <!-- Products Dropdown -->
+          <div class="nav-item dropdown"
+               (mouseenter)="isProductsDropdownOpen = true"
+               (mouseleave)="isProductsDropdownOpen = false">
+            <a [routerLink]="[currentLanguage, 'products']" 
+               class="nav-link dropdown-toggle"
+               [class.active]="isProductsDropdownOpen"
+               [attr.aria-expanded]="isProductsDropdownOpen"
+               aria-haspopup="true">
+              {{translate('nav.products')}}
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            
+            <div class="dropdown-menu" 
+                 [class.show]="isProductsDropdownOpen"
+                 role="menu">
+              <div class="dropdown-header">
+                <h4>{{translate('products.coffins')}}, {{translate('products.shrouds')}}, {{translate('products.refrigeration')}}</h4>
+              </div>
+              <a *ngFor="let product of getCurrentProducts()"
+                 [href]="product.url"
+                 class="dropdown-item"
+                 role="menuitem"
+                 (click)="navigateTo(product.url); $event.preventDefault()">
+                {{product.name}}
+                <!-- Hidden SEO keywords -->
+                <span class="seo-hidden-content">{{product.keywords}}</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Navigation Links -->
+          <a [routerLink]="[currentLanguage, 'about']" 
+             class="nav-link"
+             [class.active-border]="isLinkActive('about')"
+             (click)="onLinkClick('about')">
+            {{translate('nav.about')}}
+          </a>
+          
+          <a [routerLink]="[currentLanguage, 'contact']" 
+             class="nav-link"
+             [class.active-border]="isLinkActive('contact')"
+             (click)="onLinkClick('contact')">
+            {{translate('nav.contact')}}
+          </a>
+          
+          <a [routerLink]="[currentLanguage, 'locations']" 
+             class="nav-link"
+             [class.active-border]="isLinkActive('locations')"
+             (click)="onLinkClick('locations')">
+            {{translate('nav.locations')}}
           </a>
         </div>
-  
-        <!-- Mobile Language Selector -->
-        <div class="mobile-language">
+
+        <!-- Contact Info -->
+        <div class="navbar-contact desktop-only">
+          <a href="tel:+995599069898" 
+             class="contact-phone"
+             (click)="callPhone(); $event.preventDefault()"
+             [attr.aria-label]="translate('header.call_24_7')">
+            <i class="fa-solid fa-phone-volume"></i>
+            <span class="phone-number">+(995) 599 06 98 98</span>
+          </a>
+        </div>
+
+        <!-- Language Selector -->
+        <div class="navbar-language desktop-only">
           <app-language-selector 
             [currentLanguage]="currentLanguage"
             (languageChange)="onLanguageChange($event)">
           </app-language-selector>
         </div>
       </div>
-    </nav>
-  </header>
-  
-  <!-- SEO-focused breadcrumb -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-    <app-breadcrumb [currentLanguage]="currentLanguage"></app-breadcrumb>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu"
+         id="mobile-menu"
+         [class.open]="isMenuOpen"
+         [attr.aria-hidden]="!isMenuOpen">
+      
+      <!-- Mobile Services -->
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-header"
+             (click)="isServicesDropdownOpen = !isServicesDropdownOpen">
+          <span>{{translate('nav.services')}}</span>
+          <i class="fa-solid fa-chevron-down" 
+             [class.rotated]="isServicesDropdownOpen"></i>
+        </div>
+        
+        <div class="mobile-dropdown" [class.open]="isServicesDropdownOpen">
+          <div class="mobile-dropdown-header">
+            <h4>{{translate('seo.funeral_services')}}</h4>
+          </div>
+          <a *ngFor="let service of getCurrentServices()"
+             [href]="service.url"
+             class="mobile-nav-link"
+             (click)="navigateTo(service.url); $event.preventDefault()">
+            {{service.name}}
+            <!-- Hidden SEO keywords -->
+            <span class="seo-hidden-content">{{service.keywords}}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Products -->
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-header"
+             (click)="isProductsDropdownOpen = !isProductsDropdownOpen">
+          <span>{{translate('nav.products')}}</span>
+          <i class="fa-solid fa-chevron-down" 
+             [class.rotated]="isProductsDropdownOpen"></i>
+        </div>
+        
+        <div class="mobile-dropdown" [class.open]="isProductsDropdownOpen">
+          <div class="mobile-dropdown-header">
+            <h4>{{translate('products.coffins')}}, {{translate('products.shrouds')}}, {{translate('products.refrigeration')}}</h4>
+          </div>
+          <a *ngFor="let product of getCurrentProducts()"
+             [href]="product.url"
+             class="mobile-nav-link"
+             (click)="navigateTo(product.url); $event.preventDefault()">
+            {{product.name}}
+            <!-- Hidden SEO keywords -->
+            <span class="seo-hidden-content">{{product.keywords}}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile Direct Links -->
+      <a [routerLink]="[currentLanguage, 'about']" 
+         class="mobile-nav-link main-link"
+         [class.active-border]="isLinkActive('about')"
+         (click)="isMenuOpen = false; onLinkClick('about')">
+        {{translate('nav.about')}}
+      </a>
+      
+      <a [routerLink]="[currentLanguage, 'contact']"
+         class="mobile-nav-link main-link"
+         [class.active-border]="isLinkActive('contact')"
+         (click)="isMenuOpen = false; onLinkClick('contact')">
+        {{translate('nav.contact')}}
+      </a>
+      
+      <a [routerLink]="[currentLanguage, 'locations']"
+         class="mobile-nav-link main-link"
+         [class.active-border]="isLinkActive('locations')"
+         (click)="isMenuOpen = false; onLinkClick('locations')">
+        {{translate('nav.locations')}}
+      </a>
+
+      <!-- Mobile Phone -->
+      <div class="mobile-contact">
+        <a href="tel:+995599069898" 
+           class="mobile-phone-link"
+           (click)="callPhone(); $event.preventDefault()">
+          <i class="fa-solid fa-phone-volume"></i>
+          {{translate('header.call_24_7')}}
+        </a>
+      </div>
+
+      <!-- Mobile Language Selector -->
+      <div class="mobile-language">
+        <app-language-selector 
+          [currentLanguage]="currentLanguage"
+          (languageChange)="onLanguageChange($event)">
+        </app-language-selector>
+      </div>
+    </div>
   </nav>
+</header>
+
+<!-- SEO-focused breadcrumb -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <app-breadcrumb [currentLanguage]="currentLanguage"></app-breadcrumb>
+</nav>
+
+<!-- Hidden SEO content for better indexing - PROPERLY HIDDEN -->
+<div class="seo-hidden-content" aria-hidden="true">
+  <!-- Primary SEO Headers -->
+  <h1 class="seo-invisible">რიტუალ სერვისი - დამკრძალავი ბიურო თბილისში</h1>
+  <h2 class="seo-invisible">damkrძალავი biuro - სარიტუალო სახლი</h2>
   
-  <!-- Hidden SEO content for better indexing -->
-  <div class="seo-hidden-content" aria-hidden="true">
-    <h2>რიტუალ სერვისი - დამკრძალავი ბიურო თბილისში</h2>
+  <!-- SEO Content Paragraphs -->
+  <div class="seo-invisible">
     <p>
-      <strong>damkrdzalavi biuro</strong> - პროფესიონალური <strong>სარიტუალო სახლი</strong>. 
-      <strong>ბალზამირება</strong> (balzamireba), <strong>კატაფალკა</strong> (katafalka), 
-      <strong>ქვაზე ხატვა</strong> (qvaze xatva), <strong>გადასვენება</strong> (gadasveneba), 
-      <strong>საფლავის მოპირკეთება</strong> (mopirketeba).
+      <span>damkrძალავი biuro</span> - პროფესიონალური <span>სარიტუალო სახლი</span>. 
+      <span>ბალზამირება</span> (balzamireba), <span>კატაფალკა</span> (katafalka), 
+      <span>ქვაზე ხატვა</span> (qvaze xatva), <span>გადასვენება</span> (gadasveneba), 
+      <span>საფლავის მოპირკეთება</span> (mopirketeba).
     </p>
     
-    <ul>
+    <!-- SEO Keywords List -->
+    <ul class="seo-keywords-hidden">
       <li>დაკრძალვის სერვისები - dakrdzalva</li>
       <li>მიცვალებული - micvalebuli</li>
       <li>მიცვალებულის ჩაცმა - micvalebulis chacma</li>
@@ -287,5 +265,64 @@
       <li>საპანაშვიდე - sapanashvide</li>
       <li>სუდარა - sudara</li>
       <li>სასახლეები - sasaxleebi</li>
+      <li>მაცივრები - macivrები</li>
+      <li>ფერადი სურათის დამზადება</li>
+      <li>ლითონის ასოებით წარწერა</li>
+      <li>რაიონში გადასვენება</li>
+      <li>საზღვარგარეთ გადასვენება</li>
     </ul>
+
+    <!-- Alternative spellings and transliterations -->
+    <div class="seo-keywords-hidden">
+      <span>ritual service</span>, <span>rituali servisi</span>, <span>ritualuri servisi</span>,
+      <span>funeral home tbilisi</span>, <span>georgian funeral services</span>, 
+      <span>tbilisi damkrძალavi biuro</span>, <span>balzamirebis servisi</span>,
+      <span>katafalka tbilisi</span>, <span>gadasveneba saqartveloshi</span>
+    </div>
   </div>
+</div>
+
+<!-- Structured Data (JSON-LD) - Hidden from view -->
+<script type="application/ld+json" class="seo-structured-data">
+{
+  "@context": "https://schema.org",
+  "@type": "FuneralHome",
+  "name": "Ritual Service",
+  "alternateName": "რიტუალ სერვისი",
+  "description": "Professional funeral home in Tbilisi offering complete funeral services",
+  "url": "https://ritualservice.ge",
+  "telephone": "+995599069898",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tbilisi",
+    "addressCountry": "GE"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Funeral Services",
+    "itemListElement": [
+      {
+        "@type": "Service",
+        "name": "Embalming",
+        "alternateName": "ბალზამირება"
+      },
+      {
+        "@type": "Service", 
+        "name": "Hearse Service",
+        "alternateName": "კატაფალკა"
+      },
+      {
+        "@type": "Service",
+        "name": "Stone Engraving", 
+        "alternateName": "ქვაზე ხატვა"
+      },
+      {
+        "@type": "Service",
+        "name": "Transportation",
+        "alternateName": "გადასვენება"
+      }
+    ]
+  }
+}
+</script>

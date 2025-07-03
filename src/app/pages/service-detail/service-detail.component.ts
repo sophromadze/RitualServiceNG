@@ -67,9 +67,9 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       longDescKey: 'services.embalming_long',
       image: '/images/embalming-main.jpg',
       gallery: [
-        '/assets/images/embalming-1.jpg',
-        '/assets/images/embalming-2.jpg',
-        '/assets/images/embalming-process.jpg'
+        '/images/embalming-1.jpg',
+        '/images/embalming-2.jpg',
+        '/images/embalming-process.jpg'
       ],
       keywords: ['ბალზამირება', 'balzamireba', 'მიცვალებულის მომზადება', 'embalming'],
       relatedServices: ['dressing', 'funeral-home', 'transportation'],
@@ -92,11 +92,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.hearse',
       descKey: 'services.hearse_desc', 
       longDescKey: 'services.hearse_long',
-      image: '/assets/images/hearse-main.jpg',
+      image: '/images/hearse-main.jpg',
       gallery: [
-        '/assets/images/katafalkebi2.jpg',
-        '/assets/images/katafalkebi3.jpg',
-        '/assets/images/hearse-luxury.jpg'
+        '/images/katafalkebi2.jpg',
+        '/images/katafalkebi3.jpg',
+        '/images/hearse-luxury.jpg'
       ],
       keywords: ['კატაფალკა', 'katafalka', 'კატაფალკის მომსახურება', 'hearse service'],
       relatedServices: ['transportation', 'funeral-home', 'embalming'],
@@ -118,11 +118,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.transportation',
       descKey: 'services.transportation_desc',
       longDescKey: 'services.transportation_long', 
-      image: '/assets/images/transportation-main.jpg',
+      image: '/images/transportation-main.jpg',
       gallery: [
-        '/assets/images/microbus.jpg',
-        '/assets/images/international-transport.jpg',
-        '/assets/images/regional-transport.jpg'
+        '/images/microbus.jpg',
+        '/images/international-transport.jpg',
+        '/images/regional-transport.jpg'
       ],
       keywords: ['გადასვენება', 'gadasveneba', 'ტრანსპორტირება', 'transportation'],
       relatedServices: ['hearse', 'funeral-home', 'documentation'],
@@ -145,11 +145,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.stone_engraving',
       descKey: 'services.stone_engraving_desc',
       longDescKey: 'services.stone_engraving_long',
-      image: '/assets/images/stone-engraving-main.jpg',
+      image: '/images/stone-engraving-main.jpg',
       gallery: [
-        '/assets/images/qvaze-xatva-1.jpg',
-        '/assets/images/qvaze-xatva-2.jpg',
-        '/assets/images/colored-photo.jpg'
+        '/images/qvaze-xatva-1.jpg',
+        '/images/qvaze-xatva-2.jpg',
+        '/images/colored-photo.jpg'
       ],
       keywords: ['ქვაზე ხატვა', 'qvaze xatva', 'ფერადი სურათის დამზადება', 'stone engraving'],
       relatedServices: ['grave-decoration', 'metal-letters', 'memorial-work'],
@@ -171,11 +171,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.grave_decoration',
       descKey: 'services.grave_decoration_desc',
       longDescKey: 'services.grave_decoration_long',
-      image: '/assets/images/grave-decoration-main.jpg',
+      image: '/images/grave-decoration-main.jpg',
       gallery: [
-        '/assets/images/grave.jpg',
-        '/assets/images/mopirketeba-1.jpg',
-        '/assets/images/mopirketeba-2.jpg'
+        '/images/grave.jpg',
+        '/images/mopirketeba-1.jpg',
+        '/images/mopirketeba-2.jpg'
       ],
       keywords: ['საფლავის მოპირკეთება', 'mopirketeba', 'მემორიალური სამუშაოები', 'grave decoration'],
       relatedServices: ['stone-engraving', 'metal-letters', 'landscaping'],

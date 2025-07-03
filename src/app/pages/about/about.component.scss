@@ -71,7 +71,7 @@
 }
 
 .story-image:hover img {
-  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 .story-image::before {
@@ -133,8 +133,7 @@
 }
 
 .value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
@@ -157,8 +156,7 @@
 }
 
 .value-card:hover .value-icon {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .value-card h3 {
@@ -204,8 +202,7 @@
 }
 
 .team-member:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-lg);
   border-color: var(--primary-color);
 }
 
@@ -223,7 +220,7 @@
 }
 
 .team-member:hover .member-image img {
-  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .member-overlay {

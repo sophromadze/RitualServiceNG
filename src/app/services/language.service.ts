@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface Translation {
   [key: string]: string | Translation;
@@ -15,22 +16,23 @@ export class LanguageService {
   private translations: { [lang: string]: Translation } = {
     ka: {
       // Header & Navigation
+      'nav.home': 'მთავარი',
       'header.company_name': 'რიტუალ სერვისი',
-      'nav.services': 'მომსახურება',
+      'nav.services': 'სერვისები',
       'nav.products': 'პროდუქცია',
       'nav.about': 'ჩვენს შესახებ',
       'nav.contact': 'კონტაქტი',
       'nav.locations': 'ფილიალები',
       'header.call_24_7': 'დაგვიკავშირდით 24/7',
-      'header.phone': '+(995) 599 06 98 98',
+      
 
       // Home Page Keywords and Content
       'home.title': 'რიტუალ სერვისი - დამკრძალავი ბიურო',
       'home.subtitle': 'გთავაზობთ სარიტუალო მომსახურებას 24 საათის განმავლობაში',
       'home.funeral_home': 'დამკრძალავი ბიურო',
-      'home.damkrdzalavi_biuro': 'damkrdzalavi biuro',
+      'home.damkrdzalavi_biuro': 'დამკრძალავი ბიურო',
       'home.ritual_house': 'სარიტუალო სახლი',
-      'home.saritualo_saxli': 'saritualo saxli',
+      'home.saritualo_saxli': 'სარიტუალო სახლი',
 
       // Services with SEO Keywords
       'services.embalming': 'ბალზამირება',
@@ -45,6 +47,8 @@ export class LanguageService {
       'services.grave_decoration_desc': 'საფლავის კომპლექსური მოპირკეთება, მემორიალური სამუშაოები, ლანდშაფტური დიზაინი.',
       'services.dressing': 'მიცვალებულის ჩაცმა',
       'services.dressing_desc': 'მიცვალებულის ღირსეული ჩაცმა და მოწესრიგება გამოცდილი სპეციალისტების მიერ.',
+      'services.metal_letters': 'ლითონის ასოებით წარწერა',
+      'services.metal_letters_desc': 'ლითონის ასოებით წარწერების დამზადება საფლავებზე. მაღალი ხარისხის მეტალის ასოები.',
 
       // Products with Keywords
       'products.coffins': 'სასახლეები',
@@ -88,11 +92,66 @@ export class LanguageService {
       'cta.call_now': 'დაგვიკავშირდით ახლავე',
       'cta.get_consultation': 'მიიღეთ კონსულტაცია',
       'cta.order_service': 'შეუკვეთეთ სერვისი',
-      'cta.learn_more': 'გაიგეთ მეტი'
+      'cta.learn_more': 'გაიგეთ მეტი',
+
+      // Footer
+      'footer.ritual_services': 'სარიტუალო მომსახურება',
+      'footer.ritual_products': 'სარიტუალო პროდუქცია',
+      'footer.additional_services': 'დამატებითი სერვისები',
+      'footer.quick_links': 'სწრაფი ლინკები',
+      'footer.specialized_services': 'სპეციალიზებული სერვისები',
+      'footer.branches_tbilisi': 'ფილიალები თბილისში',
+      'footer.dighomi_branch': 'დიღომის ფილიალი',
+      'footer.gldani_branch': 'გლდნის ფილიალი',
+      'footer.jiqia_branch': 'ჯიქიას ფილიალი',
+      'footer.24_7_service': '24/7 მომსახურება',
+      'footer.all_rights_reserved': 'ყველა უფლება დაცულია',
+      'footer.privacy_policy': 'კონფიდენციალურობის პოლიტიკა',
+      'footer.terms_of_service': 'მომსახურების წესები',
+      'footer.sitemap': 'საიტის რუკა',
+      'footer.search_keywords': 'ძიების სიტყვები',
+      'footer.georgian_keywords': 'ქართული Keywords',
+      'footer.transliteration_keywords': 'Transliteration Keywords',
+      'footer.russian_keywords': 'Russian Keywords',
+
+      // Why Choose Us Section
+      'why_choose.title': 'რატომ ვართ ლიდერები?',
+      'why_choose.subtitle': 'პროფესიონალური გუნდი',
+      'why_choose.experience': '20 წლიანი გამოცდილება',
+      'why_choose.quality': 'ხარისხიანი მომსახურება',
+      'why_choose.individual_approach': 'ინდივიდუალური მიდგომა',
+      'why_choose.agent_visit': 'აგენტის მოწვევა',
+
+      // Ritual Service Description Section
+      'ritual_service.title': 'სარიტუალო სერვისი',
+      'ritual_service.description': 'გთავაზობთ სამგლოვიარო ცერემონიის ორგანიზებას და სარიტუალო მომსახურების სრულ კომპლექსს. რთულ მომენტებში თქვენ გვერდით ვიქნებით და ყველა სარიტუალო დეტალზე ვიზრუნებთ, რათა თქვენი საზრუნავი შევამციროთ. ჩვენთან დაკავშირება შეგიძლიათ ნებისმიერ დროს - 24/7, კვირის ნებისმიერ დღეს. სარიტუალო მომსახურების შესახებ პირველადი კონსულტაცია სრულიად უფასოა, ხოლო საჭიროების შემთხვევაში, ჩვენი სარიტუალო აგენტი ადგილზე მოვა და დაგეხმარებათ ყველა საკითხის მოგვარებაში. ჩვენთვის მთავარია თანაგრძნობა, სწრაფი რეაგირება, პროფესიონალიზმი და ინდივიდუალური მიდგომა თითოეული დამკვეთის მიმართ. ჩვენ გთავაზობთ უმაღლესი ხარისხის მომსახურებას, ხოლო ფასები მორგებულია თქვენს საჭიროებებსა და შესაძლებლობებს.',
+      'ritual_service.view_services': 'იხილეთ ჩვენი სერვისები',
+
+      // Why Choose Ritual Service Section
+      'why_choose_ritual.title': 'რატომ უნდა აირჩიოთ Ritual Service?',
+      'why_choose_ritual.subtitle': 'ჩვენი სარიტუალო მომსახურება გამოირჩევა პროფესიონალიზმით, ყურადღებითა და ინდივიდუალური მიდგომით. ვზრუნავთ ყველა დეტალზე, რათა თქვენ სიმშვიდე შეინარჩუნოთ რთულ დროს. მაღალი ხარისხი, ოპერატიულობა და თანაგრძნობა ჩვენი მთავარი პრინციპებია.',
+      'why_choose_ritual.experience.title': '20 წლიანი გამოცდილება',
+      'why_choose_ritual.experience.desc': 'ჩვენი გამოცდილება გვაძლევს საშუალებას, უზრუნველვყოთ ღირსეული და პროფესიონალური სარიტუალო მომსახურება.',
+      'why_choose_ritual.quality.title': 'საუკეთესო მომსახურება',
+      'why_choose_ritual.quality.desc': 'უზრუნველყოფთ ღირსეულ, სწრაფ და პროფესიონალურ სარიტუალო მომსახურებას, თითოეული დეტალის სრული გათვალისწინებით.',
+      'why_choose_ritual.support.title': '24/7 მხარდაჭერა',
+      'why_choose_ritual.support.desc': 'ჩვენი გუნდი მზადაა დაგეხმაროთ ნებისმიერ დროს, უზრუნველყოფს სწრაფ და ორგანიზებულ მომსახურებას.',
+      'why_choose_ritual.plan_funeral': 'დაგეგმეთ დაკრძალვა ჩვენთან',
+      'why_choose_ritual.contact_24_7': 'დაგვიკავშირდით 24/7',
+
+      // What Makes Us Different Section
+      'what_makes_us.title': 'რა გვხდის ჩვენ გამორჩეულს',
+      'what_makes_us.professionalism.title': 'პროფესიონალიზმი და გამოცდილება',
+      'what_makes_us.professionalism.desc': 'სიდნეის აკადემიის დაკრძალვის სერვისებს ფლობს და მართავს პოლ გროსი, რომელსაც აქვს 40 წელზე მეტი გამოცდილება ინდუსტრიაში და აქვს რეპუტაცია პერსონალური სერვისის, გაგებისა და თანაგრძნობის მიწოდებით.',
+      'what_makes_us.trust.title': 'სანდო და გამჭირვალე მომსახურება',
+      'what_makes_us.trust.desc': 'ჩვენ მზად ვართ 24 საათის განმავლობაში, კვირაში 7 დღე, რათა დაგეხმაროთ ყველა თქვენი სერვისის მოწყობაში და სპეციალიზირდეთ მემორიალური სერვისების მიწოდებაში ცხოვრების ყველა ფენის ადამიანებისთვის.',
+      'what_makes_us.care.title': 'თანაგრძნობა, განსაკუთრებული ზრუნვა',
+      'what_makes_us.care.desc': 'Ritual Service-ს პერსონალი მზად არის დაეხმაროს ადამიანებს ამ რთულ პერიოდში ცერემონიის ყველა დეტალის გატარებით. ასევე ზრუნავს თქვენი ოჯახისა და საყვარელი ადამიანისთვის მნიშვნელოვანი და დასამახსოვრებელი სერვისის შექმნაზე.'
     },
 
     en: {
       // Header & Navigation
+      'nav.home': 'Home',
       'header.company_name': 'Ritual Service',
       'nav.services': 'Services',
       'nav.products': 'Products',
@@ -100,7 +159,7 @@ export class LanguageService {
       'nav.contact': 'Contact',
       'nav.locations': 'Locations',
       'header.call_24_7': 'Call us 24/7',
-      'header.phone': '+(995) 599 06 98 98',
+      
 
       // Home Page
       'home.title': 'Ritual Service - Funeral Home',
@@ -123,6 +182,8 @@ export class LanguageService {
       'services.grave_decoration_desc': 'Complete grave decoration, memorial work, landscape design.',
       'services.dressing': 'Dressing and Preparation',
       'services.dressing_desc': 'Dignified dressing and preparation of the deceased by experienced specialists.',
+      'services.metal_letters': 'Metal Letter Inscriptions',
+      'services.metal_letters_desc': 'Creation of metal letter inscriptions on graves. High-quality metal letters.',
 
       // Products
       'products.coffins': 'Coffins',
@@ -166,11 +227,66 @@ export class LanguageService {
       'cta.call_now': 'Call Now',
       'cta.get_consultation': 'Get Consultation',
       'cta.order_service': 'Order Service',
-      'cta.learn_more': 'Learn More'
+      'cta.learn_more': 'Learn More',
+
+      // Footer
+      'footer.ritual_services': 'Ritual Services',
+      'footer.ritual_products': 'Ritual Products',
+      'footer.additional_services': 'Additional Services',
+      'footer.quick_links': 'Quick Links',
+      'footer.specialized_services': 'Specialized Services',
+      'footer.branches_tbilisi': 'Tbilisi Branches',
+      'footer.dighomi_branch': 'Dighomi Branch',
+      'footer.gldani_branch': 'Gldani Branch',
+      'footer.jiqia_branch': 'Jiqia Branch',
+      'footer.24_7_service': '24/7 Service',
+      'footer.all_rights_reserved': 'All Rights Reserved',
+      'footer.privacy_policy': 'Privacy Policy',
+      'footer.terms_of_service': 'Terms of Service',
+      'footer.sitemap': 'Sitemap',
+      'footer.search_keywords': 'Search Keywords',
+      'footer.georgian_keywords': 'Georgian Keywords',
+      'footer.transliteration_keywords': 'Transliteration Keywords',
+      'footer.russian_keywords': 'Russian Keywords',
+
+      // Why Choose Us Section
+      'why_choose.title': 'Why Choose Ritual Service?',
+      'why_choose.subtitle': 'Professional Team',
+      'why_choose.experience': '20 Years of Experience',
+      'why_choose.quality': 'Quality Service',
+      'why_choose.individual_approach': 'Individual Approach',
+      'why_choose.agent_visit': 'Agent Visit',
+
+      // Ritual Service Description Section
+      'ritual_service.title': 'Ritual Service',
+      'ritual_service.description': 'We offer comprehensive funeral ceremony organization and complete ritual services. In difficult times, we will be by your side and take care of every ritual detail to reduce your worries. You can contact us at any time - 24/7, any day of the week. Initial consultation about ritual services is completely free, and if needed, our ritual agent will come to your location and help you resolve all issues. For us, the main priorities are compassion, quick response, professionalism, and individual approach to each client. We offer the highest quality service, while prices are tailored to your needs and capabilities.',
+      'ritual_service.view_services': 'View Our Services',
+
+      // Why Choose Ritual Service Section
+      'why_choose_ritual.title': 'Why Choose Ritual Service?',
+      'why_choose_ritual.subtitle': 'Our ritual service stands out for its professionalism, attention, and individual approach. We take care of every detail so that you can maintain peace during difficult times. High quality, efficiency, and compassion are our main principles.',
+      'why_choose_ritual.experience.title': '20 Years of Experience',
+      'why_choose_ritual.experience.desc': 'Our experience allows us to ensure dignified and professional ritual services.',
+      'why_choose_ritual.quality.title': 'Best Service',
+      'why_choose_ritual.quality.desc': 'We provide dignified, fast, and professional ritual services, taking into account every detail.',
+      'why_choose_ritual.support.title': '24/7 Support',
+      'why_choose_ritual.support.desc': 'Our team is ready to help you at any time, providing fast and organized service.',
+      'why_choose_ritual.plan_funeral': 'Plan a Funeral with Us',
+      'why_choose_ritual.contact_24_7': 'Contact Us 24/7',
+
+      // What Makes Us Different Section
+      'what_makes_us.title': 'What Makes Us Different',
+      'what_makes_us.professionalism.title': 'Professionalism and Experience',
+      'what_makes_us.professionalism.desc': 'Sydney Academy Funeral Services is owned and operated by Paul Gross, who has over 40 years of experience in the industry and has a reputation for providing personal service, understanding and compassion.',
+      'what_makes_us.trust.title': 'Reliable and Transparent Service',
+      'what_makes_us.trust.desc': 'We are ready 24 hours a day, 7 days a week to help you organize all your services and specialize in providing memorial services for people of all walks of life.',
+      'what_makes_us.care.title': 'Compassion, Special Care',
+      'what_makes_us.care.desc': 'Ritual Service staff are ready to help people during this difficult period by going through every detail of the ceremony. Also cares about creating an important and memorable service for your family and loved one.'
     },
 
     ru: {
       // Header & Navigation
+      'nav.home': 'Главная',
       'header.company_name': 'Ритуал Сервис',
       'nav.services': 'Услуги',
       'nav.products': 'Продукция',
@@ -178,7 +294,7 @@ export class LanguageService {
       'nav.contact': 'Контакты',
       'nav.locations': 'Филиалы',
       'header.call_24_7': 'Звоните 24/7',
-      'header.phone': '+(995) 599 06 98 98',
+      
 
       // Home Page
       'home.title': 'Ритуал Сервис - Похоронный дом',
@@ -199,39 +315,41 @@ export class LanguageService {
       'services.stone_engraving_desc': 'Профессиональная роспись на камне, изготовление цветного фото, надписи металлическими буквами.',
       'services.grave_decoration': 'Благоустройство могил',
       'services.grave_decoration_desc': 'Комплексное благоустройство могил, мемориальные работы, ландшафтный дизайн.',
-      'services.dressing': 'Одевание усопшего',
+      'services.dressing': 'Одевание и подготовка',
       'services.dressing_desc': 'Достойное одевание и подготовка усопшего опытными специалистами.',
+      'services.metal_letters': 'Надписи металлическими буквами',
+      'services.metal_letters_desc': 'Изготовление надписей металлическими буквами на могилах. Высококачественные металлические буквы.',
 
       // Products
       'products.coffins': 'Гробы',
-      'products.coffins_desc': 'Качественные гробы: грузинский, украинский, итальянский стили. Широкий выбор на любой бюджет.',
+      'products.coffins_desc': 'Качественные гробы: грузинский, украинский, итальянский стили. Широкий выбор для любого бюджета.',
       'products.shrouds': 'Саваны',
       'products.shrouds_desc': 'Традиционные и современные саваны. Натуральные материалы, ручная работа.',
       'products.refrigeration': 'Холодильники',
       'products.refrigeration_desc': 'Гробы-холодильники, американские и стандартные модели для длительного хранения.',
 
       // Common SEO Terms
-      'seo.funeral_services': 'Похоронные услуги',
-      'seo.burial_services': 'Услуги погребения',
-      'seo.memorial_ceremonies': 'Траурные церемонии',
-      'seo.burial': 'Погребение',
+      'seo.funeral_services': 'Ритуальные услуги',
+      'seo.burial_services': 'Похоронные услуги',
+      'seo.memorial_ceremonies': 'Поминальные церемонии',
+      'seo.burial': 'Похороны',
       'seo.funeral_director': 'Похоронный директор',
       'seo.cemetery': 'Кладбище',
-      'seo.deceased': 'Покойный',
+      'seo.deceased': 'Усопший',
       'seo.mourning_hall': 'Траурный зал',
       'seo.banquet_hall': 'Банкетный зал',
       'seo.colored_photo': 'Изготовление цветного фото',
       'seo.metal_letters': 'Надписи металлическими буквами',
-      'seo.regional_transportation': 'Перевозка по региону',
+      'seo.regional_transportation': 'Региональная перевозка',
       'seo.international_transportation': 'Международная перевозка',
 
       // Contact & Location
       'contact.free_consultation': 'Бесплатная консультация',
-      'contact.agent_visit': 'Вызов агента',
-      'contact.24_7_service': 'Обслуживание 24/7',
+      'contact.agent_visit': 'Визит агента',
+      'contact.24_7_service': '24/7 обслуживание',
       'locations.tbilisi_branches': 'Филиалы в Тбилиси',
       'locations.gldani': 'Глдани - ул. Гр. Ошкели, 4',
-      'locations.dighomi': 'Дигоми - ул. Нодара Бохуа, 14',
+      'locations.dighomi': 'Дигоми - ул. Нодара Бохлуа, 14',
       'locations.jiqia': 'Джикия - ул. Александра Иоселиани, 96',
 
       // About & Experience
@@ -241,28 +359,96 @@ export class LanguageService {
       'about.quality_service': 'Качественное обслуживание',
 
       // Call to Actions
-      'cta.call_now': 'Звоните сейчас',
+      'cta.call_now': 'Позвонить сейчас',
       'cta.get_consultation': 'Получить консультацию',
       'cta.order_service': 'Заказать услугу',
-      'cta.learn_more': 'Узнать больше'
+      'cta.learn_more': 'Узнать больше',
+
+      // Footer
+      'footer.ritual_services': 'Ритуальные услуги',
+      'footer.ritual_products': 'Ритуальная продукция',
+      'footer.additional_services': 'Дополнительные услуги',
+      'footer.quick_links': 'Быстрые ссылки',
+      'footer.specialized_services': 'Специализированные услуги',
+      'footer.branches_tbilisi': 'Филиалы в Тбилиси',
+      'footer.dighomi_branch': 'Филиал Дигоми',
+      'footer.gldani_branch': 'Филиал Глдани',
+      'footer.jiqia_branch': 'Филиал Джикия',
+      'footer.24_7_service': '24/7 обслуживание',
+      'footer.all_rights_reserved': 'Все права защищены',
+      'footer.privacy_policy': 'Политика конфиденциальности',
+      'footer.terms_of_service': 'Условия обслуживания',
+      'footer.sitemap': 'Карта сайта',
+      'footer.search_keywords': 'Поисковые слова',
+      'footer.georgian_keywords': 'Грузинские ключевые слова',
+      'footer.transliteration_keywords': 'Транслитерация ключевых слов',
+      'footer.russian_keywords': 'Русские ключевые слова',
+
+      // Why Choose Us Section
+      'why_choose.title': 'Почему стоит выбрать Ритуал Сервис?',
+      'why_choose.subtitle': 'Профессиональная команда',
+      'why_choose.experience': '20 лет опыта',
+      'why_choose.quality': 'Качественное обслуживание',
+      'why_choose.individual_approach': 'Индивидуальный подход',
+      'why_choose.agent_visit': 'Визит агента',
+
+      // Ritual Service Description Section
+      'ritual_service.title': 'Ритуальный сервис',
+      'ritual_service.description': 'Предлагаем организацию поминальных церемоний и полный комплекс ритуальных услуг. В трудные моменты мы будем рядом и позаботимся о каждой ритуальной детали, чтобы уменьшить ваши заботы. Вы можете связаться с нами в любое время - 24/7, в любой день недели. Первичная консультация по ритуальным услугам совершенно бесплатна, а при необходимости наш ритуальный агент приедет на место и поможет решить все вопросы. Для нас главное - сострадание, быстрая реакция, профессионализм и индивидуальный подход к каждому клиенту. Мы предлагаем услуги высочайшего качества, при этом цены адаптированы под ваши потребности и возможности.',
+      'ritual_service.view_services': 'Посмотреть наши услуги',
+
+      // Why Choose Ritual Service Section
+      'why_choose_ritual.title': 'Почему стоит выбрать Ritual Service?',
+      'why_choose_ritual.subtitle': 'Наш ритуальный сервис выделяется профессионализмом, вниманием и индивидуальным подходом. Мы заботимся о каждой детали, чтобы вы могли сохранить спокойствие в трудные времена. Высокое качество, оперативность и сострадание - наши основные принципы.',
+      'why_choose_ritual.experience.title': '20 лет опыта',
+      'why_choose_ritual.experience.desc': 'Наш опыт позволяет обеспечить достойные и профессиональные ритуальные услуги.',
+      'why_choose_ritual.quality.title': 'Лучший сервис',
+      'why_choose_ritual.quality.desc': 'Обеспечиваем достойные, быстрые и профессиональные ритуальные услуги, учитывая каждую деталь.',
+      'why_choose_ritual.support.title': '24/7 поддержка',
+      'why_choose_ritual.support.desc': 'Наша команда готова помочь вам в любое время, обеспечивая быстрый и организованный сервис.',
+      'why_choose_ritual.plan_funeral': 'Запланируйте похороны с нами',
+      'why_choose_ritual.contact_24_7': 'Свяжитесь с нами 24/7',
+
+      // What Makes Us Different Section
+      'what_makes_us.title': 'Что делает нас особенными',
+      'what_makes_us.professionalism.title': 'Профессионализм и опыт',
+      'what_makes_us.professionalism.desc': 'Сиднейская академия похоронных услуг принадлежит и управляется Полом Гроссом, который имеет более 40 лет опыта в отрасли и имеет репутацию предоставления персонального обслуживания, понимания и сострадания.',
+      'what_makes_us.trust.title': 'Надежное и прозрачное обслуживание',
+      'what_makes_us.trust.desc': 'Мы готовы 24 часа в сутки, 7 дней в неделю помочь вам организовать все ваши услуги и специализируемся на предоставлении мемориальных услуг для людей всех слоев общества.',
+      'what_makes_us.care.title': 'Сострадание, особая забота',
+      'what_makes_us.care.desc': 'Персонал Ritual Service готов помочь людям в этот трудный период, пройдя через каждую деталь церемонии. Также заботится о создании важного и запоминающегося обслуживания для вашей семьи и близкого человека.'
     }
   };
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     // Set initial language based on URL or browser preference
     this.initializeLanguage();
   }
 
   private initializeLanguage(): void {
-    const urlPath = window.location.pathname;
     let language = 'ka'; // default
 
-    if (urlPath.startsWith('/en')) {
-      language = 'en';
-    } else if (urlPath.startsWith('/ru')) {
-      language = 'ru';
-    } else if (urlPath.startsWith('/ka')) {
-      language = 'ka';
+    if (isPlatformBrowser(this.platformId)) {
+      try {
+        const urlPath = window.location.pathname;
+        
+        if (urlPath.startsWith('/en')) {
+          language = 'en';
+        } else if (urlPath.startsWith('/ru')) {
+          language = 'ru';
+        } else if (urlPath.startsWith('/ka')) {
+          language = 'ka';
+        } else {
+          // Try to get from localStorage
+          const savedLanguage = localStorage.getItem('selectedLanguage');
+          if (savedLanguage && this.translations[savedLanguage]) {
+            language = savedLanguage;
+          }
+        }
+      } catch (error) {
+        // Fallback to default
+        language = 'ka';
+      }
     }
 
     this.setLanguage(language);
@@ -271,7 +457,13 @@ export class LanguageService {
   setLanguage(language: string): void {
     if (this.translations[language]) {
       this.currentLanguageSubject.next(language);
-      localStorage.setItem('selectedLanguage', language);
+      if (isPlatformBrowser(this.platformId)) {
+        try {
+          localStorage.setItem('selectedLanguage', language);
+        } catch (error) {
+          // Silently handle localStorage error
+        }
+      }
     }
   }
 
@@ -286,8 +478,8 @@ export class LanguageService {
     if (!translation) {
       // Fallback to Georgian if translation not found
       const fallbackTranslation = this.getNestedTranslation(this.translations['ka'], key);
+      
       if (!fallbackTranslation) {
-        console.warn(`Translation missing for key: ${key} in language: ${language}`);
         return key;
       }
       return this.interpolateParams(fallbackTranslation, params);
@@ -297,7 +489,8 @@ export class LanguageService {
   }
 
   private getNestedTranslation(obj: Translation, key: string): string {
-    return key.split('.').reduce((o: any, k) => o && o[k], obj) as string;
+    // Since translations are stored as flat keys, just return the direct key
+    return obj[key] as string;
   }
 
   private interpolateParams(text: string, params?: { [key: string]: string }): string {
