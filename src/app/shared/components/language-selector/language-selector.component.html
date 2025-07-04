@@ -1,1 +1,19 @@
-<p>language-selector works!</p>
+<div class="language-dropdown" 
+     (mouseenter)="isOpen = true" 
+     (mouseleave)="isOpen = false">
+  <button class="dropdown-button">
+    <img [src]="getFlagSrc()" [alt]="currentLanguage" class="flag-img">
+    <span>{{getLanguageName()}}</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </button>
+  
+  <div class="dropdown-content" [class.show]="isOpen">
+    <div class="language-option" 
+         *ngFor="let lang of languages" 
+         [class.hidden]="lang.code === currentLanguage"
+         (click)="selectLanguage(lang.code)">
+      <img [src]="lang.flag" [alt]="lang.name" class="flag-img">
+      <span>{{lang.name}}</span>
+    </div>
+  </div>
+</div>

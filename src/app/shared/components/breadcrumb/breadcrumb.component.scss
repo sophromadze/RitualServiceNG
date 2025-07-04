@@ -35,6 +35,10 @@
   flex-shrink: 0;
 }
 
+.breadcrumb-planning-button {
+  flex-shrink: 0;
+}
+
 .contact-phone {
   display: flex;
   align-items: center;
@@ -60,6 +64,38 @@
 }
 
 .phone-number {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.planning-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+}
+
+.planning-link:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.planning-link i {
+  font-size: 16px;
+}
+
+.planning-text {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
@@ -226,6 +262,14 @@
   .contact-phone {
     padding: 8px;
   }
+  
+  .planning-text {
+    display: none;
+  }
+  
+  .planning-link {
+    padding: 8px;
+  }
 }
 
 /* Focus styles for accessibility */
@@ -254,6 +298,17 @@
   .breadcrumb-link:focus {
     background: none !important;
   }
+}
+
+/* Language-specific display */
+[lang="en"] {
+  .ka { display: none !important; }
+  .en { display: block !important; }
+}
+
+[lang="ru"] {
+  .ka { display: none !important; }
+  .ru { display: block !important; }
 }
 
 /* Dark mode support (if needed in future) */

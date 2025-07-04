@@ -24,6 +24,7 @@ export class LanguageService {
       'nav.contact': 'კონტაქტი',
       'nav.locations': 'ფილიალები',
       'header.call_24_7': 'დაგვიკავშირდით 24/7',
+      'breadcrumb.plan_funeral': 'დაგეგმე დაკრძალვა',
       
 
       // Home Page Keywords and Content
@@ -114,6 +115,70 @@ export class LanguageService {
       'footer.transliteration_keywords': 'Transliteration Keywords',
       'footer.russian_keywords': 'Russian Keywords',
 
+      // Funeral Planning Page
+      'funeral_planning.title': 'დაკრძალვის დაგეგმვა',
+      'funeral_planning.subtitle': 'პროფესიონალური დაგეგმვა და კონსულტაცია',
+      'funeral_planning.description': 'დაგეხმარებით დაკრძალვის ყველა დეტალის დაგეგმვაში. უფასო კონსულტაცია და ნაბიჯ-ნაბიჯ გზამკვლევი.',
+      
+      // Planning Sections
+      'funeral_planning.pre_planning': 'წინასწარი დაგეგმვა',
+      'funeral_planning.ceremony_planning': 'ცერემონიის დაგეგმვა',
+      'funeral_planning.logistics': 'ლოგისტიკა',
+      'funeral_planning.documentation': 'დოკუმენტაცია',
+      
+      // Checklist Items - Pre-Planning
+      'funeral_planning.deceased_wishes': 'გარდაცვალებულის სურვილები',
+      'funeral_planning.budget_planning': 'ბიუჯეტის განსაზღვრა',
+      'funeral_planning.burial_location': 'დაკრძალვის ადგილის არჩევა',
+      'funeral_planning.family_consultation': 'ოჯახის კონსულტაცია',
+      
+      // Checklist Items - Ceremony
+      'funeral_planning.ceremony_type': 'ცერემონიის ტიპი',
+      'funeral_planning.choose_officiant': 'ღვთისმსახურის არჩევა',
+      'funeral_planning.musical_accompaniment': 'მუსიკალური აკომპანიმენტი',
+      'funeral_planning.readings_prayers': 'კითხვები და ლოცვები',
+      
+      // Checklist Items - Logistics
+      'funeral_planning.transportation': 'ტრანსპორტირება',
+      'funeral_planning.timing_schedule': 'დროის განრიგი',
+      'funeral_planning.guest_organization': 'სტუმრების ორგანიზება',
+      'funeral_planning.venue_booking': 'შენობების და ობიექტების ჯავშანი',
+      
+      // Checklist Items - Documentation
+      'funeral_planning.death_certificate': 'სიკვდილის მოწმობა',
+      'funeral_planning.permits': 'ნებართვები',
+      'funeral_planning.insurance': 'დაზღვევა',
+      'funeral_planning.legal_documents': 'იურიდიული დოკუმენტები',
+      
+      // FAQ Section
+      'funeral_planning.faq_title': 'ხშირად დასმული კითხვები',
+      'funeral_planning.faq_early_planning_q': 'რამდენად ადრე უნდა დავიწყოთ დაგეგმვა?',
+      'funeral_planning.faq_early_planning_a': 'რეკომენდებულია დაგეგმვის დაწყება მინიმუმ 2-3 კვირით ადრე, თუმცა ზოგიერთი სერვისისთვის შეიძლება მოკლე ვადებიც.',
+      'funeral_planning.faq_documents_q': 'რა დოკუმენტებია საჭირო?',
+      'funeral_planning.faq_documents_a': 'საჭიროა სიკვდილის მოწმობა, პირადობის მოწმობა, ოჯახის წევრების დოკუმენტები და სხვა ნებართვები.',
+      'funeral_planning.faq_personalized_q': 'შეგვიძლია თუ არა პერსონალიზებული ცერემონია?',
+      'funeral_planning.faq_personalized_a': 'დიახ, ჩვენ ვთავაზობთ სრულად პერსონალიზებულ ცერემონიებს, რომლებიც ასახავს გარდაცვალებულის პიროვნებას და ოჯახის სურვილებს.',
+      
+      // Contact Form
+      'funeral_planning.contact_title': 'დაგვიკავშირდით',
+      'funeral_planning.contact_subtitle': 'მიიღეთ უფასო კონსულტაცია',
+      'funeral_planning.form_name': 'სახელი',
+      'funeral_planning.form_phone': 'ტელეფონი',
+      'funeral_planning.form_email': 'ელ-ფოსტა',
+      'funeral_planning.form_message': 'შეტყობინება',
+      'funeral_planning.form_preferred_contact': 'სასურველი კონტაქტი',
+      'funeral_planning.form_phone_option': 'ტელეფონი',
+      'funeral_planning.form_email_option': 'ელ-ფოსტა',
+      'funeral_planning.form_submit': 'გაგზავნა',
+      'funeral_planning.form_submitted': 'თქვენი შეტყობინება გაიგზავნა! ჩვენ მალე დაგიკავშირდებით.',
+      
+      // Progress and Status
+      'funeral_planning.progress': 'პროგრესი',
+      'funeral_planning.completed': 'დასრულებული',
+      'funeral_planning.pending': 'მიმდინარე',
+      'funeral_planning.start_planning': 'დაიწყეთ დაგეგმვა',
+      'funeral_planning.planning_guide': 'დაგეგმვის გზამკვლევი',
+
       // Why Choose Us Section
       'why_choose.title': 'რატომ ვართ ლიდერები?',
       'why_choose.subtitle': 'პროფესიონალური გუნდი',
@@ -159,6 +224,7 @@ export class LanguageService {
       'nav.contact': 'Contact',
       'nav.locations': 'Locations',
       'header.call_24_7': 'Call us 24/7',
+      'breadcrumb.plan_funeral': 'Plan Funeral',
       
 
       // Home Page
@@ -249,6 +315,70 @@ export class LanguageService {
       'footer.transliteration_keywords': 'Transliteration Keywords',
       'footer.russian_keywords': 'Russian Keywords',
 
+      // Funeral Planning Page
+      'funeral_planning.title': 'Funeral Planning',
+      'funeral_planning.subtitle': 'Professional Planning and Consultation',
+      'funeral_planning.description': 'We will help you plan every detail of the funeral. Free consultation and step-by-step guide.',
+      
+      // Planning Sections
+      'funeral_planning.pre_planning': 'Pre-Planning',
+      'funeral_planning.ceremony_planning': 'Ceremony Planning',
+      'funeral_planning.logistics': 'Logistics',
+      'funeral_planning.documentation': 'Documentation',
+      
+      // Checklist Items - Pre-Planning
+      'funeral_planning.deceased_wishes': 'Deceased Wishes',
+      'funeral_planning.budget_planning': 'Budget Planning',
+      'funeral_planning.burial_location': 'Burial Location Selection',
+      'funeral_planning.family_consultation': 'Family Consultation',
+      
+      // Checklist Items - Ceremony
+      'funeral_planning.ceremony_type': 'Ceremony Type',
+      'funeral_planning.choose_officiant': 'Choose Officiant',
+      'funeral_planning.musical_accompaniment': 'Musical Accompaniment',
+      'funeral_planning.readings_prayers': 'Readings and Prayers',
+      
+      // Checklist Items - Logistics
+      'funeral_planning.transportation': 'Transportation',
+      'funeral_planning.timing_schedule': 'Timing and Schedule',
+      'funeral_planning.guest_organization': 'Guest Organization',
+      'funeral_planning.venue_booking': 'Venue and Facility Booking',
+      
+      // Checklist Items - Documentation
+      'funeral_planning.death_certificate': 'Death Certificate',
+      'funeral_planning.permits': 'Permits',
+      'funeral_planning.insurance': 'Insurance',
+      'funeral_planning.legal_documents': 'Legal Documents',
+      
+      // FAQ Section
+      'funeral_planning.faq_title': 'Frequently Asked Questions',
+      'funeral_planning.faq_early_planning_q': 'How early should we start planning?',
+      'funeral_planning.faq_early_planning_a': 'It is recommended to start planning at least 2-3 weeks in advance, although some services may have shorter deadlines.',
+      'funeral_planning.faq_documents_q': 'What documents are required?',
+      'funeral_planning.faq_documents_a': 'Death certificate, identity documents, family member documents and other permits are required.',
+      'funeral_planning.faq_personalized_q': 'Can we have a personalized ceremony?',
+      'funeral_planning.faq_personalized_a': 'Yes, we offer fully personalized ceremonies that reflect the personality of the deceased and family wishes.',
+      
+      // Contact Form
+      'funeral_planning.contact_title': 'Contact Us',
+      'funeral_planning.contact_subtitle': 'Get Free Consultation',
+      'funeral_planning.form_name': 'Name',
+      'funeral_planning.form_phone': 'Phone',
+      'funeral_planning.form_email': 'Email',
+      'funeral_planning.form_message': 'Message',
+      'funeral_planning.form_preferred_contact': 'Preferred Contact',
+      'funeral_planning.form_phone_option': 'Phone',
+      'funeral_planning.form_email_option': 'Email',
+      'funeral_planning.form_submit': 'Send',
+      'funeral_planning.form_submitted': 'Your message has been sent! We will contact you soon.',
+      
+      // Progress and Status
+      'funeral_planning.progress': 'Progress',
+      'funeral_planning.completed': 'Completed',
+      'funeral_planning.pending': 'Pending',
+      'funeral_planning.start_planning': 'Start Planning',
+      'funeral_planning.planning_guide': 'Planning Guide',
+
       // Why Choose Us Section
       'why_choose.title': 'Why Choose Ritual Service?',
       'why_choose.subtitle': 'Professional Team',
@@ -294,6 +424,7 @@ export class LanguageService {
       'nav.contact': 'Контакты',
       'nav.locations': 'Филиалы',
       'header.call_24_7': 'Звоните 24/7',
+      'breadcrumb.plan_funeral': 'Планировать похороны',
       
 
       // Home Page
@@ -416,7 +547,71 @@ export class LanguageService {
       'what_makes_us.trust.title': 'Надежное и прозрачное обслуживание',
       'what_makes_us.trust.desc': 'Мы готовы 24 часа в сутки, 7 дней в неделю помочь вам организовать все ваши услуги и специализируемся на предоставлении мемориальных услуг для людей всех слоев общества.',
       'what_makes_us.care.title': 'Сострадание, особая забота',
-      'what_makes_us.care.desc': 'Персонал Ritual Service готов помочь людям в этот трудный период, пройдя через каждую деталь церемонии. Также заботится о создании важного и запоминающегося обслуживания для вашей семьи и близкого человека.'
+      'what_makes_us.care.desc': 'Персонал Ritual Service готов помочь людям в этот трудный период, пройдя через каждую деталь церемонии. Также заботится о создании важного и запоминающегося обслуживания для вашей семьи и близкого человека.',
+
+      // Funeral Planning Page
+      'funeral_planning.title': 'Планирование похорон',
+      'funeral_planning.subtitle': 'Профессиональное планирование и консультация',
+      'funeral_planning.description': 'Мы поможем вам спланировать каждую деталь похорон. Бесплатная консультация и пошаговое руководство.',
+      
+      // Planning Sections
+      'funeral_planning.pre_planning': 'Предварительное планирование',
+      'funeral_planning.ceremony_planning': 'Планирование церемонии',
+      'funeral_planning.logistics': 'Логистика',
+      'funeral_planning.documentation': 'Документация',
+      
+      // Checklist Items - Pre-Planning
+      'funeral_planning.deceased_wishes': 'Пожелания усопшего',
+      'funeral_planning.budget_planning': 'Планирование бюджета',
+      'funeral_planning.burial_location': 'Выбор места захоронения',
+      'funeral_planning.family_consultation': 'Консультация с семьей',
+      
+      // Checklist Items - Ceremony
+      'funeral_planning.ceremony_type': 'Тип церемонии',
+      'funeral_planning.choose_officiant': 'Выбор священника',
+      'funeral_planning.musical_accompaniment': 'Музыкальное сопровождение',
+      'funeral_planning.readings_prayers': 'Чтения и молитвы',
+      
+      // Checklist Items - Logistics
+      'funeral_planning.transportation': 'Транспортировка',
+      'funeral_planning.timing_schedule': 'Время и расписание',
+      'funeral_planning.guest_organization': 'Организация гостей',
+      'funeral_planning.venue_booking': 'Бронирование помещений и объектов',
+      
+      // Checklist Items - Documentation
+      'funeral_planning.death_certificate': 'Свидетельство о смерти',
+      'funeral_planning.permits': 'Разрешения',
+      'funeral_planning.insurance': 'Страхование',
+      'funeral_planning.legal_documents': 'Юридические документы',
+      
+      // FAQ Section
+      'funeral_planning.faq_title': 'Часто задаваемые вопросы',
+      'funeral_planning.faq_early_planning_q': 'Как рано нужно начинать планирование?',
+      'funeral_planning.faq_early_planning_a': 'Рекомендуется начинать планирование минимум за 2-3 недели, хотя для некоторых услуг могут быть более короткие сроки.',
+      'funeral_planning.faq_documents_q': 'Какие документы требуются?',
+      'funeral_planning.faq_documents_a': 'Требуются свидетельство о смерти, документы, удостоверяющие личность, документы членов семьи и другие разрешения.',
+      'funeral_planning.faq_personalized_q': 'Можем ли мы провести персонализированную церемонию?',
+      'funeral_planning.faq_personalized_a': 'Да, мы предлагаем полностью персонализированные церемонии, которые отражают личность усопшего и пожелания семьи.',
+      
+      // Contact Form
+      'funeral_planning.contact_title': 'Свяжитесь с нами',
+      'funeral_planning.contact_subtitle': 'Получите бесплатную консультацию',
+      'funeral_planning.form_name': 'Имя',
+      'funeral_planning.form_phone': 'Телефон',
+      'funeral_planning.form_email': 'Электронная почта',
+      'funeral_planning.form_message': 'Сообщение',
+      'funeral_planning.form_preferred_contact': 'Предпочтительный контакт',
+      'funeral_planning.form_phone_option': 'Телефон',
+      'funeral_planning.form_email_option': 'Электронная почта',
+      'funeral_planning.form_submit': 'Отправить',
+      'funeral_planning.form_submitted': 'Ваше сообщение отправлено! Мы свяжемся с вами в ближайшее время.',
+      
+      // Progress and Status
+      'funeral_planning.progress': 'Прогресс',
+      'funeral_planning.completed': 'Завершено',
+      'funeral_planning.pending': 'В процессе',
+      'funeral_planning.start_planning': 'Начать планирование',
+      'funeral_planning.planning_guide': 'Руководство по планированию'
     }
   };
 

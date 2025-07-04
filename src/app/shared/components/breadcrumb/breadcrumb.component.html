@@ -36,6 +36,15 @@
           <span class="phone-number">+(995) 599 06 98 98</span>
         </a>
       </div>
+      
+      <div class="breadcrumb-planning-button">
+        <a [routerLink]="[currentLanguage, 'funeral-planning']" 
+           class="planning-link"
+           [attr.aria-label]="translate('breadcrumb.plan_funeral')">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span class="planning-text">{{translate('breadcrumb.plan_funeral')}}</span>
+        </a>
+      </div>
     </div>
   </div>
 </nav>

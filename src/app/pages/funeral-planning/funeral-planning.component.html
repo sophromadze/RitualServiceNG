@@ -1,0 +1,234 @@
+<div class="funeral-planning-page">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        {{translate('funeral_planning.title')}}
+      </h1>
+      <p class="hero-subtitle">
+        {{translate('funeral_planning.subtitle')}}
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" (click)="scrollToSection('planning-checklist')">
+          <i class="fa-solid fa-list-check"></i>
+          {{translate('funeral_planning.planning_guide')}}
+        </button>
+        <button class="btn-secondary" (click)="scrollToSection('contact-form')">
+          <i class="fa-solid fa-phone"></i>
+          {{translate('funeral_planning.contact_title')}}
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planning Overview -->
+  <section class="planning-overview">
+    <div class="container">
+      <h2 class="section-title">
+        {{translate('funeral_planning.progress')}}
+      </h2>
+      
+      <div class="planning-grid">
+        <div class="planning-card" *ngFor="let section of planningSections">
+          <div class="card-icon">
+            <i [class]="section.icon"></i>
+          </div>
+          <h3 class="card-title">{{getTitle(section)}}</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" [style.width.%]="getSectionProgress(section.id)"></div>
+          </div>
+          <p class="progress-text">
+            {{getSectionProgress(section.id) | number:'1.0-0'}}% {{translate('funeral_planning.completed')}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planning Checklist -->
+  <section id="planning-checklist" class="planning-checklist">
+    <div class="container">
+      <h2 class="section-title">
+        {{translate('funeral_planning.planning_guide')}}
+      </h2>
+
+      <div class="checklist-container">
+        <div class="checklist-section" *ngFor="let section of planningSections">
+          <div class="section-header">
+            <h3 class="section-name">
+              <i [class]="section.icon"></i>
+              {{getTitle(section)}}
+            </h3>
+            <div class="section-progress">
+              <span class="progress-number">{{getSectionProgress(section.id) | number:'1.0-0'}}%</span>
+            </div>
+          </div>
+
+          <div class="checklist-items">
+            <div class="checklist-item" 
+                 *ngFor="let item of getChecklistItems(section.id)"
+                 [class.completed]="item.completed"
+                 (click)="toggleChecklistItem(section.id, item.id)">
+              <div class="checkbox">
+                <i class="fa-solid" [class.fa-check]="item.completed" [class.fa-circle]="!item.completed"></i>
+              </div>
+              <span class="item-text">{{getText(item)}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview">
+    <div class="container">
+      <h2 class="section-title">
+        {{translate('nav.services')}}
+      </h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+          <h3 class="service-title">
+            {{translate('funeral_planning.pre_planning')}}
+          </h3>
+          <p class="service-description">
+            {{translate('funeral_planning.description')}}
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-hands-praying"></i>
+          </div>
+          <h3 class="service-title">
+            {{translate('funeral_planning.ceremony_planning')}}
+          </h3>
+          <p class="service-description">
+            {{translate('funeral_planning.faq_personalized_a')}}
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <h3 class="service-title">
+            {{translate('funeral_planning.documentation')}}
+          </h3>
+          <p class="service-description">
+            {{translate('funeral_planning.faq_documents_a')}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title">
+        {{translate('funeral_planning.faq_title')}}
+      </h2>
+
+      <div class="faq-container">
+        <div class="faq-item" *ngFor="let faq of faqItems; let i = index">
+          <div class="faq-question" (click)="toggleFAQ(i)">
+            <h3>{{getQuestion(faq)}}</h3>
+            <i class="fa-solid fa-chevron-down" [class.rotated]="faq.expanded"></i>
+          </div>
+          <div class="faq-answer" [class.expanded]="faq.expanded">
+            <p>{{getAnswer(faq)}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact-form" class="contact-section">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2 class="section-title">
+            {{translate('funeral_planning.contact_title')}}
+          </h2>
+          <p class="contact-description">
+            {{translate('funeral_planning.contact_subtitle')}}
+          </p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+995 599 069 898</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>info&#64;ritualservice.ge</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>{{translate('nav.contact')}}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form (ngSubmit)="submitContactForm()" #contactFormRef="ngForm">
+            <div class="form-group">
+              <label for="name">
+                {{translate('funeral_planning.form_name')}}
+              </label>
+              <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">
+                {{translate('funeral_planning.form_phone')}}
+              </label>
+              <input type="tel" id="phone" name="phone" [(ngModel)]="contactForm.phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">
+                {{translate('funeral_planning.form_email')}}
+              </label>
+              <input type="email" id="email" name="email" [(ngModel)]="contactForm.email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">
+                {{translate('funeral_planning.form_message')}}
+              </label>
+              <textarea id="message" name="message" [(ngModel)]="contactForm.message" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>
+                {{translate('funeral_planning.form_preferred_contact')}}
+              </label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="preferredContact" value="phone" [(ngModel)]="contactForm.preferredContact">
+                  {{translate('funeral_planning.form_phone_option')}}
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="preferredContact" value="email" [(ngModel)]="contactForm.preferredContact">
+                  {{translate('funeral_planning.form_email_option')}}
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i>
+              {{translate('funeral_planning.form_submit')}}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div> 
