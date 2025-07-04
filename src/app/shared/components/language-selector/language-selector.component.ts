@@ -34,23 +34,35 @@ import { CommonModule } from '@angular/common';
     .dropdown-button {
       display: flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border: 1px solid #ddd;
+      gap:  5px;
+      padding: 8px 9px;
+      border: none;
       border-radius: 4px;
-      background: white;
+      background: linear-gradient(135deg, #e74c3c, #ec7063);
+       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      color: #ffffff;
       cursor: pointer;
     }
     .dropdown-button:focus {
       outline: none !important;
     }
+    .dropdown-button:hover {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    .language-dropdown:hover .dropdown-button {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
     .dropdown-content {
       position: absolute;
       top: 100%;
       right: 0;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      left: 0;
+      background: linear-gradient(135deg, #e74c3c, #ec7063);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 1000;
       display: none;
@@ -64,10 +76,19 @@ import { CommonModule } from '@angular/common';
       gap: 8px;
       padding: 8px 12px;
       cursor: pointer;
+      color: #ffffff;
+      border-radius: 2px;
     }
+    
+    .language-option:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
     .language-option:hover {
-      background-color: #f5f5f5;
+      background: linear-gradient(135deg, #ec7063, #e74c3c);
     }
+
     .language-option:focus {
       outline: none !important;
     }
@@ -77,6 +98,56 @@ import { CommonModule } from '@angular/common';
     .flag-img {
       width: 20px;
       height: 15px;
+    }
+    
+    /* Responsive: Show only flags at 850px and below */
+    @media (max-width: 850px) {
+      .dropdown-button span {
+        display: none;
+      }
+      
+      .dropdown-button i {
+        display: none;
+      }
+      
+      .dropdown-button {
+        gap: 0;
+        padding: 4px;
+        border: none;
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .language-dropdown {
+        background: linear-gradient(135deg, #e74c3c, #ec7063);
+        padding: 4px;
+        border-radius: 8px;
+      }
+
+      .language-dropdown:hover {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      .language-dropdown:hover .dropdown-button {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      
+      .language-option span {
+        display: none;
+      }
+      
+      .language-option {
+        gap: 0;
+        padding: 8px;
+        justify-content: center;
+      }
+      
+      .dropdown-content {
+        min-width: auto;
+      }
     }
   `]
 })

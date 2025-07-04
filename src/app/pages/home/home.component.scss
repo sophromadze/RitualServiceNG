@@ -3,10 +3,12 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  height: 80vh;
-  min-height: 600px;
   overflow: hidden;
   background: linear-gradient(135deg, #2c3e50, #8b4513);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
 
 .hero-swiper {
@@ -102,12 +104,8 @@
   height: 400px;
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
-}
-
-.slide-image:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .slide-images {
@@ -156,15 +154,37 @@
 }
 
 .swiper-pagination-bullet {
-  background: #ffffff;
-  opacity: 0.5;
+  background: #ffffff !important;
+  opacity: 0.5 !important;
   transition: all 0.15s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #e74c3c;
+  opacity: 1 !important;
+  background: #ffffff !important;
   transform: scale(1.2);
+}
+
+/* More specific selectors to override Swiper defaults */
+.hero-section .swiper-pagination .swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.5 !important;
+}
+
+.hero-section .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Even more specific targeting */
+.hero-swiper .swiper-pagination .swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.5 !important;
+}
+
+.hero-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  opacity: 1 !important;
 }
 
 /* Services Section */
@@ -279,7 +299,7 @@
 /* What Makes Us Different Section */
 .what-makes-us-section {
   background: antiquewhite;
-  padding-bottom: 50px;
+  padding: 40px 0 30px;
 }
 
 .diff-container {
@@ -288,17 +308,23 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .diff-head h3 {
-  padding-top: 30px;
+  padding-top: 20px;
   font-size: 35px;
   font-weight: 300;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .diff-head .ornament {
-  padding: 20px;
+  padding: 15px;
   width: 300px;
+  max-width: 100%;
+  height: auto;
 }
 
 .diff-content {
@@ -306,6 +332,7 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+  gap: 0;
 }
 
 .diff-feature {
@@ -314,7 +341,9 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 30px;
+  padding: 25px 15px;
+  flex: 1;
+  min-width: 0;
 }
 
 .diff-feature:nth-child(2) {
@@ -325,16 +354,22 @@
 .diff-feature h3 {
   text-align: center;
   font-size: 25px;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .diff-feature p {
   text-align: center;
   color: #5e5e5e;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .feature-icon {
   width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 80px;
 }
 
 /* Ritual Service Description Section */
@@ -401,7 +436,7 @@
 
 .ornament {
   display: block;
-  margin: 0 auto 32px;
+  margin: 0 auto 10px;
   width: 80px;
   height: auto;
   opacity: 0.8;
@@ -654,15 +689,59 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1000px) {
+  .what-makes-us-section {
+    padding: 35px 0 25px;
+  }
+  
+  .diff-container {
+    padding: 0 20px;
+  }
+  
+  .diff-head h3 {
+    font-size: 30px;
+  }
+  
+  .diff-head .ornament {
+    width: 250px;
+  }
+  
+  .diff-content {
+    gap: 10px;
+  }
+  
+  .diff-feature {
+    padding: 20px 12px;
+    gap: 15px;
+  }
+  
+  .diff-feature h3 {
+    font-size: 22px;
+  }
+  
+  .diff-feature p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .feature-icon {
+    max-height: 60px;
+  }
+}
+
 @media (max-width: 1024px) {
   .rs-description {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 20px;
     text-align: center;
   }
   
   .rs-description-img {
     height: 300px;
+  }
+
+  .cta-buttons {
+    justify-content: center;
   }
   
   .rs-description-content {
@@ -676,7 +755,7 @@
   
   .slide-content {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 5px;
     text-align: center;
   }
   
@@ -699,6 +778,47 @@
 }
 
 @media (max-width: 768px) {
+  .what-makes-us-section {
+    padding: 30px 0 20px;
+  }
+  
+  .diff-container {
+    padding: 0 20px;
+  }
+  
+  .diff-head h3 {
+    font-size: 32px;
+  }
+  
+  .diff-head .ornament {
+    width: 280px;
+  }
+  
+  .diff-content {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .diff-feature {
+    padding: 22px 15px;
+    gap: 15px;
+  }
+  
+  .diff-feature:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+  
+  .diff-feature h3 {
+    font-size: 24px;
+  }
+  
+  .diff-feature p {
+    font-size: 15px;
+  }
+  
   .rs-description-section {
     padding: 60px 0;
   }
@@ -802,19 +922,22 @@
     font-size: 14px;
   }
   
-  .diff-content {
-    flex-direction: column;
+  .what-makes-us-section {
+    padding: 25px 0 15px;
   }
   
-  .diff-feature:nth-child(2) {
-    border-left: none;
-    border-right: none;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+  .diff-container {
+    padding: 0 15px;
   }
   
   .diff-head h3 {
     font-size: 28px;
+    padding-top: 20px;
+  }
+  
+  .diff-head .ornament {
+    width: 250px;
+    padding: 15px;
   }
   
   .why-rs-content {
@@ -835,21 +958,35 @@
     min-width: 250px;
   }
   
-  .diff-content {
-    gap: 0;
-  }
-  
-  .diff-feature {
-    padding: 20px;
+  .diff-container {
+    padding: 0 10px;
   }
   
   .diff-head h3 {
     font-size: 24px;
+    padding-top: 15px;
   }
   
   .diff-head .ornament {
     width: 200px;
-    padding: 15px;
+    padding: 10px;
+  }
+  
+  .diff-feature {
+    padding: 18px 8px;
+    gap: 12px;
+  }
+  
+  .diff-feature h3 {
+    font-size: 20px;
+  }
+  
+  .diff-feature p {
+    font-size: 13px;
+  }
+  
+  .feature-icon {
+    max-height: 50px;
   }
   
   .hero-section {
@@ -942,17 +1079,6 @@
 .feature-card:nth-child(2) { animation-delay: 0.2s; }
 .feature-card:nth-child(3) { animation-delay: 0.3s; }
 .feature-card:nth-child(4) { animation-delay: 0.4s; }
-
-/* Focus styles for accessibility */
-.service-card:focus {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
-}
-
-.feature-card:focus {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
-}
 
 /* Print styles */
 @media print {

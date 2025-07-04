@@ -1,28 +1,41 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="breadcrumb-container">
-    <ol class="breadcrumb-list">
-      <li class="breadcrumb-item">
-        <a class="breadcrumb-link breadcrumb-home" [routerLink]="[currentLanguage]">
-          <i class="fa-solid fa-home"></i>
-          <span>{{translate('nav.home')}}</span>
+    <div class="breadcrumb-content">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-link breadcrumb-home" [routerLink]="[currentLanguage]">
+            <i class="fa-solid fa-home"></i>
+            <span>{{translate('nav.home')}}</span>
+          </a>
+        </li>
+        <li class="breadcrumb-item" *ngFor="let crumb of breadcrumbs; let last = last">
+          <span class="breadcrumb-separator" aria-hidden="true">
+            <i class="fa-solid fa-chevron-right"></i>
+          </span>
+          <a *ngIf="!last" 
+             class="breadcrumb-link" 
+             [routerLink]="crumb.url"
+             [attr.aria-label]="'Navigate to ' + crumb.label">
+            {{crumb.label}}
+          </a>
+          <span *ngIf="last" 
+                class="breadcrumb-current"
+                [attr.aria-current]="'page'">
+            {{crumb.label}}
+          </span>
+        </li>
+      </ol>
+      
+      <!-- Call Button -->
+      <div class="breadcrumb-call-button">
+        <a href="tel:+995599069898" 
+           class="contact-phone"
+           (click)="callPhone(); $event.preventDefault()"
+           [attr.aria-label]="translate('header.call_24_7')">
+          <i class="fa-solid fa-phone-volume"></i>
+          <span class="phone-number">+(995) 599 06 98 98</span>
         </a>
-      </li>
-      <li class="breadcrumb-item" *ngFor="let crumb of breadcrumbs; let last = last">
-        <span class="breadcrumb-separator" aria-hidden="true">
-          <i class="fa-solid fa-chevron-right"></i>
-        </span>
-        <a *ngIf="!last" 
-           class="breadcrumb-link" 
-           [routerLink]="crumb.url"
-           [attr.aria-label]="'Navigate to ' + crumb.label">
-          {{crumb.label}}
-        </a>
-        <span *ngIf="last" 
-              class="breadcrumb-current"
-              [attr.aria-current]="'page'">
-          {{crumb.label}}
-        </span>
-      </li>
-    </ol>
+      </div>
+    </div>
   </div>
 </nav>

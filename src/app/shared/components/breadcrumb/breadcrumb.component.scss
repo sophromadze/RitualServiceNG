@@ -24,6 +24,47 @@
   padding: 0 24px;
 }
 
+.breadcrumb-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.breadcrumb-call-button {
+  flex-shrink: 0;
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #e74c3c, #ec7063);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 14px;
+}
+
+.contact-phone:hover {
+  background: linear-gradient(135deg, #ec7063, #e74c3c);
+  color: #ffffff;
+}
+
+.contact-phone i {
+  font-size: 16px;
+}
+
+.phone-number {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .breadcrumb-list {
   display: flex;
   align-items: center;
@@ -61,8 +102,6 @@
 }
 
 .breadcrumb-link:focus {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
   background-color: rgba(231, 76, 60, 0.1);
 }
 
@@ -149,11 +188,7 @@
     padding: 0;
     margin-bottom: 0;
   }
-  
-  .breadcrumb-container {
-    padding: 0 16px;
-  }
-  
+    
   .breadcrumb-list {
     gap: 6px;
   }
@@ -170,50 +205,32 @@
   .breadcrumb-separator {
     margin: 0 2px;
   }
-}
-
-@media (max-width: 480px) {
-  .breadcrumb {
-    padding: 0;
-    margin-bottom: 0;
+  
+  .contact-phone {
+    padding: 8px 12px;
+    font-size: 13px;
   }
   
-  .breadcrumb-container {
-    padding: 0 12px;
+  .contact-phone i {
+    font-size: 14px;
   }
   
-  .breadcrumb-list {
-    gap: 4px;
+  .phone-number {
+    font-size: 13px;
   }
   
-  .breadcrumb-item {
-    font-size: 12px;
-  }
-  
-  .breadcrumb-link,
-  .breadcrumb-current {
-    padding: 4px 8px;
-  }
-  
-  .breadcrumb-home span {
+  .phone-number {
     display: none;
   }
   
-  .breadcrumb-home i {
-    font-size: 18px;
+  .contact-phone {
+    padding: 8px;
   }
 }
 
 /* Focus styles for accessibility */
 .breadcrumb-link:focus-visible {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
   background-color: rgba(231, 76, 60, 0.1);
-}
-
-.breadcrumb-current:focus-visible {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
 }
 
 /* Print styles */

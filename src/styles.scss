@@ -21,7 +21,7 @@ body {
   color: #343a40;
   background-color: #ffffff;
   overflow-x: hidden;
-  padding-top: 76px; /* Account for fixed header */
+  padding-top: 74px; /* Account for fixed header */
 }
 
 /* Typography */
@@ -366,12 +366,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles for accessibility */
-*:focus {
-  outline: 2px solid #e74c3c;
-  outline-offset: 2px;
-}
-
 /* Print styles */
 @media print {
   .no-print {
@@ -387,4 +381,40 @@ html {
     box-shadow: none !important;
     border: 1px solid #ccc !important;
   }
+}
+
+@media (max-width: 1135px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      padding-top: 55px;
+  }
+}
+
+/* Swiper Pagination Override - Global Styles */
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.7 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* More specific overrides for hero section */
+.hero-section .swiper-pagination .swiper-pagination-bullet,
+.hero-swiper .swiper-pagination .swiper-pagination-bullet {
+  background: #ffffff !important;
+  opacity: 0.7 !important;
+}
+
+.hero-section .swiper-pagination .swiper-pagination-bullet-active,
+.hero-swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  opacity: 1 !important;
 }

@@ -119,9 +119,7 @@ export class HeaderComponent implements OnInit {
     this.isMenuOpen = false;
   }
 
-  callPhone(): void {
-    window.location.href = 'tel:+995599069898';
-  }
+
 
   getCurrentServices() {
     return this.navigation[this.currentLanguage as keyof typeof this.navigation]?.services || this.navigation.ka.services;

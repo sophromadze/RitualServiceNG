@@ -11,7 +11,7 @@
                class="brand-logo"
                width="40" 
                height="40">
-          <span class="brand-text">{{translate('header.company_name')}}</span>
+          <span class="brand-text">Ritual Service</span>
         </a>
       </div>
 
@@ -117,19 +117,10 @@
           </a>
         </div>
 
-        <!-- Contact Info -->
-        <div class="navbar-contact desktop-only">
-          <a href="tel:+995599069898" 
-             class="contact-phone"
-             (click)="callPhone(); $event.preventDefault()"
-             [attr.aria-label]="translate('header.call_24_7')">
-            <i class="fa-solid fa-phone-volume"></i>
-            <span class="phone-number">+(995) 599 06 98 98</span>
-          </a>
-        </div>
+
 
         <!-- Language Selector -->
-        <div class="navbar-language desktop-only">
+        <div class="navbar-language">
           <app-language-selector 
             [currentLanguage]="currentLanguage"
             (languageChange)="onLanguageChange($event)">
@@ -214,23 +205,9 @@
         {{translate('nav.locations')}}
       </a>
 
-      <!-- Mobile Phone -->
-      <div class="mobile-contact">
-        <a href="tel:+995599069898" 
-           class="mobile-phone-link"
-           (click)="callPhone(); $event.preventDefault()">
-          <i class="fa-solid fa-phone-volume"></i>
-          {{translate('header.call_24_7')}}
-        </a>
-      </div>
 
-      <!-- Mobile Language Selector -->
-      <div class="mobile-language">
-        <app-language-selector 
-          [currentLanguage]="currentLanguage"
-          (languageChange)="onLanguageChange($event)">
-        </app-language-selector>
-      </div>
+
+
     </div>
   </nav>
 </header>

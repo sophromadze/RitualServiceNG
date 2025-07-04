@@ -96,4 +96,8 @@ export class BreadcrumbComponent implements OnInit {
   translate(key: string): string {
     return this.languageService.translate(key);
   }
+
+  callPhone(): void {
+    window.open('tel:+995599069898', '_self');
+  }
 }
