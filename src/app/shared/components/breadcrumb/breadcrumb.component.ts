@@ -47,7 +47,22 @@ export class BreadcrumbComponent implements OnInit {
         
         let label = segment;
         
-        // Translate common segments
+        // Handle URL fragments (e.g., services#mourning-hall)
+        if (segment.includes('#')) {
+          const [baseSegment, fragment] = segment.split('#');
+          currentUrl = currentUrl.replace(`/${segment}`, `/${baseSegment}#${fragment}`);
+          
+          // Try to translate the fragment first, then the base segment
+          const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
+          const baseKey = `breadcrumb.${baseSegment.replace(/-/g, '_')}`;
+          
+          if (this.translate(fragmentKey) !== fragmentKey) {
+            label = this.translate(fragmentKey);
+          } else if (this.translate(baseKey) !== baseKey) {
+            label = this.translate(baseKey);
+          }
+        } else {
+          // Translate common segments
         switch (segment) {
           case 'services':
             label = this.translate('nav.services');
@@ -64,7 +79,54 @@ export class BreadcrumbComponent implements OnInit {
           case 'locations':
             label = this.translate('nav.locations');
             break;
+          // Product-specific translations
+          case 'coffins':
+            label = this.translate('breadcrumb.coffins');
+            break;
+          case 'shrouds':
+            label = this.translate('breadcrumb.shrouds');
+            break;
+          case 'refrigeration':
+            label = this.translate('breadcrumb.refrigeration');
+            break;
+          case 'hearse':
+            label = this.translate('breadcrumb.hearse');
+            break;
           // Service-specific translations
+          case 'embalming':
+            label = this.translate('breadcrumb.embalming');
+            break;
+          case 'transportation':
+            label = this.translate('breadcrumb.transportation');
+            break;
+          case 'stone-engraving':
+            label = this.translate('breadcrumb.stone_engraving');
+            break;
+          case 'grave-decoration':
+            label = this.translate('breadcrumb.grave_decoration');
+            break;
+          case 'dressing':
+            label = this.translate('breadcrumb.dressing');
+            break;
+          case 'mourning-hall':
+            label = this.translate('breadcrumb.mourning_hall');
+            break;
+          case 'banquet-hall':
+            label = this.translate('breadcrumb.banquet_hall');
+            break;
+          case 'metal-letters':
+            label = this.translate('breadcrumb.metal_letters');
+            break;
+          case 'agent-service':
+            label = this.translate('breadcrumb.agent_service');
+            break;
+          case 'lifting-machine':
+            label = this.translate('breadcrumb.lifting_machine');
+            break;
+          case 'colored-photo':
+            label = this.translate('breadcrumb.colored_photo');
+            break;
+          // Legacy translations for backward compatibility
           case 'damkrdzalavi-biuro':
             label = 'დამკრძალავი ბიურო';
             break;
@@ -83,6 +145,7 @@ export class BreadcrumbComponent implements OnInit {
           case 'mopirketeba':
             label = 'საფლავის მოპირკეთება';
             break;
+        }
         }
         
         this.breadcrumbs.push({

@@ -1,0 +1,126 @@
+/* Contact CTA Section */
+.contact-cta {
+  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
+  color: #ffffff;
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/pattern.png') repeat;
+  opacity: 0.05;
+}
+
+.contact-cta .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.contact-cta h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-cta p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #f8f9fa;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-primary {
+  background: #e74c3c;
+  color: white;
+  border: 2px solid #e74c3c;
+}
+
+.cta-buttons .btn-primary:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+.cta-buttons .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: white;
+  color: #2c3e50;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-cta {
+    padding: 4rem 0;
+  }
+
+  .contact-cta h3 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cta h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-cta p {
+    font-size: 1.1rem;
+  }
+} 

@@ -16,66 +16,59 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
   currentLanguage: string = 'ka';
   private languageSubscription: Subscription = new Subscription();
   
-  // Planning sections
-  planningSections = [
+  // Planning steps
+  planningSteps = [
     {
-      id: 'pre-planning',
-      icon: 'fa-calendar-check',
-      completed: false
-    },
-    {
-      id: 'ceremony',
-      icon: 'fa-church',
-      completed: false
-    },
-    {
-      id: 'logistics',
-      icon: 'fa-truck',
-      completed: false
+      id: 'initial-consultation',
+      titleKey: 'funeral_planning.step_consultation_title',
+      descriptionKey: 'funeral_planning.step_consultation_desc',
+      details: [
+        'funeral_planning.step_consultation_detail1',
+        'funeral_planning.step_consultation_detail2',
+        'funeral_planning.step_consultation_detail3'
+      ]
     },
     {
       id: 'documentation',
-      icon: 'fa-file-alt',
-      completed: false
+      titleKey: 'funeral_planning.step_documentation_title',
+      descriptionKey: 'funeral_planning.step_documentation_desc',
+      details: [
+        'funeral_planning.step_documentation_detail1',
+        'funeral_planning.step_documentation_detail2',
+        'funeral_planning.step_documentation_detail3'
+      ]
+    },
+    {
+      id: 'ceremony-planning',
+      titleKey: 'funeral_planning.step_ceremony_title',
+      descriptionKey: 'funeral_planning.step_ceremony_desc',
+      details: [
+        'funeral_planning.step_ceremony_detail1',
+        'funeral_planning.step_ceremony_detail2',
+        'funeral_planning.step_ceremony_detail3'
+      ]
+    },
+    {
+      id: 'logistics',
+      titleKey: 'funeral_planning.step_logistics_title',
+      descriptionKey: 'funeral_planning.step_logistics_desc',
+      details: [
+        'funeral_planning.step_logistics_detail1',
+        'funeral_planning.step_logistics_detail2',
+        'funeral_planning.step_logistics_detail3'
+      ]
+    },
+    {
+      id: 'coordination',
+      titleKey: 'funeral_planning.step_coordination_title',
+      descriptionKey: 'funeral_planning.step_coordination_desc',
+      details: [
+        'funeral_planning.step_coordination_detail1',
+        'funeral_planning.step_coordination_detail2',
+        'funeral_planning.step_coordination_detail3'
+      ]
     }
   ];
-
-  // Planning checklist items
-  checklistItems = {
-    'pre-planning': [
-      { id: 'wishes', translationKey: 'funeral_planning.deceased_wishes', completed: false },
-      { id: 'budget', translationKey: 'funeral_planning.budget_planning', completed: false },
-      { id: 'location', translationKey: 'funeral_planning.burial_location', completed: false },
-      { id: 'family', translationKey: 'funeral_planning.family_consultation', completed: false }
-    ],
-    'ceremony': [
-      { id: 'type', translationKey: 'funeral_planning.ceremony_type', completed: false },
-      { id: 'officiant', translationKey: 'funeral_planning.choose_officiant', completed: false },
-      { id: 'music', translationKey: 'funeral_planning.musical_accompaniment', completed: false },
-      { id: 'readings', translationKey: 'funeral_planning.readings_prayers', completed: false }
-    ],
-    'logistics': [
-      { id: 'transport', translationKey: 'funeral_planning.transportation', completed: false },
-      { id: 'timing', translationKey: 'funeral_planning.timing_schedule', completed: false },
-      { id: 'guests', translationKey: 'funeral_planning.guest_organization', completed: false },
-      { id: 'facilities', translationKey: 'funeral_planning.venue_booking', completed: false }
-    ],
-    'documentation': [
-      { id: 'death-cert', translationKey: 'funeral_planning.death_certificate', completed: false },
-      { id: 'permits', translationKey: 'funeral_planning.permits', completed: false },
-      { id: 'insurance', translationKey: 'funeral_planning.insurance', completed: false },
-      { id: 'legal', translationKey: 'funeral_planning.legal_documents', completed: false }
-    ]
-  };
-
-  // Contact form
-  contactForm = {
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-    preferredContact: 'phone'
-  };
 
   // FAQ items
   faqItems = [
@@ -92,6 +85,41 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
     {
       questionKey: 'funeral_planning.faq_personalized_q',
       answerKey: 'funeral_planning.faq_personalized_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_timing_q',
+      answerKey: 'funeral_planning.faq_timing_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_cost_q',
+      answerKey: 'funeral_planning.faq_cost_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_cemetery_q',
+      answerKey: 'funeral_planning.faq_cemetery_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_transport_q',
+      answerKey: 'funeral_planning.faq_transport_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_cremation_q',
+      answerKey: 'funeral_planning.faq_cremation_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_insurance_q',
+      answerKey: 'funeral_planning.faq_insurance_a',
+      expanded: false
+    },
+    {
+      questionKey: 'funeral_planning.faq_emergency_q',
+      answerKey: 'funeral_planning.faq_emergency_a',
       expanded: false
     }
   ];
@@ -115,42 +143,24 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
     return this.languageService.translate(key);
   }
 
-  toggleChecklistItem(sectionId: string, itemId: string): void {
-    const item = this.checklistItems[sectionId as keyof typeof this.checklistItems]
-      .find(i => i.id === itemId);
-    if (item) {
-      item.completed = !item.completed;
-    }
-  }
-
   toggleFAQ(index: number): void {
     this.faqItems[index].expanded = !this.faqItems[index].expanded;
   }
 
-  getSectionProgress(sectionId: string): number {
-    const items = this.checklistItems[sectionId as keyof typeof this.checklistItems];
-    const completed = items.filter(item => item.completed).length;
-    return (completed / items.length) * 100;
+  callUs(): void {
+    window.location.href = 'tel:+995599069898';
   }
 
-  submitContactForm(): void {
-    // Here you would typically send the form data to your backend
-    console.log('Contact form submitted:', this.contactForm);
-    alert(this.translate('funeral_planning.form_submitted'));
+  getStepTitle(step: any): string {
+    return this.translate(step.titleKey);
   }
 
-  getTitle(section: any): string {
-    const translationKeys = {
-      'pre-planning': 'funeral_planning.pre_planning',
-      'ceremony': 'funeral_planning.ceremony_planning',
-      'logistics': 'funeral_planning.logistics',
-      'documentation': 'funeral_planning.documentation'
-    };
-    return this.translate(translationKeys[section.id as keyof typeof translationKeys] || '');
+  getStepDescription(step: any): string {
+    return this.translate(step.descriptionKey);
   }
 
-  getText(item: any): string {
-    return this.translate(item.translationKey);
+  getStepDetail(detailKey: string): string {
+    return this.translate(detailKey);
   }
 
   getQuestion(item: any): string {
@@ -166,9 +176,5 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
-
-  getChecklistItems(sectionId: string): any[] {
-    return this.checklistItems[sectionId as keyof typeof this.checklistItems] || [];
   }
 }

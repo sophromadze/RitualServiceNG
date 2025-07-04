@@ -1,1 +1,223 @@
-<p>products works!</p>
+<!-- SEO Header Section with Keywords -->
+<div class="seo-headers">
+    <h1>{{translate('nav.products')}} - {{translate('header.company_name')}}</h1>
+    <h2 class="seo-hidden">სარიტუალო პროდუქტები - სასახლეები - სუდარები - მაცივრები - კატაფალკი</h2>
+    <h3 class="seo-hidden">sasaxleebi - sudarebi - macivrebi - katafalki</h3>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="products-hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{translate('products.title')}} - {{translate('header.company_name')}}</h1>
+        <p class="hero-description">
+          {{translate('products.hero_description')}}
+        </p>
+        
+        <div class="hero-keywords">
+          <span class="keyword-tag">{{translate('products.coffins')}}</span>
+          <span class="keyword-tag">{{translate('products.shrouds')}}</span>
+          <span class="keyword-tag">{{translate('products.refrigeration')}}</span>
+          <span class="keyword-tag">{{translate('products.hearse')}}</span>
+        </div>
+        
+                  <div class="hero-cta">
+            <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+              <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+            </a>
+            <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+              {{translate('funeral_planning.start_planning')}}
+            </a>
+          </div>
+      </div>
+      
+      <div class="hero-image">
+        <img src="/images/products-hero.jpg" 
+             alt="სარიტუალო პროდუქტები - სასახლეები, სუდარები, მაცივრები"
+             loading="eager">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Products Grid Section -->
+  <section class="products-grid-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{translate('products.our_products')}}</h2>
+        <p>{{translate('products.quality_description')}}</p>
+      </div>
+      
+      <div class="products-grid">
+        <div class="product-card" 
+             *ngFor="let product of products"
+             (click)="navigateToProduct(product.url)">
+          
+          <div class="product-image">
+            <img [src]="product.image" 
+                 [alt]="translate(product.titleKey) + ' - ' + product.keywords"
+                 loading="lazy">
+            <div class="product-overlay">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          
+          <div class="product-content">
+            <h3>{{translate(product.titleKey)}}</h3>
+            <p>{{translate(product.descKey)}}</p>
+            
+            <div class="product-features">
+              <ul>
+                <li *ngFor="let feature of product.features">
+                  <i class="fa-solid fa-check"></i>
+                  {{translate(feature)}}
+                </li>
+              </ul>
+            </div>
+            
+            <div class="product-keywords" style="display: none;">
+              <small>{{product.keywords}}</small>
+            </div>
+            
+            <div class="product-cta">
+              <span class="cta-text">{{translate('cta.learn_more')}}</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Product Categories Section -->
+  <section class="product-categories">
+    <div class="container">
+      <h2>{{translate('products.categories_title')}}</h2>
+      
+      <div class="categories-grid">
+        <div class="category-card">
+          <h3>{{translate('products.coffins')}}</h3>
+          <ul>
+            <li>{{translate('products.coffins.wooden')}}</li>
+            <li>{{translate('products.coffins.luxury')}}</li>
+            <li>{{translate('products.coffins.economy')}}</li>
+            <li>{{translate('products.coffins.standard')}}</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>{{translate('products.shrouds')}}</h3>
+          <ul>
+            <li>{{translate('products.shrouds.cotton')}}</li>
+            <li>{{translate('products.shrouds.silk')}}</li>
+            <li>{{translate('products.shrouds.artificial')}}</li>
+            <li>{{translate('products.shrouds.special')}}</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>{{translate('products.refrigeration')}}</h3>
+          <ul>
+            <li>{{translate('products.refrigeration.coffin')}}</li>
+            <li>{{translate('products.refrigeration.stationary')}}</li>
+            <li>{{translate('products.refrigeration.mobile')}}</li>
+            <li>{{translate('products.refrigeration.special')}}</li>
+          </ul>
+        </div>
+        
+        <div class="category-card">
+          <h3>{{translate('products.hearse')}}</h3>
+          <ul>
+            <li>{{translate('products.hearse.modern')}}</li>
+            <li>{{translate('products.hearse.luxury')}}</li>
+            <li>{{translate('products.hearse.standard')}}</li>
+            <li>{{translate('products.hearse.special')}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SEO Content Section -->
+  <section class="seo-content-section" style="display: none;">
+    <div class="container">
+      <div class="seo-content">
+        <h2>სარიტუალო პროდუქტები - სასახლეები, სუდარები, მაცივრები, კატაფალკი</h2>
+        
+        <div class="seo-text">
+          <h3>სარიტუალო პროდუქტები უმაღლესი ხარისხით</h3>
+          <p>
+            ჩვენი <strong>სარიტუალო პროდუქტები</strong> წარმოადგენს სრულ ასორტიმენტს 
+            <strong>დაკრძალვის</strong> (dakrdzalva) ორგანიზებისთვის. ყველა პროდუქტი 
+            მზადაა <strong>24/7</strong> და უზრუნველყოფს ღირსეულ 
+            <strong>სამგლოვიარო ცერემონიებს</strong> (samgloviaro cerimoniis).
+          </p>
+          
+          <h4>სასახლეები - sasaxleebi:</h4>
+          <ul>
+            <li><strong>ხის სასახლეები</strong> (xis sasaxleebi) - ბუნებრივი მასალებით</li>
+            <li><strong>ლუქს კლასის სასახლეები</strong> - უმაღლესი ხარისხით</li>
+            <li><strong>ეკონომ კლასის სასახლეები</strong> - ხელმისაწვდომი ფასით</li>
+            <li><strong>სტანდარტული სასახლეები</strong> - სანდო ხარისხით</li>
+          </ul>
+  
+          <h4>სუდარები - sudarebi:</h4>
+          <ul>
+            <li><strong>ბამბის სუდარები</strong> (bambis sudarebi) - ბუნებრივი მასალებით</li>
+            <li><strong>სილკის სუდარები</strong> (silkis sudarebi) - ხარისხიანი ქსოვილით</li>
+            <li><strong>ხელოვნური ქსოვილის სუდარები</strong> - გამძლე მასალებით</li>
+            <li><strong>სპეციალური დიზაინის სუდარები</strong> - ინდივიდუალური მიდგომით</li>
+          </ul>
+  
+          <h4>მაცივრები - macivrebi:</h4>
+          <ul>
+            <li><strong>სასახლე-მაცივრები</strong> (sasaxle-macivrebi) - კომბინირებული ფუნქციით</li>
+            <li><strong>სტაციონარული მაცივრები</strong> - დიდი ტევადობით</li>
+            <li><strong>მობილური მაცივრები</strong> - ტრანსპორტირებისთვის</li>
+            <li><strong>სპეციალური მაცივრები</strong> - გახანგრძლივებული შენახვისთვის</li>
+          </ul>
+  
+          <h4>კატაფალკი - katafalki:</h4>
+          <ul>
+            <li><strong>თანამედროვე კატაფალკები</strong> (tanamedrove katafalkebi) - უკანასკნელი მოდელები</li>
+            <li><strong>ლუქს კლასის კატაფალკები</strong> - უმაღლესი კომფორტით</li>
+            <li><strong>სტანდარტული კატაფალკები</strong> - სანდო ხარისხით</li>
+            <li><strong>სპეციალური კატაფალკები</strong> - ინდივიდუალური მოთხოვნებისთვის</li>
+          </ul>
+  
+          <h4>ჩვენი უპირატესობები:</h4>
+          <ul>
+            <li>20 წლიანი გამოცდილება <strong>სარიტუალო პროდუქტებში</strong></li>
+            <li><strong>24/7 მომსახურება</strong> - ნებისმიერ დროს ხელმისაწვდომი</li>
+            <li>პროფესიონალური გუნდი <strong>სარიტუალო პროდუქტების</strong> მიწოდებაში</li>
+            <li><strong>სასახლეები</strong> ყველა ფასის კატეგორიაში</li>
+            <li><strong>სუდარები</strong> ყველა ზომისა და მასალის</li>
+            <li>ინდივიდუალური მიდგომა თითოეული <strong>პროდუქტის</strong> არჩევაში</li>
+          </ul>
+  
+          <h4>ფილიალები თბილისში:</h4>
+          <ul>
+            <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა</li>
+            <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა</li>
+            <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა</li>
+          </ul>
+  
+          <p>
+            ჩვენი <strong>სარიტუალო პროდუქტები</strong> უზრუნველყოფს ღირსეულ 
+            <strong>სამგლოვიარო ცერემონიებს</strong> (samgloviaro cerimoniis) და კომპლექსურ 
+            <strong>დასაფლავების მომსახურებას</strong> (dasaflaveba momsaxureba). 
+            <strong>სასახლეები</strong> (sasaxleebi), <strong>სუდარები</strong> (sudarebi), 
+            <strong>მაცივრები</strong> (macivrеbi), <strong>კატაფალკი</strong> (katafalki) - 
+            ყველაფერი ერთ ადგილას.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact CTA Section -->
+  <app-cta></app-cta>
+  
+  <!-- Additional SEO Keywords (Hidden) -->
+  <div class="seo-keywords" aria-hidden="true">
+    <span>sasaxleebi, sudarebi, macivrebi, katafalki, xis sasaxleebi, bambis sudarebi, sasaxle-macivrebi, tanamedrove katafalkebi</span>
+  </div>

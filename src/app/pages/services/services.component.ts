@@ -4,11 +4,12 @@ import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
+import { CtaComponent } from '../../shared/components/cta/cta.component';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CtaComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
@@ -16,63 +17,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
   currentLanguage: string = 'ka';
   private subscriptions: Subscription = new Subscription();
 
-  // SEO-focused services with maximum keywords
-  services = [
-    {
-      id: 'funeral-home',
-      titleKey: 'services.funeral_home',
-      descKey: 'services.funeral_home_desc',
-      url: 'damkrdzalavi-biuro',
-      image: '/images/funeral-home.jpg',
-      keywords: 'დამკრძალავი ბიურო, damkrdzalavi biuro, სარიტუალო სახლი',
-      features: ['24/7 მომსახურება', 'პროფესიონალური გუნდი', 'სრული მომსახურება']
-    },
-    {
-      id: 'embalming',
-      titleKey: 'services.embalming',
-      descKey: 'services.embalming_desc',
-      url: 'balzamireba',
-      image: '/images/embalming.jpg',
-      keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება',
-      features: ['ხანგრძლივი შენახვა', 'ჰიგიენური მომზადება', 'პროფესიონალური მიდგომა']
-    },
-    {
-      id: 'hearse',
-      titleKey: 'services.hearse',
-      descKey: 'services.hearse_desc',
-      url: 'katafalka',
-      image: '/images/hearse.jpg',
-      keywords: 'კატაფალკა, katafalka, კატაფალკის მომსახურება',
-      features: ['თანამედროვე კატაფალკები', '24/7 ხელმისაწვდომობა', 'ნებისმიერ მიმართულებით']
-    },
-    {
-      id: 'transportation',
-      titleKey: 'services.transportation',
-      descKey: 'services.transportation_desc',
-      url: 'gadasveneba',
-      image: '/images/transportation.jpg',
-      keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება',
-      features: ['რაიონში გადასვენება', 'საზღვარგარეთ გადასვენება', 'ყველა საჭირო დოკუმენტი']
-    },
-    {
-      id: 'stone-engraving',
-      titleKey: 'services.stone_engraving',
-      descKey: 'services.stone_engraving_desc',
-      url: 'qvaze-xatva',
-      image: '/images/stone-engraving.jpg',
-      keywords: 'ქვაზე ხატვა, qvaze xatva, ხელოვნური მუშაობა',
-      features: ['ფერადი სურათის დამზადება', 'ლითონის ასოებით წარწერა', 'ხელოვნური ორნამენტები']
-    },
-    {
-      id: 'grave-decoration',
-      titleKey: 'services.grave_decoration',
-      descKey: 'services.grave_decoration_desc',
-      url: 'mopirketeba',
-      image: '/images/grave-decoration.jpg',
-      keywords: 'საფლავის მოპირკეთება, mopirketeba, მემორიალური სამუშაოები',
-      features: ['ლანდშაფტური დიზაინი', 'ქვის მუშაობა', 'კომპლექსური მომსახურება']
-    }
-  ];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -103,6 +48,50 @@ export class ServicesComponent implements OnInit, OnDestroy {
     const urlSegments = this.router.url.split('/');
     if (urlSegments.length > 1 && ['ka', 'en', 'ru'].includes(urlSegments[1])) {
       this.languageService.setLanguage(urlSegments[1]);
+    }
+
+    // Handle anchor scrolling
+    this.handleAnchorScroll();
+
+    // Listen for hash changes when already on the page
+    this.subscriptions.add(
+      this.router.events.subscribe(event => {
+        if (event.type === 1) { // NavigationEnd
+          this.handleAnchorScroll();
+        }
+      })
+    );
+
+    // Also listen for fragment changes
+    this.subscriptions.add(
+      this.route.fragment.subscribe(fragment => {
+        if (fragment) {
+          setTimeout(() => {
+            this.scrollToElement(fragment);
+          }, 100);
+        }
+      })
+    );
+  }
+
+  private handleAnchorScroll(): void {
+    // Wait for the component to be fully rendered
+    setTimeout(() => {
+      const hash = window.location.hash;
+      if (hash) {
+        this.scrollToElement(hash.substring(1)); // Remove the # from hash
+      }
+    }, 100);
+  }
+
+  private scrollToElement(elementId: string): void {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const elementTop = element.offsetTop - 100; // Offset for header
+      window.scrollTo({
+        top: elementTop,
+        behavior: 'smooth'
+      });
     }
   }
 
@@ -156,38 +145,20 @@ export class ServicesComponent implements OnInit, OnDestroy {
   private generateServicesStructuredData(): any {
     return {
       "@context": "https://schema.org",
-      "@type": "ItemList",
+      "@type": "Service",
       "name": this.languageService.translate('nav.services'),
       "description": this.getSEODescription(),
-      "itemListElement": this.services.map((service, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "Service",
-          "name": this.languageService.translate(service.titleKey),
-          "description": this.languageService.translate(service.descKey),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/services/${service.url}`,
-          "provider": {
-            "@type": "FuneralHome",
-            "name": "Ritual Service",
-            "telephone": "+995599069898"
-          }
-        }
-      }))
+      "provider": {
+        "@type": "FuneralHome",
+        "name": "Ritual Service",
+        "telephone": "+995599069898"
+      }
     };
   }
 
   // Template methods
   translate(key: string): string {
     return this.languageService.translate(key);
-  }
-
-  getServiceUrl(serviceUrl: string): string {
-    return `/${this.currentLanguage}/services/${serviceUrl}`;
-  }
-
-  navigateToService(serviceUrl: string): void {
-    this.router.navigate([this.currentLanguage, 'services', serviceUrl]);
   }
 
   callPhone(): void {

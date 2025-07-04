@@ -1,0 +1,14 @@
+<section class="contact-cta">
+  <div class="container">
+    <h3>{{translate('funeral_planning.cta_title')}}</h3>
+    <p>{{translate('funeral_planning.cta_description')}}</p>
+    <div class="cta-buttons">
+      <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+        <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
+      </a>
+      <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+        {{translate('funeral_planning.start_planning')}}
+      </a>
+    </div>
+  </div>
+</section> 

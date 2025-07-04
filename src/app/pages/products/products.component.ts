@@ -1,166 +1,127 @@
 // products.component.ts
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { SeoService } from '../../services/seo.service';
+import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
+import { SeoService } from '../../services/seo.service';
+import { CtaComponent } from '../../shared/components/cta/cta.component';
+
+interface Product {
+  id: string;
+  titleKey: string;
+  descKey: string;
+  url: string;
+  image: string;
+  keywords: string;
+  types: string[];
+  features: string[];
+}
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CtaComponent],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit, OnDestroy {
-  currentLanguage: string = 'ka';
-  private subscriptions: Subscription = new Subscription();
+export class ProductsComponent implements OnInit {
 
-  // Products with heavy SEO focus
-  products = [
-    {
-      id: 'sasaxleebi',
-      titleKey: 'products.coffins',
-      descKey: 'products.coffins_desc',
-      url: 'sasaxleebi',
-      image: '/images/coffins.jpg',
-      keywords: 'სასახლეები, sasaxleebi, კუბო, sarkofagi',
-      types: ['ქართული სტილი', 'უკრაინული სტილი', 'იტალიური სტილი', 'ხის სასახლეები', 'ლუქს სასახლეები']
-    },
-    {
-      id: 'sudarebi',
-      titleKey: 'products.shrouds',
-      descKey: 'products.shrouds_desc',
-      url: 'sudarebi',
-      image: '/images/shrouds.jpg',
-      keywords: 'სუდარები, sudarebi, sudara, სუდარა',
-      types: ['ტრადიციული სუდარები', 'თანამედროვე სუდარები', 'ბრინჯაოს სუდარები', 'შავი სუდარები', 'თეთრი სუდარები']
-    },
-    {
-      id: 'macivrеbi',
-      titleKey: 'products.refrigeration',
-      descKey: 'products.refrigeration_desc',
-      url: 'macivrеbi',
-      image: '/images/refrigeration.jpg',
-      keywords: 'მაცივრები, macivrеbi, სასახლე მაცივარი',
-      types: ['ამერიკული მაცივრები', 'სტანდარტული მაცივრები', 'სასახლე-მაცივრები', 'ლუქს მაცივრები']
-    }
-  ];
+  currentLanguage: string = 'ka';
+  products: Product[] = [];
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
-    private seoService: SeoService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
-    this.subscriptions.add(
-      this.languageService.currentLanguage$.subscribe(language => {
-        this.currentLanguage = language;
-        this.updateSEO();
-      })
-    );
-
-    this.subscriptions.add(
-      this.route.data.subscribe(data => {
-        if (data) {
-          this.updateSEO(data);
-        }
-      })
-    );
-
-    const urlSegments = this.router.url.split('/');
-    if (urlSegments.length > 1 && ['ka', 'en', 'ru'].includes(urlSegments[1])) {
-      this.languageService.setLanguage(urlSegments[1]);
-    }
+    this.currentLanguage = this.languageService.getCurrentLanguage();
+    this.loadProducts();
+    this.updateSEO();
   }
 
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
+  private loadProducts(): void {
+    this.products = [
+      {
+        id: 'coffins',
+        titleKey: 'products.coffins',
+        descKey: 'products.coffins_desc',
+        url: `/${this.currentLanguage}/products/coffins`,
+        image: '/images/sasaxleebi2.jpg',
+        keywords: 'სასახლეები, sasaxleebi, ხის სასახლეები, ლუქს კლასის სასახლეები',
+        types: ['ხის სასახლეები', 'ლუქს კლასის სასახლეები', 'ეკონომ კლასის სასახლეები'],
+        features: [
+          'products.coffins.features.natural',
+          'products.coffins.features.luxury',
+          'products.coffins.features.economy',
+          'products.coffins.features.standard'
+        ]
+      },
+      {
+        id: 'shrouds',
+        titleKey: 'products.shrouds',
+        descKey: 'products.shrouds_desc',
+        url: `/${this.currentLanguage}/products/shrouds`,
+        image: '/images/sudarebi2.jpg',
+        keywords: 'სუდარები, sudarebi, ბამბის სუდარები, სილკის სუდარები',
+        types: ['ბამბის სუდარები', 'სილკის სუდარები', 'ხელოვნური ქსოვილის სუდარები'],
+        features: [
+          'products.shrouds.features.cotton',
+          'products.shrouds.features.silk',
+          'products.shrouds.features.artificial',
+          'products.shrouds.features.special'
+        ]
+      },
+      {
+        id: 'refrigeration',
+        titleKey: 'products.refrigeration',
+        descKey: 'products.refrigeration_desc',
+        url: `/${this.currentLanguage}/products/refrigeration`,
+        image: '/images/fridge2.jpeg',
+        keywords: 'მაცივრები, macivrеbi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
+        types: ['სასახლე-მაცივრები', 'სტაციონარული მაცივრები', 'მობილური მაცივრები'],
+        features: [
+          'products.refrigeration.features.coffin',
+          'products.refrigeration.features.stationary',
+          'products.refrigeration.features.mobile',
+          'products.refrigeration.features.special'
+        ]
+      },
+      {
+        id: 'hearse',
+        titleKey: 'products.hearse',
+        descKey: 'products.hearse_desc',
+        url: `/${this.currentLanguage}/products/hearse`,
+        image: '/images/katafalkebi2.jpg',
+        keywords: 'კატაფალკი, katafalki, თანამედროვე კატაფალკები, ლუქს კლასის კატაფალკები',
+        types: ['თანამედროვე კატაფალკები', 'ლუქს კლასის კატაფალკები', 'სტანდარტული კატაფალკები'],
+        features: [
+          'products.hearse.features.modern',
+          'products.hearse.features.luxury',
+          'products.hearse.features.standard',
+          'products.hearse.features.special'
+        ]
+      }
+    ];
   }
 
-  private updateSEO(routeData?: any): void {
-    const seoData = routeData || {
-      title: this.getSEOTitle(),
-      description: this.getSEODescription(),
-      keywords: this.getSEOKeywords()
+  private updateSEO(): void {
+    const seoData = {
+      title: 'სარიტუალო პროდუქტები - სასახლეები, სუდარები, მაცივრები, კატაფალკი | Ritual Service',
+      description: 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები (sasaxleebi), სუდარები (sudarebi), მაცივრები (macivrеbi), კატაფალკი (katafalki). ყველა პროდუქტი მზადაა 24/7.',
+      keywords: 'სარიტუალო პროდუქტები, სასახლეები, სუდარები, მაცივრები, კატაფალკი, sasaxleebi, sudarebi, macivrеbi, katafalki, ხის სასახლეები, ბამბის სუდარები, სასახლე-მაცივრები, თანამედროვე კატაფალკები'
     };
-
-    const structuredData = this.generateProductsStructuredData();
     
-    this.seoService.updateSEO({
-      ...seoData,
-      structuredData: structuredData
-    }, this.currentLanguage);
-  }
-
-  private getSEOTitle(): string {
-    const titles = {
-      ka: 'პროდუქცია - სასახლეები, სუდარები, მაცივრები | რიტუალ სერვისი',
-      en: 'Products - Coffins, Shrouds, Refrigeration | Ritual Service',
-      ru: 'Продукция - Гробы, Саваны, Холодильники | Ритуал Сервис'
-    };
-    return titles[this.currentLanguage as keyof typeof titles] || titles.ka;
-  }
-
-  private getSEODescription(): string {
-    const descriptions = {
-      ka: 'ხარისხიანი სარიტუალო პროდუქცია: სასახლეები (sasaxleebi), სუდარები (sudarebi), მაცივრები (macivrеbi). ფართო არჩევანი, მაღალი ხარისხი. damkrdzalavi biuro',
-      en: 'Quality funeral products: coffins, shrouds, refrigeration. Wide selection, high quality from professional funeral home.',
-      ru: 'Качественная ритуальная продукция: гробы, саваны, холодильники. Широкий выбор, высокое качество от профессионального похоронного дома.'
-    };
-    return descriptions[this.currentLanguage as keyof typeof descriptions] || descriptions.ka;
-  }
-
-  private getSEOKeywords(): string {
-    const keywords = {
-      ka: 'სასახლეები, სუდარები, მაცივრები, sudara, sasaxleebi, macivrеbi, კუბო, sarkofagi, სარიტუალო პროდუქცია, damkrdzalavi biuro, sudarebi',
-      en: 'coffins, shrouds, refrigeration, funeral products, caskets, burial products, mortuary supplies, funeral home products',
-      ru: 'гробы, саваны, холодильники, ритуальная продукция, гробы-холодильники, похоронная продукция, товары для похорон'
-    };
-    return keywords[this.currentLanguage as keyof typeof keywords] || keywords.ka;
-  }
-
-  private generateProductsStructuredData(): any {
-    return {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": this.languageService.translate('nav.products'),
-      "description": this.getSEODescription(),
-      "itemListElement": this.products.map((product, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "Product",
-          "name": this.languageService.translate(product.titleKey),
-          "description": this.languageService.translate(product.descKey),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/products/${product.url}`,
-          "brand": {
-            "@type": "Brand",
-            "name": "Ritual Service"
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "availability": "https://schema.org/InStock",
-            "priceCurrency": "GEL"
-          }
-        }
-      }))
-    };
+    this.seoService.updateSEO(seoData, this.currentLanguage);
   }
 
   translate(key: string): string {
     return this.languageService.translate(key);
   }
 
-  getProductUrl(productUrl: string): string {
-    return `/${this.currentLanguage}/products/${productUrl}`;
-  }
-
-  navigateToProduct(productUrl: string): void {
-    this.router.navigate([this.currentLanguage, 'products', productUrl]);
+  navigateToProduct(url: string): void {
+    this.router.navigateByUrl(url);
   }
 
   callPhone(): void {

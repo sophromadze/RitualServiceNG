@@ -1,1 +1,290 @@
-<p>product-detail works!</p>
+<!-- SEO Header Section -->
+<div class="seo-headers">
+    <h1 *ngIf="productContent">{{translate(productContent.titleKey)}}</h1>
+    
+    <!-- Product-specific SEO headers -->
+    <h2 class="seo-hidden" *ngIf="productType === 'coffins'">
+      სასახლეები - sasaxleebi თბილისში ხარისხიანი მასალებით
+    </h2>
+    <h2 class="seo-hidden" *ngIf="productType === 'shrouds'">
+      სუდარები - sudarebi ბუნებრივი მასალებით
+    </h2>
+    <h2 class="seo-hidden" *ngIf="productType === 'refrigeration'">
+      მაცივრები - macivrebi სასახლე-მაცივრები
+    </h2>
+    <h2 class="seo-hidden" *ngIf="productType === 'hearse'">
+      კატაფალკი - katafalki მომსახურება 24/7
+    </h2>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="product-hero" *ngIf="productContent">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{translate(productContent.titleKey)}}</h1>
+        <p class="hero-description">{{translate(productContent.descKey)}}</p>
+        
+        <!-- Product-specific keyword content -->
+        <div class="product-keywords" [ngSwitch]="productType">
+          
+          <!-- Coffins Keywords -->
+          <div *ngSwitchCase="'coffins'" class="keyword-content">
+            <p>{{translate('products.coffins.hero_keywords')}}</p>
+          </div>
+          
+          <!-- Shrouds Keywords -->
+          <div *ngSwitchCase="'shrouds'" class="keyword-content">
+            <p>{{translate('products.shrouds.hero_keywords')}}</p>
+          </div>
+          
+          <!-- Refrigeration Keywords -->
+          <div *ngSwitchCase="'refrigeration'" class="keyword-content">
+            <p>{{translate('products.refrigeration.hero_keywords')}}</p>
+          </div>
+          
+          <!-- Hearse Keywords -->
+          <div *ngSwitchCase="'hearse'" class="keyword-content">
+            <p>{{translate('products.hearse.hero_keywords')}}</p>
+          </div>
+          
+        </div>
+        
+        <div class="hero-cta">
+          <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+            <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+          </a>
+          <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+            {{translate('funeral_planning.start_planning')}}
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <img [src]="productContent.image" 
+             [alt]="translate(productContent.titleKey)"
+             loading="eager">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Product Details Section -->
+  <section class="product-details" *ngIf="productContent">
+    <div class="container">
+      
+      <!-- Long Description -->
+      <div class="product-description">
+        <h2>{{translate(productContent.titleKey)}} - {{translate('products.details_title')}}</h2>
+        <p>{{translate(productContent.longDescKey)}}</p>
+      </div>
+      
+      <!-- Features Section -->
+      <div class="product-features">
+        <h3>{{translate('products.features_title')}}</h3>
+        <div class="features-grid">
+          <div class="feature-item" *ngFor="let feature of productContent.features">
+            <i class="fa-solid fa-check-circle"></i>
+            <span>{{translate(feature)}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Types Section -->
+      <div class="product-types">
+        <h3>{{translate('products.types_title')}}</h3>
+        <div class="types-grid">
+          <div class="type-item" *ngFor="let type of productContent.types">
+            <i class="fa-solid fa-star"></i>
+            <span>{{translate(type)}}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Process Section for Hearse -->
+      <div class="product-process" *ngIf="productType === 'hearse'">
+        <h3>{{translate('products.hearse.process_title')}}</h3>
+        <div class="process-steps">
+          <div class="process-step" *ngFor="let step of productContent.process; let i = index">
+            <div class="step-number">{{i + 1}}</div>
+            <p>{{translate(step)}}</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- Gallery Section -->
+  <section class="product-gallery" *ngIf="productContent?.gallery">
+    <div class="container">
+      <h3>{{translate('products.gallery_title')}}</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item" *ngFor="let image of productContent?.gallery; let i = index">
+          <img [src]="image" 
+               [alt]="getGalleryImageAlt(i)"
+               loading="lazy"
+               (click)="openImageModal(image)">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Related Products -->
+  <section class="related-products" *ngIf="productContent?.relatedProducts">
+    <div class="container">
+      <h3>{{translate('products.related_title')}}</h3>
+      <div class="related-grid">
+        <div class="related-item" 
+            *ngFor="let related of productContent?.relatedProducts"
+            (click)="navigateToProduct(related)">
+          
+          <!-- Dynamic content based on related product -->
+          <div [ngSwitch]="related">
+            <div *ngSwitchCase="'coffins'">
+              <h4>{{translate('products.coffins')}}</h4>
+              <p>{{translate('products.coffins_keywords')}}</p>
+            </div>
+            <div *ngSwitchCase="'shrouds'">
+              <h4>{{translate('products.shrouds')}}</h4>
+              <p>{{translate('products.shrouds_keywords')}}</p>
+            </div>
+            <div *ngSwitchCase="'refrigeration'">
+              <h4>{{translate('products.refrigeration')}}</h4>
+              <p>{{translate('products.refrigeration_keywords')}}</p>
+            </div>
+            <div *ngSwitchCase="'hearse'">
+              <h4>{{translate('products.hearse')}}</h4>
+              <p>{{translate('products.hearse_keywords')}}</p>
+            </div>
+          </div>
+          
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SEO Content Section -->
+  <section class="seo-content-section">
+    <div class="container">
+      <div class="seo-content" [ngSwitch]="productType">
+        
+        <!-- Coffins SEO Content -->
+        <div *ngSwitchCase="'coffins'" class="product-seo-content">
+          <h3>სასახლეები - sasaxleebi ხარისხიანი მასალებით</h3>
+          <p>
+            ჩვენი <strong>სასახლეები</strong> (sasaxleebi) წარმოადგენს ხარისხიან 
+            <strong>ხის სასახლეებს</strong> (xis sasaxleebi) ბუნებრივი მასალებით. 
+            <strong>ლუქს კლასის სასახლეები</strong>, <strong>ეკონომ კლასის სასახლეები</strong> 
+            და <strong>სტანდარტული სასახლეები</strong> - ყველა ფასის კატეგორიაში.
+          </p>
+          
+          <h4>სასახლეების ტიპები:</h4>
+          <ul>
+            <li><strong>ხის სასახლეები</strong> (xis sasaxleebi) - ბუნებრივი მასალებით</li>
+            <li><strong>ლუქს კლასის სასახლეები</strong> - უმაღლესი ხარისხით</li>
+            <li><strong>ეკონომ კლასის სასახლეები</strong> - ხელმისაწვდომი ფასით</li>
+            <li><strong>სტანდარტული სასახლეები</strong> - სანდო ხარისხით</li>
+          </ul>
+        </div>
+        
+        <!-- Shrouds SEO Content -->
+        <div *ngSwitchCase="'shrouds'" class="product-seo-content">
+          <h3>სუდარები - sudarebi ბუნებრივი მასალებით</h3>
+          <p>
+            <strong>სუდარები</strong> (sudarebi) - ჩვენ გთავაზობთ <strong>ბამბის სუდარებს</strong> 
+            (bambis sudarebi) ბუნებრივი მასალებით, <strong>სილკის სუდარებს</strong> 
+            (silkis sudarebi) ხარისხიანი ქსოვილით და <strong>ხელოვნური ქსოვილის სუდარებს</strong> 
+            გამძლე მასალებით.
+          </p>
+          
+          <h4>სუდარების ტიპები:</h4>
+          <ul>
+            <li><strong>ბამბის სუდარები</strong> (bambis sudarebi) - ბუნებრივი მასალებით</li>
+            <li><strong>სილკის სუდარები</strong> (silkis sudarebi) - ხარისხიანი ქსოვილით</li>
+            <li><strong>ხელოვნური ქსოვილის სუდარები</strong> - გამძლე მასალებით</li>
+            <li><strong>სპეციალური დიზაინის სუდარები</strong> - ინდივიდუალური მიდგომით</li>
+          </ul>
+        </div>
+        
+        <!-- Refrigeration SEO Content -->
+        <div *ngSwitchCase="'refrigeration'" class="product-seo-content">
+          <h3>მაცივრები - macivrеbi სასახლე-მაცივრები</h3>
+          <p>
+            <strong>მაცივრები</strong> (macivrеbi) - ჩვენი <strong>სასახლე-მაცივრები</strong> 
+            (sasaxle-macivrеbi) კომბინირებული ფუნქციით. <strong>სტაციონარული მაცივრები</strong> 
+            დიდი ტევადობით და <strong>მობილური მაცივრები</strong> ტრანსპორტირებისთვის.
+          </p>
+          
+          <h4>მაცივრების ტიპები:</h4>
+          <ul>
+            <li><strong>სასახლე-მაცივრები</strong> (sasaxle-macivrеbi) - კომბინირებული ფუნქციით</li>
+            <li><strong>სტაციონარული მაცივრები</strong> - დიდი ტევადობით</li>
+            <li><strong>მობილური მაცივრები</strong> - ტრანსპორტირებისთვის</li>
+            <li><strong>სპეციალური მაცივრები</strong> - გახანგრძლივებული შენახვისთვის</li>
+          </ul>
+        </div>
+        
+        <!-- Hearse SEO Content -->
+        <div *ngSwitchCase="'hearse'" class="product-seo-content">
+          <h3>კატაფალკი - katafalki მომსახურება 24/7</h3>
+          <p>
+            <strong>კატაფალკი</strong> (katafalki) - ჩვენი თანამედროვე კატაფალკების პარკი 
+            მზადაა ნებისმიერ დროს. <strong>თანამედროვე კატაფალკები</strong> 
+            (tanamedrove katafalkebi) უკანასკნელი მოდელები და <strong>ლუქს კლასის კატაფალკები</strong> 
+            უმაღლესი კომფორტით. <strong>გადასვენება</strong> (gadasveneba) ნებისმიერ მიმართულებით.
+          </p>
+          
+          <h4>კატაფალკის ტიპები:</h4>
+          <ul>
+            <li><strong>თანამედროვე კატაფალკები</strong> (tanamedrove katafalkebi) - უკანასკნელი მოდელები</li>
+            <li><strong>ლუქს კლასის კატაფალკები</strong> - უმაღლესი კომფორტით</li>
+            <li><strong>სტანდარტული კატაფალკები</strong> - სანდო ხარისხით</li>
+            <li><strong>სპეციალური კატაფალკები</strong> - ინდივიდუალური მოთხოვნებისთვის</li>
+          </ul>
+          
+          <h4>კატაფალკის მომსახურება:</h4>
+          <ul>
+            <li>24/7 ხელმისაწვდომობა</li>
+            <li>გადასვენება ნებისმიერ მიმართულებით</li>
+            <li>გამოცდილი მძღოლები</li>
+            <li>თანამედროვე აღჭურვილობა</li>
+            <li>უსაფრთხო ტრანსპორტირება</li>
+            <li>სრული იურიდიული მხარდაჭერა</li>
+          </ul>
+          
+          <h4>გადასვენების მიმართულებები:</h4>
+          <ul>
+            <li>თბილისის ყველა უბანი</li>
+            <li>საქართველოს ყველა რეგიონი</li>
+            <li>საზღვარგარეთ გადასვენება</li>
+            <li>საერთაშორისო ტრანსპორტირება</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!-- Funeral Planning CTA Section -->
+  <section class="contact-cta">
+    <div class="container">
+      <h3>{{translate('funeral_planning.cta_title')}}</h3>
+      <p>{{translate('funeral_planning.cta_description')}}</p>
+      <div class="cta-buttons">
+        <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+          <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
+        </a>
+        <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+          {{translate('funeral_planning.start_planning')}}
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Additional SEO Keywords (Hidden) -->
+  <div class="seo-keywords" aria-hidden="true">
+    <span *ngIf="productType === 'coffins'">sasaxleebi, xis sasaxleebi, lux klasis sasaxleebi</span>
+    <span *ngIf="productType === 'shrouds'">sudarebi, bambis sudarebi, silkis sudarebi</span>
+    <span *ngIf="productType === 'refrigeration'">macivrеbi, sasaxle-macivrеbi</span>
+    <span *ngIf="productType === 'hearse'">katafalki, tanamedrove katafalkebi, gadasveneba</span>
+  </div>

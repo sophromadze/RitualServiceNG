@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
-import { ServiceDetailComponent } from './pages/service-detail/service-detail.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
+
 import { LocationsComponent } from './pages/locations/locations.component';
 import { FuneralPlanningComponent } from './pages/funeral-planning/funeral-planning.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -37,68 +36,6 @@ export const routes: Routes = [
         }
       },
       
-      // Service detail pages with SEO-focused Georgian URLs
-      { 
-        path: 'services/damkrdzalavi-biuro', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'funeral-home',
-          title: 'დამკრძალავი ბიურო - რიტუალ სერვისი | damkrdzalavi biuro',
-          description: 'პროფესიონალური დამკრძალავი ბიურო თბილისში. სრული სარიტუალო მომსახურება, მიცვალებულის ჩაცმა, ბალზამირება. 24/7 მომსახურება.',
-          keywords: 'დამკრძალავი ბიურო, damkrdzalavi biuro, სარიტუალო სახლი, მიცვალებულის ჩაცმა, რიტუალური მომსახურება'
-        }
-      },
-      { 
-        path: 'services/balzamireba', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'embalming',
-          title: 'ბალზამირება - პროფესიონალური მომსახურება | რიტუალ სერვისი',
-          description: 'ბალზამირების პროფესიონალური მომსახურება. მიცვალებულის დაცვა, ჰიგიენური მომზადება. გამოცდილი სპეციალისტები.',
-          keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება, დამკრძალავი ბიურო, რიტუალური მომსახურება'
-        }
-      },
-      { 
-        path: 'services/katafalka', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'hearse',
-          title: 'კატაფალკა - კატაფალკის მომსახურება | რიტუალ სერვისი',
-          description: 'კატაფალკის პროფესიონალური მომსახურება. თანამედროვე კატაფალკები, გადასვენება ნებისმიერ მიმართულებით. 24/7 ხელმისაწვდომობა.',
-          keywords: 'კატაფალკა, katafalka, კატაფალკის მომსახურება, გადასვენება, gadasveneba, დამკრძალავი ბიურო'
-        }
-      },
-      { 
-        path: 'services/gadasveneba', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'transportation',
-          title: 'გადასვენება - ტრანსპორტირება | რიტუალ სერვისი',
-          description: 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ. პროფესიონალური ტრანსპორტირება, ყველა საჭირო დოკუმენტი.',
-          keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება, კატაფალკა, დამკრძალავი ბიურო, რაიონში გადასვენება'
-        }
-      },
-      { 
-        path: 'services/qvaze-xatva', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'stone-engraving',
-          title: 'ქვაზე ხატვა - ხელოსნური ხატვა | რიტუალ სერვისი',
-          description: 'ქვაზე პროფესიონალური ხატვა, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა. ხელოვნური და ხანგრძლივი.',
-          keywords: 'ქვაზე ხატვა, qvaze xatva, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა, საფლავის მოპირკეთება'
-        }
-      },
-      { 
-        path: 'services/mopirketeba', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'grave-decoration',
-          title: 'საფლავის მოპირკეთება - მემორიალური სამუშაოები | რიტუალ სერვისი',
-          description: 'საფლავის პროფესიონალური მოპირკეთება, მემორიალური სამუშაოები, ქვაზე ხატვა, ფერადი სურათის დამზადება.',
-          keywords: 'საფლავის მოპირკეთება, mopirketeba, ქვაზე ხატვა, მემორიალური სამუშაოები, ფერადი სურათის დამზადება'
-        }
-      },
-      
       { 
         path: 'products', 
         component: ProductsComponent,
@@ -109,7 +46,7 @@ export const routes: Routes = [
         }
       },
       { 
-        path: 'products/sasaxleebi', 
+        path: 'products/coffins', 
         component: ProductDetailComponent,
         data: { 
           product: 'coffins',
@@ -119,7 +56,7 @@ export const routes: Routes = [
         }
       },
       { 
-        path: 'products/sudarebi', 
+        path: 'products/shrouds', 
         component: ProductDetailComponent,
         data: { 
           product: 'shrouds',
@@ -129,13 +66,23 @@ export const routes: Routes = [
         }
       },
       { 
-        path: 'products/macivrеbi', 
+        path: 'products/refrigeration', 
         component: ProductDetailComponent,
         data: { 
           product: 'refrigeration',
           title: 'მაცივრები - სასახლე მაცივრები | რიტუალ სერვისი',
           description: 'თანამედროვე სასახლე-მაცივრები, ამერიკული და სტანდარტული მოდელები. ხანგრძლივი შენახვა.',
           keywords: 'მაცივრები, macivrеbi, სასახლე მაცივარი, ამერიკული მაცივარი, სტანდარტული მაცივარი'
+        }
+      },
+      { 
+        path: 'products/hearse', 
+        component: ProductDetailComponent,
+        data: { 
+          product: 'hearse',
+          title: 'კატაფალკი - კატაფალკის მომსახურება | რიტუალ სერვისი',
+          description: 'კატაფალკის პროფესიონალური მომსახურება. თანამედროვე კატაფალკები, გადასვენება ნებისმიერ მიმართულებით. 24/7 ხელმისაწვდომობა.',
+          keywords: 'კატაფალკი, katafalki, კატაფალკის მომსახურება, გადასვენება, gadasveneba, დამკრძალავი ბიურო'
         }
       },
       
@@ -148,15 +95,7 @@ export const routes: Routes = [
           keywords: 'რიტუალ სერვისი ისტორია, გამოცდილება, დამკრძალავი ბიურო, პროფესიონალური გუნდი'
         }
       },
-      { 
-        path: 'contact', 
-        component: ContactComponent,
-        data: { 
-          title: 'კონტაქტი - 24/7 მომსახურება | რიტუალ სერვისი',
-          description: 'დაგვიკავშირდით 24/7. პროფესიონალური კონსულტაცია, სწრაფი რეაგირება. თბილისში 3 ფილიალი.',
-          keywords: 'კონტაქტი, 24/7 მომსახურება, უფასო კონსულტაცია, agentic gamodzaxeba, რიტუალ სერვისი ფილიალები'
-        }
-      },
+
       { 
         path: 'locations', 
         component: LocationsComponent,
@@ -200,18 +139,12 @@ export const routes: Routes = [
           keywords: 'funeral services, embalming, hearse services, stone engraving, transportation, mourning hall, burial preparation'
         }
       },
-      { path: 'services/funeral-home', component: ServiceDetailComponent, data: { service: 'funeral-home' }},
-      { path: 'services/embalming', component: ServiceDetailComponent, data: { service: 'embalming' }},
-      { path: 'services/hearse', component: ServiceDetailComponent, data: { service: 'hearse' }},
-      { path: 'services/transportation', component: ServiceDetailComponent, data: { service: 'transportation' }},
-      { path: 'services/stone-engraving', component: ServiceDetailComponent, data: { service: 'stone-engraving' }},
-      { path: 'services/grave-decoration', component: ServiceDetailComponent, data: { service: 'grave-decoration' }},
       { path: 'products', component: ProductsComponent },
       { path: 'products/coffins', component: ProductDetailComponent, data: { product: 'coffins' }},
       { path: 'products/shrouds', component: ProductDetailComponent, data: { product: 'shrouds' }},
       { path: 'products/refrigeration', component: ProductDetailComponent, data: { product: 'refrigeration' }},
+      { path: 'products/hearse', component: ProductDetailComponent, data: { product: 'hearse' }},
       { path: 'about', component: AboutComponent },
-      { path: 'contact', component: ContactComponent },
       { path: 'locations', component: LocationsComponent },
       { 
         path: 'funeral-planning', 
@@ -247,18 +180,12 @@ export const routes: Routes = [
           keywords: 'ритуальные услуги, бальзамирование, услуги катафалка, роспись на камне, перевозка покойного, траурный зал'
         }
       },
-      { path: 'services/funeral-home', component: ServiceDetailComponent, data: { service: 'funeral-home' }},
-      { path: 'services/embalming', component: ServiceDetailComponent, data: { service: 'embalming' }},
-      { path: 'services/hearse', component: ServiceDetailComponent, data: { service: 'hearse' }},
-      { path: 'services/transportation', component: ServiceDetailComponent, data: { service: 'transportation' }},
-      { path: 'services/stone-engraving', component: ServiceDetailComponent, data: { service: 'stone-engraving' }},
-      { path: 'services/grave-decoration', component: ServiceDetailComponent, data: { service: 'grave-decoration' }},
       { path: 'products', component: ProductsComponent },
       { path: 'products/coffins', component: ProductDetailComponent, data: { product: 'coffins' }},
       { path: 'products/shrouds', component: ProductDetailComponent, data: { product: 'shrouds' }},
       { path: 'products/refrigeration', component: ProductDetailComponent, data: { product: 'refrigeration' }},
+      { path: 'products/hearse', component: ProductDetailComponent, data: { product: 'hearse' }},
       { path: 'about', component: AboutComponent },
-      { path: 'contact', component: ContactComponent },
       { path: 'locations', component: LocationsComponent },
       { 
         path: 'funeral-planning', 

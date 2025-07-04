@@ -26,65 +26,68 @@ export class HeaderComponent implements OnInit {
   navigation = {
     ka: {
       services: [
-        { name: 'დამკრძალავი ბიურო', url: '/ka/services/damkrdzalavi-biuro', keywords: 'damkrdzalavi biuro' },
-        { name: 'ბალზამირება', url: '/ka/services/balzamireba', keywords: 'balzamireba' },
-        { name: 'მიცვალებულის ჩაცმა', url: '/ka/services/micvalebulis-chacma', keywords: 'micvalebulis chacma' },
-        { name: 'საპანაშვიდე დარბაზი', url: '/ka/services/sapanashvide-darbazi', keywords: 'sapanashvide darbazi' },
-        { name: 'საბანკეტო დარბაზი', url: '/ka/services/sabanketo-darbazi', keywords: 'sabanketo darbazi' },
-        { name: 'სამარხის გაჭრა', url: '/ka/services/samarxis-gacra', keywords: 'samarxis gacra' },
-        { name: 'ფერადი სურათის დამზადება', url: '/ka/services/feradi-suratis-damzadeba', keywords: 'feradi suratis damzadeba' },
-        { name: 'ლითონის ასოებით წარწერა', url: '/ka/services/litonis-asoebit-carcera', keywords: 'litonis asoebit carcera' },
-        { name: 'გადასვენება', url: '/ka/services/gadasveneba', keywords: 'gadasveneba' },
-        { name: 'ქვაზე ხატვა', url: '/ka/services/qvaze-xatva', keywords: 'qvaze xatva' },
-        { name: 'საფლავის მოპირკეთება', url: '/ka/services/mopirketeba', keywords: 'mopirketeba' }
+        { name: 'აგენტის მომსახურება', url: '/ka/services#agent-service', keywords: 'agentic momsaxureba' },
+        { name: 'მიცვალებულის ჩაცმა', url: '/ka/services#dressing', keywords: 'micvalebulis chacma' },
+        { name: 'ბალზამირება', url: '/ka/services#embalming', keywords: 'balzamireba' },
+        { name: 'კატაფალკის მომსახურება', url: '/ka/services#hearse', keywords: 'katafalkis momsaxureba' },
+        { name: 'გადასვენება', url: '/ka/services#transportation', keywords: 'gadasveneba' },
+        { name: 'ქვაზე ხატვა', url: '/ka/services#stone-engraving', keywords: 'qvaze xatva' },
+        { name: 'საფლავის მოპირკეთება', url: '/ka/services#grave-decoration', keywords: 'mopirketeba' },
+        { name: 'საპანაშვიდე დარბაზი', url: '/ka/services#mourning-hall', keywords: 'sapanashvide darbazi' },
+        { name: 'საბანკეტო დარბაზი', url: '/ka/services#banquet-hall', keywords: 'sabanketo darbazi' },
+        { name: 'სამარხის გაჭრა', url: '/ka/services#grave-preparation', keywords: 'samarxis gacra' },
+        { name: 'ფერადი სურათის დამზადება', url: '/ka/services#colored-photo', keywords: 'feradi suratis damzadeba' },
+        { name: 'ლითონის ასოებით წარწერა', url: '/ka/services#metal-letters', keywords: 'litonis asoebit carcera' }
       ],
       products: [
-        { name: 'სასახლეები', url: '/ka/products/sasaxleebi', keywords: 'sasaxleebi' },
-        { name: 'სუდარები', url: '/ka/products/sudarebi', keywords: 'sudarebi, sudara' },
-        { name: 'მაცივრები', url: '/ka/products/macivrеbi', keywords: 'macivrеbi' },
-        { name: 'კატაფალკი', url: '/ka/products/katafalki', keywords: 'katafalki' }
+        { name: 'სასახლეები', url: '/ka/products/coffins', keywords: 'sasaxleebi' },
+        { name: 'კატაფალკი', url: '/ka/products/hearse', keywords: 'katafalki' },
+        { name: 'სუდარები', url: '/ka/products/shrouds', keywords: 'sudarebi, sudara' },
+        { name: 'მაცივრები', url: '/ka/products/refrigeration', keywords: 'macivrеbi' }
       ]
     },
     en: {
       services: [
-        { name: 'Funeral Home', url: '/en/services/funeral-home', keywords: 'funeral home' },
-        { name: 'Embalming', url: '/en/services/embalming', keywords: 'embalming' },
-        { name: 'Dressing the Deceased', url: '/en/services/dressing-deceased', keywords: 'dressing deceased' },
-        { name: 'Memorial Hall', url: '/en/services/memorial-hall', keywords: 'memorial hall' },
-        { name: 'Banquet Hall', url: '/en/services/banquet-hall', keywords: 'banquet hall' },
-        { name: 'Grave Digging', url: '/en/services/grave-digging', keywords: 'grave digging' },
-        { name: 'Color Photo Production', url: '/en/services/color-photo-production', keywords: 'color photo production' },
-        { name: 'Metal Letter Engraving', url: '/en/services/metal-letter-engraving', keywords: 'metal letter engraving' },
-        { name: 'Transportation', url: '/en/services/transportation', keywords: 'transportation' },
-        { name: 'Stone Engraving', url: '/en/services/stone-engraving', keywords: 'stone engraving' },
-        { name: 'Grave Decoration', url: '/en/services/grave-decoration', keywords: 'grave decoration' }
+        { name: 'Agent Service', url: '/en/services#agent-service', keywords: 'agent service' },
+        { name: 'Dressing the Deceased', url: '/en/services#dressing', keywords: 'dressing deceased' },
+        { name: 'Embalming', url: '/en/services#embalming', keywords: 'embalming' },
+        { name: 'Hearse Service', url: '/en/services#hearse', keywords: 'hearse service' },
+        { name: 'Transportation', url: '/en/services#transportation', keywords: 'transportation' },
+        { name: 'Stone Engraving', url: '/en/services#stone-engraving', keywords: 'stone engraving' },
+        { name: 'Grave Decoration', url: '/en/services#grave-decoration', keywords: 'grave decoration' },
+        { name: 'Memorial Hall', url: '/en/services#mourning-hall', keywords: 'memorial hall' },
+        { name: 'Banquet Hall', url: '/en/services#banquet-hall', keywords: 'banquet hall' },
+        { name: 'Grave Digging', url: '/en/services#grave-preparation', keywords: 'grave digging' },
+        { name: 'Color Photo Production', url: '/en/services#colored-photo', keywords: 'color photo production' },
+        { name: 'Metal Letter Engraving', url: '/en/services#metal-letters', keywords: 'metal letter engraving' }
       ],
       products: [
         { name: 'Coffins', url: '/en/products/coffins', keywords: 'coffins' },
+        { name: 'Hearse', url: '/en/products/hearse', keywords: 'hearse' },
         { name: 'Shrouds', url: '/en/products/shrouds', keywords: 'shrouds' },
-        { name: 'Refrigeration', url: '/en/products/refrigeration', keywords: 'refrigeration' },
-        { name: 'Hearse', url: '/en/products/hearse', keywords: 'hearse' }
+        { name: 'Refrigeration', url: '/en/products/refrigeration', keywords: 'refrigeration' }
       ]
     },
     ru: {
       services: [
-        { name: 'Похоронный дом', url: '/ru/services/funeral-home', keywords: 'похоронный дом' },
-        { name: 'Бальзамирование', url: '/ru/services/embalming', keywords: 'бальзамирование' },
-        { name: 'Одевание покойного', url: '/ru/services/dressing-deceased', keywords: 'одевание покойного' },
-        { name: 'Поминальный зал', url: '/ru/services/memorial-hall', keywords: 'поминальный зал' },
-        { name: 'Банкетный зал', url: '/ru/services/banquet-hall', keywords: 'банкетный зал' },
-        { name: 'Копание могилы', url: '/ru/services/grave-digging', keywords: 'копание могилы' },
-        { name: 'Изготовление цветных фотографий', url: '/ru/services/color-photo-production', keywords: 'изготовление цветных фотографий' },
-        { name: 'Гравировка металлическими буквами', url: '/ru/services/metal-letter-engraving', keywords: 'гравировка металлическими буквами' },
-        { name: 'Перевозка', url: '/ru/services/transportation', keywords: 'перевозка' },
-        { name: 'Роспись на камне', url: '/ru/services/stone-engraving', keywords: 'роспись на камне' },
-        { name: 'Благоустройство могил', url: '/ru/services/grave-decoration', keywords: 'благоустройство могил' }
+        { name: 'Агентское обслуживание', url: '/ru/services#agent-service', keywords: 'агентское обслуживание' },
+        { name: 'Одевание покойного', url: '/ru/services#dressing', keywords: 'одевание покойного' },
+        { name: 'Бальзамирование', url: '/ru/services#embalming', keywords: 'бальзамирование' },
+        { name: 'Услуги катафалка', url: '/ru/services#hearse', keywords: 'услуги катафалка' },
+        { name: 'Перевозка', url: '/ru/services#transportation', keywords: 'перевозка' },
+        { name: 'Роспись на камне', url: '/ru/services#stone-engraving', keywords: 'роспись на камне' },
+        { name: 'Благоустройство могил', url: '/ru/services#grave-decoration', keywords: 'благоустройство могил' },
+        { name: 'Поминальный зал', url: '/ru/services#mourning-hall', keywords: 'поминальный зал' },
+        { name: 'Банкетный зал', url: '/ru/services#banquet-hall', keywords: 'банкетный зал' },
+        { name: 'Копание могилы', url: '/ru/services#grave-preparation', keywords: 'копание могилы' },
+        { name: 'Изготовление цветных фотографий', url: '/ru/services#colored-photo', keywords: 'изготовление цветных фотографий' },
+        { name: 'Гравировка металлическими буквами', url: '/ru/services#metal-letters', keywords: 'гравировка металлическими буквами' }
       ],
       products: [
         { name: 'Гробы', url: '/ru/products/coffins', keywords: 'гробы' },
+        { name: 'Катафалк', url: '/ru/products/hearse', keywords: 'катафалк' },
         { name: 'Саваны', url: '/ru/products/shrouds', keywords: 'саваны' },
-        { name: 'Холодильники', url: '/ru/products/refrigeration', keywords: 'холодильники' },
-        { name: 'Катафалк', url: '/ru/products/hearse', keywords: 'катафалк' }
+        { name: 'Холодильники', url: '/ru/products/refrigeration', keywords: 'холодильники' }
       ]
     }
   };
@@ -132,7 +135,19 @@ export class HeaderComponent implements OnInit {
   }
 
   navigateTo(url: string): void {
-    this.router.navigateByUrl(url);
+    // Extract the path and fragment from the URL
+    const urlParts = url.split('#');
+    const path = urlParts[0];
+    const fragment = urlParts[1];
+    
+    if (fragment) {
+      // Navigate with fragment
+      this.router.navigate([path], { fragment: fragment });
+    } else {
+      // Navigate without fragment
+      this.router.navigateByUrl(url);
+    }
+    
     this.closeAllDropdowns();
     this.isMenuOpen = false;
   }
@@ -153,5 +168,16 @@ export class HeaderComponent implements OnInit {
 
   isLinkActive(linkId: string): boolean {
     return this.lastClickedLink === linkId;
+  }
+
+  getServicePath(url: string): string[] {
+    const urlParts = url.split('#');
+    const path = urlParts[0];
+    return [path];
+  }
+
+  getServiceFragment(url: string): string {
+    const urlParts = url.split('#');
+    return urlParts[1] || '';
   }
 }

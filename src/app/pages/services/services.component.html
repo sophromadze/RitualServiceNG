@@ -1,232 +1,263 @@
 <!-- SEO Header Section with Keywords -->
 <div class="seo-headers">
     <h1>{{translate('nav.services')}} - {{translate('header.company_name')}}</h1>
-    <h2 class="seo-hidden">დაკრძალვის სერვისები - დამკრძალავი ბიურო - damkrdzalavi biuro</h2>
-    <h3 class="seo-hidden">ბალზამირება - კატაფალკა - ქვაზე ხატვა - გადასვენება</h3>
-    <h3 class="seo-hidden">balzamireba - katafalka - qvaze xatva - gadasveneba</h3>
-  </div>
+    <h2 class="seo-hidden">სარიტუალო მომსახურება - ბალზამირება - კატაფალკა - ქვაზე ხატვა</h2>
+    <h3 class="seo-hidden">balzamireba - katafalka - qvaze xatva - gadasveneba - mopirketeba</h3>
+</div>
   
-  <!-- Hero Section -->
-  <section class="services-hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>{{translate('seo.funeral_services')}} - {{translate('header.company_name')}}</h1>
-        <p class="hero-description">
-          <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) რიტუალ სერვისი გთავაზობთ სრულ კომპლექს 
-          სარიტუალო მომსახურებისა: <strong>ბალზამირება</strong> (balzamireba), 
-          <strong>კატაფალკა</strong> (katafalka), <strong>ქვაზე ხატვა</strong> (qvaze xatva), 
-          <strong>გადასვენება</strong> (gadasveneba).
-        </p>
-        
-        <div class="hero-keywords">
-          <span class="keyword-tag">მიცვალებულის ჩაცმა</span>
-          <span class="keyword-tag">საფლავის მოპირკეთება</span>
-          <span class="keyword-tag">მემორიალური სამუშაოები</span>
-          <span class="keyword-tag">სამგლოვიარო ცერემონიები</span>
-        </div>
-        
-        <div class="hero-cta">
+<!-- Hero Section -->
+<section class="services-hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>{{translate('seo.funeral_services')}} - {{translate('header.company_name')}}</h1>
+      <p class="hero-description">
+        {{translate('services.hero_description')}}
+      </p>
+      
+      <div class="hero-keywords">
+        <span class="keyword-tag">{{translate('services.hero_keywords.ritual_services')}}</span>
+        <span class="keyword-tag">{{translate('services.hero_keywords.embalming')}}</span>
+        <span class="keyword-tag">{{translate('services.hero_keywords.hearse')}}</span>
+        <span class="keyword-tag">{{translate('services.hero_keywords.stone_engraving')}}</span>
+        <span class="keyword-tag">{{translate('services.hero_keywords.transportation')}}</span>
+        <span class="keyword-tag">{{translate('services.hero_keywords.dressing')}}</span>
+      </div>
+      
+              <div class="hero-cta">
           <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
             <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
           </a>
-          <a [routerLink]="['/'+currentLanguage+'/contact']" class="btn btn-secondary">
-            {{translate('contact.free_consultation')}}
+          <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+            {{translate('funeral_planning.start_planning')}}
           </a>
         </div>
-      </div>
-      
-      <div class="hero-image">
-        <img src="/images/services-hero.jpg" 
-             alt="სარიტუალო მომსახურება - დამკრძალავი ბიურო"
-             loading="eager">
-      </div>
     </div>
-  </section>
-  
-  <!-- Services Grid Section -->
-  <section class="services-grid-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>ჩვენი მომსახურება</h2>
-        <p>პროფესიონალური <strong>დამკრძალავი ბიურო</strong> - სრული სარიტუალო მომსახურება 24/7</p>
-      </div>
-      
-      <div class="services-grid">
-        <div class="service-card" 
-             *ngFor="let service of services"
-             (click)="navigateToService(service.url)">
-          
-          <div class="service-image">
-            <img [src]="service.image" 
-                 [alt]="translate(service.titleKey) + ' - ' + service.keywords"
-                 loading="lazy">
-            <div class="service-overlay">
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </div>
-          
-          <div class="service-content">
-            <h3>{{translate(service.titleKey)}}</h3>
-            <p>{{translate(service.descKey)}}</p>
-            
-            <div class="service-features">
-              <ul>
-                <li *ngFor="let feature of service.features">
-                  <i class="fa-solid fa-check"></i>
-                  {{feature}}
-                </li>
-              </ul>
-            </div>
-            
-            <div class="service-keywords">
-              <small>{{service.keywords}}</small>
-            </div>
-            
-            <div class="service-cta">
-              <span class="cta-text">{{translate('cta.learn_more')}}</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </div>
-          </div>
-        </div>
-      </div>
+    
+    <div class="hero-image">
+      <img src="/images/services.jpg" 
+           alt="სარიტუალო მომსახურება - რიტუალ სერვისი"
+           loading="eager">
     </div>
-  </section>
-  
-  <!-- SEO Content Section with Maximum Keywords -->
-  <section class="seo-content-section">
-    <div class="container">
-      <div class="seo-content">
-        <h2>სარიტუალო მომსახურება - დამკრძალავი ბიურო რიტუალ სერვისი</h2>
-        
-        <div class="seo-text">
-          <h3>დამკრძალავი ბიურო - damkrdzalavi biuro პროფესიონალური მომსახურება</h3>
-          <p>
-            ჩვენი <strong>დამკრძალავი ბიურო</strong> (damkrdzalavi biuro) წარმოადგენს პროფესიონალურ 
-            <strong>სარიტუალო სახლს</strong> (saritualo saxli), სადაც მიიღებთ ყველა საჭირო მომსახურებას 
-            <strong>დაკრძალვის</strong> (dakrdzalva) ორგანიზებისთვის. ჩვენ ვზრუნავთ 
-            <strong>მიცვალებულის</strong> (micvalebuli) ღირსეულ მომზადებაზე და 
-            <strong>სამგლოვიარო ცერემონიების</strong> (samgloviaro) ორგანიზებაზე.
-          </p>
-          
-          <h4>ძირითადი სარიტუალო სერვისები:</h4>
-          <ul>
-            <li><strong>ბალზამირება</strong> (balzamireba) - მიცვალებულის პროფესიონალური მომზადება</li>
-            <li><strong>კატაფალკა</strong> (katafalka) - კატაფალკის მომსახურება ყველა მიმართულებით</li>
-            <li><strong>გადასვენება</strong> (gadasveneba) - რაიონში და საზღვარგარეთ ტრანსპორტირება</li>
-            <li><strong>ქვაზე ხატვა</strong> (qvaze xatva) - პროფესიონალური ხელოვნური მუშაობა</li>
-            <li><strong>საფლავის მოპირკეთება</strong> (mopirketeba) - კომპლექსური მემორიალური სამუშაოები</li>
-            <li><strong>მიცვალებულის ჩაცმა</strong> (micvalebulis chacma) - ღირსეული მომზადება</li>
-          </ul>
-  
-          <h4>დამატებითი სერვისები:</h4>
-          <ul>
-            <li><strong>საპანაშვიდე</strong> (sapanashvide) დარბაზი - ღირსეული გარემო</li>
-            <li><strong>საბანკეტო დარბაზი</strong> - მემორიალური ღონისძიებებისთვის</li>
-            <li><strong>ფერადი სურათის დამზადება</strong> - მაღალი ხარისხით</li>
-            <li><strong>ლითონის ასოებით წარწერა</strong> - ხანგრძლივი და ღირსეული</li>
-            <li><strong>სუდარა</strong> (sudara) - ხარისხიანი სარიტუალო ტანსაცმელი</li>
-            <li><strong>მაცივრები</strong> - სასახლე-მაცივრები ხანგრძლივი შენახვისთვის</li>
-          </ul>
-  
-          <h4>ჩვენი უპირატესობები:</h4>
-          <ul>
-            <li>20 წლიანი გამოცდილება <strong>დაკრძალვის სერვისებში</strong></li>
-            <li><strong>24/7 მომსახურება</strong> - ნებისმიერ დროს ხელმისაწვდომი</li>
-            <li>პროფესიონალური გუნდი <strong>სარიტუალო მომსახურებაში</strong></li>
-            <li><strong>სასაფლაო</strong> მომსახურება ყველა დონეზე</li>
-            <li><strong>დასაფლავების მომსახურება</strong> - სრული კომპლექსი</li>
-            <li>ინდივიდუალური მიდგომა თითოეული <strong>მიცვალებულის</strong> მიმართ</li>
-          </ul>
-  
-          <h4>ფილიალები თბილისში:</h4>
-          <ul>
-            <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა</li>
-            <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა</li>
-            <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა</li>
-          </ul>
-  
-          <p>
-            ჩვენი <strong>სარიტუალო სახლი</strong> (saritualo saxli) უზრუნველყოფს ღირსეულ 
-            <strong>სამგლოვიარო ცერემონიებს</strong> (samgloviaro cerimoniis) და კომპლექსურ 
-            <strong>დასაფლავების მომსახურებას</strong> (dasaflaveba momsaxureba). 
-            <strong>damkrdzalavi biuro</strong> რიტუალ სერვისი - თქვენი დანდობილი პარტნერი რთულ დროს.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Service Categories Section -->
-  <section class="service-categories">
-    <div class="container">
-      <h2>სერვისების კატეგორიები</h2>
-      
-      <div class="categories-grid">
-        <div class="category-card">
-          <h3>ძირითადი მომსახურება</h3>
-          <ul>
-            <li>დამკრძალავი ბიურო - damkrdzalavi biuro</li>
-            <li>ბალზამირება - balzamireba</li>
-            <li>კატაფალკა - katafalka</li>
-            <li>მიცვალებულის ჩაცმა - micvalebulis chacma</li>
-          </ul>
-        </div>
-        
-        <div class="category-card">
-          <h3>ტრანსპორტირება</h3>
-          <ul>
-            <li>გადასვენება - gadasveneba</li>
-            <li>რაიონში გადასვენება</li>
-            <li>საზღვარგარეთ გადასვენება</li>
-            <li>კატაფალკის მომსახურება</li>
-          </ul>
-        </div>
-        
-        <div class="category-card">
-          <h3>მემორიალური სამუშაოები</h3>
-          <ul>
-            <li>ქვაზე ხატვა - qvaze xatva</li>
-            <li>საფლავის მოპირკეთება - mopirketeba</li>
-            <li>ფერადი სურათის დამზადება</li>
-            <li>ლითონის ასოებით წარწერა</li>
-          </ul>
-        </div>
-        
-        <div class="category-card">
-          <h3>დარბაზები და ღონისძიებები</h3>
-          <ul>
-            <li>საპანაშვიდე - sapanashvide</li>
-            <li>საბანკეტო დარბაზი</li>
-            <li>სამგლოვიარო - samgloviaro</li>
-            <li>მემორიალური ღონისძიებები</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact CTA Section -->
-  <section class="contact-cta">
-    <div class="container">
-      <h3>{{translate('contact.free_consultation')}}</h3>
-      <p>დაგვიკავშირდით ახლავე - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით</p>
-      <div class="cta-buttons">
-        <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-          <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
-        </a>
-        <a [routerLink]="['/'+currentLanguage+'/contact']" class="btn btn-secondary">
-          {{translate('contact.free_consultation')}}
-        </a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Hidden SEO Keywords -->
-  <div class="seo-keywords" aria-hidden="true">
-    <span>dakrdzalva</span>
-    <span>micvalebuli</span>
-    <span>sudara</span>
-    <span>sasaxleebi</span>
-    <span>macivrеbi</span>
-    <span>sarkofagi</span>
   </div>
+</section>
+
+<!-- Service Details Section -->
+<section class="service-details">
+  <div class="container">
+    <div class="service-plan-description">
+      <h2>{{translate('services.our_services_title')}}</h2>
+      <p>{{translate('services.our_services_description')}}</p>
+      <div class="short-plan-service">
+        <ul>
+          <li>{{translate('services.plan_list.agent_visit')}}</li>
+          <li>{{translate('services.plan_list.dressing_preparation')}}</li>
+          <li>{{translate('services.plan_list.embalming')}}</li>
+          <li>{{translate('services.plan_list.hearse_service')}}</li>
+          <li>{{translate('services.plan_list.lifting_machine')}}</li>
+          <li>{{translate('services.plan_list.halls')}}</li>
+        </ul>
+        <ul>
+          <li>{{translate('services.plan_list.transportation')}}</li>
+          <li>{{translate('services.plan_list.grave_preparation')}}</li>
+          <li>{{translate('services.plan_list.stone_engraving')}}</li>
+          <li>{{translate('services.plan_list.colored_photo')}}</li>
+          <li>{{translate('services.plan_list.metal_letters')}}</li>
+        </ul>
+      </div>      
+    </div>
+    
+    <div class="service-plan-detailed">
+      <!-- Agent Service -->
+      <div id="agent-service" class="agent-service">
+        <img src="/images/agent.jpg" alt="{{translate('services.agent_service.alt')}}">
+        <div>
+          <h1>{{translate('services.agent_service.title')}}</h1>
+          <p>{{translate('services.agent_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Dressing Service -->
+      <div id="dressing" class="dressing-service">
+        <div>
+          <h1>{{translate('services.dressing_service.title')}}</h1>
+          <p>{{translate('services.dressing_service.description')}}</p>
+        </div>
+        <img src="/images/suit.jpg" alt="{{translate('services.dressing_service.alt')}}">
+      </div>
+      
+      <!-- Embalming Service -->
+      <div id="embalming" class="embalming-service">
+        <img src="/images/embalming.jpg" alt="{{translate('services.embalming_service.alt')}}">
+        <div>
+          <h1>{{translate('services.embalming_service.title')}}</h1>
+          <p>{{translate('services.embalming_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Hearse Service -->
+      <div id="hearse" class="hearse-service">
+        <div>
+          <h1>{{translate('services.hearse_service.title')}}</h1>
+          <p>{{translate('services.hearse_service.description')}}</p>
+        </div>
+        <img src="/images/katafalkebi.jpg" alt="{{translate('services.hearse_service.alt')}}">
+      </div>
+      
+      <!-- Transportation Service -->
+      <div id="transportation" class="transportation-service">
+        <img src="/images/transfer.jpg" alt="{{translate('services.transportation_service.alt')}}">
+        <div>
+          <h1>{{translate('services.transportation_service.title')}}</h1>
+          <p>{{translate('services.transportation_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Stone Engraving Service -->
+      <div id="stone-engraving" class="stone-engraving-service">
+        <div>
+          <h1>{{translate('services.stone_engraving_service.title')}}</h1>
+          <p>{{translate('services.stone_engraving_service.description')}}</p>
+        </div>
+        <img src="/images/stonepainting.jpg" alt="{{translate('services.stone_engraving_service.alt')}}">
+      </div>
+      
+      <!-- Grave Decoration Service -->
+      <div id="grave-decoration" class="grave-decoration-service">
+        <img src="/images/grave.jpg" alt="{{translate('services.grave_decoration_service.alt')}}">
+        <div>
+          <h1>{{translate('services.grave_decoration_service.title')}}</h1>
+          <p>{{translate('services.grave_decoration_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Mourning Hall Service -->
+      <div id="mourning-hall" class="mourning-hall-service">
+        <div>
+          <h1>{{translate('services.mourning_hall_service.title')}}</h1>
+          <p>{{translate('services.mourning_hall_service.description')}}</p>
+        </div>
+        <img src="/images/hall.jpg" alt="{{translate('services.mourning_hall_service.alt')}}">
+      </div>
+      
+      <!-- Banquet Hall Service -->
+      <div id="banquet-hall" class="banquet-hall-service">
+        <img src="/images/hall.jpg" alt="{{translate('services.banquet_hall_service.alt')}}">
+        <div>
+          <h1>{{translate('services.banquet_hall_service.title')}}</h1>
+          <p>{{translate('services.banquet_hall_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Grave Preparation Service -->
+      <div id="grave-preparation" class="grave-preparation-service">
+        <img src="/images/grave.jpg" alt="{{translate('services.grave_preparation_service.alt')}}">
+        <div>
+          <h1>{{translate('services.grave_preparation_service.title')}}</h1>
+          <p>{{translate('services.grave_preparation_service.description')}}</p>
+        </div>
+      </div>
+      
+      <!-- Colored Photo Service -->
+      <div id="colored-photo" class="colored-photo-service">
+        <div>
+          <h1>{{translate('services.colored_photo_service.title')}}</h1>
+          <p>{{translate('services.colored_photo_service.description')}}</p>
+        </div>
+        <img src="/images/stonepainting.jpg" alt="{{translate('services.colored_photo_service.alt')}}">
+      </div>
+      
+      <!-- Metal Letters Service -->
+      <div id="metal-letters" class="metal-letters-service">
+        <img src="/images/stonepainting.jpg" alt="{{translate('services.metal_letters_service.alt')}}">
+        <div>
+          <h1>{{translate('services.metal_letters_service.title')}}</h1>
+          <p>{{translate('services.metal_letters_service.description')}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  
+<!-- SEO Content Section with Maximum Keywords -->
+<section class="seo-content-section">
+  <div class="container">
+    <div class="seo-content">
+      <h2>სარიტუალო მომსახურება - რიტუალ სერვისი</h2>
+      
+      <div class="seo-text">
+        <h3>პროფესიონალური სარიტუალო მომსახურება</h3>
+        <p>
+          რიტუალ სერვისი წარმოადგენს პროფესიონალურ <strong>სარიტუალო მომსახურების</strong> 
+          კომპანიას, სადაც მიიღებთ ყველა საჭირო მომსახურებას <strong>დაკრძალვის</strong> 
+          (dakrdzalva) ორგანიზებისთვის. ჩვენ ვზრუნავთ <strong>მიცვალებულის</strong> 
+          (micvalebuli) ღირსეულ მომზადებაზე და <strong>სამგლოვიარო ცერემონიების</strong> 
+          (samgloviaro) ორგანიზებაზე.
+        </p>
+        
+        <h4>ძირითადი სარიტუალო სერვისები:</h4>
+        <ul>
+          <li><strong>ბალზამირება</strong> (balzamireba) - მიცვალებულის პროფესიონალური მომზადება</li>
+          <li><strong>კატაფალკა</strong> (katafalka) - კატაფალკის მომსახურება ყველა მიმართულებით</li>
+          <li><strong>მიცვალებულის ჩაცმა</strong> (micvalebulis chacma) - ღირსეული მომზადება</li>
+          <li><strong>გადასვენება</strong> (gadasveneba) - რაიონში და საზღვარგარეთ ტრანსპორტირება</li>
+          <li><strong>ქვაზე ხატვა</strong> (qvaze xatva) - პროფესიონალური ხელოვნური მუშაობა</li>
+          <li><strong>საფლავის მოპირკეთება</strong> (mopirketeba) - კომპლექსური მემორიალური სამუშაოები</li>
+        </ul>
+
+        <h4>დამატებითი სერვისები:</h4>
+        <ul>
+          <li><strong>საპანაშვიდე</strong> (sapanashvide) დარბაზი - ღირსეული გარემო</li>
+          <li><strong>საბანკეტო დარბაზი</strong> - მემორიალური ღონისძიებებისთვის</li>
+          <li><strong>ფერადი სურათის დამზადება</strong> - მაღალი ხარისხით</li>
+          <li><strong>ლითონის ასოებით წარწერა</strong> - ხანგრძლივი და ღირსეული</li>
+          <li><strong>სუდარა</strong> (sudara) - ხარისხიანი სარიტუალო ტანსაცმელი</li>
+          <li><strong>მაცივრები</strong> - სასახლე-მაცივრები ხანგრძლივი შენახვისთვის</li>
+        </ul>
+
+        <h4>ჩვენი უპირატესობები:</h4>
+        <ul>
+          <li>20 წლიანი გამოცდილება <strong>სარიტუალო მომსახურებაში</strong></li>
+          <li><strong>24/7 მომსახურება</strong> - ნებისმიერ დროს ხელმისაწვდომი</li>
+          <li>პროფესიონალური გუნდი <strong>სარიტუალო მომსახურებაში</strong></li>
+          <li><strong>სასაფლაო</strong> მომსახურება ყველა დონეზე</li>
+          <li><strong>დასაფლავების მომსახურება</strong> - სრული კომპლექსი</li>
+          <li>ინდივიდუალური მიდგომა თითოეული <strong>მიცვალებულის</strong> მიმართ</li>
+        </ul>
+
+        <h4>ფილიალები თბილისში:</h4>
+        <ul>
+          <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა</li>
+          <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა</li>
+          <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა</li>
+        </ul>
+
+        <p>
+          რიტუალ სერვისი უზრუნველყოფს ღირსეულ <strong>სამგლოვიარო ცერემონიებს</strong> 
+          (samgloviaro cerimoniis) და კომპლექსურ <strong>დასაფლავების მომსახურებას</strong> 
+          (dasaflaveba momsaxureba). ჩვენი კომპანია - თქვენი დანდობილი პარტნერი რთულ დროს.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<!-- Contact CTA Section -->
+<app-cta></app-cta>
+  
+<!-- Hidden SEO Keywords -->
+<div class="seo-keywords" aria-hidden="true">
+  <span>dakrdzalva</span>
+  <span>micvalebuli</span>
+  <span>sudara</span>
+  <span>sasaxleebi</span>
+  <span>macivrеbi</span>
+  <span>sarkofagi</span>
+  <span>balzamireba</span>
+  <span>katafalka</span>
+  <span>qvaze xatva</span>
+  <span>gadasveneba</span>
+  <span>mopirketeba</span>
+  <span>micvalebulis chacma</span>
+</div>
