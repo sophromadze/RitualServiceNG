@@ -15,9 +15,9 @@ export class LanguageSelectorComponent {
   isOpen = false;
 
   languages = [
-    { code: 'ka', name: 'ქარ', flag: '/images/ge.svg' },
-    { code: 'en', name: 'ENG', flag: '/images/gb.svg' },
-    { code: 'ru', name: 'РУС', flag: '/images/ru.svg' }
+    { code: 'ka', name: 'ქარ', flag: './images/ge.svg' },
+    { code: 'en', name: 'ENG', flag: './images/gb.svg' },
+    { code: 'ru', name: 'РУС', flag: './images/ru.svg' }
   ];
 
   selectLanguage(langCode: string) {
@@ -26,7 +26,7 @@ export class LanguageSelectorComponent {
   }
 
   getFlagSrc(): string {
-    return this.languages.find(lang => lang.code === this.currentLanguage)?.flag || '/images/ge.svg';
+    return this.languages.find(lang => lang.code === this.currentLanguage)?.flag || './images/ge.svg';
   }
 
   getLanguageName(): string {

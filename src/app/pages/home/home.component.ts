@@ -26,42 +26,42 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       id: 'main-service',
       titleKey: 'home.title',
       subtitleKey: 'home.subtitle',
-      image: '/images/kuboebi2.jpg',
+      image: './images/kuboebi2.jpg',
       alt: 'დამკრძალავი ბიურო - სარიტუალო სახლი - damkrdzalavi biuro'
     },
     {
       id: 'coffins-slide',
       titleKey: 'products.coffins',
       subtitleKey: 'products.coffins_desc',
-              images: ['/images/kuboebi3.jpg', '/images/kuboebi4.jpg'],
+              images: ['./images/kuboebi3.jpg', './images/kuboebi4.jpg'],
       alt: 'სასახლეები - ხარისხიანი სასახლეები - sasaxleebi'
     },
     {
       id: 'hearse-slide', 
       titleKey: 'services.hearse',
       subtitleKey: 'services.hearse_desc',
-              images: ['/images/katafalkebi2.jpg', '/images/katafalkebi3.jpg'],
+              images: ['./images/katafalkebi2.jpg', './images/katafalkebi3.jpg'],
       alt: 'კატაფალკა - კატაფალკის მომსახურება - katafalka'
     },
     {
       id: 'embalming-slide',
       titleKey: 'services.embalming',
       subtitleKey: 'services.embalming_desc', 
-      image: '/images/darbazebi1.jpg',
+      image: './images/darbazebi1.jpg',
       alt: 'ბალზამირება - პროფესიონალური ბალზამირება - balzamireba'
     },
     {
       id: 'stone-engraving-slide',
       titleKey: 'services.stone_engraving',
       subtitleKey: 'services.stone_engraving_desc',
-      image: '/images/grave.jpg',
+      image: './images/grave.jpg',
       alt: 'ქვაზე ხატვა - საფლავის მოპირკეთება - qvaze xatva - mopirketeba'
     },
     {
       id: 'transportation-slide',
       titleKey: 'services.transportation', 
       subtitleKey: 'services.transportation_desc',
-      image: '/images/microbus.jpg',
+      image: './images/microbus.jpg',
       alt: 'გადასვენება - ტრანსპორტირება - gadasveneba'
     }
   ];
@@ -91,42 +91,42 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       titleKey: 'services.embalming',
       descKey: 'services.embalming_desc',
       url: '/services/balzamireba',
-      image: '/images/embalming.jpg',
+      image: './images/embalming.jpg',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
     },
     {
       titleKey: 'services.dressing',
       descKey: 'services.dressing_desc',
       url: '/services/micvalebulis-chacma',
-      image: '/images/suit.jpg',
+      image: './images/suit.jpg',
       keywords: 'მიცვალებულის ჩაცმა, micvalebulis chacma, მოწესრიგება'
     },
     {
       titleKey: 'services.transportation',
       descKey: 'services.transportation_desc',
       url: '/services/gadasveneba', 
-      image: '/images/microbus.jpg',
+      image: './images/microbus.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.stone_engraving',
       descKey: 'services.stone_engraving_desc',
-      url: '/services/qvaze-xatva',
-      image: '/images/stonepainting.jpg', 
+      url: './services/qvaze-xatva',
+      image: './images/stonepainting.jpg', 
       keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.grave_decoration',
       descKey: 'services.grave_decoration_desc',
       url: '/services/samarkhis-motsqoba',
-      image: '/images/grave.jpg',
+      image: './images/grave.jpg',
       keywords: 'სამარხის მოწყობა, samarkhis motsqoba, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.metal_letters',
       descKey: 'services.metal_letters_desc',
       url: '/services/litonis-asoebit-tsartsera',
-      image: '/images/tomb.jpg',
+      image: './images/tomb.jpg',
       keywords: 'ლითონის ასოებით წარწერა, litonis asoebit tsartsera, მეტალის ასოები'
     }
   ];

@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.coffins',
         descKey: 'products.coffins_desc',
         url: `/${this.currentLanguage}/products/coffins`,
-        image: '/images/sasaxleebi2.jpg',
+        image: './images/sasaxleebi2.jpg',
         keywords: 'სასახლეები, sasaxleebi, ხის სასახლეები, ლუქს კლასის სასახლეები',
         types: ['ხის სასახლეები', 'ლუქს კლასის სასახლეები', 'ეკონომ კლასის სასახლეები'],
         features: [
@@ -63,7 +63,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.shrouds',
         descKey: 'products.shrouds_desc',
         url: `/${this.currentLanguage}/products/shrouds`,
-        image: '/images/sudarebi2.jpg',
+        image: './images/sudarebi2.jpg',
         keywords: 'სუდარები, sudarebi, ბამბის სუდარები, სილკის სუდარები',
         types: ['ბამბის სუდარები', 'სილკის სუდარები', 'ხელოვნური ქსოვილის სუდარები'],
         features: [
@@ -78,7 +78,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.refrigeration',
         descKey: 'products.refrigeration_desc',
         url: `/${this.currentLanguage}/products/refrigeration`,
-        image: '/images/fridge2.jpeg',
+        image: './images/fridge2.jpeg',
         keywords: 'მაცივრები, macivrеbi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
         types: ['სასახლე-მაცივრები', 'სტაციონარული მაცივრები', 'მობილური მაცივრები'],
         features: [
@@ -93,7 +93,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.hearse',
         descKey: 'products.hearse_desc',
         url: `/${this.currentLanguage}/products/hearse`,
-        image: '/images/katafalkebi2.jpg',
+        image: './images/katafalkebi2.jpg',
         keywords: 'კატაფალკი, katafalki, თანამედროვე კატაფალკები, ლუქს კლასის კატაფალკები',
         types: ['თანამედროვე კატაფალკები', 'ლუქს კლასის კატაფალკები', 'სტანდარტული კატაფალკები'],
         features: [
