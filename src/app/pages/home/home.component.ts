@@ -437,6 +437,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   goToPlanningPage(): void {
-    this.router.navigate([this.currentLanguage, 'contact']);
+    this.router.navigate([this.currentLanguage, 'funeral-planning']);
   }
 }

@@ -42,6 +42,7 @@ export class LanguageService {
       'breadcrumb.agent_service': 'აგენტის მომსახურება',
       'breadcrumb.lifting_machine': 'მწევი მანქანა',
       'breadcrumb.colored_photo': 'ფერადი სურათის დამზადება',
+      'breadcrumb.funeral_planning': 'დაკრძალვის დაგეგმვა',
       
 
       // Home Page Keywords and Content
@@ -111,6 +112,14 @@ export class LanguageService {
       'locations.gldani': 'გლდანი - 4 გრ. ოშკელის ქუჩა',
       'locations.dighomi': 'დიღომი - 14 ნოდარ ბოხუას ქუჩა',
       'locations.jiqia': 'ჯიქია - 96 ალექსანდრე იოსელიანის ქუჩა',
+      'ritual_offer': '"რიტუალ სერვისი" გთავაზობთ უფასო პირველ კონსულტაციას, რის შემდეგაც, სურვილის შემთხვევაში, ჩვენი სარიტუალო აგენტი ადგილზე მობრძანდება თქვენთან.',
+      'gldani_address': '4 გრ. ოშკელის ქუჩა, თბილისი',
+      'dighomi_address': '14 ნოდარ ბოხუას ქუჩა, თბილისი',
+      'saburtalo_address': '96 ალექსანდრე იოსელიანის ქუჩა, თბილისი',
+      'locations.title': 'დამკრძალავი ბიურო',
+      'locations.gldani_title': 'გლდანი',
+      'locations.dighomi_title': 'დიღომი',
+      'locations.saburtalo_title': 'საბურთალო',
 
       // About & Experience
       'about.20_years_experience': '20 წლიანი გამოცდილება',
@@ -570,6 +579,7 @@ export class LanguageService {
       'breadcrumb.agent_service': 'Agent Service',
       'breadcrumb.lifting_machine': 'Lifting Machine',
       'breadcrumb.colored_photo': 'Colored Photo Production',
+      'breadcrumb.funeral_planning': 'Funeral Planning',
       
 
       // Home Page
@@ -638,6 +648,14 @@ export class LanguageService {
       'locations.gldani': 'Gldani - 4 Gr. Oshkeli Street',
       'locations.dighomi': 'Dighomi - 14 Nodar Bokhua Street',
       'locations.jiqia': 'Jiqia - 96 Alexandre Ioseliani Street',
+      'ritual_offer': '"Ritual Service" offers free initial consultation, after which, if desired, our ritual agent will visit you on site.',
+      'gldani_address': '4 Gr. Oshkeli Street, Tbilisi',
+      'dighomi_address': '14 Nodar Bokhua Street, Tbilisi',
+      'saburtalo_address': '96 Alexandre Ioseliani Street, Tbilisi',
+      'locations.title': 'Funeral Home',
+      'locations.gldani_title': 'Gldani',
+      'locations.dighomi_title': 'Dighomi',
+      'locations.saburtalo_title': 'Saburtalo',
 
       // About & Experience
       'about.20_years_experience': '20 Years of Experience',
@@ -1097,6 +1115,7 @@ export class LanguageService {
       'breadcrumb.agent_service': 'Услуги агента',
       'breadcrumb.lifting_machine': 'Подъемная машина',
       'breadcrumb.colored_photo': 'Изготовление цветного фото',
+      'breadcrumb.funeral_planning': 'Планирование похорон',
       
 
       // Home Page
@@ -1165,6 +1184,14 @@ export class LanguageService {
       'locations.gldani': 'Глдани - ул. Гр. Ошкели, 4',
       'locations.dighomi': 'Дигоми - ул. Нодара Бохлуа, 14',
       'locations.jiqia': 'Джикия - ул. Александра Иоселиани, 96',
+      'ritual_offer': '"Ритуал Сервис" предлагает бесплатную первичную консультацию, после которой, при желании, наш ритуальный агент приедет к вам на место.',
+      'gldani_address': 'ул. Гр. Ошкели, 4, Тбилиси',
+      'dighomi_address': 'ул. Нодара Бохлуа, 14, Тбилиси',
+      'saburtalo_address': 'ул. Александра Иоселиани, 96, Тбилиси',
+      'locations.title': 'Похоронный дом',
+      'locations.gldani_title': 'Глдани',
+      'locations.dighomi_title': 'Дигоми',
+      'locations.saburtalo_title': 'Сабуртало',
 
       // About & Experience
       'about.20_years_experience': '20 лет опыта',

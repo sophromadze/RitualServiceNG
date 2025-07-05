@@ -126,6 +126,9 @@ export class BreadcrumbComponent implements OnInit {
           case 'colored-photo':
             label = this.translate('breadcrumb.colored_photo');
             break;
+          case 'funeral-planning':
+            label = this.translate('breadcrumb.funeral_planning');
+            break;
           // Legacy translations for backward compatibility
           case 'damkrdzalavi-biuro':
             label = 'დამკრძალავი ბიურო';

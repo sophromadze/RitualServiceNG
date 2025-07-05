@@ -1,1 +1,57 @@
-<p>locations works!</p>
+<section id="mapSection">
+  <div class="location-list">
+    <div class="mapDesc">
+      <div class="desc-header">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>{{ translate('locations.title') || 'დამკრძალავი ბიურო' }}</h3>
+      </div>
+      <p>{{ translate('ritual_offer') }}</p>
+      <a class="phoneFM" href="tel:+995599069898">
+        <i class="fa-solid fa-phone"></i>
+        <span>+(995) 599 06 98 98</span>
+      </a>
+    </div>
+    
+    <div class="location-item" data-lat="41.81655515468242" data-lng="44.82321041488827" data-key="gldani">
+      <div class="location-content">
+        <div class="location-icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="location-details">
+          <h4>{{ translate('locations.gldani_title') || 'გლდანი' }}</h4>
+          <p>{{ translate('gldani_address') }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="location-item" data-lat="41.78013878162857" data-lng="44.7705123053155" data-key="dighomi">
+      <div class="location-content">
+        <div class="location-icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="location-details">
+          <h4>{{ translate('locations.dighomi_title') || 'დიღომი' }}</h4>
+          <p>{{ translate('dighomi_address') }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="location-item" data-lat="41.72027280349609" data-lng="44.7002050838214" data-key="saburtalo">
+      <div class="location-content">
+        <div class="location-icon">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <div class="location-details">
+          <h4>{{ translate('locations.saburtalo_title') || 'საბურთალო' }}</h4>
+          <p>{{ translate('saburtalo_address') }}</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+  
+  <div id="map">
+    <div class="map-loading" *ngIf="!isMapInitialized">
+      <span>Loading map...</span>
+    </div>
+  </div>
+</section>
