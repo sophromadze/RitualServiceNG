@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   isMenuOpen = false;
   isServicesDropdownOpen = false;
   isProductsDropdownOpen = false;
+  isMobileServicesOpen = false;
+  isMobileProductsOpen = false;
   lastClickedLink: string | null = null;
 
   // Navigation structure with SEO-focused URLs
@@ -101,7 +103,8 @@ export class HeaderComponent implements OnInit {
     // Set up click outside listener for dropdowns
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
-      if (!target.closest('.dropdown')) {
+      // Only close desktop dropdowns, not mobile dropdowns
+      if (!target.closest('.dropdown') && !target.closest('.mobile-menu')) {
         this.closeAllDropdowns();
       }
     });
@@ -117,6 +120,9 @@ export class HeaderComponent implements OnInit {
 
   toggleMobileMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+    if (!this.isMenuOpen) {
+      this.closeMobileDropdowns();
+    }
   }
 
   toggleServicesDropdown(): void {
@@ -129,9 +135,27 @@ export class HeaderComponent implements OnInit {
     this.isServicesDropdownOpen = false;
   }
 
+  toggleMobileServices(): void {
+    this.isMobileServicesOpen = !this.isMobileServicesOpen;
+    this.isMobileProductsOpen = false;
+  }
+
+  toggleMobileProducts(): void {
+    this.isMobileProductsOpen = !this.isMobileProductsOpen;
+    this.isMobileServicesOpen = false;
+  }
+
   closeAllDropdowns(): void {
     this.isServicesDropdownOpen = false;
     this.isProductsDropdownOpen = false;
+    // Don't close mobile dropdowns when closing desktop dropdowns
+    // this.isMobileServicesOpen = false;
+    // this.isMobileProductsOpen = false;
+  }
+
+  closeMobileDropdowns(): void {
+    this.isMobileServicesOpen = false;
+    this.isMobileProductsOpen = false;
   }
 
   navigateTo(url: string): void {

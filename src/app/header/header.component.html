@@ -21,7 +21,7 @@
         <button class="mobile-menu-toggle"
                 type="button"
                 [class.active]="isMenuOpen"
-                (click)="isMenuOpen = !isMenuOpen"
+                (click)="toggleMobileMenu()"
                 [attr.aria-expanded]="isMenuOpen"
                 aria-controls="mobile-menu"
                 aria-label="Toggle navigation menu">
@@ -132,13 +132,14 @@
       <!-- Mobile Services -->
       <div class="mobile-nav-section">
         <div class="mobile-nav-header"
-             (click)="isServicesDropdownOpen = !isServicesDropdownOpen">
+             [class.active]="isMobileServicesOpen"
+             (click)="toggleMobileServices()">
           <span>{{translate('nav.services')}}</span>
           <i class="fa-solid fa-chevron-down" 
-             [class.rotated]="isServicesDropdownOpen"></i>
+             [class.rotated]="isMobileServicesOpen"></i>
         </div>
         
-        <div class="mobile-dropdown" [class.open]="isServicesDropdownOpen">
+        <div class="mobile-dropdown" [class.open]="isMobileServicesOpen">
           <div class="mobile-dropdown-header">
             <h4>{{translate('seo.funeral_services')}}</h4>
           </div>
@@ -146,7 +147,7 @@
              [routerLink]="getServicePath(service.url)"
              [fragment]="getServiceFragment(service.url)"
              class="mobile-nav-link"
-             (click)="isMenuOpen = false">
+             (click)="isMenuOpen = false; closeMobileDropdowns()">
             {{service.name}}
             <!-- Hidden SEO keywords -->
             <span class="seo-hidden-content">{{service.keywords}}</span>
@@ -157,20 +158,21 @@
       <!-- Mobile Products -->
       <div class="mobile-nav-section">
         <div class="mobile-nav-header"
-             (click)="isProductsDropdownOpen = !isProductsDropdownOpen">
+             [class.active]="isMobileProductsOpen"
+             (click)="toggleMobileProducts()">
           <span>{{translate('nav.products')}}</span>
           <i class="fa-solid fa-chevron-down" 
-             [class.rotated]="isProductsDropdownOpen"></i>
+             [class.rotated]="isMobileProductsOpen"></i>
         </div>
         
-        <div class="mobile-dropdown" [class.open]="isProductsDropdownOpen">
+        <div class="mobile-dropdown" [class.open]="isMobileProductsOpen">
           <div class="mobile-dropdown-header">
             <h4>{{translate('products.coffins')}}, {{translate('products.shrouds')}}, {{translate('products.refrigeration')}}</h4>
           </div>
           <a *ngFor="let product of getCurrentProducts()"
              [href]="product.url"
              class="mobile-nav-link"
-             (click)="navigateTo(product.url); $event.preventDefault()">
+             (click)="navigateTo(product.url); $event.preventDefault(); closeMobileDropdowns()">
             {{product.name}}
             <!-- Hidden SEO keywords -->
             <span class="seo-hidden-content">{{product.keywords}}</span>

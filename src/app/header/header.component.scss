@@ -255,13 +255,12 @@
   top: 55px;
   left: 0;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100%;
   background: #ffffff;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 90;
   overflow-y: auto;
-  padding: 32px 16px;
 }
 
 .mobile-menu.open {
@@ -269,7 +268,7 @@
 }
 
 .mobile-nav-section {
-  margin-bottom: 32px;
+  border-bottom: 1px dotted #000000;
 }
 
 .mobile-nav-header {
@@ -277,11 +276,11 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 16px;
+  padding: 14px 16px;
   background: none;
   border: none;
   color: #2c3e50;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   border-bottom: 1px solid #f8f9fa;
@@ -291,6 +290,11 @@
 
 .mobile-nav-header:hover {
   background-color: #f8f9fa;
+}
+
+.mobile-nav-header.active {
+  background-color: #e9ecef;
+  color: #2c3e50;
 }
 
 .mobile-nav-header i {
@@ -305,57 +309,57 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
-}
-
-.mobile-dropdown.open {
-  max-height: 500px;
-}
-
-.mobile-dropdown-header {
-  padding: 16px;
   background-color: #f8f9fa;
-  border-radius: 8px;
-  margin: 8px 0;
-  /* Hide visually but keep for SEO */
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  border: 1px solid #e9ecef;
   opacity: 0;
   pointer-events: none;
 }
 
+.mobile-dropdown.open {
+  max-height: 800px;
+  padding: 8px 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-dropdown-header {
+  display: none; /* Hide mobile dropdown headers */
+}
+
 .mobile-dropdown-header h4 {
   margin: 0;
-  font-size: 16px;
-  color: #2c3e50;
+  font-size: 13px;
+  color: #6c757d;
+  font-weight: 500;
 }
 
 .mobile-nav-link {
   display: block;
-  padding: 16px;
+  padding: 12px 16px;
   color: #343a40;
   text-decoration: none;
-  border-bottom: 1px dotted #dee2e6;
+  border-bottom: 1px dotted #000000 !important;
   transition: all 0.15s ease-in-out;
   white-space: nowrap;
+  font-size: 14px;
+  line-height: 1.3;
 }
 
 .mobile-nav-link:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .mobile-nav-link:hover {
   color: #2c3e50;
-  border-top: 2px solid #e74c3c !important;
-  border-bottom: 1px dotted #2c3e50;
+  background-color: #e9ecef;
 }
 
 .mobile-nav-link.main-link {
   font-weight: 600;
   color: #2c3e50;
-  border-bottom: 2px solid #2c3e50;
+  border-bottom: 1px dotted #000000;
+  font-size: 15px;
+  padding: 14px 16px;
 }
 
 
@@ -459,27 +463,6 @@
   animation: slideIn 0.3s ease-out;
 }
 
-/* Focus styles for accessibility - NO TRANSITIONS */
-.mobile-nav-header:focus,
-.mobile-nav-link:focus {
-  border-top: 2px solid #e74c3c !important;
-}
-
-/* Hover styles to show border on hover */
-.mobile-nav-link:hover {
-  border-top: 2px solid #e74c3c !important;
-}
-
-/* Active state styles to keep border visible permanently */
-.mobile-nav-header:active,
-.mobile-nav-link:active {
-  border-top: 2px solid #e74c3c !important;
-}
-
-/* Active border class for clicked links */
-.mobile-nav-link.active-border {
-  border-top: 2px solid #e74c3c !important;
-}
 
 /* Remove any outline transitions from all elements */
 .nav-link {
