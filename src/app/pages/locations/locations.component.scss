@@ -10,6 +10,7 @@
     flex-direction: column;
     padding: 1rem;
     margin: 1rem;
+    min-height: auto;
   }
 }
 
@@ -22,7 +23,8 @@
 
   @media (max-width: 768px) {
     flex: none;
-    order: 2;
+    order: 1;
+    width: 100%;
   }
 }
 
@@ -283,9 +285,12 @@
   }
 
   @media (max-width: 768px) {
-    height: 450px;
-    order: 1;
+    height: 400px;
+    order: 2;
     border-radius: 12px;
+    width: 100%;
+    flex: none;
+    margin-top: 1rem;
   }
 }
 
@@ -435,6 +440,7 @@
 
   .location-list {
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   .mapDesc {
@@ -448,6 +454,12 @@
   .location-item {
     padding: 1.2rem;
     font-size: 0.95rem;
+  }
+
+  #map {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 
