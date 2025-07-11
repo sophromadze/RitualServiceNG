@@ -1,9 +1,10 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { Router, RouterModule, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { LanguageSelectorComponent } from '../shared/components/language-selector/language-selector.component';
 import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
+import { filter, Subscription } from 'rxjs';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   @Input() currentLanguage: string = 'ka';
   @Output() languageChange = new EventEmitter<string>();
 
@@ -23,6 +24,7 @@ export class HeaderComponent implements OnInit {
   isMobileServicesOpen = false;
   isMobileProductsOpen = false;
   lastClickedLink: string | null = null;
+  private routeSubscription: Subscription = new Subscription();
 
   // Navigation structure with SEO-focused URLs
   navigation = {
@@ -43,9 +45,9 @@ export class HeaderComponent implements OnInit {
       ],
       products: [
         { name: 'სასახლეები', url: '/ka/products/coffins', keywords: 'sasaxleebi' },
-        { name: 'კატაფალკი', url: '/ka/products/hearse', keywords: 'katafalki' },
+        { name: 'კატაფალკები', url: '/ka/products/hearse', keywords: 'katafalka' },
         { name: 'სუდარები', url: '/ka/products/shrouds', keywords: 'sudarebi, sudara' },
-        { name: 'მაცივრები', url: '/ka/products/refrigeration', keywords: 'macivrеbi' }
+        { name: 'მაცივრები', url: '/ka/products/refrigeration', keywords: 'macivrebi' }
       ]
     },
     en: {
@@ -108,6 +110,18 @@ export class HeaderComponent implements OnInit {
         this.closeAllDropdowns();
       }
     });
+
+    // Listen to route changes to update active state
+    this.routeSubscription = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      // Clear last clicked link when route changes
+      this.lastClickedLink = null;
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.routeSubscription.unsubscribe();
   }
 
   translate(key: string): string {
@@ -191,6 +205,29 @@ export class HeaderComponent implements OnInit {
   }
 
   isLinkActive(linkId: string): boolean {
+    // Get current URL path
+    const currentUrl = this.router.url;
+    
+    // If we're on the home page, no navigation links should be active
+    if (currentUrl === '/' + this.currentLanguage || currentUrl === '/' + this.currentLanguage + '/') {
+      return false;
+    }
+    
+    // Check if the current URL matches the link ID
+    if (linkId === 'about' && currentUrl.includes('/about')) {
+      return true;
+    }
+    if (linkId === 'locations' && currentUrl.includes('/locations')) {
+      return true;
+    }
+    if (linkId === 'services' && currentUrl.includes('/services')) {
+      return true;
+    }
+    if (linkId === 'products' && currentUrl.includes('/products')) {
+      return true;
+    }
+    
+    // Fallback to last clicked link for immediate feedback
     return this.lastClickedLink === linkId;
   }
 

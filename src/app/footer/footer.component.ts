@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 
 @Component({
@@ -13,9 +13,18 @@ import { LanguageService } from '../services/language.service';
 export class FooterComponent {
   @Input() currentLanguage: string = 'ka';
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private router: Router
+  ) {}
 
   translate(key: string): string {
     return this.languageService.translate(key);
+  }
+
+  navigateToLocation(location: string): void {
+    this.router.navigate([this.currentLanguage, 'locations'], { 
+      fragment: location 
+    });
   }
 }

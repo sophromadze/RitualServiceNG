@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
+import { CtaComponent } from '../../shared/components/cta/cta.component';
 
 interface ProductContent {
   id: string;
@@ -22,7 +23,7 @@ interface ProductContent {
 @Component({
   selector: 'app-product-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, CtaComponent],
   templateUrl: './product-detail.component.html',
   styleUrls: ['./product-detail.component.scss']
 })
@@ -42,9 +43,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       longDescKey: 'products.coffins_long',
       image: './images/sasaxleebi2.jpg',
       gallery: [
-        './images/sasaxleebi1.jpg',
         './images/sasaxleebi2.jpg',
-        './images/coffin-luxury.jpg'
+        './images/darbazebi1.jpg',
+        './images/darbazebi2.jpg'
       ],
       keywords: ['სასახლეები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
       relatedProducts: ['shrouds', 'refrigeration', 'hearse'],
@@ -69,9 +70,10 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       longDescKey: 'products.shrouds_long',
       image: './images/sudarebi2.jpg',
       gallery: [
-        './images/sudarebi1.jpg',
         './images/sudarebi2.jpg',
-        './images/shroud-cotton.jpg'
+        './images/shroud1.jpg',
+        './images/shroud2.jpg',
+        './images/shroud3.jpg'
       ],
       keywords: ['სუდარები', 'sudarebi', 'ბამბის სუდარები', 'shrouds'],
       relatedProducts: ['coffins', 'refrigeration', 'hearse'],
@@ -98,7 +100,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       gallery: [
         './images/fridge1.jpeg',
         './images/fridge2.jpeg',
-        './images/refrigeration-stationary.jpg'
+        './images/macivrebi.jpg',
+        './images/macivrebi2.jpg'
       ],
       keywords: ['მაცივრები', 'macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'hearse'],

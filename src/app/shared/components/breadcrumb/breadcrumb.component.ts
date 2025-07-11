@@ -47,19 +47,49 @@ export class BreadcrumbComponent implements OnInit {
         
         let label = segment;
         
-        // Handle URL fragments (e.g., services#mourning-hall)
+        // Handle URL fragments (e.g., services#mourning-hall or locations#gldani)
         if (segment.includes('#')) {
           const [baseSegment, fragment] = segment.split('#');
           currentUrl = currentUrl.replace(`/${segment}`, `/${baseSegment}#${fragment}`);
           
-          // Try to translate the fragment first, then the base segment
-          const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
-          const baseKey = `breadcrumb.${baseSegment.replace(/-/g, '_')}`;
-          
-          if (this.translate(fragmentKey) !== fragmentKey) {
-            label = this.translate(fragmentKey);
-          } else if (this.translate(baseKey) !== baseKey) {
-            label = this.translate(baseKey);
+          // Special handling for locations with fragments
+          if (baseSegment === 'locations') {
+            // Set the base label to "ფილიალები" (locations)
+            label = this.translate('nav.locations');
+            
+            // Add the specific location as a separate breadcrumb
+            let locationLabel = '';
+            switch (fragment) {
+              case 'gldani':
+                locationLabel = this.translate('locations.gldani_title') || 'გლდანი';
+                break;
+              case 'dighomi':
+                locationLabel = this.translate('locations.dighomi_title') || 'დიღომი';
+                break;
+              case 'jiqia':
+                locationLabel = this.translate('locations.saburtalo_title') || 'საბურთალო';
+                break;
+              default:
+                locationLabel = fragment;
+            }
+            
+            // Add the location breadcrumb
+            this.breadcrumbs.push({
+              label: locationLabel,
+              url: currentUrl
+            });
+            
+            return; // Skip the default push below
+          } else {
+            // Handle other fragments (services, etc.)
+            const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
+            const baseKey = `breadcrumb.${baseSegment.replace(/-/g, '_')}`;
+            
+            if (this.translate(fragmentKey) !== fragmentKey) {
+              label = this.translate(fragmentKey);
+            } else if (this.translate(baseKey) !== baseKey) {
+              label = this.translate(baseKey);
+            }
           }
         } else {
           // Translate common segments
@@ -137,7 +167,7 @@ export class BreadcrumbComponent implements OnInit {
             label = 'ბალზამირება';
             break;
           case 'katafalka':
-            label = 'კატაფალკა';
+            label = 'კატაფალკები';
             break;
           case 'gadasveneba':
             label = 'გადასვენება';

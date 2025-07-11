@@ -216,7 +216,7 @@ export class SeoService {
   private getMultiLanguageDescription(): any {
     return {
       "@type": "MultipleLanguageValue",
-      "ka": "ჩვენ გთავაზობთ პროფესიონალურ მომსახურებას დაკრძალვის ორგანიზებაში. ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება.",
+      "ka": "ჩვენ გთავაზობთ პროფესიონალურ მომსახურებას დაკრძალვის ორგანიზებაში. ბალზამირება, კატაფალკი, ქვაზე ხატვა, გადასვენება.",
       "ru": "Мы предоставляем профессиональную поддержку во всех вопросах организации похорон. Бальзамирование, катафалк, роспись на камне.",
       "en": "We provide professional support for all funeral arrangements. Embalming, hearse services, stone engraving, transportation."
     };

@@ -55,6 +55,18 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
       })
     );
 
+    // Handle fragment navigation from footer
+    this.subscriptions.add(
+      this.route.fragment.subscribe(fragment => {
+        if (fragment) {
+          // Wait for the map to be initialized and then handle the fragment
+          setTimeout(() => {
+            this.handleFragmentNavigation(fragment);
+          }, 1000);
+        }
+      })
+    );
+
     const urlSegments = this.router.url.split('/');
     if (urlSegments.length > 1 && ['ka', 'en', 'ru'].includes(urlSegments[1])) {
       this.languageService.setLanguage(urlSegments[1]);
@@ -120,7 +132,6 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
       this.bounds = new window.google.maps.LatLngBounds();
       
       await this.addLocationMarkers();
-      this.setupLocationItemHandlers();
       this.addMyLocationButton();
       
       this.isMapInitialized = true;
@@ -140,7 +151,10 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
       this.markers = [];
       this.locationMarkerMap.clear();
       
-      const locationItems = document.querySelectorAll('.location-item');
+      // Simple approach: wait a bit for DOM to be ready, then get location items
+      await new Promise(resolve => setTimeout(resolve, 500));
+      let locationItems = document.querySelectorAll('.location-list .location-item');
+      
       const pinColors = ["#5184ed", "#d14646", "#35b34a"];
       
       for (let i = 0; i < locationItems.length; i++) {
@@ -168,17 +182,17 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
         const lng = position['lng'];
         
         const infoWindowContent = `
-          <div style="padding: 10px; max-width: 220px;">
-            <h3 style="margin-top: 0; color: #444;">${item.textContent}</h3>
-            <p style="margin-bottom: 5px;">Ritual Service</p>
-            <div style="display: flex; justify-content: space-between; margin-top: 8px;">
-              <a href="tel:+995599069898" style="color: #5184ed; display: flex; align-items: center; text-decoration: none; font-size: 16px;">
-                <i class="fa-solid fa-phone"></i>&nbsp;+995 599 06 98 98
+          <div style="padding: 8px; max-width: 200px; font-size: 12px;">
+            <h3 style="margin: 0 0 4px 0; color: #444; font-size: 14px; font-weight: 600;">${item.textContent}</h3>
+            <p style="margin: 0 0 6px 0; font-size: 11px; color: #666;">Ritual Service</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+              <a href="tel:+995599069898" style="color: #5184ed; display: flex; align-items: center; text-decoration: none; font-size: 11px;">
+                <i class="fa-solid fa-phone" style="margin-right: 4px;"></i>+995 599 06 98 98
               </a>
               <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
                  target="_blank" 
-                 style="color: #5184ed; display: flex; align-items: center; text-decoration: none; font-size: 30px;">
-                <i class="fa-solid fa-directions"></i>&nbsp;
+                 style="color: #5184ed; display: flex; align-items: center; text-decoration: none; font-size: 16px; margin-left: 8px;">
+                <i class="fa-solid fa-directions"></i>
               </a>
             </div>
           </div>
@@ -211,6 +225,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
         this.markers.push(marker);
         this.locationMarkerMap.set(item, marker);
         
+        // Set up click handler for this specific item
+        this.setupLocationItemHandler(item);
+        
         this.bounds.extend({['lat']: lat, ['lng']: lng});
       }
       
@@ -226,28 +243,48 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  private setupLocationItemHandlers(): void {
-    const locationItems = document.querySelectorAll('.location-item');
-    
-    locationItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const marker = this.locationMarkerMap.get(item);
+  private setupLocationItemHandler(item: HTMLElement): void {
+    item.addEventListener('click', () => {
+      const marker = this.locationMarkerMap.get(item);
+      
+      if (marker) {
+        const position = marker.position;
         
-        if (marker) {
-          const position = marker.position;
-          
-          this.map.panTo(position);
-          this.map.setZoom(16);
-          
-          if (this.activeInfoWindow) {
-            this.activeInfoWindow.close();
-          }
-          
-          window.google.maps.event.trigger(marker, 'click');
-          this.highlightLocationItem(item as HTMLElement);
+        this.map.panTo(position);
+        this.map.setZoom(16);
+        
+        if (this.activeInfoWindow) {
+          this.activeInfoWindow.close();
         }
-      });
+        
+        window.google.maps.event.trigger(marker, 'click');
+        this.highlightLocationItem(item);
+        
+        // Scroll to map on mobile devices
+        this.scrollToMap();
+      }
     });
+  }
+
+  private scrollToMap(): void {
+    // Check if we're on mobile (screen width <= 768px)
+    if (window.innerWidth <= 768) {
+      const mapElement = document.getElementById('map');
+      if (mapElement) {
+        // Get header height to account for fixed positioning
+        const header = document.querySelector('header') || document.querySelector('.header') || document.querySelector('#header');
+        const headerHeight = header ? header.offsetHeight : 80; // Default fallback height
+        
+        // Calculate the target scroll position with header offset
+        const mapRect = mapElement.getBoundingClientRect();
+        const targetScrollTop = window.pageYOffset + mapRect.top - headerHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: targetScrollTop,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 
   private highlightLocationItem(activeItem: HTMLElement): void {
@@ -256,6 +293,52 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
     });
     
     activeItem.classList.add('active');
+  }
+
+  private handleFragmentNavigation(fragment: string): void {
+    // Find the location item with matching data-key
+    const locationItem = document.querySelector(`.location-item[data-key="${fragment}"]`) as HTMLElement;
+    
+    if (locationItem) {
+      // Highlight the location item immediately
+      this.highlightLocationItem(locationItem);
+      
+      // If map is not ready yet, wait for it
+      if (!this.map || !this.isMapInitialized) {
+        // Wait for map to be ready and try again
+        setTimeout(() => {
+          this.handleFragmentNavigation(fragment);
+        }, 500);
+        return;
+      }
+      
+      // Get the marker for this location
+      const marker = this.locationMarkerMap.get(locationItem);
+      
+      if (marker) {
+        const position = marker.position;
+        
+        // Pan to the location and zoom in
+        this.map.panTo(position);
+        this.map.setZoom(16);
+        
+        // Close any existing info window
+        if (this.activeInfoWindow) {
+          this.activeInfoWindow.close();
+        }
+        
+        // Trigger the marker click to show info window
+        window.google.maps.event.trigger(marker, 'click');
+        
+        // Scroll to map on mobile devices
+        this.scrollToMap();
+      } else {
+        // If marker is not found, try again after a short delay
+        setTimeout(() => {
+          this.handleFragmentNavigation(fragment);
+        }, 200);
+      }
+    }
   }
 
   private addMyLocationButton(): void {
@@ -335,6 +418,8 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     });
   }
+
+
 
   private updateSEO(routeData?: any): void {
     const seoData = routeData || {

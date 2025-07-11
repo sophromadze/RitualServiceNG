@@ -297,6 +297,10 @@
   color: #2c3e50;
 }
 
+.mobile-nav-header.active-border {
+  border-bottom: 2px solid #e74c3c;
+}
+
 .mobile-nav-header i {
   transition: transform 0.15s ease-in-out;
 }

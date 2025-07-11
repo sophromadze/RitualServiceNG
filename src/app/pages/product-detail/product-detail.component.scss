@@ -27,8 +27,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('/images/hero-pattern.png') repeat;
-    opacity: 0.1;
+    background: url('/images/orn1.png') repeat;
+    opacity: 0.05; // Reduced opacity for better text visibility
   }
   
   .hero-content {
@@ -44,8 +44,9 @@
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 40px;
+      gap: 30px;
       text-align: center;
+      padding: 0 15px;
     }
   }
   
@@ -55,9 +56,16 @@
       font-weight: 700;
       margin-bottom: 20px;
       line-height: 1.2;
+      color: #ffffff; // Explicit white color
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Added text shadow for better visibility
       
       @media (max-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
       }
     }
     
@@ -65,10 +73,22 @@
       font-size: 1.2rem;
       line-height: 1.6;
       margin-bottom: 30px;
-      opacity: 0.9;
+      opacity: 0.95; // Increased opacity for better visibility
+      color: #f0f0f0; // Light gray for better contrast
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
       
       strong {
         color: #ffd700;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       }
     }
   }
@@ -76,14 +96,29 @@
   .product-keywords {
     margin-bottom: 30px;
     
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+    
     .keyword-content {
       p {
         font-size: 1.1rem;
         line-height: 1.6;
-        opacity: 0.9;
+        opacity: 0.95; // Increased opacity for better visibility
+        color: #f0f0f0; // Light gray for better contrast
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        
+        @media (max-width: 768px) {
+          font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem;
+        }
         
         strong {
           color: #ffd700;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
       }
     }
@@ -96,6 +131,13 @@
     
     @media (max-width: 768px) {
       justify-content: center;
+      gap: 15px;
+    }
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
     }
     
     .btn {
@@ -107,6 +149,22 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      font-size: 1rem;
+      
+      @media (max-width: 768px) {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        gap: 8px;
+      }
+      
+      @media (max-width: 480px) {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        gap: 6px;
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
       
       &.btn-primary {
         background: #ffd700;
@@ -139,6 +197,17 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      
+      @media (max-width: 768px) {
+        height: 300px;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      @media (max-width: 480px) {
+        height: 250px;
+        border-radius: 6px;
+      }
     }
   }
 }
@@ -163,6 +232,14 @@
       font-weight: 700;
       color: #1a1a1a;
       margin-bottom: 20px;
+      
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
     }
     
     p {
@@ -171,6 +248,14 @@
       line-height: 1.7;
       max-width: 800px;
       margin: 0 auto;
+      
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.95rem;
+      }
     }
   }
   
@@ -268,6 +353,95 @@
         color: #1a1a1a;
         font-weight: 500;
         font-size: 0.95rem;
+      }
+    }
+  }
+  
+  // Process Section for Hearse
+  .product-process {
+    margin-top: 20px;
+    
+    h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    
+    .process-step {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-left: 4px solid #ffd700;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      
+      @media (max-width: 768px) {
+        padding: 25px;
+        gap: 15px;
+      }
+      
+      @media (max-width: 480px) {
+        padding: 20px;
+        gap: 12px;
+      }
+      
+      .step-number {
+        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+        color: #1a1a1a;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+        
+        @media (max-width: 768px) {
+          width: 45px;
+          height: 45px;
+          font-size: 1.1rem;
+        }
+        
+        @media (max-width: 480px) {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
+      
+      p {
+        color: #333;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+          font-size: 0.95rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -387,6 +561,7 @@
       color: #666;
       font-size: 0.9rem;
       margin: 0;
+      display: none; // Hide p tags in related products
     }
     
     i {
@@ -454,75 +629,13 @@
           }
         }
       }
+      
+      // English text in SEO content is already hidden since the section has display: none
     }
   }
 }
 
-// Contact CTA Section
-.contact-cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-  color: white;
-  text-align: center;
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  h3 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    opacity: 0.9;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    .btn {
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      
-      &.btn-primary {
-        background: #ffd700;
-        color: #1a1a1a;
-        
-        &:hover {
-          background: #ffed4e;
-          transform: translateY(-2px);
-        }
-      }
-      
-      &.btn-secondary {
-        background: transparent;
-        color: white;
-        border: 2px solid #ffd700;
-        
-        &:hover {
-          background: #ffd700;
-          color: #1a1a1a;
-          transform: translateY(-2px);
-        }
-      }
-    }
-  }
-}
+// Contact CTA Section - Removed as we're using the CTA component
 
 // SEO Keywords (Hidden)
 .seo-keywords {

@@ -18,6 +18,7 @@ export class LanguageService {
       // Header & Navigation
       'nav.home': 'მთავარი',
       'header.company_name': 'რიტუალ სერვისი',
+      'loader.title': 'რიტუალ სერვისი - დამკრძალავი ბიურო',
       'nav.services': 'სერვისები',
       'nav.products': 'პროდუქცია',
       'nav.about': 'ჩვენს შესახებ',
@@ -30,7 +31,7 @@ export class LanguageService {
       'breadcrumb.coffins': 'სასახლეები',
       'breadcrumb.shrouds': 'სუდარები',
       'breadcrumb.refrigeration': 'მაცივრები',
-      'breadcrumb.hearse': 'კატაფალკი',
+      'breadcrumb.hearse': 'კატაფალკები',
       'breadcrumb.embalming': 'ბალზამირება',
       'breadcrumb.transportation': 'გადასვენება',
       'breadcrumb.stone_engraving': 'ქვაზე ხატვა',
@@ -56,8 +57,8 @@ export class LanguageService {
       // Services with SEO Keywords
       'services.embalming': 'ბალზამირება',
       'services.embalming_desc': 'მიცვალებულის პროფესიონალური ბალზამირება და მომზადება. ხანგრძლივი შენახვა, ჰიგიენური მომზადება.',
-      'services.hearse': 'კატაფალკა',
-      'services.hearse_desc': 'კატაფალკის პროფესიონალური მომსახურება. თანამედროვე კატაფალკები ნებისმიერ მიმართულებით გადასვენებისთვის.',
+      'services.hearse': 'კატაფალკები',
+      'services.hearse_desc': 'კატაფალკების პროფესიონალური მომსახურება. თანამედროვე კატაფალკები ნებისმიერ მიმართულებით გადასვენებისთვის.',
       'services.transportation': 'გადასვენება',
       'services.transportation_desc': 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ. ყველა საჭირო დოკუმენტის მომზადება.',
       'services.stone_engraving': 'ქვაზე ხატვა',
@@ -80,7 +81,7 @@ export class LanguageService {
       'products.shrouds_desc': 'ტრადიციული და თანამედროვე სუდარები. ნატურალური მასალები, ხელნაკეთი მუშაობა.',
       'products.refrigeration': 'მაცივრები',
       'products.refrigeration_desc': 'სასახლე-მაცივრები, ამერიკული და სტანდარტული მოდელები ხანგრძლივი შენახვისთვის.',
-      'products.hearse': 'კატაფალკი',
+      'products.hearse': 'კატაფალკები',
       'products.hearse_desc': 'თანამედროვე კატაფალკები 24/7 მომსახურებით',
       'products.coffins_long': 'ჩვენი სასახლეები წარმოადგენს ხარისხიან ხის სასახლეებს ბუნებრივი მასალებით. ლუქს კლასის სასახლეები, ეკონომ კლასის სასახლეები და სტანდარტული სასახლეები - ყველა ფასის კატეგორიაში.',
       'products.shrouds_long': 'სუდარები - ჩვენ გთავაზობთ ბამბის სუდარებს  ბუნებრივი მასალებით, სილკის სუდარებს ხარისხიანი ქსოვილით და ხელოვნური ქსოვილის სუდარებს გამძლე მასალებით.',
@@ -95,7 +96,7 @@ export class LanguageService {
       'seo.memorial_ceremonies': 'სამგლოვიარო ცერემონიები',
       'seo.burial': 'დაკრძალვა',
       'seo.funeral_director': 'დამკრძალავი',
-      'seo.cemetery': 'სასაფლაო',
+      'seo.cemetery': 'საფლავის',
       'seo.deceased': 'მიცვალებული',
       'seo.mourning_hall': 'საპანაშვიდე დარბაზი',
       'seo.banquet_hall': 'საბანკეტო დარბაზი',
@@ -140,11 +141,12 @@ export class LanguageService {
       'footer.quick_links': 'სწრაფი ლინკები',
       'footer.specialized_services': 'სპეციალიზებული სერვისები',
       'footer.branches_tbilisi': 'ფილიალები თბილისში',
-      'footer.dighomi_branch': 'დიღომის ფილიალი',
-      'footer.gldani_branch': 'გლდნის ფილიალი',
+      'footer.dighomi_branch': 'დიღმის ფილიალი',
+      'footer.gldani_branch': 'გლდანის ფილიალი',
       'footer.jiqia_branch': 'ჯიქიას ფილიალი',
       'footer.24_7_service': '24/7 მომსახურება',
       'footer.all_rights_reserved': 'ყველა უფლება დაცულია',
+      'footer.copyright_text': 'სარიტუალო სახლი - რიტუალ სერვისი - დამკრძალავი ბიურო',
       'footer.privacy_policy': 'კონფიდენციალურობის პოლიტიკა',
       'footer.terms_of_service': 'მომსახურების წესები',
       'footer.sitemap': 'საიტის რუკა',
@@ -170,7 +172,7 @@ export class LanguageService {
       'funeral_planning.step_documentation_title': 'დოკუმენტაციის მომზადება',
       'funeral_planning.step_documentation_desc': 'ჩვენ დაგეხმარებით ყველა საჭირო იურიდიული დოკუმენტის შეგროვებაში და მომზადებაში.',
       'funeral_planning.step_documentation_detail1': 'სიკვდილის მოწმობა და სამედიცინო დოკუმენტაცია',
-      'funeral_planning.step_documentation_detail2': 'დაკრძალვის ნებართვები და სასაფლაოს მოწყობა',
+      'funeral_planning.step_documentation_detail2': 'დაკრძალვის ნებართვები და საფლავის მოწყობა',
       'funeral_planning.step_documentation_detail3': 'დაზღვევისა და იურიდიული დოკუმენტების დამუშავება',
       
       'funeral_planning.step_ceremony_title': 'ცერემონიის დაგეგმვა',
@@ -181,7 +183,7 @@ export class LanguageService {
       
       'funeral_planning.step_logistics_title': 'ლოგისტიკის კოორდინაცია',
       'funeral_planning.step_logistics_desc': 'ჩვენ ვმართავთ ყველა ტრანსპორტირებას, დროის განრიგს და ადგილის მოწყობას, რომ ყველაფერი შეუფერხებლად ჩატარდეს.',
-      'funeral_planning.step_logistics_detail1': 'ტრანსპორტირებისა და კატაფალკის მოწყობა',
+      'funeral_planning.step_logistics_detail1': 'ტრანსპორტირებისა და კატაფალკების მოწყობა',
       'funeral_planning.step_logistics_detail2': 'დროის კოორდინაცია ყველა მხარესთან',
       'funeral_planning.step_logistics_detail3': 'ადგილის მომზადება და სტუმართა ორგანიზება',
       
@@ -236,7 +238,7 @@ export class LanguageService {
       'funeral_planning.faq_cemetery_q': 'როგორ ავირჩიო სასაფლაო?',
       'funeral_planning.faq_cemetery_a': 'ჩვენ შეგვიძლია დაგეხმაროთ სასაფლაოს ვარიანტების შესწავლაში მდებარეობის, რელიგიური მოთხოვნების, ოჯახის პრეფერენციებისა და ბიუჯეტის მიხედვით. ჩვენ გვაქვს ურთიერთობები ბევრ ადგილობრივ სასაფლაოთან.',
       'funeral_planning.faq_transport_q': 'თქვენ გთავაზობთ ტრანსპორტული სერვისებს?',
-      'funeral_planning.faq_transport_a': 'დიახ, ჩვენ ვთავაზობთ ყოვლისმომცველ ტრანსპორტულ სერვისებს, მათ შორის კატაფალკას, ოჯახის ტრანსპორტირებას და რეგიონულ ან საერთაშორისო ტრანსპორტირებას საჭიროების შემთხვევაში.',
+      'funeral_planning.faq_transport_a': 'დიახ, ჩვენ ვთავაზობთ ყოვლისმომცველ ტრანსპორტულ სერვისებს, მათ შორის კატაფალკებს, ოჯახის ტრანსპორტირებას და რეგიონულ ან საერთაშორისო ტრანსპორტირებას საჭიროების შემთხვევაში.',
       'funeral_planning.faq_cremation_q': 'თქვენ გთავაზობთ კრემაციის სერვისებს?',
       'funeral_planning.faq_cremation_a': 'დიახ, ჩვენ ვთავაზობთ კრემაციის სერვისებს და შეგვიძლია დაგეხმაროთ კრემირებული ნაშთების მემორიალური ცერემონიების დაგეგმვაში. ჩვენ პატივს ვცემთ ყველა რელიგიურ და პირად პრეფერენციას.',
       'funeral_planning.faq_insurance_q': 'თქვენ მუშაობთ დაკრძალვის დაზღვევასთან?',
@@ -329,7 +331,7 @@ export class LanguageService {
       
       // Products Page Specific Translations
       'products.title': 'სარიტუალო პროდუქტები',
-      'products.hero_description': 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები, სუდარები, მაცივრები, კატაფალკი. ყველა პროდუქტი მზადაა 24/7.',
+      'products.hero_description': 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები, სუდარები, მაცივრები, კატაფალკები. ყველა პროდუქტი მზადაა 24/7.',
       'products.our_products': 'ჩვენი პროდუქტები',
       'products.quality_description': 'ხარისხიანი სარიტუალო პროდუქტები - სრული ასორტიმენტი',
       'products.categories_title': 'პროდუქტების კატეგორიები',
@@ -343,7 +345,7 @@ export class LanguageService {
       'products.coffins_keywords': 'სასახლეები - sasaxleebi',
       'products.shrouds_keywords': 'სუდარები - sudarebi',
       'products.refrigeration_keywords': 'მაცივრები - macivrebi',
-      'products.hearse_keywords': 'კატაფალკი - katafalki',
+      'products.hearse_keywords': 'კატაფალკები - katafalki',
       
       // Product Categories
       'products.coffins.wooden': 'ხის სასახლეები',
@@ -393,10 +395,10 @@ export class LanguageService {
       'services.contact_now': 'დაგვიკავშირდით ახლავე - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით',
       
       // Services Page
-      'services.hero_description': 'რიტუალ სერვისი გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა: ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა.',
+      'services.hero_description': 'რიტუალ სერვისი გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა: ბალზამირება, კატაფალკი, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა.',
       'services.hero_keywords.ritual_services': 'სარიტუალო მომსახურება',
       'services.hero_keywords.embalming': 'ბალზამირება',
-      'services.hero_keywords.hearse': 'კატაფალკა',
+      'services.hero_keywords.hearse': 'კატაფალკები',
       'services.hero_keywords.stone_engraving': 'ქვაზე ხატვა',
       'services.hero_keywords.transportation': 'გადასვენება',
       'services.hero_keywords.dressing': 'მიცვალებულის ჩაცმა',
@@ -555,6 +557,7 @@ export class LanguageService {
       // Header & Navigation
       'nav.home': 'Home',
       'header.company_name': 'Ritual Service',
+      'loader.title': 'Ritual Service - Funeral Home',
       'nav.services': 'Services',
       'nav.products': 'Products',
       'nav.about': 'About Us',
@@ -681,6 +684,7 @@ export class LanguageService {
       'footer.jiqia_branch': 'Jiqia Branch',
       'footer.24_7_service': '24/7 Service',
       'footer.all_rights_reserved': 'All Rights Reserved',
+      'footer.copyright_text': 'Funeral Home - Ritual Service - Funeral Bureau',
       'footer.privacy_policy': 'Privacy Policy',
       'footer.terms_of_service': 'Terms of Service',
       'footer.sitemap': 'Sitemap',
@@ -1091,6 +1095,7 @@ export class LanguageService {
       // Header & Navigation
       'nav.home': 'Главная',
       'header.company_name': 'Ритуал Сервис',
+      'loader.title': 'Ритуал Сервис - Похоронный дом',
       'nav.services': 'Услуги',
       'nav.products': 'Продукция',
       'nav.about': 'О нас',
@@ -1217,6 +1222,7 @@ export class LanguageService {
       'footer.jiqia_branch': 'Филиал Джикия',
       'footer.24_7_service': '24/7 обслуживание',
       'footer.all_rights_reserved': 'Все права защищены',
+      'footer.copyright_text': 'Похоронный дом - Ритуальный сервис - Похоронное бюро',
       'footer.privacy_policy': 'Политика конфиденциальности',
       'footer.terms_of_service': 'Условия обслуживания',
       'footer.sitemap': 'Карта сайта',
@@ -1724,12 +1730,12 @@ export class LanguageService {
       services: {
         ka: {
           title: 'მომსახურება - სრული სარიტუალო მომსახურება | რიტუალ სერვისი',
-          description: 'სრული სარიტუალო მომსახურება: ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა.',
-          keywords: 'დაკრძალვის სერვისები, ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება',
+          description: 'სრული სარიტუალო მომსახურება: ბალზამირება, კატაფალკი, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა.',
+          keywords: 'დაკრძალვის სერვისები, ბალზამირება, კატაფალკები, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება',
           h1: 'სარიტუალო მომსახურება - დამკრძალავი ბიურო',
           services: [
             { name: 'ბალზამირება', url: '/ka/services/balzamireba', desc: 'მიცვალებულის პროფესიონალური ბალზამირება' },
-            { name: 'კატაფალკა', url: '/ka/services/katafalka', desc: 'კატაფალკის მომსახურება ყველა მიმართულებით' },
+            { name: 'კატაფალკები', url: '/ka/services/katafalka', desc: 'კატაფალკების მომსახურება ყველა მიმართულებით' },
             { name: 'გადასვენება', url: '/ka/services/gadasveneba', desc: 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ' },
             { name: 'ქვაზე ხატვა', url: '/ka/services/qvaze-xatva', desc: 'პროფესიონალური ქვაზე ხატვა და გრავიურა' }
           ]
@@ -1850,7 +1856,7 @@ export class LanguageService {
     const pageKeywords = {
       home: {
         ka: [
-          'დამკრძალავი ბიურო', 'სარიტუალო სახლი', 'ბალზამირება', 'კატაფალკა', 
+          'დამკრძალავი ბიურო', 'სარიტუალო სახლი', 'ბალზამირება', 'კატაფალკი', 
           'ქვაზე ხატვა', 'გადასვენება', 'damkrdzalavi biuro', 'მიცვალებულის ჩაცმა',
           'საფლავის მოპირკეთება', 'ფერადი სურათის დამზადება', 'ლითონის ასოებით წარწერა',
           'რიტუალ სერვისი', 'დაკრძალვის სერვისები', 'სამგლოვიარო ცერემონიები'
@@ -1868,7 +1874,7 @@ export class LanguageService {
       },
       services: {
         ka: [
-          'ბალზამირება', 'balzamireba', 'კატაფალკა', 'katafalka', 'ქვაზე ხატვა', 
+          'ბალზამირება', 'balzamireba', 'კატაფალკები', 'katafalka', 'ქვაზე ხატვა', 
           'qvaze xatva', 'გადასვენება', 'gadasveneba', 'მიცვალებულის ჩაცმა',
           'მოპირკეთება', 'mopirketeba', 'დამკრძალავი ბიურო სერვისები'
         ],
@@ -1883,7 +1889,7 @@ export class LanguageService {
       },
       products: {
         ka: [
-          'სასახლეები', 'sasaxleebi', 'სუდარები', 'sudarebi', 'მაცივრები', 'macivrеbi',
+          'სასახლეები', 'sasaxleebi', 'სუდარები', 'sudarebi', 'მაცივრები', 'macivrebi',
           'კუბო', 'სუდარა', 'sudara', 'სასახლე მაცივარი'
         ],
         en: [

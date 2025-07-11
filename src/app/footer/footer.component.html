@@ -33,7 +33,7 @@
                  rel="noopener noreferrer"
                  class="social-link facebook"
                  title="Facebook">
-                <i class="fa-brands fa-square-facebook fa-2x"></i>
+                <i class="fa-brands fa-square-facebook"></i>
               </a>
               <a href="https://www.memento.ge/" 
                  target="_blank"
@@ -48,85 +48,24 @@
             </div>
           </div>
   
-          <!-- Services Links -->
-          <div class="footer-section services-links">
-            <h4>{{translate('footer.ritual_services')}}</h4>
-            <ul>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'damkrdzalavi-biuro']">
-                  <strong>{{translate('home.funeral_home')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'balzamireba']">
-                  <strong>{{translate('services.embalming')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'katafalka']">
-                  <strong>{{translate('services.hearse')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'gadasveneba']">
-                  <strong>{{translate('services.transportation')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'qvaze-xatva']">
-                  <strong>{{translate('services.stone_engraving')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'services', 'mopirketeba']">
-                  <strong>{{translate('services.grave_decoration')}}</strong>
-                </a>
-              </li>
-            </ul>
-          </div>
-  
-          <!-- Products Links -->
-          <div class="footer-section products-links">
-            <h4>{{translate('footer.ritual_products')}}</h4>
-            <ul>
-                            <li>
-                <a [routerLink]="[currentLanguage, 'products', 'coffins']">
-                  <strong>{{translate('products.coffins')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'products', 'shrouds']">
-                  <strong>{{translate('products.shrouds')}}</strong>
-                </a>
-              </li>
-              <li>
-                <a [routerLink]="[currentLanguage, 'products', 'refrigeration']">
-                  <strong>{{translate('products.refrigeration')}}</strong>
-                </a>
-              </li>
-            </ul>
-
-
-          </div>
-  
           <!-- Locations -->
           <div class="footer-section locations">
             <h4>{{translate('footer.branches_tbilisi')}}</h4>
-            <div class="location-item">
+            <div class="location-item" (click)="navigateToLocation('dighomi')">
               <h5>{{translate('footer.dighomi_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
                 {{translate('locations.dighomi')}}
               </p>
             </div>
-            <div class="location-item">
+            <div class="location-item" (click)="navigateToLocation('gldani')">
               <h5>{{translate('footer.gldani_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
                 {{translate('locations.gldani')}}
               </p>
             </div>
-            <div class="location-item">
+            <div class="location-item" (click)="navigateToLocation('jiqia')">
               <h5>{{translate('footer.jiqia_branch')}}</h5>
               <p>
                 <i class="fa-solid fa-location-dot"></i>
@@ -210,17 +149,7 @@
       <div class="container">
         <div class="footer-bottom-content">
           <div class="copyright">
-            <p>&copy; 2025 <strong>{{translate('header.company_name')}}</strong> - {{translate('footer.all_rights_reserved')}}</p>
-            <p class="seo-text">
-              <strong>{{translate('home.funeral_home')}}</strong> - 
-              {{translate('about.professional_team')}} <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}
-            </p>
-          </div>
-          
-          <div class="footer-legal">
-            <a href="/privacy-policy">{{translate('footer.privacy_policy')}}</a>
-            <a href="/terms-of-service">{{translate('footer.terms_of_service')}}</a>
-            <a href="/sitemap">{{translate('footer.sitemap')}}</a>
+            <p>&copy; 2025 {{translate('footer.copyright_text')}}</p>
           </div>
         </div>
       </div>
