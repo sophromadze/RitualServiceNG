@@ -56,11 +56,12 @@ export class LanguageService {
 
       // Services with SEO Keywords
       'services.embalming': 'ბალზამირება',
-      'services.embalming_desc': 'მიცვალებულის პროფესიონალური ბალზამირება და მომზადება. ხანგრძლივი შენახვა, ჰიგიენური მომზადება.',
+      'services.embalming_desc': 'კეთილმოწყობილი, მყუდრო სივრცე მიცვალებულის დასასვენებლად და სარიტუალო პროცესის წარმართვისთვის',
       'services.hearse': 'კატაფალკები',
-      'services.hearse_desc': 'კატაფალკების პროფესიონალური მომსახურება. თანამედროვე კატაფალკები ნებისმიერ მიმართულებით გადასვენებისთვის.',
+      'services.hearse_desc': 'კატაფალკის მომსახურების სერვისი, თქვენთვის სასურველ ნებისმიერ ლოკაციაზე',
       'services.transportation': 'გადასვენება',
       'services.transportation_desc': 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ. ყველა საჭირო დოკუმენტის მომზადება.',
+      'services.transportation_guest': 'მარშუტკის მომსახურება, სტუმრების გადასაადგილებლად ნებისმიერ ლოკაციაზე',
       'services.stone_engraving': 'ქვაზე ხატვა',
       'services.stone_engraving_desc': 'ქვაზე პროფესიონალური ხატვა, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა.',
       'services.grave_decoration': 'საფლავის მოპირკეთება',
@@ -73,10 +74,12 @@ export class LanguageService {
       'services.banquet_hall_desc': 'საბანკეტო დარბაზი მემორიალური ღონისძიებებისთვის. დიდი ტევადობა, სრული მომსახურება.',
       'services.metal_letters': 'ლითონის ასოებით წარწერა',
       'services.metal_letters_desc': 'ლითონის ასოებით წარწერების დამზადება საფლავებზე. მაღალი ხარისხის მეტალის ასოები.',
+      'services.cemetery_decoration': 'სასაფლაოს მოპირკეთება',
+      'services.cemetery_decoration_desc': 'გთავაზობთ საფლავის მოპირკეთებას, მაღალი ხარისხის ქვას+ქვაზე ხატვა, ლითონის წარწერები, სასაფლაოს აქსესუარები',
 
       // Products with Keywords
       'products.coffins': 'სასახლეები',
-      'products.coffins_desc': 'ხარისხიანი სასახლეები: ქართული, უკრაინული, იტალიური სტილი. ფართო არჩევანი ყველა ბიუჯეტისთვის.',
+      'products.coffins_desc': 'მაღალი ხარისხის სასახლეები 350 ლარიდან. თქვენთვის სასურველი ნებისმიერი სტილი - ქართული, უკრაინილი, იტალიური.',
       'products.shrouds': 'სუდარები',
       'products.shrouds_desc': 'ტრადიციული და თანამედროვე სუდარები. ნატურალური მასალები, ხელნაკეთი მუშაობა.',
       'products.refrigeration': 'მაცივრები',
@@ -323,11 +326,11 @@ export class LanguageService {
       // What Makes Us Different Section
       'what_makes_us.title': 'რა გვხდის ჩვენ გამორჩეულს',
       'what_makes_us.professionalism.title': 'პროფესიონალიზმი და გამოცდილება',
-      'what_makes_us.professionalism.desc': 'სიდნეის აკადემიის დაკრძალვის სერვისებს ფლობს და მართავს პოლ გროსი, რომელსაც აქვს 40 წელზე მეტი გამოცდილება ინდუსტრიაში და აქვს რეპუტაცია პერსონალური სერვისის, გაგებისა და თანაგრძნობის მიწოდებით.',
+      'what_makes_us.professionalism.desc': 'მრავალწლიანი გამოცდილება და ნდობა - დამკრძალავი ბიურო "Ritual service" 15 წელია ფუნქციონირებს, შესაბამისად გამოცდილება გვაძლევს საშუალებას შევინარჩუნოთ ორგანიზებულობა. ჩვენი მიზანია, ადამიანებს დავეხმაროთ ცხოვრების ყველაზე რთულ მომენტში - მშვიდად, ღირსეულად ჩაატარონ სარიტუალო პროცესი.',
       'what_makes_us.trust.title': 'სანდო და გამჭირვალე მომსახურება',
       'what_makes_us.trust.desc': 'ჩვენ მზად ვართ 24 საათის განმავლობაში, კვირაში 7 დღე, რათა დაგეხმაროთ ყველა თქვენი სერვისის მოწყობაში და სპეციალიზირდეთ მემორიალური სერვისების მიწოდებაში ცხოვრების ყველა ფენის ადამიანებისთვის.',
       'what_makes_us.care.title': 'თანაგრძნობა, განსაკუთრებული ზრუნვა',
-      'what_makes_us.care.desc': 'Ritual Service-ს პერსონალი მზად არის დაეხმაროს ადამიანებს ამ რთულ პერიოდში ცერემონიის ყველა დეტალის გატარებით. ასევე ზრუნავს თქვენი ოჯახისა და საყვარელი ადამიანისთვის მნიშვნელოვანი და დასამახსოვრებელი სერვისის შექმნაზე.',
+      'what_makes_us.care.desc': 'Ritual Service-ის პერსონალი მზად არის დაეხმაროს ადამიანებს ამ რთულ პერიოდში ცერემონიის ყველა დეტალის გატარებით. ასევე ზრუნავს თქვენი ოჯახისა და საყვარელი ადამიანისთვის მნიშვნელოვანი და დასამახსოვრებელი სერვისის შექმნაზე.',
       
       // Products Page Specific Translations
       'products.title': 'სარიტუალო პროდუქტები',
@@ -595,11 +598,12 @@ export class LanguageService {
 
       // Services
       'services.embalming': 'Embalming',
-      'services.embalming_desc': 'Professional embalming and preparation of the deceased. Long-term preservation, hygienic preparation.',
+      'services.embalming_desc': 'Well-equipped, comfortable space for the deceased to rest and conduct ritual ceremonies',
       'services.hearse': 'Hearse Service',
-      'services.hearse_desc': 'Professional hearse services. Modern hearses for transportation in any direction.',
+      'services.hearse_desc': 'Hearse service, at any location you prefer',
       'services.transportation': 'Transportation',
       'services.transportation_desc': 'Transportation of the deceased locally and internationally. Preparation of all necessary documents.',
+      'services.transportation_guest': 'Minibus service for transporting guests to any location',
       'services.stone_engraving': 'Stone Engraving',
       'services.stone_engraving_desc': 'Professional stone engraving, colored photo creation, metal letter inscriptions.',
       'services.grave_decoration': 'Grave Decoration',
@@ -612,10 +616,12 @@ export class LanguageService {
       'services.banquet_hall_desc': 'Banquet hall for memorial events. Large capacity, full service.',
       'services.metal_letters': 'Metal Letter Inscriptions',
       'services.metal_letters_desc': 'Creation of metal letter inscriptions on graves. High-quality metal letters.',
+      'services.cemetery_decoration': 'Cemetery Decoration',
+      'services.cemetery_decoration_desc': 'We offer grave decoration, high-quality stone+stone painting, metal inscriptions, cemetery accessories',
 
       // Products
       'products.coffins': 'Coffins',
-      'products.coffins_desc': 'Quality coffins: Georgian, Ukrainian, Italian styles. Wide selection for every budget.',
+      'products.coffins_desc': 'High-quality coffins from 350 GEL. Any style you prefer - Georgian, Ukrainian, Italian.',
       'products.shrouds': 'Shrouds',
       'products.shrouds_desc': 'Traditional and modern shrouds. Natural materials, handcrafted work.',
       'products.refrigeration': 'Refrigeration',
@@ -861,7 +867,7 @@ export class LanguageService {
       // What Makes Us Different Section
       'what_makes_us.title': 'What Makes Us Different',
       'what_makes_us.professionalism.title': 'Professionalism and Experience',
-      'what_makes_us.professionalism.desc': 'Sydney Academy Funeral Services is owned and operated by Paul Gross, who has over 40 years of experience in the industry and has a reputation for providing personal service, understanding and compassion.',
+      'what_makes_us.professionalism.desc': 'Years of experience and trust - "Ritual Service" funeral bureau has been operating for 15 years, so experience allows us to maintain organization. Our goal is to help people in life\'s most difficult moment — to conduct the ritual process peacefully and with dignity.',
       'what_makes_us.trust.title': 'Reliable and Transparent Service',
       'what_makes_us.trust.desc': 'We are ready 24 hours a day, 7 days a week to help you organize all your services and specialize in providing memorial services for people of all walks of life.',
       'what_makes_us.care.title': 'Compassion, Special Care',
@@ -1133,11 +1139,12 @@ export class LanguageService {
 
       // Services
       'services.embalming': 'Бальзамирование',
-      'services.embalming_desc': 'Профессиональное бальзамирование и подготовка усопшего. Длительное сохранение, гигиеническая подготовка.',
+      'services.embalming_desc': 'Благоустроенное, уютное пространство для упокоения усопшего и проведения ритуальных церемоний',
       'services.hearse': 'Услуги катафалка',
-      'services.hearse_desc': 'Профессиональные услуги катафалка. Современные катафалки для перевозки в любом направлении.',
+      'services.hearse_desc': 'Услуги катафалка, в любом удобном для вас месте',
       'services.transportation': 'Перевозка',
       'services.transportation_desc': 'Перевозка усопшего по региону и за границу. Подготовка всех необходимых документов.',
+      'services.transportation_guest': 'Услуги маршрутки для перевозки гостей в любое место',
       'services.stone_engraving': 'Роспись на камне',
       'services.stone_engraving_desc': 'Профессиональная роспись на камне, изготовление цветного фото, надписи металлическими буквами.',
       'services.grave_decoration': 'Благоустройство могил',
@@ -1150,10 +1157,12 @@ export class LanguageService {
       'services.banquet_hall_desc': 'Банкетный зал для мемориальных мероприятий. Большая вместимость, полное обслуживание.',
       'services.metal_letters': 'Надписи металлическими буквами',
       'services.metal_letters_desc': 'Изготовление надписей металлическими буквами на могилах. Высококачественные металлические буквы.',
+      'services.cemetery_decoration': 'Благоустройство кладбища',
+      'services.cemetery_decoration_desc': 'Предлагаем благоустройство могил, высококачественный камень+роспись на камне, металлические надписи, кладбищенские аксессуары',
 
       // Products
       'products.coffins': 'Гробы',
-      'products.coffins_desc': 'Качественные гробы: грузинский, украинский, итальянский стили. Широкий выбор для любого бюджета.',
+      'products.coffins_desc': 'Качественные гробы от 350 лари. Любой стиль по вашему желанию - грузинский, украинский, итальянский.',
       'products.shrouds': 'Саваны',
       'products.shrouds_desc': 'Традиционные и современные саваны. Натуральные материалы, ручная работа.',
       'products.refrigeration': 'Холодильники',
@@ -1287,7 +1296,7 @@ export class LanguageService {
       // What Makes Us Different Section
       'what_makes_us.title': 'Что делает нас особенными',
       'what_makes_us.professionalism.title': 'Профессионализм и опыт',
-      'what_makes_us.professionalism.desc': 'Сиднейская академия похоронных услуг принадлежит и управляется Полом Гроссом, который имеет более 40 лет опыта в отрасли и имеет репутацию предоставления персонального обслуживания, понимания и сострадания.',
+      'what_makes_us.professionalism.desc': 'Многолетний опыт и доверие - похоронное бюро "Ritual Service" функционирует уже 15 лет, поэтому опыт позволяет нам поддерживать организованность. Наша цель - помочь людям в самый сложный момент жизни — провести ритуальный процесс спокойно и достойно.',
       'what_makes_us.trust.title': 'Надежное и прозрачное обслуживание',
       'what_makes_us.trust.desc': 'Мы готовы 24 часа в сутки, 7 дней в неделю помочь вам организовать все ваши услуги и специализируемся на предоставлении мемориальных услуг для людей всех слоев общества.',
       'what_makes_us.care.title': 'Сострадание, особая забота',
