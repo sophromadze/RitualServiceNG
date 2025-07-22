@@ -16,7 +16,7 @@ export class LanguageService {
   private translations: { [lang: string]: Translation } = {
     ka: {
       // Header & Navigation
-      'nav.home': 'მთავარი',
+      'nav.home': 'დამკრძალავი ბიურო - მთავარი',
       'header.company_name': 'რიტუალ სერვისი',
       'loader.title': 'რიტუალ სერვისი - დამკრძალავი ბიურო',
       'nav.services': 'სერვისები',
@@ -61,7 +61,6 @@ export class LanguageService {
       'services.hearse_desc': 'კატაფალკის მომსახურების სერვისი, თქვენთვის სასურველ ნებისმიერ ლოკაციაზე',
       'services.transportation': 'გადასვენება',
       'services.transportation_desc': 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ. ყველა საჭირო დოკუმენტის მომზადება.',
-      'services.transportation_guest': 'მარშუტკის მომსახურება, სტუმრების გადასაადგილებლად ნებისმიერ ლოკაციაზე',
       'services.stone_engraving': 'ქვაზე ხატვა',
       'services.stone_engraving_desc': 'ქვაზე პროფესიონალური ხატვა, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა.',
       'services.grave_decoration': 'საფლავის მოპირკეთება',
@@ -76,6 +75,12 @@ export class LanguageService {
       'services.metal_letters_desc': 'ლითონის ასოებით წარწერების დამზადება საფლავებზე. მაღალი ხარისხის მეტალის ასოები.',
       'services.cemetery_decoration': 'სასაფლაოს მოპირკეთება',
       'services.cemetery_decoration_desc': 'გთავაზობთ საფლავის მოპირკეთებას, მაღალი ხარისხის ქვას+ქვაზე ხატვა, ლითონის წარწერები, სასაფლაოს აქსესუარები',
+      'services.grave_excavation': 'სამარხის გაჭრა',
+      'services.grave_excavation_desc': 'სამარხის პროფესიონალური გაჭრა და მომზადება. ყველა საჭირო ნებართვის მიღება.',
+      'services.hearse_service': 'კატაფალკის მომსახურება',
+      'services.hearse_service_desc': 'კატაფალკის მომსახურება 24/7. თანამედროვე კატაფალკები, პროფესიონალური მძღოლები.',
+      'services.burial_filter': 'ჩასასვენებელი ფილტი',
+      'services.burial_filter_desc': 'ჩასასვენებელი ფილტის მომზადება და დამონტაჟება. ხარისხიანი მასალები, გამძლე კონსტრუქცია.',
 
       // Products with Keywords
       'products.coffins': 'სასახლეები',
@@ -136,6 +141,11 @@ export class LanguageService {
       'cta.get_consultation': 'მიიღეთ კონსულტაცია',
       'cta.order_service': 'შეუკვეთეთ სერვისი',
       'cta.learn_more': 'გაიგეთ მეტი',
+      'common.learn_more': 'გაიგე მეტი',
+      'common.quick_actions': 'მოქმედებები',
+      'common.plan_funeral': 'დაკრძალვის დაგეგმვა',
+      'common.call': 'დარეკვა',
+      'common.scroll_to_top': 'ზევით ასვლა',
 
       // Footer
       'footer.ritual_services': 'სარიტუალო მომსახურება',
@@ -267,7 +277,7 @@ export class LanguageService {
       'funeral_planning.completed': 'დასრულებული',
       'funeral_planning.pending': 'მიმდინარე',
       'funeral_planning.start_planning': 'დაიწყეთ დაგეგმვა',
-      'funeral_planning.cta_title': 'მზად ხართ დაგეგმვის დასაწყებად?',
+      'funeral_planning.cta_title': 'გსურთ დაკრძალვის დაგეგმვა?',
       'funeral_planning.cta_description': 'დაგვიკავშირდით დღეს, რომ განვიხილოთ როგორ შეგვიძლია დაგეხმაროთ თქვენ და თქვენს ოჯახს',
 
       // Why Choose Us Section
@@ -335,6 +345,7 @@ export class LanguageService {
       // Products Page Specific Translations
       'products.title': 'სარიტუალო პროდუქტები',
       'products.hero_description': 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები, სუდარები, მაცივრები, კატაფალკები. ყველა პროდუქტი მზადაა 24/7.',
+      'products.hero_title': 'დამკრძალავი ბიურო - სარიტუალო პროდუქტები',
       'products.our_products': 'ჩვენი პროდუქტები',
       'products.quality_description': 'ხარისხიანი სარიტუალო პროდუქტები - სრული ასორტიმენტი',
       'products.categories_title': 'პროდუქტების კატეგორიები',
@@ -398,13 +409,9 @@ export class LanguageService {
       'services.contact_now': 'დაგვიკავშირდით ახლავე - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით',
       
       // Services Page
-      'services.hero_description': 'რიტუალ სერვისი გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა: ბალზამირება, კატაფალკი, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა.',
-      'services.hero_keywords.ritual_services': 'სარიტუალო მომსახურება',
-      'services.hero_keywords.embalming': 'ბალზამირება',
-      'services.hero_keywords.hearse': 'კატაფალკები',
-      'services.hero_keywords.stone_engraving': 'ქვაზე ხატვა',
-      'services.hero_keywords.transportation': 'გადასვენება',
-      'services.hero_keywords.dressing': 'მიცვალებულის ჩაცმა',
+      'services.hero_description': 'რიტუალ სერვისი გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა: ბალზამირება, კატაფალკი, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა და ა.შ.',
+      'services.hero_title': 'დამკრძალავი ბიურო - დაკრძალვის სერვისები',
+
       'services.section_title': 'ჩვენი მომსახურება',
       'services.section_description': 'პროფესიონალური სარიტუალო მომსახურება 24/7 - ყველა საჭირო სერვისი ერთ ადგილას',
       'services.seo_title': 'სარიტუალო მომსახურება - რიტუალ სერვისი',
@@ -558,7 +565,7 @@ export class LanguageService {
 
     en: {
       // Header & Navigation
-      'nav.home': 'Home',
+      'nav.home': 'Funeral Home - Home',
       'header.company_name': 'Ritual Service',
       'loader.title': 'Ritual Service - Funeral Home',
       'nav.services': 'Services',
@@ -618,6 +625,12 @@ export class LanguageService {
       'services.metal_letters_desc': 'Creation of metal letter inscriptions on graves. High-quality metal letters.',
       'services.cemetery_decoration': 'Cemetery Decoration',
       'services.cemetery_decoration_desc': 'We offer grave decoration, high-quality stone+stone painting, metal inscriptions, cemetery accessories',
+      'services.grave_excavation': 'Grave Excavation',
+      'services.grave_excavation_desc': 'Professional grave excavation and preparation. Obtaining all necessary permits.',
+      'services.hearse_service': 'Hearse Service',
+      'services.hearse_service_desc': 'Hearse service 24/7. Modern hearses, professional drivers.',
+      'services.burial_filter': 'Burial Filter',
+      'services.burial_filter_desc': 'Preparation and installation of burial filters. Quality materials, durable construction.',
 
       // Products
       'products.coffins': 'Coffins',
@@ -677,6 +690,11 @@ export class LanguageService {
       'cta.get_consultation': 'Get Consultation',
       'cta.order_service': 'Order Service',
       'cta.learn_more': 'Learn More',
+      'common.learn_more': 'Learn More',
+      'common.quick_actions': 'Quick Actions',
+      'common.plan_funeral': 'Plan Funeral',
+      'common.call': 'Call',
+      'common.scroll_to_top': 'Scroll to Top',
 
       // Footer
       'footer.ritual_services': 'Ritual Services',
@@ -808,7 +826,7 @@ export class LanguageService {
       'funeral_planning.pending': 'Pending',
       'funeral_planning.start_planning': 'Start Planning',
 
-      'funeral_planning.cta_title': 'Ready to Start Planning?',
+      'funeral_planning.cta_title': 'Would you like to plan a funeral?',
       'funeral_planning.cta_description': 'Contact us today to discuss how we can help you and your family',
 
       // Why Choose Us Section
@@ -876,6 +894,7 @@ export class LanguageService {
       // Products Page Specific Translations
       'products.title': 'Ritual Products',
       'products.hero_description': 'High-quality ritual products: coffins, shrouds, refrigeration, hearse. All products are ready 24/7.',
+      'products.hero_title': 'Funeral Home - Ritual Products',
       'products.our_products': 'Our Products',
       'products.quality_description': 'Quality ritual products - complete assortment',
       'products.categories_title': 'Product Categories',
@@ -939,13 +958,9 @@ export class LanguageService {
       'services.contact_now': 'Contact us now - we are by your side 24 hours a day',
       
       // Services Page
-      'services.hero_description': 'Ritual Service offers a complete complex of ritual services: embalming, hearse, stone engraving, transportation, dressing the deceased, grave decoration.',
-      'services.hero_keywords.ritual_services': 'Ritual Services',
-      'services.hero_keywords.embalming': 'Embalming',
-      'services.hero_keywords.hearse': 'Hearse',
-      'services.hero_keywords.stone_engraving': 'Stone Engraving',
-      'services.hero_keywords.transportation': 'Transportation',
-      'services.hero_keywords.dressing': 'Dressing',
+      'services.hero_description': 'Ritual Service offers a complete complex of ritual services: embalming, hearse, stone engraving, transportation, dressing the deceased, grave decoration, etc.',
+      'services.hero_title': 'Funeral Home - Funeral Services',
+
       'services.section_title': 'Our Services',
       'services.section_description': 'Professional ritual services 24/7 - all necessary services in one place',
       'services.seo_title': 'Ritual Services - Ritual Service',
@@ -1099,7 +1114,7 @@ export class LanguageService {
 
     ru: {
       // Header & Navigation
-      'nav.home': 'Главная',
+      'nav.home': 'Похоронный дом - Главная',
       'header.company_name': 'Ритуал Сервис',
       'loader.title': 'Ритуал Сервис - Похоронный дом',
       'nav.services': 'Услуги',
@@ -1159,6 +1174,12 @@ export class LanguageService {
       'services.metal_letters_desc': 'Изготовление надписей металлическими буквами на могилах. Высококачественные металлические буквы.',
       'services.cemetery_decoration': 'Благоустройство кладбища',
       'services.cemetery_decoration_desc': 'Предлагаем благоустройство могил, высококачественный камень+роспись на камне, металлические надписи, кладбищенские аксессуары',
+      'services.grave_excavation': 'Рытье могилы',
+      'services.grave_excavation_desc': 'Профессиональное рытье и подготовка могилы. Получение всех необходимых разрешений.',
+      'services.hearse_service': 'Услуги катафалка',
+      'services.hearse_service_desc': 'Услуги катафалка 24/7. Современные катафалки, профессиональные водители.',
+      'services.burial_filter': 'Погребальный фильтр',
+      'services.burial_filter_desc': 'Подготовка и установка погребальных фильтров. Качественные материалы, прочная конструкция.',
 
       // Products
       'products.coffins': 'Гробы',
@@ -1218,6 +1239,11 @@ export class LanguageService {
       'cta.get_consultation': 'Получить консультацию',
       'cta.order_service': 'Заказать услугу',
       'cta.learn_more': 'Узнать больше',
+      'common.learn_more': 'Узнать больше',
+      'common.quick_actions': 'Действия',
+      'common.plan_funeral': 'Планирование похорон',
+      'common.call': 'Позвонить',
+      'common.scroll_to_top': 'Прокрутить вверх',
 
       // Footer
       'footer.ritual_services': 'Ритуальные услуги',
@@ -1417,12 +1443,13 @@ export class LanguageService {
       'funeral_planning.completed': 'Завершено',
       'funeral_planning.pending': 'В процессе',
       'funeral_planning.start_planning': 'Начать планирование',
-      'funeral_planning.cta_title': 'Готовы начать планирование?',
+      'funeral_planning.cta_title': 'Хотите спланировать похороны?',
       'funeral_planning.cta_description': 'Свяжитесь с нами сегодня, чтобы обсудить, как мы можем помочь вам и вашей семье',
       
       // Products Page Specific Translations
       'products.title': 'Ритуальная продукция',
       'products.hero_description': 'Высококачественная ритуальная продукция: гробы, саваны, холодильники, катафалк. Вся продукция готова 24/7.',
+      'products.hero_title': 'Похоронный дом - Ритуальная продукция',
       'products.our_products': 'Наша продукция',
       'products.quality_description': 'Качественная ритуальная продукция - полный ассортимент',
       'products.categories_title': 'Категории продукции',
@@ -1486,13 +1513,9 @@ export class LanguageService {
       'services.contact_now': 'Свяжитесь с нами сейчас - мы рядом 24 часа в сутки',
       
       // Services Page
-      'services.hero_description': 'Ритуал Сервис предлагает полный комплекс ритуальных услуг: бальзамирование, катафалк, роспись на камне, перевозка, одевание усопшего, благоустройство могил.',
-      'services.hero_keywords.ritual_services': 'Ритуальные услуги',
-      'services.hero_keywords.embalming': 'Бальзамирование',
-      'services.hero_keywords.hearse': 'Катафалк',
-      'services.hero_keywords.stone_engraving': 'Роспись на камне',
-      'services.hero_keywords.transportation': 'Перевозка',
-      'services.hero_keywords.dressing': 'Одевание',
+      'services.hero_description': 'Ритуал Сервис предлагает полный комплекс ритуальных услуг: бальзамирование, катафалк, роспись на камне, перевозка, одевание усопшего, благоустройство могил и т.д.',
+      'services.hero_title': 'Похоронный дом - Похоронные услуги',
+
       'services.section_title': 'Наши услуги',
       'services.section_description': 'Профессиональные ритуальные услуги 24/7 - все необходимые услуги в одном месте',
       'services.seo_title': 'Ритуальные услуги - Ритуал Сервис',

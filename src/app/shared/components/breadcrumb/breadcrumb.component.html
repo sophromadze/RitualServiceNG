@@ -26,25 +26,7 @@
         </li>
       </ol>
       
-      <!-- Call Button -->
-      <div class="breadcrumb-call-button">
-        <a href="tel:+995599069898" 
-           class="contact-phone"
-           (click)="callPhone(); $event.preventDefault()"
-           [attr.aria-label]="translate('header.call_24_7')">
-          <i class="fa-solid fa-phone-volume"></i>
-          <span class="phone-number">+(995) 599 06 98 98</span>
-        </a>
-      </div>
-      
-      <div class="breadcrumb-planning-button">
-        <a [routerLink]="[currentLanguage, 'funeral-planning']" 
-           class="planning-link"
-           [attr.aria-label]="translate('breadcrumb.plan_funeral')">
-          <i class="fa-solid fa-calendar-check"></i>
-          <span class="planning-text">{{translate('breadcrumb.plan_funeral')}}</span>
-        </a>
-      </div>
+
     </div>
   </div>
 </nav>

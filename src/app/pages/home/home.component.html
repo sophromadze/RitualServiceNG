@@ -3,143 +3,19 @@
 <h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}}</h2>
 <h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}}</h3>
 
-<!-- Hero Section with Swiper -->
+<!-- Hero Section -->
 <main class="hero-section">
-  <div class="swiper hero-swiper">
-    <div class="swiper-wrapper">
-      
-      <!-- Main Service Slide -->
-      <div class="swiper-slide" id="main-service-slide">
-        <div class="slide-content">
-          <div class="slide-text">
-            <h1>{{translate('home.title')}}</h1>
-            <p>{{translate('home.subtitle')}}</p>
-            <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <img class="slide-image" 
-               [src]="heroSlides[0].image" 
-               [alt]="heroSlides[0].alt"
-               loading="eager">
-        </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-brand">Ritual Service</div>
+      <h1>{{translate('home.funeral_home')}}</h1>
+      <h2>{{translate('home.subtitle')}}</h2>
+      <div class="cta-buttons">
+        <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+          <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+        </a>
       </div>
-
-      <!-- Coffins Slide -->
-      <div class="swiper-slide" id="coffins-slide">
-        <div class="slide-content">
-          <div class="slide-text">
-            <h2>{{translate('products.coffins')}}</h2>
-            <p>{{translate('products.coffins_desc')}}</p>
-            <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <div class="slide-images">
-            <img [src]="heroSlides[1].images?.[0]" 
-                 alt="სასახლეები - ხარისხიანი სასახლეები"
-                 loading="lazy">
-            <img [src]="heroSlides[1].images?.[1]" 
-                 alt="sasaxleebi - კუბო"
-                 loading="lazy">
-          </div>
-        </div>
-      </div>
-
-      <!-- Hearse Slide -->
-      <div class="swiper-slide" id="hearse-slide">
-        <div class="slide-content">
-          <div class="slide-text">
-            <h2>{{translate('services.hearse')}}</h2>
-            <p>{{translate('services.hearse_desc')}}</p>
-            <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <div class="slide-images">
-            <img [src]="heroSlides[2].images?.[0]" 
-                 alt="კატაფალკა - katafalka მომსახურება"
-                 loading="lazy">
-            <img [src]="heroSlides[2].images?.[1]" 
-                 alt="კატაფალკის მომსახურება"
-                 loading="lazy">
-          </div>
-        </div>
-      </div>
-
-      <!-- Embalming/Mourning Hall Slide -->
-      <div class="swiper-slide" id="mourning-hall-slide">
-        <div class="slide-content">
-          <div class="slide-text">
-            <h2>{{translate('seo.mourning_hall')}}</h2>
-            <p>{{translate('services.embalming_desc')}}</p>
-            <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <div class="slide-images">
-            <img [src]="'./images/darbazebi1.jpg'" 
-                 alt="საპანაშვიდე დარბაზი - samgloviaro დარბაზი"
-                 loading="lazy">
-            <img [src]="'./images/darbazebi2.jpg'" 
-                 alt="საბანკეტო დარბაზი"
-                 loading="lazy">
-          </div>
-        </div>
-      </div>
-
-      <!-- Cemetery Services Slide -->
-      <div class="swiper-slide" id="cemetery-slide">
-        <div class="slide-content">
-          <div class="slide-text">
-            <h2>{{translate('services.cemetery_decoration')}}</h2>
-            <p>{{translate('services.cemetery_decoration_desc')}}</p>
-            <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <img class="slide-image" 
-               [src]="'./images/grave.jpg'" 
-               [alt]="'საფლავის მოპირკეთება - ქვაზე ხატვა'"
-               loading="lazy">
-        </div>
-      </div>
-
-      <!-- Transportation Slide -->
-      <div class="swiper-slide" id="transportation-slide">
-        <div class="slide-content">
-                      <div class="slide-text">
-              <h2>{{translate('services.transportation')}}</h2>
-              <p>{{translate('services.transportation_guest')}}</p>
-              <div class="cta-buttons">
-              <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
-                <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
-              </a>
-            </div>
-          </div>
-          <img class="slide-image" 
-               [src]="'./images/microbus.jpg'" 
-               [alt]="'ტრანსპორტირება - გადასვენება'"
-               loading="lazy">
-        </div>
-      </div>
-
     </div>
-    
-    <!-- Swiper navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
   </div>
 </main>
 
@@ -149,21 +25,21 @@
     <div class="diff-container">
       <div class="diff-head">
         <h3>{{translate('what_makes_us.title')}}</h3>
-        <img src="./images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
+        <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
       </div>
       <div class="diff-content">
         <div class="diff-feature">
-          <img src="./images/experience.png" alt="გამოცდილება" class="feature-icon">
+          <img src="/images/experience.png" alt="გამოცდილება" class="feature-icon">
           <h3>{{translate('what_makes_us.professionalism.title')}}</h3>
           <p>{{translate('what_makes_us.professionalism.desc')}}</p>
         </div>
         <div class="diff-feature">
-          <img src="./images/trust.png" alt="სანდოობა" class="feature-icon">
+          <img src="/images/trust.png" alt="სანდოობა" class="feature-icon">
           <h3>{{translate('what_makes_us.trust.title')}}</h3>
           <p>{{translate('what_makes_us.trust.desc')}}</p>
         </div>
         <div class="diff-feature">
-          <img src="./images/care1.png" alt="ზრუნვა" class="feature-icon">
+          <img src="/images/care1.png" alt="ზრუნვა" class="feature-icon">
           <h3>{{translate('what_makes_us.care.title')}}</h3>
           <p>{{translate('what_makes_us.care.desc')}}</p>
         </div>
@@ -176,7 +52,7 @@
 <section id="services-section" class="services-section">
   <div class="container">
     <div class="section-header">
-      <h2>{{translate('nav.services')}} - {{translate('seo.funeral_services')}}</h2>
+      <h2>{{translate('seo.funeral_services')}}</h2>
     </div>
     
     <div class="services-grid">
@@ -193,6 +69,9 @@
           <div class="keywords" [attr.aria-label]="service.keywords">
             <small>{{service.keywords}}</small>
           </div>
+          <button class="btn btn-secondary" (click)="navigateToService(service.url)">
+            {{translate('common.learn_more')}}
+          </button>
         </div>
       </div>
     </div>
@@ -206,7 +85,7 @@
       <div class="rs-description-img"></div>
       <div class="rs-description-content">
         <h3>{{translate('ritual_service.title')}}</h3>
-        <img src="./images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
+        <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
         <p>{{translate('ritual_service.description')}}</p>
         <button class="btn btn-primary" (click)="goToServicePage()">
           <i class="fa-solid fa-arrow-right"></i>

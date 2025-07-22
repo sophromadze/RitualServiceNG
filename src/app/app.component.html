@@ -4,7 +4,7 @@
 <!-- Loading Screen -->
 <div class="loading-screen" *ngIf="isLoading">
   <div class="loading-content">
-            <img src="./images/logo.png" alt="რიტუალ სერვისი" class="loading-logo">
+            <img src="/images/logo.png" alt="რიტუალ სერვისი" class="loading-logo">
     <div class="loading-spinner"></div>
     <p>{{'loader.title' | translate}}</p>
   </div>
@@ -26,6 +26,12 @@
   
   <!-- Footer -->
   <app-footer [currentLanguage]="currentLanguage"></app-footer>
+  
+  <!-- Floating Action Buttons -->
+  <app-floating-action-buttons></app-floating-action-buttons>
+  
+  <!-- Scroll to Top Button -->
+  <app-scroll-to-top></app-scroll-to-top>
   
 </div>
 

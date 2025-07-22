@@ -13,11 +13,14 @@
 
 /* Hero Section */
 .products-hero {
-  background: linear-gradient(135deg, #1a252f 0%, #2c3e50 50%, #34495e 100%);
-  color: #ffffff;
-  padding: 6rem 0;
   position: relative;
   overflow: hidden;
+  background: url('/images/services.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  min-height: 500px;
 }
 
 .products-hero::before {
@@ -27,39 +30,108 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/orn1.png') repeat;
-  opacity: 0.05;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  z-index: 1;
 }
 
 .hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
   position: relative;
   z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-text {
+  color: #ffffff;
+}
+
+.hero-brand {
+  font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
+  font-size: 48px;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
   color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-  letter-spacing: -0.5px;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-  color: #f8f9fa;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+.hero-text h2 {
+  font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
+  font-size: 20px;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .products-hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .hero-brand {
+    font-size: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .hero-brand {
+    font-size: 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .hero-text h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .hero-brand {
+    font-size: 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-text h2 {
+    font-size: 14px;
+  }
 }
 
 .hero-keywords {
@@ -88,47 +160,46 @@
 
 .hero-cta {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-cta .btn {
-  padding: 1.2rem 2.5rem;
-  border-radius: 50px;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 1.1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  gap: 8px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-  background: #e74c3c;
-  color: white;
-  border: 2px solid #e74c3c;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
 }
 
 .btn-primary:hover {
-  background: #c0392b;
-  border-color: #c0392b;
-  transform: translateY(-3px);
+  background: linear-gradient(135deg, #c0392b, #a93226);
   box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
 .btn-secondary:hover {
-  background: white;
-  color: #2c3e50;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+  transform: translateY(-2px);
 }
 
 .hero-image {

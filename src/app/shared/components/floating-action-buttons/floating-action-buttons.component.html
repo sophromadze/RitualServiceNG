@@ -1,0 +1,22 @@
+<div class="floating-action-buttons" [class.expanded]="isExpanded">
+  <!-- Action Buttons Container (Single Column) -->
+  <div class="action-buttons-container" *ngIf="isExpanded">
+    <!-- Plan Funeral Button -->
+    <button class="action-button plan-button" (click)="planFuneral()" [title]="translate('common.plan_funeral')">
+      <span class="button-text">{{translate('common.plan_funeral')}}</span>
+    </button>
+    
+    <!-- Call Button -->
+    <button class="action-button call-button" (click)="callPhone()" [title]="translate('common.call')">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="action-icon">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="button-text">{{translate('common.call')}}</span>
+    </button>
+  </div>
+
+  <!-- Toggle Button (Long Rectangle with Text) -->
+  <button class="toggle-button" (click)="toggleExpanded()" [title]="translate('common.quick_actions')">
+    <span class="toggle-text">{{translate('common.quick_actions')}}</span>
+  </button>
+</div> 

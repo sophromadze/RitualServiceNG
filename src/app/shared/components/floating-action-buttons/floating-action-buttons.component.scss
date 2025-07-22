@@ -1,0 +1,178 @@
+.floating-action-buttons {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    top: 65%;
+  }
+}
+
+
+
+.action-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-right: 10px;
+  transform: translateX(200px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    transform: translateX(180px);
+    gap: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    transform: translateX(160px);
+    gap: 8px;
+  }
+}
+
+
+
+.floating-action-buttons.expanded .action-buttons-container {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.action-button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 45px;
+    font-size: 11px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 40px;
+    font-size: 10px;
+  }
+}
+
+.plan-button {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  
+  &:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+  }
+}
+
+.call-button {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  
+  &:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  }
+}
+
+.action-icon {
+  width: 16px;
+  height: 16px;
+  
+  @media (max-width: 768px) {
+    width: 14px;
+    height: 14px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.button-text {
+  font-weight: 600;
+}
+
+.toggle-button {
+  width: 30px;
+  height: 120px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 15px 0 0 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  
+  &:hover {
+    background: linear-gradient(135deg, #2980b9, #1f5f8b);
+    box-shadow: -4px 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 100px;
+    border-radius: 14px 0 0 14px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 26px;
+    height: 90px;
+    border-radius: 13px 0 0 13px;
+  }
+}
+
+.toggle-text {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 10px;
+  }
+}
+
+// Add a subtle pulse animation for the call button to draw attention
+.call-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(40, 167, 69, 0.7);
+  }
+  70% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+} 

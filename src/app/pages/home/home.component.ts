@@ -1,11 +1,9 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
-
-declare const Swiper: any;
 
 @Component({
   selector: 'app-home',
@@ -14,57 +12,10 @@ declare const Swiper: any;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+export class HomeComponent implements OnInit, OnDestroy {
   
   currentLanguage: string = 'ka';
   private subscriptions: Subscription = new Subscription();
-  private swiper?: any;
-
-  // SEO-focused content structure with maximum keywords
-  heroSlides = [
-    {
-      id: 'main-service',
-      titleKey: 'home.title',
-      subtitleKey: 'home.subtitle',
-      image: './images/kuboebi2.jpg',
-      alt: 'დამკრძალავი ბიურო - სარიტუალო სახლი - damkrdzalavi biuro'
-    },
-    {
-      id: 'coffins-slide',
-      titleKey: 'products.coffins',
-      subtitleKey: 'products.coffins_desc',
-              images: ['./images/kuboebi3.jpg', './images/kuboebi4.jpg'],
-      alt: 'სასახლეები - ხარისხიანი სასახლეები - sasaxleebi'
-    },
-    {
-      id: 'hearse-slide', 
-      titleKey: 'services.hearse',
-      subtitleKey: 'services.hearse_desc',
-              images: ['./images/katafalkebi2.jpg', './images/katafalkebi3.jpg'],
-      alt: 'კატაფალკა - კატაფალკის მომსახურება - katafalka'
-    },
-    {
-      id: 'embalming-slide',
-      titleKey: 'services.embalming',
-      subtitleKey: 'services.embalming_desc', 
-      image: './images/darbazebi1.jpg',
-      alt: 'ბალზამირება - პროფესიონალური ბალზამირება - balzamireba'
-    },
-    {
-      id: 'stone-engraving-slide',
-      titleKey: 'services.stone_engraving',
-      subtitleKey: 'services.stone_engraving_desc',
-      image: './images/grave.jpg',
-      alt: 'ქვაზე ხატვა - საფლავის მოპირკეთება - qvaze xatva - mopirketeba'
-    },
-    {
-      id: 'transportation-slide',
-      titleKey: 'services.transportation', 
-      subtitleKey: 'services.transportation_desc',
-      image: './images/microbus.jpg',
-      alt: 'გადასვენება - ტრანსპორტირება - gadasveneba'
-    }
-  ];
 
   // Why choose us section with SEO keywords
   whyChooseUsFeatures = [
@@ -88,46 +39,95 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   // Service cards with SEO-optimized URLs and keywords
   serviceCards = [
     {
+      titleKey: 'products.coffins',
+      descKey: 'products.coffins_desc',
+      url: '/products/coffins',
+      image: '/images/kuboebi2.jpg',
+      keywords: 'სასახლეები, sasaxleebi, კუბოები'
+    },
+    {
+      titleKey: 'products.refrigeration',
+      descKey: 'products.refrigeration_desc',
+      url: '/products/refrigeration',
+      image: '/images/fridge1.jpeg',
+      keywords: 'სასახლე მაცივრები, sasaxle macivrebi, მაცივრები'
+    },
+    {
+      titleKey: 'products.shrouds',
+      descKey: 'products.shrouds_desc',
+      url: '/products/shrouds',
+      image: '/images/shroud1.jpg',
+      keywords: 'სუდარა, sudara, სუდარები'
+    },
+    {
       titleKey: 'services.embalming',
       descKey: 'services.embalming_desc',
-      url: '/services/balzamireba',
-      image: './images/embalming.jpg',
+      url: '/services#embalming',
+      image: '/images/embalming.jpg',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
     },
     {
       titleKey: 'services.dressing',
       descKey: 'services.dressing_desc',
-      url: '/services/micvalebulis-chacma',
-      image: './images/suit.jpg',
+      url: '/services#dressing',
+      image: '/images/suit.jpg',
       keywords: 'მიცვალებულის ჩაცმა, micvalebulis chacma, მოწესრიგება'
     },
     {
       titleKey: 'services.transportation',
       descKey: 'services.transportation_desc',
-      url: '/services/gadasveneba', 
-      image: './images/microbus.jpg',
+      url: '/services#transportation', 
+      image: '/images/microbus.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.stone_engraving',
       descKey: 'services.stone_engraving_desc',
-      url: './services/qvaze-xatva',
-      image: './images/stonepainting.jpg', 
+      url: '/services#stone-engraving',
+      image: '/images/stonepainting.jpg', 
       keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.grave_decoration',
       descKey: 'services.grave_decoration_desc',
-      url: '/services/samarkhis-motsqoba',
-      image: './images/grave.jpg',
+      url: '/services#grave-decoration',
+      image: '/images/grave.jpg',
       keywords: 'სამარხის მოწყობა, samarkhis motsqoba, საფლავის მოპირკეთება'
     },
     {
-      titleKey: 'services.metal_letters',
-      descKey: 'services.metal_letters_desc',
-      url: '/services/litonis-asoebit-tsartsera',
-      image: './images/tomb.jpg',
-      keywords: 'ლითონის ასოებით წარწერა, litonis asoebit tsartsera, მეტალის ასოები'
+      titleKey: 'services.banquet_hall',
+      descKey: 'services.banquet_hall_desc',
+      url: '/services#banquet-hall',
+      image: '/images/hall.jpg',
+      keywords: 'საბანკეტო დარბაზი, sabanketo darbazi, ბანკეტი'
+    },
+    {
+      titleKey: 'services.mourning_hall',
+      descKey: 'services.mourning_hall_desc',
+      url: '/services#mourning-hall',
+      image: '/images/darbazebi1.jpg',
+      keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, სამგლოვიარო დარბაზი'
+    },
+    {
+      titleKey: 'services.grave_excavation',
+      descKey: 'services.grave_excavation_desc',
+      url: '/services',
+      image: '/images/grave.jpg',
+      keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
+    },
+    {
+      titleKey: 'services.hearse_service',
+      descKey: 'services.hearse_service_desc',
+      url: '/services#hearse',
+      image: '/images/katafalkebi2.jpg',
+      keywords: 'კატაფალკის მომსახურება, katafalkis momserva, კატაფალკა'
+    },
+    {
+      titleKey: 'services.burial_filter',
+      descKey: 'services.burial_filter_desc',
+      url: '/services',
+      image: '/images/grave.jpg',
+      keywords: 'ჩასასვენებელი ფილტი, chasasvenebeli filti, საფლავის ფილტი'
     }
   ];
 
@@ -144,10 +144,6 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
       this.languageService.currentLanguage$.subscribe(language => {
         this.currentLanguage = language;
         this.updateSEO();
-        // Reinitialize Swiper after language change to ensure proper rendering
-        setTimeout(() => {
-          this.reinitializeSwiper();
-        }, 300);
       })
     );
 
@@ -167,108 +163,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
-  ngAfterViewInit(): void {
-    // Load Swiper from CDN and initialize
-    this.loadSwiper();
-  }
-
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
-    if (this.swiper && typeof this.swiper.destroy === 'function') {
-      this.swiper.destroy();
-    }
-  }
-
-  private loadSwiper(): void {
-    // Check if Swiper is already loaded
-    if (typeof Swiper !== 'undefined') {
-      this.initializeSwiper();
-      return;
-    }
-
-    // Load Swiper CSS
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
-    document.head.appendChild(link);
-
-    // Load Swiper JS
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
-    script.onload = () => {
-      this.initializeSwiper();
-    };
-    document.head.appendChild(script);
-  }
-
-  private initializeSwiper(): void {
-    try {
-      // Check if Swiper container exists
-      const swiperContainer = document.querySelector('.hero-swiper');
-      if (!swiperContainer) {
-        console.warn('Swiper container not found');
-        return;
-      }
-
-      // Check if Swiper is available
-      if (typeof Swiper === 'undefined') {
-        console.warn('Swiper not loaded yet');
-        return;
-      }
-
-      // Check if slides are properly loaded
-      const slides = document.querySelectorAll('.hero-swiper .swiper-slide');
-      
-      if (slides.length < 2) {
-        setTimeout(() => this.initializeSwiper(), 100);
-        return;
-      }
-
-      // Check if slides have proper dimensions (not 0x0)
-      const firstSlide = slides[0] as HTMLElement;
-      if (firstSlide.offsetWidth === 0 || firstSlide.offsetHeight === 0) {
-        setTimeout(() => this.initializeSwiper(), 100);
-        return;
-      }
-
-      // Destroy existing swiper instance if it exists
-      if (this.swiper && typeof this.swiper.destroy === 'function') {
-        this.swiper.destroy();
-      }
-
-      // Enable loop mode since we have 6 slides with proper dimensions
-      const shouldUseLoop = true;
-
-      this.swiper = new Swiper('.hero-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: shouldUseLoop,
-        // autoplay: {
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    } catch (error) {
-      console.error('Error initializing Swiper:', error);
-    }
-  }
-
-  private reinitializeSwiper(): void {
-    // Only reinitialize if Swiper is already loaded
-    if (typeof Swiper !== 'undefined') {
-      // Add a longer delay to ensure DOM is fully updated after language change
-      setTimeout(() => {
-        this.initializeSwiper();
-      }, 200);
-    }
   }
 
   private updateSEO(routeData?: any): void {
@@ -425,7 +321,15 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   navigateToService(serviceUrl: string): void {
-    this.router.navigate([this.currentLanguage, ...serviceUrl.split('/').filter(s => s)]);
+    // Handle anchor navigation for services
+    if (serviceUrl.includes('#')) {
+      const [path, fragment] = serviceUrl.split('#');
+      const segments = path.split('/').filter(s => s);
+      this.router.navigate([this.currentLanguage, ...segments], { fragment: fragment });
+    } else {
+      // Regular navigation for products
+      this.router.navigate([this.currentLanguage, ...serviceUrl.split('/').filter(s => s)]);
+    }
   }
 
   callPhone(): void {

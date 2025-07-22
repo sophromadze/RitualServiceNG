@@ -8,11 +8,13 @@ import { LanguageService } from './services/language.service';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TranslatePipe } from './pipes/translate.pipe';
+import { FloatingActionButtonsComponent } from './shared/components/floating-action-buttons/floating-action-buttons.component';
+import { ScrollToTopComponent } from './shared/components/scroll-to-top/scroll-to-top.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslatePipe],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, TranslatePipe, FloatingActionButtonsComponent, ScrollToTopComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

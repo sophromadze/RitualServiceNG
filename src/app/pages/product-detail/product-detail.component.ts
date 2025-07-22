@@ -41,11 +41,11 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.coffins',
       descKey: 'products.coffins_desc',
       longDescKey: 'products.coffins_long',
-      image: './images/sasaxleebi2.jpg',
+      image: '/images/sasaxleebi2.jpg',
       gallery: [
-        './images/sasaxleebi2.jpg',
-        './images/darbazebi1.jpg',
-        './images/darbazebi2.jpg'
+        '/images/sasaxleebi2.jpg',
+        '/images/darbazebi1.jpg',
+        '/images/darbazebi2.jpg'
       ],
       keywords: ['სასახლეები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
       relatedProducts: ['shrouds', 'refrigeration', 'hearse'],
@@ -68,12 +68,12 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.shrouds',
       descKey: 'products.shrouds_desc',
       longDescKey: 'products.shrouds_long',
-      image: './images/sudarebi2.jpg',
+      image: '/images/sudarebi2.jpg',
       gallery: [
-        './images/sudarebi2.jpg',
-        './images/shroud1.jpg',
-        './images/shroud2.jpg',
-        './images/shroud3.jpg'
+        '/images/sudarebi2.jpg',
+        '/images/shroud1.jpg',
+        '/images/shroud2.jpg',
+        '/images/shroud3.jpg'
       ],
       keywords: ['სუდარები', 'sudarebi', 'ბამბის სუდარები', 'shrouds'],
       relatedProducts: ['coffins', 'refrigeration', 'hearse'],
@@ -96,12 +96,12 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.refrigeration',
       descKey: 'products.refrigeration_desc',
       longDescKey: 'products.refrigeration_long',
-      image: './images/fridge2.jpeg',
+      image: '/images/fridge2.jpeg',
       gallery: [
-        './images/fridge1.jpeg',
-        './images/fridge2.jpeg',
-        './images/macivrebi.jpg',
-        './images/macivrebi2.jpg'
+        '/images/fridge1.jpeg',
+        '/images/fridge2.jpeg',
+        '/images/macivrebi.jpg',
+        '/images/macivrebi2.jpg'
       ],
       keywords: ['მაცივრები', 'macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'hearse'],
@@ -124,13 +124,13 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.hearse',
       descKey: 'products.hearse_desc',
       longDescKey: 'products.hearse_long',
-      image: './images/katafalkebi2.jpg',
+      image: '/images/katafalkebi2.jpg',
       gallery: [
-        './images/katafalkebi2.jpg',
-        './images/katafalkebi3.jpg',
-        './images/katafalki1.jpg',
-        './images/katafalki2.jpg',
-        './images/katafalki3.jpg'
+        '/images/katafalkebi2.jpg',
+        '/images/katafalkebi3.jpg',
+        '/images/katafalki1.jpg',
+        '/images/katafalki2.jpg',
+        '/images/katafalki3.jpg'
       ],
       keywords: ['კატაფალკი', 'katafalki', 'თანამედროვე კატაფალკები', 'hearse', 'გადასვენება', 'gadasveneba'],
       relatedProducts: ['coffins', 'shrouds', 'refrigeration'],
