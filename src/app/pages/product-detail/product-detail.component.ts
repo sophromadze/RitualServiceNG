@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
 import { CtaComponent } from '../../shared/components/cta/cta.component';
+import { isPlatformBrowser } from '@angular/common';
 
 interface ProductContent {
   id: string;
@@ -103,7 +104,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/macivrebi.jpg',
         '/images/macivrebi2.jpg'
       ],
-      keywords: ['მაცივრები', 'macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
+              keywords: ['სასახლე მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'hearse'],
       features: [
         'products.refrigeration_feature_1',
@@ -179,9 +180,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       'products.shrouds_feature_4': 'სპეციალური დიზაინის სუდარები ინდივიდუალური მიდგომით',
 
       // Refrigeration
-      'products.refrigeration': 'მაცივრები',
+      'products.refrigeration': 'სასახლე მაცივრები',
       'products.refrigeration_desc': 'სასახლე-მაცივრები და სტაციონარული მაცივრები',
-      'products.refrigeration_long': 'მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
+      'products.refrigeration_long': 'სასახლე მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
       'products.refrigeration_feature_1': 'სასახლე-მაცივრები კომბინირებული ფუნქციით',
       'products.refrigeration_feature_2': 'სტაციონარული მაცივრები დიდი ტევადობით',
       'products.refrigeration_feature_3': 'მობილური მაცივრები ტრანსპორტირებისთვის',
@@ -290,7 +291,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private seoService: SeoService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -380,6 +382,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   }
 
   callPhone(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     window.location.href = 'tel:+995599069898';
   }
 

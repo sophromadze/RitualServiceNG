@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { Subscription } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-funeral-planning',
@@ -124,7 +125,10 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
     }
   ];
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
     this.currentLanguage = this.languageService.getCurrentLanguage();
@@ -148,6 +152,9 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
   }
 
   callUs(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     window.location.href = 'tel:+995599069898';
   }
 
@@ -172,6 +179,9 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
   }
 
   scrollToSection(sectionId: string): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

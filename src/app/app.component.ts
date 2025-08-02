@@ -117,6 +117,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private setupGoogleAnalytics(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Google Analytics setup
     const script = document.createElement('script');
     script.async = true;
@@ -138,6 +141,9 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private setupPhoneTraking(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Track phone clicks for analytics
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;

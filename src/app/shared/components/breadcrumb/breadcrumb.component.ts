@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
 import { filter } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-breadcrumb',
@@ -17,7 +18,8 @@ export class BreadcrumbComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit() {
@@ -193,7 +195,23 @@ export class BreadcrumbComponent implements OnInit {
     return this.languageService.translate(key);
   }
 
+  isHomePage(): boolean {
+    const url = this.router.url;
+    const segments = url.split('/').filter(segment => segment);
+    return segments.length === 1 && ['ka', 'en', 'ru'].includes(segments[0]);
+  }
+
+  onHomeClick(event: Event): void {
+    if (this.isHomePage()) {
+      event.preventDefault();
+      return;
+    }
+  }
+
   callPhone(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     window.open('tel:+995599069898', '_self');
   }
 }

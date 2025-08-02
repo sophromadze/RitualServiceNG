@@ -1,4 +1,4 @@
-import { Component, HostListener, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, ElementRef, Inject, PLATFORM_ID, OnInit } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { LanguageService } from '../../../services/language.service';
@@ -10,7 +10,7 @@ import { LanguageService } from '../../../services/language.service';
   templateUrl: './floating-action-buttons.component.html',
   styleUrl: './floating-action-buttons.component.scss'
 })
-export class FloatingActionButtonsComponent {
+export class FloatingActionButtonsComponent implements OnInit {
   isExpanded = false;
   private isBrowser: boolean;
   
@@ -22,11 +22,15 @@ export class FloatingActionButtonsComponent {
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
-  
-  @HostListener('document:click', ['$event'])
-  onDocumentClick(event: Event) {
-    if (!this.elementRef.nativeElement.contains(event.target)) {
-      this.isExpanded = false;
+
+  ngOnInit(): void {
+    // Set up click outside listener only in browser
+    if (this.isBrowser) {
+      document.addEventListener('click', (event) => {
+        if (!this.elementRef.nativeElement.contains(event.target)) {
+          this.isExpanded = false;
+        }
+      });
     }
   }
   

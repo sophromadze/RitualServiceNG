@@ -21,7 +21,7 @@ body {
   color: #343a40;
   background-color: #ffffff;
   overflow-x: hidden;
-  padding-top: 74px; /* Account for fixed header */
+  padding-top: 72px; 
 }
 
 /* Typography */
@@ -385,36 +385,12 @@ html {
 
 @media (max-width: 1135px) {
   body {
-    padding-top: 60px;
+    padding-top: 58px;
   }
 }
 
 @media (max-width: 768px) {
   body {
-      padding-top: 55px;
+      padding-top: 53px;
   }
-}
-
-/* Swiper Pagination Override - Global Styles */
-.swiper-pagination-bullet {
-  background: #ffffff !important;
-  opacity: 0.7 !important;
-}
-
-.swiper-pagination-bullet-active {
-  background: #ffffff !important;
-  opacity: 1 !important;
-}
-
-/* More specific overrides for hero section */
-.hero-section .swiper-pagination .swiper-pagination-bullet,
-.hero-swiper .swiper-pagination .swiper-pagination-bullet {
-  background: #ffffff !important;
-  opacity: 0.7 !important;
-}
-
-.hero-section .swiper-pagination .swiper-pagination-bullet-active,
-.hero-swiper .swiper-pagination .swiper-pagination-bullet-active {
-  background: #ffffff !important;
-  opacity: 1 !important;
 }

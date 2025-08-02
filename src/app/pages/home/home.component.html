@@ -3,6 +3,9 @@
 <h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}}</h2>
 <h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}}</h3>
 
+<!-- Breadcrumb -->
+<app-breadcrumb [currentLanguage]="currentLanguage"></app-breadcrumb>
+
 <!-- Hero Section -->
 <main class="hero-section">
   <div class="hero-content">
@@ -14,6 +17,9 @@
         <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
           <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
         </a>
+        <button class="btn btn-plan" (click)="goToPlanningPage()">
+          <i class="fa-solid fa-calendar-check"></i> {{translate('common.plan_funeral')}}
+        </button>
       </div>
     </div>
   </div>
@@ -53,6 +59,7 @@
   <div class="container">
     <div class="section-header">
       <h2>{{translate('seo.funeral_services')}}</h2>
+      <p>{{translate('services.description')}}</p>
     </div>
     
     <div class="services-grid">
@@ -109,35 +116,54 @@
       
       <div class="why-rs-content">
         <div class="why-rs-feature">
-          <i class="fa-solid fa-user-tie fa-4x"></i>
-          <h4>{{translate('why_choose_ritual.experience.title')}}</h4>
-          <p>{{translate('why_choose_ritual.experience.desc')}}</p>
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.full_service.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.full_service.desc')}}</p>
         </div>
         <div class="why-rs-feature">
-          <i class="fa-regular fa-star fa-4x"></i>
-          <h4>{{translate('why_choose_ritual.quality.title')}}</h4>
-          <p>{{translate('why_choose_ritual.quality.desc')}}</p>
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.peaceful_environment.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.peaceful_environment.desc')}}</p>
         </div>
         <div class="why-rs-feature">
-          <i class="fa-regular fa-clock fa-4x"></i>
-          <h4>{{translate('why_choose_ritual.support.title')}}</h4>
-          <p>{{translate('why_choose_ritual.support.desc')}}</p>
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.compassion_support.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.compassion_support.desc')}}</p>
         </div>
-      </div>
-      
-      <div class="why-rs-btns">
-        <button class="btn btn-primary" (click)="goToPlanningPage()">
-          <i class="fa-solid fa-calendar-check"></i>
-          {{translate('why_choose_ritual.plan_funeral')}}
-        </button>
-        <a href="tel:+995599069898" class="btn btn-accent" (click)="callPhone()">
-          <i class="fa-solid fa-phone-volume"></i>
-          {{translate('why_choose_ritual.contact_24_7')}}
-        </a>
+        <div class="why-rs-feature">
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.experience_trust.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.experience_trust.desc')}}</p>
+        </div>
+        <div class="why-rs-feature">
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.years_experience.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.years_experience.desc')}}</p>
+        </div>
+        <div class="why-rs-feature">
+          <div class="feature-header">
+            <span class="checkmark">✔️</span>
+            <h4>{{translate('why_choose_ritual.support_24_7.title')}}</h4>
+          </div>
+          <p>{{translate('why_choose_ritual.support_24_7.desc')}}</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- CTA Component -->
+<app-cta></app-cta>
 
 <!-- SEO Content Section with All Keywords - Hidden from users but accessible to search engines -->
 <section class="seo-content-section seo-hidden">
@@ -171,7 +197,7 @@
           <li><strong>სასახლეები</strong> - sasaxleebi ყველა სტილში</li>
           <li><strong>სუდარები</strong> - sudarebi ტრადიციული და თანამედროვე</li>
           <li><strong>სუდარა</strong> - sudara ხარისხიანი მასალებით</li>
-          <li><strong>მაცივრები</strong> - სასახლე მაცივრები</li>
+          <li><strong>სასახლე მაცივრები</strong> - სასახლე-მაცივრები</li>
         </ul>
 
         <h4>ფილიალები თბილისში:</h4>

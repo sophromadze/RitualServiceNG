@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
+import { isPlatformBrowser } from '@angular/common';
 
 declare global {
   interface Window {
@@ -36,7 +37,8 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
     private route: ActivatedRoute,
     private router: Router,
     private seoService: SeoService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -74,7 +76,10 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.loadGoogleMapsScript();
+    // Only initialize map if we're in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadGoogleMapsScript();
+    }
   }
 
   ngOnDestroy(): void {
@@ -90,6 +95,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private loadGoogleMapsScript(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Check if Google Maps is already loaded
     if (window.google && window.google.maps) {
       this.initMap();
@@ -112,6 +120,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private async initMap(): Promise<void> {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     try {
       if (this.isMapInitialized) return;
 
@@ -244,6 +255,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private setupLocationItemHandler(item: HTMLElement): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     item.addEventListener('click', () => {
       const marker = this.locationMarkerMap.get(item);
       
@@ -267,6 +281,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private scrollToMap(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Check if we're on mobile (screen width <= 768px)
     if (window.innerWidth <= 768) {
       const mapElement = document.getElementById('map');
@@ -288,6 +305,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private highlightLocationItem(activeItem: HTMLElement): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     document.querySelectorAll('.location-item').forEach(item => {
       item.classList.remove('active');
     });
@@ -296,6 +316,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private handleFragmentNavigation(fragment: string): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Find the location item with matching data-key
     const locationItem = document.querySelector(`.location-item[data-key="${fragment}"]`) as HTMLElement;
     
@@ -342,6 +365,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private addMyLocationButton(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     const locationButton = document.createElement("div");
     locationButton.classList.add("custom-map-control");
     locationButton.title = "Show my location";
@@ -377,6 +403,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private showToast(message: string, isError: boolean = false): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     let toast = document.getElementById("map-toast");
     if (!toast) {
       toast = document.createElement("div");
@@ -395,6 +424,9 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private showMapError(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     const mapElement = document.getElementById('map');
     if (mapElement) {
       mapElement.innerHTML = "<p style='padding: 20px; text-align: center; color: #666;'>Map could not be loaded. Please refresh and try again.</p>";
@@ -402,6 +434,11 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   private waitForElement(selector: string): Promise<Element> {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) {
+      return Promise.reject(new Error('Not in browser environment'));
+    }
+    
     return new Promise((resolve) => {
       const element = document.querySelector(selector);
       if (element) {

@@ -3,7 +3,10 @@
     <div class="breadcrumb-content">
       <ol class="breadcrumb-list">
         <li class="breadcrumb-item">
-          <a class="breadcrumb-link breadcrumb-home" [routerLink]="[currentLanguage]">
+          <a class="breadcrumb-link breadcrumb-home" 
+             [routerLink]="['/' + currentLanguage]"
+             [class.disabled]="isHomePage()"
+             (click)="onHomeClick($event)">
             <i class="fa-solid fa-home"></i>
             <span>{{translate('nav.home')}}</span>
           </a>
@@ -26,6 +29,26 @@
         </li>
       </ol>
       
+      <!-- Social Links -->
+      <div class="breadcrumb-social">
+        <a href="https://www.facebook.com/profile.php?id=100075978162042" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="social-link facebook"
+           title="Facebook">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.memento.ge/" 
+           target="_blank"
+           rel="noopener noreferrer" 
+           class="social-link memento"
+           title="Memento">
+          <img src="/images/memento.svg" 
+               alt="Memento"
+               width="34"
+               height="34">
+        </a>
+      </div>
 
     </div>
   </div>

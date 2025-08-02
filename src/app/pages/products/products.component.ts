@@ -1,10 +1,11 @@
 // products.component.ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { LanguageService } from '../../services/language.service';
 import { SeoService } from '../../services/seo.service';
 import { CtaComponent } from '../../shared/components/cta/cta.component';
+import { isPlatformBrowser } from '@angular/common';
 
 interface Product {
   id: string;
@@ -32,7 +33,8 @@ export class ProductsComponent implements OnInit {
   constructor(
     private router: Router,
     private languageService: LanguageService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -79,7 +81,7 @@ export class ProductsComponent implements OnInit {
         descKey: 'products.refrigeration_desc',
         url: `/${this.currentLanguage}/products/refrigeration`,
         image: '/images/fridge2.jpeg',
-        keywords: 'მაცივრები, macivrebi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
+        keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
         types: ['სასახლე-მაცივრები', 'სტაციონარული მაცივრები', 'მობილური მაცივრები'],
         features: [
           'products.refrigeration.features.coffin',
@@ -108,9 +110,9 @@ export class ProductsComponent implements OnInit {
 
   private updateSEO(): void {
     const seoData = {
-      title: 'სარიტუალო პროდუქტები - სასახლეები, სუდარები, მაცივრები, კატაფალკი | Ritual Service',
-      description: 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები (sasaxleebi), სუდარები (sudarebi), მაცივრები (macivrеbi), კატაფალკი (katafalki). ყველა პროდუქტი მზადაა 24/7.',
-      keywords: 'სარიტუალო პროდუქტები, სასახლეები, სუდარები, მაცივრები, კატაფალკი, sasaxleebi, sudarebi, macivrеbi, katafalki, ხის სასახლეები, ბამბის სუდარები, სასახლე-მაცივრები, თანამედროვე კატაფალკები'
+              title: 'სარიტუალო პროდუქტები - სასახლეები, სუდარები, სასახლე მაცივრები, კატაფალკი | Ritual Service',
+        description: 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები (sasaxleebi), სუდარები (sudarebi), სასახლე მაცივრები (sasaxle macivrеbi), კატაფალკი (katafalki). ყველა პროდუქტი მზადაა 24/7.',
+        keywords: 'სარიტუალო პროდუქტები, სასახლეები, სუდარები, სასახლე მაცივრები, კატაფალკი, sasaxleebi, sudarebi, sasaxle macivrеbi, katafalki, ხის სასახლეები, ბამბის სუდარები, სასახლე-მაცივრები, თანამედროვე კატაფალკები'
     };
     
     this.seoService.updateSEO(seoData, this.currentLanguage);
@@ -125,6 +127,9 @@ export class ProductsComponent implements OnInit {
   }
 
   callPhone(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     window.location.href = 'tel:+995599069898';
   }
 }

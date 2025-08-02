@@ -7,7 +7,7 @@
            class="brand-link"
            [attr.aria-label]="translate('header.company_name')"
            (click)="onLinkClick('home')">
-          <img src="/images/logo.png" 
+          <img src="/images/logo2.png" 
                alt="Ritual Service Logo"
                class="brand-logo"
                width="40" 
@@ -43,7 +43,7 @@
                [class.active-border]="isLinkActive('services')"
                [attr.aria-expanded]="isServicesDropdownOpen"
                aria-haspopup="true"
-               (click)="onLinkClick('services')">
+               (click)="toggleServicesDropdown(); $event.preventDefault(); onLinkClick('services')">
               {{translate('nav.services')}}
               <i class="fa-solid fa-chevron-down"></i>
             </a>
@@ -77,7 +77,7 @@
                [class.active-border]="isLinkActive('products')"
                [attr.aria-expanded]="isProductsDropdownOpen"
                aria-haspopup="true"
-               (click)="onLinkClick('products')">
+               (click)="toggleProductsDropdown(); $event.preventDefault(); onLinkClick('products')">
               {{translate('nav.products')}}
               <i class="fa-solid fa-chevron-down"></i>
             </a>
@@ -210,7 +210,7 @@
 </header>
 
 <!-- SEO-focused breadcrumb -->
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<nav class="breadcrumb-nav" aria-label="Breadcrumb" *ngIf="!isHomePage()">
   <app-breadcrumb [currentLanguage]="currentLanguage"></app-breadcrumb>
 </nav>
 
@@ -239,7 +239,7 @@
       <li>საპანაშვიდე - sapanashvide</li>
       <li>სუდარა - sudara</li>
       <li>სასახლეები - sasaxleebi</li>
-      <li>მაცივრები - macivrები</li>
+      <li>სასახლე მაცივრები - sasaxle macivrები</li>
       <li>ფერადი სურათის დამზადება</li>
       <li>ლითონის ასოებით წარწერა</li>
       <li>რაიონში გადასვენება</li>

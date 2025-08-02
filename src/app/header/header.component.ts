@@ -1,10 +1,11 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, NavigationEnd } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { LanguageSelectorComponent } from '../shared/components/language-selector/language-selector.component';
 import { BreadcrumbComponent } from '../shared/components/breadcrumb/breadcrumb.component';
 import { filter, Subscription } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 
 @Component({
@@ -47,7 +48,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         { name: 'სასახლეები', url: '/ka/products/coffins', keywords: 'sasaxleebi' },
         { name: 'კატაფალკები', url: '/ka/products/hearse', keywords: 'katafalka' },
         { name: 'სუდარები', url: '/ka/products/shrouds', keywords: 'sudarebi, sudara' },
-        { name: 'მაცივრები', url: '/ka/products/refrigeration', keywords: 'macivrebi' }
+        { name: 'სასახლე მაცივრები', url: '/ka/products/refrigeration', keywords: 'sasaxle macivrebi' }
       ]
     },
     en: {
@@ -98,18 +99,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   constructor(
     private router: Router,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
-    // Set up click outside listener for dropdowns
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      // Only close desktop dropdowns, not mobile dropdowns
-      if (!target.closest('.dropdown') && !target.closest('.mobile-menu')) {
-        this.closeAllDropdowns();
-      }
-    });
+    // Only run browser-specific code if we're in the browser
+    if (isPlatformBrowser(this.platformId)) {
+      // Set up click outside listener for dropdowns
+      document.addEventListener('click', (event) => {
+        const target = event.target as HTMLElement;
+        // Only close desktop dropdowns, not mobile dropdowns
+        if (!target.closest('.dropdown') && !target.closest('.mobile-menu')) {
+          this.closeAllDropdowns();
+        }
+      });
+    }
 
     // Listen to route changes to update active state
     this.routeSubscription = this.router.events.pipe(
@@ -117,6 +122,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     ).subscribe(() => {
       // Clear last clicked link when route changes
       this.lastClickedLink = null;
+      // Close all dropdowns when route changes
+      this.closeAllDropdowns();
+      this.isMenuOpen = false;
     });
   }
 
@@ -240,5 +248,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   getServiceFragment(url: string): string {
     const urlParts = url.split('#');
     return urlParts[1] || '';
+  }
+
+  isHomePage(): boolean {
+    const currentUrl = this.router.url;
+    return currentUrl === `/${this.currentLanguage}` || currentUrl === `/${this.currentLanguage}/`;
   }
 }

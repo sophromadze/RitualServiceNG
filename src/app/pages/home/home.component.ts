@@ -1,14 +1,17 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
+import { isPlatformBrowser } from '@angular/common';
+import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
+import { CtaComponent } from '../../shared/components/cta/cta.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, BreadcrumbComponent, CtaComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -50,7 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       descKey: 'products.refrigeration_desc',
       url: '/products/refrigeration',
       image: '/images/fridge1.jpeg',
-      keywords: 'სასახლე მაცივრები, sasaxle macivrebi, მაცივრები'
+              keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
     },
     {
       titleKey: 'products.shrouds',
@@ -135,7 +138,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private router: Router,
     private seoService: SeoService,
-    private languageService: LanguageService
+    private languageService: LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   ngOnInit(): void {
@@ -185,9 +189,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private getSEOTitle(): string {
     const titles = {
-      ka: 'რიტუალ სერვისი - დამკრძალავი ბიურო | სარიტუალო სახლი თბილისში',
-      en: 'Ritual Service - Funeral Home | Professional Funeral Services in Tbilisi',
-      ru: 'Ритуал Сервис - Похоронный дом | Профессиональные ритуальные услуги в Тбилиси'
+      ka: 'დამკრძალავი ბიურო - Ritual Service',
+      en: 'Funeral Bureau - Ritual Service',
+      ru: 'Похоронное бюро - Ritual Service'
     };
     return titles[this.currentLanguage as keyof typeof titles] || titles.ka;
   }
@@ -333,6 +337,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   callPhone(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     window.location.href = 'tel:+995599069898';
   }
 

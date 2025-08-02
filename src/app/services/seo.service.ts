@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface SEOData {
   title?: string;
@@ -22,17 +23,17 @@ export class SeoService {
   
   private defaultSEO = {
     ka: {
-      title: 'რიტუალ სერვისი - დამკრძალავი ბიურო | სარიტუალო სახლი',
+      title: 'დამკრძალავი ბიურო - Ritual Service',
       description: 'რიტუალ სერვისი - პროფესიონალური დამკრძალავი ბიურო თბილისში. ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება. სარიტუალო მომსახურება 24/7.',
       keywords: 'დამკრძალავი ბიურო, სარიტუალო სახლი, ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა'
     },
     en: {
-      title: 'Ritual Service - Funeral Home | Professional Funeral Services',
+      title: 'Funeral Bureau - Ritual Service',
       description: 'Ritual Service - Professional funeral home in Tbilisi. Embalming, hearse services, stone engraving, transportation. 24/7 funeral services.',
       keywords: 'funeral home, funeral services, embalming, hearse, stone engraving, transportation, burial services, memorial services, grave decoration'
     },
     ru: {
-      title: 'Ритуал Сервис - Похоронный дом | Ритуальные услуги',
+      title: 'Похоронное бюро - Ritual Service',
       description: 'Ритуал Сервис - профессиональный похоронный дом в Тбилиси. Бальзамирование, катафалк, роспись на камне, перевозка. Ритуальные услуги 24/7.',
       keywords: 'похоронный дом, ритуальные услуги, похоронные услуги, бальзамирование, катафалк, роспись на камне, перевозка покойного, благоустройство могил, траурные церемонии'
     }
@@ -41,12 +42,16 @@ export class SeoService {
   constructor(
     private title: Title,
     private meta: Meta,
-    private router: Router
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    // Subscribe to route changes to update canonical URL
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
-    ).subscribe((event: NavigationEnd) => {
-      this.updateCanonicalUrl(event.url);
+    ).subscribe(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        this.updateCanonicalUrl(this.router.url);
+      }
     });
   }
 
@@ -99,6 +104,9 @@ export class SeoService {
   }
 
   private updateCanonicalUrl(url: string): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Remove existing canonical link
     const existingCanonical = document.querySelector('link[rel="canonical"]');
     if (existingCanonical) {
@@ -113,6 +121,9 @@ export class SeoService {
   }
 
   private updateLanguageAlternates(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Remove existing hreflang links
     document.querySelectorAll('link[hreflang]').forEach(link => link.remove());
     
@@ -136,6 +147,9 @@ export class SeoService {
   }
 
   private updateStructuredData(data: any): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     // Remove existing structured data
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
@@ -153,9 +167,9 @@ export class SeoService {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "FuneralHome",
-      "name": language === 'ka' ? "რიტუალ სერვისი - დამკრძალავი ბიურო" : 
-             language === 'en' ? "Ritual Service - Funeral Home" : 
-             "Ритуал Сервис - Похоронный дом",
+      "name": language === 'ka' ? "დამკრძალავი ბიურო - Ritual Service" : 
+             language === 'en' ? "Funeral Bureau - Ritual Service" : 
+             "Похоронное бюро - Ritual Service",
       "alternateName": [
         "დამკრძალავი ბიურო რიტუალ სერვისი",
         "damkrdzalavi biuro",

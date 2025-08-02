@@ -27,13 +27,7 @@
   padding: 0 2rem;
 }
 
-.contact-cta h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
+
 
 .contact-cta p {
   font-size: 1.1rem;
@@ -98,10 +92,6 @@
     padding: 3rem 0;
   }
 
-  .contact-cta h3 {
-    font-size: 1.8rem;
-  }
-
   .contact-cta p {
     font-size: 1rem;
   }
@@ -115,11 +105,6 @@
 @media (max-width: 768px) {
   .contact-cta {
     padding: 2.5rem 0;
-  }
-
-  .contact-cta h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
   }
 
   .contact-cta p {
@@ -145,11 +130,6 @@
 @media (max-width: 480px) {
   .contact-cta {
     padding: 2rem 0;
-  }
-
-  .contact-cta h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
   }
 
   .contact-cta p {

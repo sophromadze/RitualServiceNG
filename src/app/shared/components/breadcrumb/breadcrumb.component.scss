@@ -1,7 +1,7 @@
 /* Modern Breadcrumb Component Styles */
 
 .breadcrumb {
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
   padding: 0;
   margin-bottom: 0;
   position: relative;
@@ -29,6 +29,53 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+}
+
+.breadcrumb-social {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: all 0.15s ease-in-out;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.social-link.facebook {
+  color: #1877F2 !important;
+}
+
+.social-link.facebook:hover {
+  color: #1877F2 !important;
+}
+
+.social-link img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: all 0.15s ease-in-out;
+}
+
+.social-link i {
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease-in-out;
 }
 
 .breadcrumb-call-button {
@@ -120,7 +167,7 @@
 }
 
 .breadcrumb-link {
-  color: #2c3e50;
+  color: #ffffff;
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 8px;
@@ -133,22 +180,22 @@
 }
 
 .breadcrumb-link:hover {
-  color: #e74c3c;
-  background-color: rgba(231, 76, 60, 0.08);
+  color: #ffffff;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
 }
 
-.breadcrumb-link:focus {
-  background-color: rgba(231, 76, 60, 0.1);
-}
+
+
+
 
 .breadcrumb-current {
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: 600;
   padding: 6px 12px;
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.05), rgba(231, 76, 60, 0.05));
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   border-radius: 8px;
   position: relative;
-  border-left: 3px solid #e74c3c;
+  border-left: 3px solid #ffffff;
 }
 
 .breadcrumb-current::before {
@@ -158,38 +205,54 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(44, 62, 80, 0.02), rgba(231, 76, 60, 0.02));
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.1), rgba(52, 73, 94, 0.1));
   border-radius: 8px;
   z-index: -1;
 }
 
 /* Home icon styling */
 .breadcrumb-home {
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: 600;
 }
 
 .breadcrumb-home i {
   font-size: 16px;
-  color: #e74c3c;
+  color: #2c3e50;
 }
 
 .breadcrumb-home:hover i {
-  color: #c0392b;
+  color: #e74c3c;
 }
 
 .breadcrumb-home span {
   font-weight: 600;
 }
 
+/* Disabled state for home page */
+.breadcrumb-home.disabled {
+  opacity: 1;
+  cursor: default;
+  pointer-events: none;
+}
+
+.breadcrumb-home.disabled:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.breadcrumb-home.disabled:hover i {
+  color: #2c3e50;
+}
+
 /* Separator styling */
 .breadcrumb-separator {
   display: flex;
   align-items: center;
-  color: #adb5bd;
+  color: #ffffff;
   margin: 0 4px;
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .breadcrumb-separator i {
@@ -270,11 +333,31 @@
   .planning-link {
     padding: 8px;
   }
+  
+  .breadcrumb-social {
+    gap: 8px;
+  }
+  
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .social-link img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .social-link i {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* Focus styles for accessibility */
 .breadcrumb-link:focus-visible {
-  background-color: rgba(231, 76, 60, 0.1);
+  background: transparent;
 }
 
 /* Print styles */
@@ -311,22 +394,4 @@
   .ru { display: block !important; }
 }
 
-/* Dark mode support (if needed in future) */
-@media (prefers-color-scheme: dark) {
-  .breadcrumb {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  }
-  
-  .breadcrumb-link {
-    color: #ecf0f1;
-  }
-  
-  .breadcrumb-link:hover {
-    background-color: rgba(231, 76, 60, 0.2);
-  }
-  
-  .breadcrumb-current {
-    background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(44, 62, 80, 0.1));
-    color: #ecf0f1;
-  }
-}
+

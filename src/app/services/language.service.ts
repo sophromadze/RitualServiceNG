@@ -30,7 +30,7 @@ export class LanguageService {
       // Breadcrumb translations for URL segments
       'breadcrumb.coffins': 'სასახლეები',
       'breadcrumb.shrouds': 'სუდარები',
-      'breadcrumb.refrigeration': 'მაცივრები',
+      'breadcrumb.refrigeration': 'სასახლე მაცივრები',
       'breadcrumb.hearse': 'კატაფალკები',
       'breadcrumb.embalming': 'ბალზამირება',
       'breadcrumb.transportation': 'გადასვენება',
@@ -87,13 +87,13 @@ export class LanguageService {
       'products.coffins_desc': 'მაღალი ხარისხის სასახლეები 350 ლარიდან. თქვენთვის სასურველი ნებისმიერი სტილი - ქართული, უკრაინილი, იტალიური.',
       'products.shrouds': 'სუდარები',
       'products.shrouds_desc': 'ტრადიციული და თანამედროვე სუდარები. ნატურალური მასალები, ხელნაკეთი მუშაობა.',
-      'products.refrigeration': 'მაცივრები',
+      'products.refrigeration': 'სასახლე მაცივრები',
       'products.refrigeration_desc': 'სასახლე-მაცივრები, ამერიკული და სტანდარტული მოდელები ხანგრძლივი შენახვისთვის.',
       'products.hearse': 'კატაფალკები',
       'products.hearse_desc': 'თანამედროვე კატაფალკები 24/7 მომსახურებით',
       'products.coffins_long': 'ჩვენი სასახლეები წარმოადგენს ხარისხიან ხის სასახლეებს ბუნებრივი მასალებით. ლუქს კლასის სასახლეები, ეკონომ კლასის სასახლეები და სტანდარტული სასახლეები - ყველა ფასის კატეგორიაში.',
       'products.shrouds_long': 'სუდარები - ჩვენ გთავაზობთ ბამბის სუდარებს  ბუნებრივი მასალებით, სილკის სუდარებს ხარისხიანი ქსოვილით და ხელოვნური ქსოვილის სუდარებს გამძლე მასალებით.',
-      'products.refrigeration_long': 'მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
+      'products.refrigeration_long': 'სასახლე მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
       'products.hearse_long': 'კატაფალკი - ჩვენი თანამედროვე კატაფალკების პარკი მზადაა ნებისმიერ დროს. თანამედროვე კატაფალკები უკანასკნელი მოდელები და ლუქს კლასის კატაფალკები უმაღლესი კომფორტით. გადასვენება ნებისმიერ მიმართულებით.',
       
       'header.phone': '+995 599 069 898',
@@ -112,6 +112,9 @@ export class LanguageService {
       'seo.metal_letters': 'ლითონის ასოებით წარწერა',
       'seo.regional_transportation': 'რაიონში გადასვენება',
       'seo.international_transportation': 'საზღვარგარეთ გადასვენება',
+
+      // Services Description
+      'services.description': 'ჩვენ გთავაზობთ სრულ სარიტუალო მომსახურებას - ერთი სივრციდან ყველაფერს, რაც საჭიროა ღირსეული და მოწესრიგებული ცერემონიისთვის. ჩვენი მიზანია, რთულ სიტუაციაში თქვენი გვერდში დგომა და საჭიროებების გათვალისწინება.',
 
       // Contact & Location
       'contact.free_consultation': 'უფასო კონსულტაცია',
@@ -277,8 +280,8 @@ export class LanguageService {
       'funeral_planning.completed': 'დასრულებული',
       'funeral_planning.pending': 'მიმდინარე',
       'funeral_planning.start_planning': 'დაიწყეთ დაგეგმვა',
-      'funeral_planning.cta_title': 'გსურთ დაკრძალვის დაგეგმვა?',
-      'funeral_planning.cta_description': 'დაგვიკავშირდით დღეს, რომ განვიხილოთ როგორ შეგვიძლია დაგეხმაროთ თქვენ და თქვენს ოჯახს',
+      'funeral_planning.plan_funeral': 'დაგეგმეთ დაკრძალვა',
+      'funeral_planning.cta_description': 'როცა ადამიანი დგას ყველაზე რთული მომენტში, მნიშვნელოვანია მის გვერდით იყოს სანდო, პასუხისმგებლიანი და გულისხმიერი გუნდი. სწორედ ასეთები ვართ ჩვენ.',
 
       // Why Choose Us Section
       'why_choose.title': 'რატომ ვართ ლიდერები?',
@@ -324,12 +327,18 @@ export class LanguageService {
       // Why Choose Ritual Service Section
       'why_choose_ritual.title': 'რატომ უნდა აირჩიოთ Ritual Service?',
       'why_choose_ritual.subtitle': 'ჩვენი სარიტუალო მომსახურება გამოირჩევა პროფესიონალიზმით, ყურადღებითა და ინდივიდუალური მიდგომით. ვზრუნავთ ყველა დეტალზე, რათა თქვენ სიმშვიდე შეინარჩუნოთ რთულ დროს. მაღალი ხარისხი, ოპერატიულობა და თანაგრძნობა ჩვენი მთავარი პრინციპებია.',
-      'why_choose_ritual.experience.title': '20 წლიანი გამოცდილება',
-      'why_choose_ritual.experience.desc': 'ჩვენი გამოცდილება გვაძლევს საშუალებას, უზრუნველვყოთ ღირსეული და პროფესიონალური სარიტუალო მომსახურება.',
-      'why_choose_ritual.quality.title': 'საუკეთესო მომსახურება',
-      'why_choose_ritual.quality.desc': 'უზრუნველყოფთ ღირსეულ, სწრაფ და პროფესიონალურ სარიტუალო მომსახურებას, თითოეული დეტალის სრული გათვალისწინებით.',
-      'why_choose_ritual.support.title': '24/7 მხარდაჭერა',
-      'why_choose_ritual.support.desc': 'ჩვენი გუნდი მზადაა დაგეხმაროთ ნებისმიერ დროს, უზრუნველყოფს სწრაფ და ორგანიზებულ მომსახურებას.',
+      'why_choose_ritual.full_service.title': 'სრულ სერვისზე პასუხისმგებლობა',
+      'why_choose_ritual.full_service.desc': 'ჩვენ არ გიტოვებთ არაფერს გასარკვევად — ყველაფერზე ვზრუნავთ: ცერემონიიდან დაწყებული, ტრანსპორტირებით, დარბაზით და სასაფლაოს აქსესუარებით დამთავრებული',
+      'why_choose_ritual.peaceful_environment.title': 'მშვიდი გარემო და პროფესიონალიზმი',
+      'why_choose_ritual.peaceful_environment.desc': 'ჩვენი სივრცეები შექმნილია იმისთვის, რომ ოჯახმა შეძლოს ღირსეულად, მშვიდად და სიწყნარეში გამოეთხოვოს საყვარელ ადამიანს.',
+      'why_choose_ritual.compassion_support.title': 'თანაგრძნობა და მხარდაჭერა',
+      'why_choose_ritual.compassion_support.desc': 'ჩვენ არ ვართ მხოლოდ სერვისის მიმწოდებლები — ვართ ადამიანები, რომლებიც თქვენს გვერდით დგანან. ჩვენ გვესმის თქვენი ტკივილი და პატივისცემით ვეკიდებით თითოეულ დეტალს.',
+      'why_choose_ritual.experience_trust.title': 'გამოცდილება და ნდობა',
+      'why_choose_ritual.experience_trust.desc': 'მრავალი ოჯახი უკვე გვენდო და ჩვენ დავამტკიცეთ, რომ შესაძლებელია ცერემონიის გამართვა ღირსეულად, მოკრძალებულად და ყოველგვარი ზედმეტი ხარჯის გარეშე. ჩვენთან ყველაფერი წარიმართება მშვიდად, მოწესრიგებულად და ადამიანურად. თქვენზე ზრუნვა — ჩვენი მთავარი პასუხისმგებლობაა.',
+      'why_choose_ritual.years_experience.title': '15 წლიანი გამოცდილება',
+      'why_choose_ritual.years_experience.desc': 'ჩვენი გამოცდილება გვაძლევს საშძუალებას ვუზრუნველყოთ ღირსეული და პროფესიონალური სარიტუალო მოსმახურება.',
+      'why_choose_ritual.support_24_7.title': '24/7 მხარდაჭერა',
+      'why_choose_ritual.support_24_7.desc': 'ჩვენი გუნდი მზად არის დაგეხმაროთ ნებისმიერ დროს და დღეს, უზრუნველყოს სრაფი მომსახურება.',
       'why_choose_ritual.plan_funeral': 'დაგეგმეთ დაკრძალვა ჩვენთან',
       'why_choose_ritual.contact_24_7': 'დაგვიკავშირდით 24/7',
 
@@ -344,7 +353,7 @@ export class LanguageService {
       
       // Products Page Specific Translations
       'products.title': 'სარიტუალო პროდუქტები',
-      'products.hero_description': 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები, სუდარები, მაცივრები, კატაფალკები. ყველა პროდუქტი მზადაა 24/7.',
+      'products.hero_description': 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები, სუდარები, სასახლე მაცივრები, კატაფალკები. ყველა პროდუქტი მზადაა 24/7.',
       'products.hero_title': 'დამკრძალავი ბიურო - სარიტუალო პროდუქტები',
       'products.our_products': 'ჩვენი პროდუქტები',
       'products.quality_description': 'ხარისხიანი სარიტუალო პროდუქტები - სრული ასორტიმენტი',
@@ -358,7 +367,7 @@ export class LanguageService {
       // Product Keywords for Related Products
       'products.coffins_keywords': 'სასახლეები - sasaxleebi',
       'products.shrouds_keywords': 'სუდარები - sudarebi',
-      'products.refrigeration_keywords': 'მაცივრები - macivrebi',
+      'products.refrigeration_keywords': 'სასახლე მაცივრები - sasaxle macivrebi',
       'products.hearse_keywords': 'კატაფალკები - katafalki',
       
       // Product Categories
@@ -662,6 +671,9 @@ export class LanguageService {
       'seo.regional_transportation': 'Regional Transportation',
       'seo.international_transportation': 'International Transportation',
 
+      // Services Description
+      'services.description': 'We offer complete ritual services - everything needed for a dignified and organized ceremony from one place. Our goal is to stand by your side in difficult situations and consider your needs.',
+
       // Contact & Location
       'contact.free_consultation': 'Free Consultation',
       'contact.agent_visit': 'Agent Visit',
@@ -825,9 +837,9 @@ export class LanguageService {
       'funeral_planning.completed': 'Completed',
       'funeral_planning.pending': 'Pending',
       'funeral_planning.start_planning': 'Start Planning',
+      'funeral_planning.plan_funeral': 'Plan Funeral',
 
-      'funeral_planning.cta_title': 'Would you like to plan a funeral?',
-      'funeral_planning.cta_description': 'Contact us today to discuss how we can help you and your family',
+      'funeral_planning.cta_description': 'When a person is going through their most difficult moment, it is important to have a reliable, responsible, and caring team by their side. That is exactly what we are.',
 
       // Why Choose Us Section
       'why_choose.title': 'Why Choose Ritual Service?',
@@ -873,14 +885,21 @@ export class LanguageService {
       // Why Choose Ritual Service Section
       'why_choose_ritual.title': 'Why Choose Ritual Service?',
       'why_choose_ritual.subtitle': 'Our ritual service stands out for its professionalism, attention, and individual approach. We take care of every detail so that you can maintain peace during difficult times. High quality, efficiency, and compassion are our main principles.',
-      'why_choose_ritual.experience.title': '20 Years of Experience',
-      'why_choose_ritual.experience.desc': 'Our experience allows us to ensure dignified and professional ritual services.',
-      'why_choose_ritual.quality.title': 'Best Service',
-      'why_choose_ritual.quality.desc': 'We provide dignified, fast, and professional ritual services, taking into account every detail.',
-      'why_choose_ritual.support.title': '24/7 Support',
-      'why_choose_ritual.support.desc': 'Our team is ready to help you at any time, providing fast and organized service.',
+      'why_choose_ritual.full_service.title': 'Full Service Responsibility',
+      'why_choose_ritual.full_service.desc': 'We leave nothing for you to figure out — we take care of everything: from the ceremony, transportation, hall, and cemetery accessories.',
+      'why_choose_ritual.peaceful_environment.title': 'Peaceful Environment and Professionalism',
+      'why_choose_ritual.peaceful_environment.desc': 'Our spaces are designed so that families can bid farewell to their loved ones with dignity, peace, and tranquility.',
+      'why_choose_ritual.compassion_support.title': 'Compassion and Support',
+      'why_choose_ritual.compassion_support.desc': 'We are not just service providers — we are people who stand by your side. We understand your pain and treat every detail with respect.',
+      'why_choose_ritual.experience_trust.title': 'Experience and Trust',
+      'why_choose_ritual.experience_trust.desc': 'Many families already trust us and we have proven that it is possible to conduct ceremonies with dignity, modesty, and without any unnecessary expenses. Everything with us will proceed peacefully, orderly, and humanely. Taking care of you is our main responsibility.',
+      'why_choose_ritual.years_experience.title': '15 Years of Experience',
+      'why_choose_ritual.years_experience.desc': 'Our experience enables us to provide dignified and professional ritual services.',
+      'why_choose_ritual.support_24_7.title': '24/7 Support',
+      'why_choose_ritual.support_24_7.desc': 'Our team is ready to help you at any time and day, providing prompt service.',
       'why_choose_ritual.plan_funeral': 'Plan a Funeral with Us',
       'why_choose_ritual.contact_24_7': 'Contact Us 24/7',
+
 
       // What Makes Us Different Section
       'what_makes_us.title': 'What Makes Us Different',
@@ -1211,6 +1230,9 @@ export class LanguageService {
       'seo.regional_transportation': 'Региональная перевозка',
       'seo.international_transportation': 'Международная перевозка',
 
+      // Services Description
+      'services.description': 'Мы предлагаем полный комплекс ритуальных услуг - все необходимое для достойной и организованной церемонии из одного места. Наша цель - быть рядом с вами в трудных ситуациях и учитывать ваши потребности.',
+
       // Contact & Location
       'contact.free_consultation': 'Бесплатная консультация',
       'contact.agent_visit': 'Визит агента',
@@ -1310,12 +1332,18 @@ export class LanguageService {
       // Why Choose Ritual Service Section
       'why_choose_ritual.title': 'Почему стоит выбрать Ritual Service?',
       'why_choose_ritual.subtitle': 'Наш ритуальный сервис выделяется профессионализмом, вниманием и индивидуальным подходом. Мы заботимся о каждой детали, чтобы вы могли сохранить спокойствие в трудные времена. Высокое качество, оперативность и сострадание - наши основные принципы.',
-      'why_choose_ritual.experience.title': '20 лет опыта',
-      'why_choose_ritual.experience.desc': 'Наш опыт позволяет обеспечить достойные и профессиональные ритуальные услуги.',
-      'why_choose_ritual.quality.title': 'Лучший сервис',
-      'why_choose_ritual.quality.desc': 'Обеспечиваем достойные, быстрые и профессиональные ритуальные услуги, учитывая каждую деталь.',
-      'why_choose_ritual.support.title': '24/7 поддержка',
-      'why_choose_ritual.support.desc': 'Наша команда готова помочь вам в любое время, обеспечивая быстрый и организованный сервис.',
+      'why_choose_ritual.full_service.title': 'Полная ответственность за сервис',
+      'why_choose_ritual.full_service.desc': 'Мы не оставляем вам ничего для выяснения — мы заботимся обо всем: от церемонии, транспортировки, зала и аксессуаров кладбища.',
+      'why_choose_ritual.peaceful_environment.title': 'Спокойная обстановка и профессионализм',
+      'why_choose_ritual.peaceful_environment.desc': 'Наши пространства созданы для того, чтобы семьи могли достойно, спокойно и в умиротворении попрощаться с любимым человеком.',
+      'why_choose_ritual.compassion_support.title': 'Сострадание и поддержка',
+      'why_choose_ritual.compassion_support.desc': 'Мы не просто поставщики услуг — мы люди, которые стоят рядом с вами. Мы понимаем вашу боль и относимся к каждой детали с уважением.',
+      'why_choose_ritual.experience_trust.title': 'Опыт и доверие',
+      'why_choose_ritual.experience_trust.desc': 'Многие семьи уже доверяют нам, и мы доказали, что возможно провести церемонию достойно, скромно и без каких-либо лишних расходов. С нами все пройдет спокойно, организованно и по-человечески. Забота о вас — наша главная ответственность.',
+      'why_choose_ritual.years_experience.title': '15 лет опыта',
+      'why_choose_ritual.years_experience.desc': 'Наш опыт позволяет нам обеспечить достойное и профессиональное ритуальное обслуживание.',
+      'why_choose_ritual.support_24_7.title': '24/7 поддержка',
+      'why_choose_ritual.support_24_7.desc': 'Наша команда готова помочь вам в любое время и день, обеспечивая оперативное обслуживание.',
       'why_choose_ritual.plan_funeral': 'Запланируйте похороны с нами',
       'why_choose_ritual.contact_24_7': 'Свяжитесь с нами 24/7',
 
@@ -1443,8 +1471,8 @@ export class LanguageService {
       'funeral_planning.completed': 'Завершено',
       'funeral_planning.pending': 'В процессе',
       'funeral_planning.start_planning': 'Начать планирование',
-      'funeral_planning.cta_title': 'Хотите спланировать похороны?',
-      'funeral_planning.cta_description': 'Свяжитесь с нами сегодня, чтобы обсудить, как мы можем помочь вам и вашей семье',
+      'funeral_planning.plan_funeral': 'Планировать похороны',
+      'funeral_planning.cta_description': 'Когда человек переживает самый трудный момент, важно, чтобы рядом с ним была надежная, ответственная и заботливая команда. Именно такими мы и являемся.',
       
       // Products Page Specific Translations
       'products.title': 'Ритуальная продукция',
@@ -1800,14 +1828,14 @@ export class LanguageService {
       
       products: {
         ka: {
-          title: 'პროდუქცია - სასახლეები, სუდარები, მაცივრები | რიტუალ სერვისი',
-          description: 'ხარისხიანი სარიტუალო პროდუქცია: სასახლეები, სუდარები, მაცივრები. ფართო არჩევანი, მაღალი ხარისხი.',
-          keywords: 'სასახლეები, სუდარები, მაცივრები, sasaxleebi, sudarebi, კუბო, სარიტუალო პროდუქცია',
+                  title: 'პროდუქცია - სასახლეები, სუდარები, სასახლე მაცივრები | რიტუალ სერვისი',
+        description: 'ხარისხიანი სარიტუალო პროდუქცია: სასახლეები, სუდარები, სასახლე მაცივრები. ფართო არჩევანი, მაღალი ხარისხი.',
+        keywords: 'სასახლეები, სუდარები, სასახლე მაცივრები, sasaxleebi, sudarebi, sasaxle macivrebi, კუბო, სარიტუალო პროდუქცია',
           h1: 'სარიტუალო პროდუქცია',
           products: [
                     { name: 'სასახლეები', url: '/ka/products/coffins', desc: 'ხარისხიანი სასახლეები ყველა სტილში' },
         { name: 'სუდარები', url: '/ka/products/shrouds', desc: 'ტრადიციული და თანამედროვე სუდარები' },
-                          { name: 'მაცივრები', url: '/ka/products/refrigeration', desc: 'სასახლე-მაცივრები ხანგრძლივი შენახვისთვის' }
+                          { name: 'სასახლე მაცივრები', url: '/ka/products/refrigeration', desc: 'სასახლე-მაცივრები ხანგრძლივი შენახვისთვის' }
           ]
         },
         en: {
@@ -1921,7 +1949,7 @@ export class LanguageService {
       },
       products: {
         ka: [
-          'სასახლეები', 'sasaxleebi', 'სუდარები', 'sudarebi', 'მაცივრები', 'macivrebi',
+          'სასახლეები', 'sasaxleebi', 'სუდარები', 'sudarebi', 'სასახლე მაცივრები', 'sasaxle macivrebi',
           'კუბო', 'სუდარა', 'sudara', 'სასახლე მაცივარი'
         ],
         en: [
