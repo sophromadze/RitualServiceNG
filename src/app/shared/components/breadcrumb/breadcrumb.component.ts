@@ -57,6 +57,16 @@ export class BreadcrumbComponent implements OnInit {
       for (let i = startIndex; i < segments.length; i++) {
         const segment = segments[i];
         
+        // Skip language codes that might appear in the URL
+        if (['en', 'ru', 'ka'].includes(segment)) {
+          continue;
+        }
+        
+        // Skip empty segments
+        if (!segment || segment.trim() === '') {
+          continue;
+        }
+        
         if (this.currentLanguage === 'ka') {
           currentUrl += `/${segment}`;
         } else {
@@ -122,10 +132,13 @@ export class BreadcrumbComponent implements OnInit {
           label = this.translateSegment(segment);
         }
         
-        this.breadcrumbs.push({
-          label: label,
-          url: currentUrl
-        });
+        // Only add breadcrumb if label is not empty and not a language code
+        if (label && label.trim() !== '' && !['en', 'ru', 'ka'].includes(label)) {
+          this.breadcrumbs.push({
+            label: label,
+            url: currentUrl
+          });
+        }
       }
     }
   }

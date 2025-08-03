@@ -126,5 +126,11 @@
   
   .dropdown-content {
     min-width: auto;
+    z-index: 1001; /* Ensure it appears above other elements */
+  }
+
+  /* Ensure dropdown stays open on mobile when clicked */
+  .language-dropdown:focus-within .dropdown-content {
+    display: block;
   }
 } 

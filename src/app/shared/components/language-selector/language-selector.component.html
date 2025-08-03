@@ -1,7 +1,7 @@
 <div class="language-dropdown" 
-     (mouseenter)="isOpen = true" 
-     (mouseleave)="isOpen = false">
-  <button class="dropdown-button">
+     (mouseenter)="onMouseEnter()" 
+     (mouseleave)="onMouseLeave()">
+  <button class="dropdown-button" (click)="toggleDropdown($event)">
     <img [src]="getFlagSrc()" [alt]="currentLanguage" class="flag-img">
     <span>{{getLanguageName()}}</span>
     <i class="fa-solid fa-chevron-down"></i>
