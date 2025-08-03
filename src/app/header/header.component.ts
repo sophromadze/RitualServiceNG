@@ -282,6 +282,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return [this.currentLanguage, 'locations'];
   }
 
+  getHomeLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['/'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage];
+  }
+
   isHomePage(): boolean {
     const currentUrl = this.router.url;
     

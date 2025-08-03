@@ -420,7 +420,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
   }
 
   getGalleryImageAlt(index: number): string {
@@ -431,5 +431,14 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   openImageModal(image: string): void {
     // Implementation for image modal
     console.log('Opening image modal:', image);
+  }
+
+  getFuneralPlanningLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['funeral-planning'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'funeral-planning'];
   }
 }

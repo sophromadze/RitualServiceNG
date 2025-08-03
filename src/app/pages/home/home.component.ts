@@ -229,7 +229,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       "url": `https://ritualservice.ge/${this.currentLanguage}`,
       "logo": "https://ritualservice.ge/images/logo.png",
       "image": "https://ritualservice.ge/images/logo300.png",
-      "telephone": "+995599069898",
+      "telephone": "+995557556116",
       "description": this.getSEODescription(),
       "address": [
         {
@@ -285,25 +285,25 @@ export class HomeComponent implements OnInit, OnDestroy {
           "@type": "Service",
           "name": this.languageService.translate('services.embalming_dressing'),
           "description": this.languageService.translate('services.embalming_service.description'),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/services/balzamireba`
+          "url": `https://ritualservice.ge${this.currentLanguage === 'ka' ? '' : `/${this.currentLanguage}`}/services/balzamireba`
         },
         {
           "@type": "Service", 
           "name": this.languageService.translate('services.hearse_service'),
           "description": this.languageService.translate('services.hearse_service.description'),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/services/katafalka`
+          "url": `https://ritualservice.ge${this.currentLanguage === 'ka' ? '' : `/${this.currentLanguage}`}/services/katafalka`
         },
         {
           "@type": "Service",
           "name": this.languageService.translate('services.transportation'),
           "description": this.languageService.translate('services.transportation_service.description'),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/services/gadasveneba`
+          "url": `https://ritualservice.ge${this.currentLanguage === 'ka' ? '' : `/${this.currentLanguage}`}/services/gadasveneba`
         },
         {
           "@type": "Service",
           "name": this.languageService.translate('services.grave_stones_painting'),
           "description": this.languageService.translate('services.stone_engraving_service.description'),
-          "url": `https://ritualservice.ge/${this.currentLanguage}/services/qvaze-xatva`
+          "url": `https://ritualservice.ge${this.currentLanguage === 'ka' ? '' : `/${this.currentLanguage}`}/services/qvaze-xatva`
         }
       ],
       "sameAs": [
@@ -345,7 +345,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
   }
 
   goToServicePage(): void {

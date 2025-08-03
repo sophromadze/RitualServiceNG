@@ -4,7 +4,7 @@
       <ol class="breadcrumb-list">
         <li class="breadcrumb-item">
           <a class="breadcrumb-link breadcrumb-home" 
-             [routerLink]="['/' + currentLanguage]"
+             [routerLink]="getHomeLink()"
              [class.disabled]="isHomePage()"
              (click)="onHomeClick($event)">
             <i class="fa-solid fa-home"></i>

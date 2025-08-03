@@ -29,7 +29,16 @@ export class CtaComponent {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
+  }
+
+  getFuneralPlanningLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['funeral-planning'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'funeral-planning'];
   }
 
   // Component can be extended with input properties if needed

@@ -179,7 +179,7 @@ export class SeoService {
       "url": "https://ritualservice.ge",
       "logo": "https://ritualservice.ge/images/logo.png",
       "image": "https://ritualservice.ge/images/logo300.png",
-      "telephone": "+995599069898",
+      "telephone": "+995557556116",
       "description": this.getMultiLanguageDescription(),
       "address": [
         {
@@ -289,7 +289,7 @@ export class SeoService {
       "provider": {
         "@type": "FuneralHome",
         "name": "Ritual Service",
-        "telephone": "+995599069898",
+        "telephone": "+995557556116",
         "url": "https://ritualservice.ge"
       }
     };

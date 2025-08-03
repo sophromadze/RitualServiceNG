@@ -155,7 +155,7 @@ export class FuneralPlanningComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
   }
 
   getStepTitle(step: any): string {

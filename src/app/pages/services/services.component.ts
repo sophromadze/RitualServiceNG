@@ -248,7 +248,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
       "provider": {
         "@type": "FuneralHome",
         "name": "Ritual Service",
-        "telephone": "+995599069898"
+        "telephone": "+995557556116"
       }
     };
   }
@@ -262,7 +262,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
   }
 
   navigateToService(serviceId: string): void {
@@ -284,10 +284,19 @@ export class ServicesComponent implements OnInit, OnDestroy {
     
     // For Georgian (default), don't add language prefix
     if (this.currentLanguage === 'ka') {
-      this.router.navigate([`/services/${route}`]);
+      this.router.navigate(['services', route]);
     } else {
       // For other languages, add language prefix
-      this.router.navigate([`/${this.currentLanguage}/services/${route}`]);
+      this.router.navigate([this.currentLanguage, 'services', route]);
     }
+  }
+
+  getFuneralPlanningLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['funeral-planning'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'funeral-planning'];
   }
 }

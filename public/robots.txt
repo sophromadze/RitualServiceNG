@@ -10,7 +10,6 @@ Disallow: /private/
 Disallow: /api/
 
 # Allow all public content
-Allow: /ka/
 Allow: /en/
 Allow: /ru/
 Allow: /images/

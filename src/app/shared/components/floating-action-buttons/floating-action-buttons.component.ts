@@ -44,7 +44,7 @@ export class FloatingActionButtonsComponent implements OnInit {
   
   callPhone() {
     if (this.isBrowser) {
-      window.location.href = 'tel:+995599069898';
+      window.location.href = 'tel:+995557556116';
     }
   }
 
@@ -52,7 +52,14 @@ export class FloatingActionButtonsComponent implements OnInit {
     // Get current language from URL
     const urlSegments = this.router.url.split('/');
     const currentLanguage = urlSegments.length > 1 && ['ka', 'en', 'ru'].includes(urlSegments[1]) ? urlSegments[1] : 'ka';
-    this.router.navigate([currentLanguage, 'funeral-planning']);
+    
+    // For Georgian (default), don't add language prefix
+    if (currentLanguage === 'ka') {
+      this.router.navigate(['funeral-planning']);
+    } else {
+      // For other languages, add language prefix
+      this.router.navigate([currentLanguage, 'funeral-planning']);
+    }
   }
 
   translate(key: string): string {

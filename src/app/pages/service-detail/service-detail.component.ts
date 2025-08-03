@@ -595,7 +595,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       "provider": {
         "@type": "FuneralHome",
         "name": "Ritual Service",
-        "telephone": "+995599069898"
+        "telephone": "+995557556116"
       }
     };
   }
@@ -622,7 +622,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995599069898';
+    window.location.href = 'tel:+995557556116';
   }
 
   getGalleryImageAlt(index: number): string {
@@ -700,6 +700,15 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
   // Get current services for related services section
   getCurrentServices() {
     return this.navigation[this.currentLanguage as keyof typeof this.navigation]?.services || this.navigation.ka.services;
+  }
+
+  getFuneralPlanningLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['funeral-planning'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'funeral-planning'];
   }
 
   // Get all service keys for related services section

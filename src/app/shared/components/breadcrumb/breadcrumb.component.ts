@@ -239,7 +239,23 @@ export class BreadcrumbComponent implements OnInit {
   isHomePage(): boolean {
     const url = this.router.url;
     const segments = url.split('/').filter(segment => segment);
-    return segments.length === 1 && ['ka', 'en', 'ru'].includes(segments[0]);
+    
+    // For Georgian (default), home page is just "/" (no segments)
+    if (this.currentLanguage === 'ka') {
+      return segments.length === 0;
+    }
+    
+    // For other languages, home page has language segment
+    return segments.length === 1 && ['en', 'ru'].includes(segments[0]);
+  }
+
+  getHomeLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['/'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage];
   }
 
   onHomeClick(event: Event): void {
@@ -253,6 +269,6 @@ export class BreadcrumbComponent implements OnInit {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.open('tel:+995599069898', '_self');
+    window.open('tel:+995557556116', '_self');
   }
 }

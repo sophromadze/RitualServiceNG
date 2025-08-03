@@ -3,7 +3,7 @@
     <div class="navbar-container">
       <!-- Brand Logo -->
       <div class="navbar-brand">
-        <a [routerLink]="[currentLanguage]" 
+        <a [routerLink]="getHomeLink()" 
            class="brand-link"
            [attr.aria-label]="translate('header.company_name')"
            (click)="onLinkClick('home')">
@@ -187,14 +187,14 @@
       </div>
 
       <!-- Mobile Direct Links -->
-      <a [routerLink]="[currentLanguage, 'about']" 
+      <a [routerLink]="getAboutLink()" 
          class="mobile-nav-link main-link"
          [class.active-border]="isLinkActive('about')"
          (click)="isMenuOpen = false; onLinkClick('about')">
         {{translate('nav.about')}}
       </a>
       
-      <a [routerLink]="[currentLanguage, 'locations']"
+      <a [routerLink]="getLocationsLink()"
          class="mobile-nav-link main-link"
          [class.active-border]="isLinkActive('locations')"
          (click)="isMenuOpen = false; onLinkClick('locations')">
@@ -264,7 +264,7 @@
   "alternateName": "რიტუალ სერვისი",
   "description": "Professional funeral home in Tbilisi offering complete funeral services",
   "url": "https://ritualservice.ge",
-  "telephone": "+995599069898",
+  "telephone": "+995557556116",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Tbilisi",
