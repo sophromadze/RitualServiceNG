@@ -51,7 +51,7 @@
         </div>
         
         <div class="hero-cta">
-          <a href="tel:+995557556116" class="btn btn-primary" (click)="callPhone()">
+          <a class="btn btn-primary" (click)="callPhone()">
             <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
           </a>
           <a [routerLink]="getFuneralPlanningLink()" class="btn btn-secondary">
@@ -102,7 +102,7 @@
         
         <div class="coffin-consultation">
           <p>{{translate('products.coffins.consultation_text_1')}}</p>
-          <p>{{translate('products.coffins.consultation_text_2')}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+          <p>{{translate('products.coffins.consultation_text_2')}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@
         
         <div class="shroud-consultation">
           <p>{{translate('products.shrouds.consultation_text_1')}}</p>
-          <p>{{translate('products.shrouds.consultation_text_2')}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+          <p>{{translate('products.shrouds.consultation_text_2')}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@
         
         <div class="refrigeration-consultation">
           <p>{{translate('products.refrigeration.consultation_text_1')}}</p>
-          <p>{{translate('products.refrigeration.consultation_text_2')}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+          <p>{{translate('products.refrigeration.consultation_text_2')}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
         </div>
       </div>
     </div>
@@ -230,7 +230,7 @@
         
         <div class="cemetery-accessories-consultation">
           <p>{{translate('products.cemetery_accessories.consultation_text_1')}}</p>
-          <p>{{translate('products.cemetery_accessories.consultation_text_2')}}, <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+          <p>{{translate('products.cemetery_accessories.consultation_text_2')}}, <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
         </div>
       </div>
     </div>

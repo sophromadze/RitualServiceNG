@@ -4,16 +4,29 @@ Allow: /
 # Sitemap location
 Sitemap: https://ritualservice.ge/sitemap.xml
 
-# Disallow admin or private areas (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
 # Allow all public content
 Allow: /en/
 Allow: /ru/
 Allow: /images/
 Allow: /public/
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow search engine bots specifically
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
 
 # Crawl delay (optional - be respectful to server)
 Crawl-delay: 1 

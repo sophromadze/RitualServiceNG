@@ -366,6 +366,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.phone-link {
+  cursor: pointer;
+}
+
 /* Print styles */
 @media print {
   .no-print {

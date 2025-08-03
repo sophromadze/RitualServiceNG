@@ -6,7 +6,7 @@
         <h3>{{ translate('locations.title') || 'დამკრძალავი ბიურო' }}</h3>
       </div>
       <p>{{ translate('ritual_offer') }}</p>
-      <a class="phoneFM" href="tel:+995557556116">
+      <a class="phoneFM" (click)="callPhone()">
         <i class="fa-solid fa-phone"></i>
         <span>+(995) 557 55 61 16</span>
       </a>

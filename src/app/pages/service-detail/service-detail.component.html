@@ -13,7 +13,7 @@
             <p class="hero-description">{{translate(serviceContent.descKey)}}</p>
             
             <div class="hero-cta">
-                <a href="tel:+995557556116" class="btn btn-primary" (click)="callPhone()">
+                <a class="btn btn-primary" (click)="callPhone()">
                     <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
                 </a>
                 <a [routerLink]="getFuneralPlanningLink()" class="btn btn-secondary">
@@ -51,7 +51,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -73,7 +73,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -95,7 +95,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -117,7 +117,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -139,7 +139,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -161,7 +161,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -183,7 +183,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -205,7 +205,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -237,7 +237,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -272,7 +272,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
-                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[1])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
 
@@ -317,7 +317,7 @@
 
             <!-- Final Message -->
             <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 2">
-                <p>{{translate(serviceContent!.process[2])}} <a href="tel:+995557556116" class="phone-link">+995 557 55 61 16</a></p>
+                <p>{{translate(serviceContent!.process[2])}} <a class="phone-link" (click)="callPhone()">+995 557 55 61 16</a></p>
             </div>
         </div>
     </div>

@@ -5,13 +5,12 @@ import { Subscription } from 'rxjs';
 import { SeoService } from '../../services/seo.service';
 import { LanguageService } from '../../services/language.service';
 import { isPlatformBrowser } from '@angular/common';
-import { BreadcrumbComponent } from '../../shared/components/breadcrumb/breadcrumb.component';
 import { CtaComponent } from '../../shared/components/cta/cta.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, BreadcrumbComponent, CtaComponent],
+  imports: [CommonModule, RouterModule, CtaComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

@@ -130,8 +130,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu"
          id="mobile-menu"
-         [class.open]="isMenuOpen"
-         [attr.aria-hidden]="!isMenuOpen">
+         [class.open]="isMenuOpen">
       
       <!-- Mobile Services -->
       <div class="mobile-nav-section">
@@ -150,7 +149,6 @@
           </div>
           <a *ngFor="let service of getCurrentServices()"
              [routerLink]="getServicePath(service.url)"
-             [fragment]="getServiceFragment(service.url)"
              class="mobile-nav-link"
              (click)="isMenuOpen = false; closeMobileDropdowns(); onLinkClick('services')">
             {{service.name}}
@@ -209,7 +207,7 @@
 </header>
 
 <!-- SEO-focused breadcrumb -->
-<nav class="breadcrumb-nav" aria-label="Breadcrumb" *ngIf="!isHomePage()">
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
   <app-breadcrumb [currentLanguage]="currentLanguage"></app-breadcrumb>
 </nav>
 

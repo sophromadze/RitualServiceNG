@@ -69,6 +69,7 @@
   margin-bottom: 8px;
   transition: all 0.15s ease-in-out;
   max-width: 200px;
+  cursor: pointer;
 }
 
 .footer-phone:hover {
@@ -375,6 +376,20 @@
   
   .footer-contact {
     text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+
+  .location-item {
+    p{
+      justify-content: center;
+    }    
+  }
+
+  .footer-section{
+    li {
+      text-align: center;
+    }
   }
   
   .footer-social {

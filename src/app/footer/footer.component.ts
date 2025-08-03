@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { LanguageService } from '../services/language.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -15,11 +16,19 @@ export class FooterComponent {
 
   constructor(
     private languageService: LanguageService,
-    private router: Router
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
   translate(key: string): string {
     return this.languageService.translate(key);
+  }
+
+  callPhone(): void {
+    // Only run if we're in the browser
+    if (!isPlatformBrowser(this.platformId)) return;
+    
+    window.location.href = 'tel:+995557556116';
   }
 
   navigateToLocation(location: string): void {

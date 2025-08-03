@@ -68,160 +68,58 @@ export class BreadcrumbComponent implements OnInit {
         // Handle URL fragments (e.g., services#mourning-hall or locations#gldani)
         if (segment.includes('#')) {
           const [baseSegment, fragment] = segment.split('#');
-          currentUrl = currentUrl.replace(`/${segment}`, `/${baseSegment}#${fragment}`);
           
-          // Special handling for locations with fragments
-          if (baseSegment === 'locations') {
-            // Set the base label to "ფილიალები" (locations)
-            label = this.translate('nav.locations');
-            
-            // Add the specific location as a separate breadcrumb
-            let locationLabel = '';
-            switch (fragment) {
-              case 'gldani':
-                locationLabel = this.translate('locations.gldani_title') || 'გლდანი';
-                break;
-              case 'dighomi':
-                locationLabel = this.translate('locations.dighomi_title') || 'დიღომი';
-                break;
-              case 'jiqia':
-                locationLabel = this.translate('locations.saburtalo_title') || 'საბურთალო';
-                break;
-              default:
-                locationLabel = fragment;
-            }
-            
-            // Add the location breadcrumb
-            this.breadcrumbs.push({
-              label: locationLabel,
-              url: currentUrl
-            });
-            
-            continue; // Skip the default push below
+          // If fragment is empty, just use the base segment without the #
+          if (!fragment) {
+            currentUrl = currentUrl.replace(`/${segment}`, `/${baseSegment}`);
+            // Translate the base segment properly
+            label = this.translateSegment(baseSegment);
           } else {
-            // Handle other fragments (services, etc.)
-            const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
-            const baseKey = `breadcrumb.${baseSegment.replace(/-/g, '_')}`;
+            currentUrl = currentUrl.replace(`/${segment}`, `/${baseSegment}#${fragment}`);
             
-            if (this.translate(fragmentKey) !== fragmentKey) {
-              label = this.translate(fragmentKey);
-            } else if (this.translate(baseKey) !== baseKey) {
-              label = this.translate(baseKey);
+            // Special handling for locations with fragments
+            if (baseSegment === 'locations') {
+              // Set the base label to "ფილიალები" (locations)
+              label = this.translate('nav.locations');
+              
+              // Add the specific location as a separate breadcrumb
+              let locationLabel = '';
+              switch (fragment) {
+                case 'gldani':
+                  locationLabel = this.translate('locations.gldani_title') || 'გლდანი';
+                  break;
+                case 'dighomi':
+                  locationLabel = this.translate('locations.dighomi_title') || 'დიღომი';
+                  break;
+                case 'jiqia':
+                  locationLabel = this.translate('locations.saburtalo_title') || 'საბურთალო';
+                  break;
+                default:
+                  locationLabel = fragment;
+              }
+              
+              // Add the location breadcrumb
+              this.breadcrumbs.push({
+                label: locationLabel,
+                url: currentUrl
+              });
+              
+              continue; // Skip the default push below
+            } else {
+              // Handle other fragments (services, etc.)
+              const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
+              const baseKey = `breadcrumb.${baseSegment.replace(/-/g, '_')}`;
+              
+              if (this.translate(fragmentKey) !== fragmentKey) {
+                label = this.translate(fragmentKey);
+              } else if (this.translate(baseKey) !== baseKey) {
+                label = this.translate(baseKey);
+              }
             }
           }
         } else {
-          // Translate common segments
-        switch (segment) {
-          case 'services':
-            label = this.translate('nav.services');
-            break;
-          case 'products':
-            label = this.translate('nav.products');
-            break;
-          case 'about':
-            label = this.translate('nav.about');
-            break;
-          case 'contact':
-            label = this.translate('nav.contact');
-            break;
-          case 'locations':
-            label = this.translate('nav.locations');
-            break;
-          case 'funeral-planning':
-            label = this.translate('breadcrumb.funeral_planning');
-            break;
-          // Product-specific translations
-          case 'coffins':
-            label = this.translate('breadcrumb.coffins');
-            break;
-          case 'shrouds':
-            label = this.translate('breadcrumb.shrouds');
-            break;
-          case 'refrigeration':
-            label = this.translate('breadcrumb.refrigeration');
-            break;
-          case 'cemetery_accessories':
-            label = this.translate('breadcrumb.cemetery_accessories');
-            break;
-          case 'cemetery-accessories':
-            label = this.translate('breadcrumb.cemetery_accessories');
-            break;
-          // Service-specific translations - Legacy services
-          case 'embalming':
-            label = this.translate('breadcrumb.embalming');
-            break;
-          case 'transportation':
-            label = this.translate('breadcrumb.transportation');
-            break;
-          case 'stone-engraving':
-            label = this.translate('breadcrumb.stone_engraving');
-            break;
-          case 'grave-decoration':
-            label = this.translate('breadcrumb.grave_decoration');
-            break;
-          case 'dressing':
-            label = this.translate('breadcrumb.dressing');
-            break;
-          case 'mourning-hall':
-            label = this.translate('breadcrumb.mourning_hall');
-            break;
-          case 'banquet-hall':
-            label = this.translate('breadcrumb.banquet_hall');
-            break;
-          case 'metal-letters':
-            label = this.translate('breadcrumb.metal_letters');
-            break;
-          case 'agent-service':
-            label = this.translate('breadcrumb.agent_service');
-            break;
-          case 'lifting-machine':
-            label = this.translate('breadcrumb.lifting_machine');
-            break;
-          case 'colored-photo':
-            label = this.translate('breadcrumb.colored_photo');
-            break;
-          // New service translations
-          case 'embalming-dressing':
-            label = this.translate('services.embalming_dressing_service.title') || 'ბალზამირება, გრიმი, ჩაცმა';
-            break;
-          case 'microbus':
-            label = this.translate('services.microbus_service.title') || 'მარშუტკა';
-            break;
-          case 'hall':
-            label = this.translate('services.hall_service.title') || 'დარბაზი';
-            break;
-          case 'cemetery-decoration':
-            label = this.translate('services.cemetery_decoration_service.title') || 'სასაფლაოს მოპირკეთება';
-            break;
-          case 'grave-stones':
-            label = this.translate('services.grave_stones_service.title') || 'საფლავის ქვები, ქვაზე ხატვა';
-            break;
-          case 'grave-preparation':
-            label = this.translate('services.grave_preparation_service.title') || 'სამარხის გაჭრა';
-            break;
-          case 'hearse':
-            label = this.translate('services.hearse_service.title') || 'კატაფალკის მომსახურება';
-            break;
-          // Legacy translations for backward compatibility
-          case 'damkrdzalavi-biuro':
-            label = 'დამკრძალავი ბიურო';
-            break;
-          case 'balzamireba':
-            label = 'ბალზამირება';
-            break;
-          case 'katafalka':
-            label = 'კატაფალკები';
-            break;
-          case 'gadasveneba':
-            label = 'გადასვენება';
-            break;
-          case 'qvaze-xatva':
-            label = 'ქვაზე ხატვა';
-            break;
-          case 'mopirketeba':
-            label = 'საფლავის მოპირკეთება';
-            break;
-        }
+          // Translate common segments using the helper method
+          label = this.translateSegment(segment);
         }
         
         this.breadcrumbs.push({
@@ -234,6 +132,88 @@ export class BreadcrumbComponent implements OnInit {
 
   translate(key: string): string {
     return this.languageService.translate(key);
+  }
+
+  private translateSegment(segment: string): string {
+    // Translate common segments
+    switch (segment) {
+      case 'services':
+        return this.translate('nav.services');
+      case 'products':
+        return this.translate('nav.products');
+      case 'about':
+        return this.translate('nav.about');
+      case 'contact':
+        return this.translate('nav.contact');
+      case 'locations':
+        return this.translate('nav.locations');
+      case 'funeral-planning':
+        return this.translate('breadcrumb.funeral_planning');
+      // Product-specific translations
+      case 'coffins':
+        return this.translate('breadcrumb.coffins');
+      case 'shrouds':
+        return this.translate('breadcrumb.shrouds');
+      case 'refrigeration':
+        return this.translate('breadcrumb.refrigeration');
+      case 'cemetery_accessories':
+        return this.translate('breadcrumb.cemetery_accessories');
+      case 'cemetery-accessories':
+        return this.translate('breadcrumb.cemetery_accessories');
+      // Service-specific translations - Legacy services
+      case 'embalming':
+        return this.translate('breadcrumb.embalming');
+      case 'transportation':
+        return this.translate('breadcrumb.transportation');
+      case 'stone-engraving':
+        return this.translate('breadcrumb.stone_engraving');
+      case 'grave-decoration':
+        return this.translate('breadcrumb.grave_decoration');
+      case 'dressing':
+        return this.translate('breadcrumb.dressing');
+      case 'mourning-hall':
+        return this.translate('breadcrumb.mourning_hall');
+      case 'banquet-hall':
+        return this.translate('breadcrumb.banquet_hall');
+      case 'metal-letters':
+        return this.translate('breadcrumb.metal_letters');
+      case 'agent-service':
+        return this.translate('breadcrumb.agent_service');
+      case 'lifting-machine':
+        return this.translate('breadcrumb.lifting_machine');
+      case 'colored-photo':
+        return this.translate('breadcrumb.colored_photo');
+      // New service translations
+      case 'embalming-dressing':
+        return this.translate('services.embalming_dressing_service.title') || 'ბალზამირება, გრიმი, ჩაცმა';
+      case 'microbus':
+        return this.translate('services.microbus_service.title') || 'მარშუტკა';
+      case 'hall':
+        return this.translate('services.hall_service.title') || 'დარბაზი';
+      case 'cemetery-decoration':
+        return this.translate('services.cemetery_decoration_service.title') || 'სასაფლაოს მოპირკეთება';
+      case 'grave-stones':
+        return this.translate('services.grave_stones_service.title') || 'საფლავის ქვები, ქვაზე ხატვა';
+      case 'grave-preparation':
+        return this.translate('services.grave_preparation_service.title') || 'სამარხის გაჭრა';
+      case 'hearse':
+        return this.translate('services.hearse_service.title') || 'კატაფალკის მომსახურება';
+      // Legacy translations for backward compatibility
+      case 'damkrdzalavi-biuro':
+        return 'დამკრძალავი ბიურო';
+      case 'balzamireba':
+        return 'ბალზამირება';
+      case 'katafalka':
+        return 'კატაფალკები';
+      case 'gadasveneba':
+        return 'გადასვენება';
+      case 'qvaze-xatva':
+        return 'ქვაზე ხატვა';
+      case 'mopirketeba':
+        return 'საფლავის მოპირკეთება';
+      default:
+        return segment;
+    }
   }
 
   isHomePage(): boolean {

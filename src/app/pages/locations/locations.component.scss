@@ -107,6 +107,7 @@
     position: relative;
     z-index: 1;
     transition: all 0.3s ease;
+    cursor: pointer;
 
     &:hover {
       color: #2c5aa0;
