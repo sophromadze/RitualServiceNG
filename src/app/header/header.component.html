@@ -56,7 +56,6 @@
               </div>
               <a *ngFor="let service of getCurrentServices()"
                  [routerLink]="getServicePath(service.url)"
-                 [fragment]="getServiceFragment(service.url)"
                  class="dropdown-item"
                  role="menuitem"
                  (click)="closeAllDropdowns(); onLinkClick('services')">
@@ -283,8 +282,8 @@
       },
       {
         "@type": "Service", 
-        "name": "Hearse Service",
-        "alternateName": "კატაფალკა"
+        "name": "Cemetery Accessories",
+        "alternateName": "სასაფლაოს აქსესუარები"
       },
       {
         "@type": "Service",

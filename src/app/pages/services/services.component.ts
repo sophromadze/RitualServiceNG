@@ -7,6 +7,14 @@ import { LanguageService } from '../../services/language.service';
 import { CtaComponent } from '../../shared/components/cta/cta.component';
 import { isPlatformBrowser } from '@angular/common';
 
+interface ServiceItem {
+  id: string;
+  titleKey: string;
+  descKey: string;
+  image: string;
+  keywords: string;
+}
+
 @Component({
   selector: 'app-services',
   standalone: true,
@@ -17,6 +25,80 @@ import { isPlatformBrowser } from '@angular/common';
 export class ServicesComponent implements OnInit, OnDestroy {
   currentLanguage: string = 'ka';
   private subscriptions: Subscription = new Subscription();
+
+  // Services data for grid display
+  services: ServiceItem[] = [
+    {
+      id: 'embalming-dressing',
+      titleKey: 'services.embalming_dressing',
+      descKey: 'services.embalming_dressing.description',
+      image: '/images/embalming.jpg',
+      keywords: 'ბალზამირება, გრიმი, ჩაცმა, balzamireba, grimi, chacma'
+    },
+    {
+      id: 'transportation',
+      titleKey: 'services.transportation',
+      descKey: 'services.transportation.description',
+      image: '/images/transfer.jpg',
+      keywords: 'გადასვენება, gadasveneba, transportation'
+    },
+    {
+      id: 'mourning-hall',
+      titleKey: 'services.mourning_hall',
+      descKey: 'services.mourning_hall.description',
+      image: '/images/hall.jpg',
+      keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, mourning hall'
+    },
+    {
+      id: 'hearse-service',
+      titleKey: 'services.hearse_service',
+      descKey: 'services.hearse_service.description',
+      image: '/images/katafalkebi.jpg',
+      keywords: 'კატაფალკის მომსახურება, katafalkis momsaxureba, hearse service'
+    },
+    {
+      id: 'marshutka',
+      titleKey: 'services.marshutka',
+      descKey: 'services.marshutka.description',
+      image: '/images/marshutka.jpg',
+      keywords: 'მარშუტკა, marshutka, minibus'
+    },
+    {
+      id: 'hall',
+      titleKey: 'services.hall',
+      descKey: 'services.hall.description',
+      image: '/images/hall.jpg',
+      keywords: 'დარბაზი, darbazi, hall'
+    },
+    {
+      id: 'cemetery-decoration',
+      titleKey: 'services.cemetery_decoration',
+      descKey: 'services.cemetery_decoration.description',
+      image: '/images/grave.jpg',
+      keywords: 'სასაფლაოს მოპირკეთება, sasapleos mopirketeba, cemetery decoration'
+    },
+    {
+      id: 'grave-stones-painting',
+      titleKey: 'services.grave_stones_painting',
+      descKey: 'services.grave_stones_painting.description',
+      image: '/images/stonepainting.jpg',
+      keywords: 'საფლავის ქვები, ქვაზე ხატვა, saflavis qvebi, qvaze xatva'
+    },
+    {
+      id: 'grave-excavation',
+      titleKey: 'services.grave_excavation',
+      descKey: 'services.grave_excavation.description',
+      image: '/images/grave.jpg',
+      keywords: 'სამარხის გაჭრა, samarxis gachra, grave excavation'
+    },
+    {
+      id: 'lifting-machine',
+      titleKey: 'services.lifting_machine',
+      descKey: 'services.lifting_machine.description',
+      image: '/images/liftingMachine.jpg',
+      keywords: 'ჩასასვენებლი ლიფტი, chasasvenebli lifti, lifting machine'
+    }
+  ];
 
 
 
@@ -174,5 +256,24 @@ export class ServicesComponent implements OnInit, OnDestroy {
     if (!isPlatformBrowser(this.platformId)) return;
     
     window.location.href = 'tel:+995599069898';
+  }
+
+  navigateToService(serviceId: string): void {
+    // Map service IDs to the correct routes
+    const serviceRouteMap: { [key: string]: string } = {
+      'embalming-dressing': 'embalming-dressing',
+      'transportation': 'transportation',
+      'mourning-hall': 'mourning-hall',
+      'hearse-service': 'hearse',
+      'marshutka': 'microbus',
+      'hall': 'hall',
+      'cemetery-decoration': 'cemetery-decoration',
+      'grave-stones-painting': 'grave-stones',
+      'grave-excavation': 'grave-preparation',
+      'lifting-machine': 'lifting-machine'
+    };
+    
+    const route = serviceRouteMap[serviceId] || serviceId;
+    this.router.navigate([`/${this.currentLanguage}/services/${route}`]);
   }
 }

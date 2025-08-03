@@ -49,7 +49,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/darbazebi2.jpg'
       ],
       keywords: ['სასახლეები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
-      relatedProducts: ['shrouds', 'refrigeration', 'hearse'],
+      relatedProducts: ['shrouds', 'refrigeration', 'cemetery_accessories'],
       features: [
         'products.coffins_feature_1',
         'products.coffins_feature_2',
@@ -77,19 +77,9 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/shroud3.jpg'
       ],
       keywords: ['სუდარები', 'sudarebi', 'ბამბის სუდარები', 'shrouds'],
-      relatedProducts: ['coffins', 'refrigeration', 'hearse'],
-      features: [
-        'products.shrouds_feature_1',
-        'products.shrouds_feature_2',
-        'products.shrouds_feature_3',
-        'products.shrouds_feature_4'
-      ],
-      types: [
-        'products.shrouds.cotton',
-        'products.shrouds.silk',
-        'products.shrouds.artificial',
-        'products.shrouds.special'
-      ]
+      relatedProducts: ['coffins', 'refrigeration', 'cemetery_accessories'],
+      features: [],
+      types: []
     },
 
     'refrigeration': {
@@ -105,7 +95,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/macivrebi2.jpg'
       ],
               keywords: ['სასახლე მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
-      relatedProducts: ['coffins', 'shrouds', 'hearse'],
+      relatedProducts: ['coffins', 'shrouds', 'cemetery_accessories'],
       features: [
         'products.refrigeration_feature_1',
         'products.refrigeration_feature_2',
@@ -120,40 +110,39 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       ]
     },
 
-    'hearse': {
-      id: 'hearse',
-      titleKey: 'products.hearse',
-      descKey: 'products.hearse_desc',
-      longDescKey: 'products.hearse_long',
-      image: '/images/katafalkebi2.jpg',
+    'cemetery_accessories': {
+      id: 'cemetery_accessories',
+      titleKey: 'products.cemetery_accessories',
+      descKey: 'products.cemetery_accessories_desc',
+      longDescKey: 'products.cemetery_accessories_long',
+      image: '/images/cemetery.jpg',
       gallery: [
-        '/images/katafalkebi2.jpg',
-        '/images/katafalkebi3.jpg',
-        '/images/katafalki1.jpg',
-        '/images/katafalki2.jpg',
-        '/images/katafalki3.jpg'
+        '/images/cemetery.jpg',
+        '/images/grave.jpg',
+        '/images/tomb.jpg',
+        '/images/stonepainting.jpg'
       ],
-      keywords: ['კატაფალკი', 'katafalki', 'თანამედროვე კატაფალკები', 'hearse', 'გადასვენება', 'gadasveneba'],
+      keywords: ['სასაფლაოს აქსესუარები', 'sasapleos akseesuarebi', 'ჯვრები', 'jvrebi', 'საყვავილე კონსტრუქციები', 'saqvaile konstrukciebi'],
       relatedProducts: ['coffins', 'shrouds', 'refrigeration'],
       features: [
-        'products.hearse_feature_1',
-        'products.hearse_feature_2',
-        'products.hearse_feature_3',
-        'products.hearse_feature_4',
-        'products.hearse_feature_5',
-        'products.hearse_feature_6'
+        'products.cemetery_accessories_feature_1',
+        'products.cemetery_accessories_feature_2',
+        'products.cemetery_accessories_feature_3',
+        'products.cemetery_accessories_feature_4',
+        'products.cemetery_accessories_feature_5',
+        'products.cemetery_accessories_feature_6'
       ],
       types: [
-        'products.hearse.modern',
-        'products.hearse.luxury',
-        'products.hearse.standard',
-        'products.hearse.special'
+        'products.cemetery_accessories.crosses',
+        'products.cemetery_accessories.flower_structures',
+        'products.cemetery_accessories.candles',
+        'products.cemetery_accessories.marble_accessories'
       ],
       process: [
-        'products.hearse_process_1',
-        'products.hearse_process_2',
-        'products.hearse_process_3',
-        'products.hearse_process_4'
+        'products.cemetery_accessories_process_1',
+        'products.cemetery_accessories_process_2',
+        'products.cemetery_accessories_process_3',
+        'products.cemetery_accessories_process_4'
       ]
     }
   };
@@ -188,20 +177,20 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       'products.refrigeration_feature_3': 'მობილური მაცივრები ტრანსპორტირებისთვის',
       'products.refrigeration_feature_4': 'სპეციალური მაცივრები გახანგრძლივებული შენახვისთვის',
 
-      // Hearse
-      'products.hearse': 'კატაფალკი',
-      'products.hearse_desc': 'თანამედროვე კატაფალკები 24/7 მომსახურებით',
-      'products.hearse_long': 'კატაფალკი - ჩვენი თანამედროვე კატაფალკების პარკი მზადაა ნებისმიერ დროს. თანამედროვე კატაფალკები უკანასკნელი მოდელები და ლუქს კლასის კატაფალკები უმაღლესი კომფორტით. გადასვენება ნებისმიერ მიმართულებით.',
-      'products.hearse_feature_1': 'თანამედროვე კატაფალკები უკანასკნელი მოდელები',
-      'products.hearse_feature_2': 'ლუქს კლასის კატაფალკები უმაღლესი კომფორტით',
-      'products.hearse_feature_3': 'სტანდარტული კატაფალკები სანდო ხარისხით',
-      'products.hearse_feature_4': 'სპეციალური კატაფალკები ინდივიდუალური მოთხოვნებისთვის',
-      'products.hearse_feature_5': '24/7 ხელმისაწვდომობა - ნებისმიერ დროს',
-      'products.hearse_feature_6': 'გადასვენება ნებისმიერ მიმართულებით',
-      'products.hearse_process_1': 'კონტაქტი და შეთანხმება - ჩვენ ვუკავშირდებით 24/7',
-      'products.hearse_process_2': 'კატაფალკის მომზადება - თანამედროვე აღჭურვილობით',
-      'products.hearse_process_3': 'უსაფრთხო ტრანსპორტირება - გამოცდილი მძღოლებით',
-      'products.hearse_process_4': 'სრული მომსახურება - დანარჩენი ყველაფერი ჩვენზეა'
+      // Cemetery Accessories
+      'products.cemetery_accessories': 'სასაფლაოს აქსესუარები',
+      'products.cemetery_accessories_desc': 'ხარისხიანი სასაფლაოს აქსესუარები',
+      'products.cemetery_accessories_long': 'სასაფლაოს აქსესუარები - ჩვენ გთავაზობთ ჯვრებს, საყვავილე კონსტრუქციებს, სასანთლეებს და მარმარილოს აქსესუარებს. ყველა პროდუქტი მზადაა 24/7.',
+      'products.cemetery_accessories_feature_1': 'ჯვრები (მარმარილოსი და ხის) - ტრადიციული და თანამედროვე ფორმებით',
+      'products.cemetery_accessories_feature_2': 'საყვავილე კონსტრუქციები - ლითონის, ქვის ან კერამიკის',
+      'products.cemetery_accessories_feature_3': 'სასანთლეები - მარტივი და ორნამენტული ვარიანტები',
+      'products.cemetery_accessories_feature_4': 'მარმარილოს აქსესუარები - ქვის ლარნაკები და ხსოვნის დაფები',
+      'products.cemetery_accessories_feature_5': 'ხარისხიანი, გამძლე მასალები - ამინდისა და დროის მიმართ მდგრადობა',
+      'products.cemetery_accessories_feature_6': 'ადგილზე მიტანა და მონტაჟი თბილისსა და რეგიონებში',
+      'products.cemetery_accessories_process_1': 'კონტაქტი და შეთანხმება - ჩვენ ვუკავშირდებით 24/7',
+      'products.cemetery_accessories_process_2': 'პროდუქტის შერჩევა - კონსულტაცია სპეციალისტებისგან',
+      'products.cemetery_accessories_process_3': 'ადგილზე მიტანა - უსაფრთხო ტრანსპორტირებით',
+      'products.cemetery_accessories_process_4': 'მონტაჟი და მომსახურება - სრული პასუხისმგებლობა'
     },
     en: {
       // Coffins
@@ -231,18 +220,20 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       'products.refrigeration_feature_3': 'Mobile refrigerators for transportation',
       'products.refrigeration_feature_4': 'Special refrigerators for extended storage',
 
-      // Hearse
-      'products.hearse': 'Hearse',
-      'products.hearse_desc': 'Modern hearses with 24/7 service',
-      'products.hearse_long': 'Hearse - our modern hearse fleet is ready at any time. Modern hearses latest models and luxury class hearses with highest comfort. Transportation in any direction.',
-      'products.hearse_feature_1': 'Modern hearses latest models',
-      'products.hearse_feature_2': 'Luxury class hearses with highest comfort',
-      'products.hearse_feature_3': 'Standard hearses with reliable quality',
-      'products.hearse_feature_4': 'Special hearses for individual requirements',
-      'products.hearse_process_1': 'Contact and agreement - we are available 24/7',
-      'products.hearse_process_2': 'Hearse preparation - with modern equipment',
-      'products.hearse_process_3': 'Safe transportation - with experienced drivers',
-      'products.hearse_process_4': 'Complete service - everything else is on us'
+      // Cemetery Accessories
+      'products.cemetery_accessories': 'Cemetery Accessories',
+      'products.cemetery_accessories_desc': 'Quality cemetery accessories',
+      'products.cemetery_accessories_long': 'Cemetery Accessories - we offer crosses, flower structures, candles and marble accessories. All products are ready 24/7.',
+      'products.cemetery_accessories_feature_1': 'Crosses (marble and wood) - traditional and modern forms',
+      'products.cemetery_accessories_feature_2': 'Flower structures - metal, stone or ceramic',
+      'products.cemetery_accessories_feature_3': 'Candles - simple and ornamental variants',
+      'products.cemetery_accessories_feature_4': 'Marble accessories - stone lanterns and memorial boards',
+      'products.cemetery_accessories_feature_5': 'Quality, durable materials - resistance to weather and time',
+      'products.cemetery_accessories_feature_6': 'On-site delivery and installation in Tbilisi and regions',
+      'products.cemetery_accessories_process_1': 'Contact and agreement - we are available 24/7',
+      'products.cemetery_accessories_process_2': 'Product selection - consultation from specialists',
+      'products.cemetery_accessories_process_3': 'On-site delivery - with safe transportation',
+      'products.cemetery_accessories_process_4': 'Installation and service - full responsibility'
     },
     ru: {
       // Coffins
@@ -272,18 +263,20 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       'products.refrigeration_feature_3': 'Мобильные холодильники для транспортировки',
       'products.refrigeration_feature_4': 'Специальные холодильники для длительного хранения',
 
-      // Hearse
-      'products.hearse': 'Катафалк',
-      'products.hearse_desc': 'Современные катафалки с обслуживанием 24/7',
-      'products.hearse_long': 'Катафалк - наш современный парк катафалков готов в любое время. Современные катафалки последние модели и катафалки люкс класса с высшим комфортом. Перевозка в любом направлении.',
-      'products.hearse_feature_1': 'Современные катафалки последние модели',
-      'products.hearse_feature_2': 'Катафалки люкс класса с высшим комфортом',
-      'products.hearse_feature_3': 'Стандартные катафалки с надежным качеством',
-      'products.hearse_feature_4': 'Специальные катафалки для индивидуальных требований',
-      'products.hearse_process_1': 'Контакт и соглашение - мы доступны 24/7',
-      'products.hearse_process_2': 'Подготовка катафалка - с современным оборудованием',
-      'products.hearse_process_3': 'Безопасная перевозка - с опытными водителями',
-      'products.hearse_process_4': 'Полное обслуживание - все остальное на нас'
+      // Cemetery Accessories
+      'products.cemetery_accessories': 'Кладбищенские аксессуары',
+      'products.cemetery_accessories_desc': 'Качественные кладбищенские аксессуары',
+      'products.cemetery_accessories_long': 'Кладбищенские аксессуары - мы предлагаем кресты, цветочные конструкции, свечи и мраморные аксессуары. Все продукты готовы 24/7.',
+      'products.cemetery_accessories_feature_1': 'Кресты (мраморные и деревянные) - традиционные и современные формы',
+      'products.cemetery_accessories_feature_2': 'Цветочные конструкции - металлические, каменные или керамические',
+      'products.cemetery_accessories_feature_3': 'Свечи - простые и декоративные варианты',
+      'products.cemetery_accessories_feature_4': 'Мраморные аксессуары - каменные фонари и мемориальные доски',
+      'products.cemetery_accessories_feature_5': 'Качественные, прочные материалы - устойчивость к погоде и времени',
+      'products.cemetery_accessories_feature_6': 'Доставка и установка на месте в Тбилиси и регионах',
+      'products.cemetery_accessories_process_1': 'Контакт и соглашение - мы доступны 24/7',
+      'products.cemetery_accessories_process_2': 'Выбор продукта - консультация специалистов',
+      'products.cemetery_accessories_process_3': 'Доставка на месте - с безопасной транспортировкой',
+      'products.cemetery_accessories_process_4': 'Установка и обслуживание - полная ответственность'
     }
   };
 
@@ -374,7 +367,16 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   }
 
   getProductUrl(relatedProduct: string): string {
-    return `/${this.currentLanguage}/products/${relatedProduct}`;
+    // Map product IDs to URL paths (handle underscores to hyphens conversion)
+    const urlMapping: { [key: string]: string } = {
+      'coffins': 'coffins',
+      'shrouds': 'shrouds', 
+      'refrigeration': 'refrigeration',
+      'cemetery_accessories': 'cemetery-accessories'
+    };
+    
+    const urlPath = urlMapping[relatedProduct] || relatedProduct;
+    return `/${this.currentLanguage}/products/${urlPath}`;
   }
 
   navigateToProduct(relatedProduct: string): void {

@@ -31,7 +31,7 @@ export class LanguageService {
       'breadcrumb.coffins': 'სასახლეები',
       'breadcrumb.shrouds': 'სუდარები',
       'breadcrumb.refrigeration': 'სასახლე მაცივრები',
-      'breadcrumb.hearse': 'კატაფალკები',
+      'breadcrumb.cemetery_accessories': 'სასაფლაოს აქსესუარები',
       'breadcrumb.embalming': 'ბალზამირება',
       'breadcrumb.transportation': 'გადასვენება',
       'breadcrumb.stone_engraving': 'ქვაზე ხატვა',
@@ -54,47 +54,29 @@ export class LanguageService {
       'home.ritual_house': 'სარიტუალო სახლი',
       'home.saritualo_saxli': 'სარიტუალო სახლი',
 
-      // Services with SEO Keywords
-      'services.embalming': 'ბალზამირება',
-      'services.embalming_desc': 'კეთილმოწყობილი, მყუდრო სივრცე მიცვალებულის დასასვენებლად და სარიტუალო პროცესის წარმართვისთვის',
-      'services.hearse': 'კატაფალკები',
-      'services.hearse_desc': 'კატაფალკის მომსახურების სერვისი, თქვენთვის სასურველ ნებისმიერ ლოკაციაზე',
+      // Services with SEO Keywords - 14 Service Cards
+      'services.coffins': 'სასახლეები',
+      'services.coffin_refrigeration': 'სასახლე მაცივარი',
+      'services.shrouds': 'სუდარა',
+      'services.embalming_dressing': 'ბალზამირება, გრიმი, ჩაცმა',
       'services.transportation': 'გადასვენება',
-      'services.transportation_desc': 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ. ყველა საჭირო დოკუმენტის მომზადება.',
-      'services.stone_engraving': 'ქვაზე ხატვა',
-      'services.stone_engraving_desc': 'ქვაზე პროფესიონალური ხატვა, ფერადი სურათის დამზადება, ლითონის ასოებით წარწერა.',
-      'services.grave_decoration': 'საფლავის მოპირკეთება',
-      'services.grave_decoration_desc': 'საფლავის კომპლექსური მოპირკეთება, მემორიალური სამუშაოები, ლანდშაფტური დიზაინი.',
-      'services.dressing': 'მიცვალებულის ჩაცმა',
-      'services.dressing_desc': 'მიცვალებულის ღირსეული ჩაცმა და მოწესრიგება გამოცდილი სპეციალისტების მიერ.',
       'services.mourning_hall': 'საპანაშვიდე დარბაზი',
-      'services.mourning_hall_desc': 'საპანაშვიდე დარბაზი ღირსეული გარემოთი. სრული მომსახურება, მოქნილი გრაფიკი.',
-      'services.banquet_hall': 'საბანკეტო დარბაზი',
-      'services.banquet_hall_desc': 'საბანკეტო დარბაზი მემორიალური ღონისძიებებისთვის. დიდი ტევადობა, სრული მომსახურება.',
-      'services.metal_letters': 'ლითონის ასოებით წარწერა',
-      'services.metal_letters_desc': 'ლითონის ასოებით წარწერების დამზადება საფლავებზე. მაღალი ხარისხის მეტალის ასოები.',
-      'services.cemetery_decoration': 'სასაფლაოს მოპირკეთება',
-      'services.cemetery_decoration_desc': 'გთავაზობთ საფლავის მოპირკეთებას, მაღალი ხარისხის ქვას+ქვაზე ხატვა, ლითონის წარწერები, სასაფლაოს აქსესუარები',
-      'services.grave_excavation': 'სამარხის გაჭრა',
-      'services.grave_excavation_desc': 'სამარხის პროფესიონალური გაჭრა და მომზადება. ყველა საჭირო ნებართვის მიღება.',
       'services.hearse_service': 'კატაფალკის მომსახურება',
-      'services.hearse_service_desc': 'კატაფალკის მომსახურება 24/7. თანამედროვე კატაფალკები, პროფესიონალური მძღოლები.',
-      'services.burial_filter': 'ჩასასვენებელი ფილტი',
-      'services.burial_filter_desc': 'ჩასასვენებელი ფილტის მომზადება და დამონტაჟება. ხარისხიანი მასალები, გამძლე კონსტრუქცია.',
+      'services.marshutka': 'მარშუტკა',
+      'services.hall': 'დარბაზი',
+      'services.cemetery_decoration': 'სასაფლაოს მოპირკეთება',
+      'services.grave_stones_painting': 'საფლავის ქვები, ქვაზე ხატვა',
+      'services.grave_excavation': 'სამარხის გაჭრა',
+      'services.cemetery_accessories': 'სასაფლაოს აქსესუარები',
+      'services.lifting_machine': 'ჩასასვენებლი ლიფტი',
 
       // Products with Keywords
       'products.coffins': 'სასახლეები',
-      'products.coffins_desc': 'მაღალი ხარისხის სასახლეები 350 ლარიდან. თქვენთვის სასურველი ნებისმიერი სტილი - ქართული, უკრაინილი, იტალიური.',
       'products.shrouds': 'სუდარები',
-      'products.shrouds_desc': 'ტრადიციული და თანამედროვე სუდარები. ნატურალური მასალები, ხელნაკეთი მუშაობა.',
       'products.refrigeration': 'სასახლე მაცივრები',
-      'products.refrigeration_desc': 'სასახლე-მაცივრები, ამერიკული და სტანდარტული მოდელები ხანგრძლივი შენახვისთვის.',
-      'products.hearse': 'კატაფალკები',
-      'products.hearse_desc': 'თანამედროვე კატაფალკები 24/7 მომსახურებით',
-      'products.coffins_long': 'ჩვენი სასახლეები წარმოადგენს ხარისხიან ხის სასახლეებს ბუნებრივი მასალებით. ლუქს კლასის სასახლეები, ეკონომ კლასის სასახლეები და სტანდარტული სასახლეები - ყველა ფასის კატეგორიაში.',
-      'products.shrouds_long': 'სუდარები - ჩვენ გთავაზობთ ბამბის სუდარებს  ბუნებრივი მასალებით, სილკის სუდარებს ხარისხიანი ქსოვილით და ხელოვნური ქსოვილის სუდარებს გამძლე მასალებით.',
-      'products.refrigeration_long': 'სასახლე მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
-      'products.hearse_long': 'კატაფალკი - ჩვენი თანამედროვე კატაფალკების პარკი მზადაა ნებისმიერ დროს. თანამედროვე კატაფალკები უკანასკნელი მოდელები და ლუქს კლასის კატაფალკები უმაღლესი კომფორტით. გადასვენება ნებისმიერ მიმართულებით.',
+      'products.cemetery_accessories': 'სასაფლაოს აქსესუარები',
+      
+
       
       'header.phone': '+995 599 069 898',
 
@@ -281,7 +263,7 @@ export class LanguageService {
       'funeral_planning.pending': 'მიმდინარე',
       'funeral_planning.start_planning': 'დაიწყეთ დაგეგმვა',
       'funeral_planning.plan_funeral': 'დაგეგმეთ დაკრძალვა',
-      'funeral_planning.cta_description': 'როცა ადამიანი დგას ყველაზე რთული მომენტში, მნიშვნელოვანია მის გვერდით იყოს სანდო, პასუხისმგებლიანი და გულისხმიერი გუნდი. სწორედ ასეთები ვართ ჩვენ.',
+      'funeral_planning.cta_description': 'მაშინ როდესაც ადამიანი დგას ცხოვრების ყველაზე რთული მომენტში, მნიშვნელოვანია მის გვერდით იყოს სანდო, პასუხისმგებლიანი და გულისხმიერი გუნდი. სწორედ ასეთები ვართ ჩვენ.',
 
       // Why Choose Us Section
       'why_choose.title': 'რატომ ვართ ლიდერები?',
@@ -360,7 +342,7 @@ export class LanguageService {
       'products.categories_title': 'პროდუქტების კატეგორიები',
       'products.types_title': 'პროდუქტის ტიპები',
       'products.gallery_title': 'ფოტო გალერეა',
-      'products.related_title': 'მსგავსი პროდუქტები',
+      'products.related_title': 'სხვა პროდუქტები',
       'products.details_title': 'დეტალურად',
       'products.features_title': 'ჩვენი უპირატესობები',
       
@@ -368,7 +350,7 @@ export class LanguageService {
       'products.coffins_keywords': 'სასახლეები - sasaxleebi',
       'products.shrouds_keywords': 'სუდარები - sudarebi',
       'products.refrigeration_keywords': 'სასახლე მაცივრები - sasaxle macivrebi',
-      'products.hearse_keywords': 'კატაფალკები - katafalki',
+      'products.cemetery_accessories_keywords': 'სასაფლაოს აქსესუარები - sasapleos akseesuarebi',
       
       // Product Categories
       'products.coffins.wooden': 'ხის სასახლეები',
@@ -386,10 +368,10 @@ export class LanguageService {
       'products.refrigeration.mobile': 'მობილური მაცივრები',
       'products.refrigeration.special': 'სპეციალური მაცივრები',
       
-      'products.hearse.modern': 'თანამედროვე კატაფალკები',
-      'products.hearse.luxury': 'ლუქს კლასის კატაფალკები',
-      'products.hearse.standard': 'სტანდარტული კატაფალკები',
-      'products.hearse.special': 'სპეციალური კატაფალკები',
+      'products.cemetery_accessories.crosses': 'ჯვრები',
+      'products.cemetery_accessories.flower_structures': 'საყვავილე კონსტრუქციები',
+      'products.cemetery_accessories.candles': 'სასანთლეები',
+      'products.cemetery_accessories.marble_accessories': 'მარმარილოს აქსესუარები',
       
       // Product Features
       'products.coffins.features.natural': 'ხის სასახლეები ბუნებრივი მასალებით',
@@ -407,11 +389,11 @@ export class LanguageService {
       'products.refrigeration.features.mobile': 'მობილური მაცივრები ტრანსპორტირებისთვის',
       'products.refrigeration.features.special': 'სპეციალური მაცივრები გახანგრძლივებული შენახვისთვის',
       
-      'products.hearse.features.modern': 'თანამედროვე კატაფალკები უკანასკნელი მოდელები',
-      'products.hearse.features.luxury': 'ლუქს კლასის კატაფალკები უმაღლესი კომფორტით',
-      'products.hearse.features.standard': 'სტანდარტული კატაფალკები სანდო ხარისხით',
-      'products.hearse.features.special': 'სპეციალური კატაფალკები ინდივიდუალური მოთხოვნებისთვის',
-      'products.hearse.process_title': 'კატაფალკის მომსახურების პროცესი',
+      'products.cemetery_accessories.features.crosses': 'ჯვრები (მარმარილოსი და ხის) — ტრადიციული და თანამედროვე ფორმებით, სხვადასხვა ზომასა და დიზაინში',
+      'products.cemetery_accessories.features.flower_structures': 'საყვავილე კონსტრუქციები — ლითონის, ქვის ან კერამიკის, რომლებიც უზრუნველყოფს მუდმივ სისუფთავეს და სიმშვიდეს საფლავზე',
+      'products.cemetery_accessories.features.candles': 'სასანთლეები — მარტივი და ორნამენტული ვარიანტები, რომლებიც თვეობით ინარჩუნებენ სიმყუდროვეს და ლოცვის სივრცეს',
+      'products.cemetery_accessories.features.marble_accessories': 'მარმარილოს აქსესუარები — ქვის ლარნაკები, ხსოვნის ქვის დაფები, ბორდიურები და სხვა ელემენტები, მორგებული საფლავის დიზაინზე',
+      'products.cemetery_accessories.process_title': 'სასაფლაოს აქსესუარების არჩევანი',
       
       // Contact CTA
       'products.contact_now': 'დაგვიკავშირდით ახლავე - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით',
@@ -458,8 +440,90 @@ export class LanguageService {
       // Product Hero Keywords
       'products.coffins.hero_keywords': 'ხარისხიანი ხის სასახლეები ბუნებრივი მასალებით. ლუქს კლასის სასახლეები და ეკონომ კლასის სასახლეები ყველა ფასის კატეგორიაში.',
       'products.shrouds.hero_keywords': 'ბამბის სუდარები ბუნებრივი მასალებით. სილკის სუდარები ხარისხიანი ქსოვილით და ხელოვნური ქსოვილის სუდარები გამძლე მასალებით.',
-      'products.refrigeration.hero_keywords': 'სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
-      'products.hearse.hero_keywords': 'პროფესიონალური კატაფალკის მომსახურება. თანამედროვე კატაფალკები უკანასკნელი მოდელები 24/7. გადასვენება ნებისმიერ მიმართულებით.',
+      
+      // Shrouds Product Detail Translations
+      'products.shrouds.hero_description_1': 'დამკრძალავი ბიურო რიტუალ სერვისი გთავაზობთ სუდარებს, სუდარა არის ქრისტიანული წესის განუყოფელი ნაწილი — ის მიცვალებულს ფარავს როგორც სიმშვიდისა და სიწმინდის ნიშანი.',
+      'products.shrouds.hero_description_2': 'ჩვენ გთავაზობთ: ტრადიციულ და რბილ ქსოვილზე დამზადებულ სუდარებს, ჯვრით, გამოსახულებით ან მინიმალისტური დიზაინით, სხვადასხვა ზომა და საფასო კატეგორია, ადგილზე მიტანა დაკრძალვამდე.',
+      'products.shrouds.types_section_title': 'სუდარა არ არის მხოლოდ გადასაფარებელი — ის რწმენის და უკანასკნელი გზის სიმბოლოა.',
+      'products.shrouds.types.traditional': 'ტრადიციული',
+      'products.shrouds.types.traditional_materials': 'რბილი ქსოვილზე დამზადებული სუდარები ჯვრით და გამოსახულებით.',
+      'products.shrouds.types.minimalist': 'მინიმალისტური',
+      'products.shrouds.types.minimalist_materials': 'მინიმალისტური დიზაინის სუდარები ხარისხიანი ქსოვილით.',
+      'products.shrouds.types.special': 'სპეციალური',
+      'products.shrouds.types.special_materials': 'სპეციალური დიზაინის სუდარები ინდივიდუალური მოთხოვნებისთვის.',
+      'products.shrouds.consultation_text_1': 'თუ არ იცით როგორ შეარჩიოთ — ჩვენი კონსულტანტი დაგეხმარებათ არჩევანში.',
+      'products.shrouds.consultation_text_2': 'ადგილზე მიტანა შესაძლებელია თბილისში და რეგიონებში. დეტალური ინფორმაციისთვის დაგვიკავშირდით ნომერზე',
+                  'products.refrigeration.hero_keywords': 'დამკრძალავი ბიურო რიტუალ სერვისი გთავაზობთ უმაღლესი ხარისხის სასახლე მაცივარს, რომელიც უზრუნველყოფს გარდაცვლილის დროებით დაყოვნებას დაკრძალვამდე',
+      'products.cemetery_accessories.hero_keywords': 'დამკრძალავი ბიურო რიტუალ სერვისი გთავაზობთ სასაფლაოს აქსუსეუარებს აქსესუარები ქმნიან მთლიან, სუფთა და მოწესრიგებულ გარემოს, სადაც ახლობლებს შეუძლიათ ღირსეულად გამოხატონ პატივისცემა',
+      
+      // Coffins Product Detail Translations
+      'products.coffins.seo_header': 'სასახლეები - sasaxleebi თბილისში ხარისხიანი მასალებით',
+      'products.coffins.hero_description_1': 'დამკრძალავი ბიურო რიტუალ სერვისი გთავაზობთ სრულად ორგანიზებულ და ღირსეულ მომსახურებას.',
+      'products.coffins.hero_description_2': 'ჩვენს ბიუროში შეგიძლიათ შეიძინოთ მაღალი ხარისხის სხვადასხვა დიზაინის სასახლეები, რომლებიც პასუხობს როგორც ტრადიციულ, ისე თანამედროვე მოთხოვნებს.',
+      'products.coffins.types_section_title': 'ჩვენს ბიუროში წარმოდგენილია, ქართული, იტალიური და უკრაინული სასახლეები',
+      'products.coffins.types.georgian': 'ქართული',
+      'products.coffins.types.georgian_materials': 'მასალა - წიფელი, წაბლი, მუხა, კაკალი, ფიჭვი.',
+      'products.coffins.types.italian': 'იტალიური',
+      'products.coffins.types.italian_materials': 'მასალა - წიფელი, წაბლი, მუხა, კაკალი, ფიჭვი',
+      'products.coffins.types.ukrainian': 'უკრაინული',
+      'products.coffins.types.ukrainian_materials': 'მასალა - ფიჭვი.',
+      'products.coffins.consultation_text_1': 'თუ არ იცით როგორ შეარჩიოთ — ჩვენი კონსულტანტი დაგეხმარებათ არჩევანში.',
+      'products.coffins.consultation_text_2': 'ადგილზე მიტანა შესაძლებელია თბილისში და რეგიონებში. დეტალებზე დაგვიკავშირდით ნომერზე',
+      'products.coffins.seo_keywords': 'sasaxleebi, xis sasaxleebi, lux klasis sasaxleebi',
+      
+      // Other Product SEO Headers
+      'products.shrouds.seo_header': 'სუდარები - sudarebi ბუნებრივი მასალებით',
+      'products.refrigeration.seo_header': 'სასახლე მაცივრები - sasaxle macivrebi სასახლე-მაცივრები',
+      'products.cemetery_accessories.seo_header': 'სასაფლაოს აქსესუარები - sasapleos akseesuarebi ხარისხიანი მასალებით',
+      
+      // Related Products
+      'products.related_products_title': 'სხვა პროდუქტები',
+      
+      // Other Product SEO Keywords
+      'products.shrouds.seo_keywords': 'sudarebi, bambis sudarebi, silkis sudarebi',
+      'products.refrigeration.seo_keywords': 'macivrеbi, sasaxle-macivrеbi',
+      'products.cemetery_accessories.seo_keywords': 'sasapleos akseesuarebi, jvrebi, saqvaile konstrukciebi, sasantleebi',
+      
+      // Refrigeration Types Section
+                  'products.refrigeration.types_section_title': 'გთავაზობთ ორი სახეობის სასახლე მაცივარს',
+      'products.refrigeration.types.american': 'ამერიკული მაცივარი',
+      'products.refrigeration.types.american_description': 'ამერიკული მაცივარი - უმაღლესი ხარისხის სასახლე მაცივარი, რომელიც უზრუნველყოფს გარდაცვლილის დროებით დაყოვნებას დაკრძალვამდე.',
+      'products.refrigeration.types.standard': 'სტანდარტული მაცივარი',
+      'products.refrigeration.types.standard_description': 'სტანდარტული მაცივარი - სანდო და ხარისხიანი მაცივარი ფასი და სასახლის სტილის განსხვავებით.',
+      'products.refrigeration.consultation_text_1': 'განსხვავება აღნიშნულ სახეობებში არის ფასი და სასახლის სტილი.',
+      'products.refrigeration.consultation_text_2': 'სასახლე მაცივრის მიწოდება შეგვიძლია ნებისმიერ ლოკაციაზე თბილისსა თუ რეგიონებში. დეტალური ინფორმაციის მისაღებად დაგვიკავშირდით ნომერზე',
+      
+      // Cemetery Accessories Product Detail Translations
+      'products.cemetery_accessories.hero_description_1': 'დამკრძალავი ბიურო რიტუალ სერვისი გთავაზობთ სასაფლაოს აქსუსეუარებს აქსესუარები ქმნიან მთლიან, სუფთა და მოწესრიგებულ გარემოს, სადაც ახლობლებს შეუძლიათ ღირსეულად გამოხატონ პატივისცემა',
+      'products.cemetery_accessories.hero_description_2': '',
+      'products.cemetery_accessories.types_section_title': 'ჩვენ გთავაზობთ',
+      'products.cemetery_accessories.types.crosses': 'ჯვრები',
+      'products.cemetery_accessories.types.crosses_materials': '(მარმარილოს და ხის) — ტრადიციული და თანამედროვე ფორმებით, სხვადასხვა ზომასა და დიზაინში.',
+      'products.cemetery_accessories.types.flower_structures': 'საყვავილე კონსტრუქციები',
+      'products.cemetery_accessories.types.flower_structures_materials': 'ლითონის, ქვის ან კერამიკის, რომლებიც უზრუნველყოფს მუდმივ სისუფთავეს და სიმშვიდეს საფლავზე.',
+      'products.cemetery_accessories.types.candles': 'სასანთლეები',
+      'products.cemetery_accessories.types.candles_materials': 'მარტივი და ორნამენტული ვარიანტები, რომლებიც თვეობით ინარჩუნებენ სიმყუდროვეს და ლოცვის სივრცეს.',
+      'products.cemetery_accessories.types.marble_accessories': 'მარმარილოს აქსესუარები',
+      'products.cemetery_accessories.types.marble_accessories_materials': 'ქვის ლარნაკები, ხსოვნის ქვის დაფები, ბორდიურები და სხვა ელემენტები, მორგებული საფლავის დიზაინზე.',
+      'products.cemetery_accessories.why_choose_title': 'რატომ უნდა აირჩიოთ ჩვენი პროდუქტი?',
+      'products.cemetery_accessories.why_choose.quality': '✔ ხარისხიანი, გამძლე მასალები — ამინდისა და დროის მიმართ მდგრადობა',
+      'products.cemetery_accessories.why_choose.variety': '✔ არჩევანის მრავალფეროვნება — ტრადიციული და ინდივიდუალური დიზაინები',
+      'products.cemetery_accessories.why_choose.consultation': '✔ დახმარება სწორ არჩევანში — კონსულტაცია სპეციალისტებისგან',
+      'products.cemetery_accessories.why_choose.delivery': '✔ ადგილზე მიტანა და მონტაჟი თბილისსა და რეგიონებში',
+      'products.cemetery_accessories.final_message': '',
+      'products.cemetery_accessories.consultation_text_1': 'გააუმჯობესეთ მემორიალის იერსახე დეტალებით, რომლებიც სიწმინდისა და სიყვარულის ნიშნებად რჩება მრავალი წლის განმავლობაში.',
+      'products.cemetery_accessories.consultation_text_2': 'დაგვიკავშირდით დეტალებისთვის',
+      
+      // Coffin Types Section
+      'coffin_types.title': 'ჩვენს ბიუროში წარმოდგენილია, ქართული, იტალიური და უკრაინული სასახლეები',
+      'coffin_types.georgian': 'ქართული',
+      'coffin_types.italian': 'იტალიური',
+      'coffin_types.ukrainian': 'უკრაინული',
+      'coffin_types.georgian_desc': 'წიფელი,წაბლი,მუხა,კაკალი,ფიჭვი მასალისგან დამზადებული სასახლეები',
+      'coffin_types.italian_desc': 'წიფელი,წაბლი,მუხა,კაკალი,ფიჭვი მასალისგან დამზადებული სასახლეები',
+      'coffin_types.ukrainian_desc': 'ფიჭვი მასალისგან დამზადებული სასახლეები',
+      'coffin_types.consultation_text': 'თუ არ იცით როგორ შეარჩიოთ — ჩვენი კონსულტანტი დაგეხმარებათ არჩევანში.',
+      'coffin_types.delivery_text': 'ადგილზე მიტანა შესაძლებელია თბილისში და რეგიონებში. დეტალებზე დაგვიკავშირდით ნომერზე',
       
       // Service Categories
       'services.category.primary': 'ძირითადი სერვისები',
@@ -569,7 +633,14 @@ export class LanguageService {
       'services.colored_photo.description': 'ფერადი სურათის დამზადება. ხარისხიანი ფოტოები ხანგრძლივი შენახვისთვის.',
 
       'services.metal_letters.title': 'ლითონის ასოებით წარწერა',
-      'services.metal_letters.description': 'ლითონის ასოებით წარწერა. ხანგრძლივი და ღირსეული წარწერები ლითონის ასოებით.'
+      'services.metal_letters.description': 'ლითონის ასოებით წარწერა. ხანგრძლივი და ღირსეული წარწერები ლითონის ასოებით.',
+      
+      // New service translations for breadcrumb
+      'services.embalming_dressing_service.title': 'ბალზამირება, გრიმი, ჩაცმა',
+      'services.microbus_service.title': 'მარშუტკა',
+      'services.hall_service.title': 'დარბაზი',
+      'services.cemetery_decoration_service.title': 'სასაფლაოს მოპირკეთება',
+      'services.grave_stones_service.title': 'საფლავის ქვები, ქვაზე ხატვა'
     },
 
     en: {
@@ -589,7 +660,7 @@ export class LanguageService {
       'breadcrumb.coffins': 'Coffins',
       'breadcrumb.shrouds': 'Shrouds',
       'breadcrumb.refrigeration': 'Refrigeration',
-      'breadcrumb.hearse': 'Hearse',
+      'breadcrumb.cemetery_accessories': 'Cemetery Accessories',
       'breadcrumb.embalming': 'Embalming',
       'breadcrumb.transportation': 'Transportation',
       'breadcrumb.stone_engraving': 'Stone Engraving',
@@ -612,48 +683,27 @@ export class LanguageService {
       'home.ritual_house': 'Funeral Services House',
       'home.saritualo_saxli': 'Memorial Service Center',
 
-      // Services
-      'services.embalming': 'Embalming',
-      'services.embalming_desc': 'Well-equipped, comfortable space for the deceased to rest and conduct ritual ceremonies',
-      'services.hearse': 'Hearse Service',
-      'services.hearse_desc': 'Hearse service, at any location you prefer',
+      // Services - 14 Service Cards
+      'services.coffins': 'Coffins',
+      'services.coffin_refrigeration': 'Coffin Refrigeration',
+      'services.shrouds': 'Shrouds',
+      'services.embalming_dressing': 'Embalming, Makeup, Dressing',
       'services.transportation': 'Transportation',
-      'services.transportation_desc': 'Transportation of the deceased locally and internationally. Preparation of all necessary documents.',
-      'services.transportation_guest': 'Minibus service for transporting guests to any location',
-      'services.stone_engraving': 'Stone Engraving',
-      'services.stone_engraving_desc': 'Professional stone engraving, colored photo creation, metal letter inscriptions.',
-      'services.grave_decoration': 'Grave Decoration',
-      'services.grave_decoration_desc': 'Complete grave decoration, memorial work, landscape design.',
-      'services.dressing': 'Dressing and Preparation',
-      'services.dressing_desc': 'Dignified dressing and preparation of the deceased by experienced specialists.',
       'services.mourning_hall': 'Mourning Hall',
-      'services.mourning_hall_desc': 'Mourning hall with dignified environment. Full service, flexible schedule.',
-      'services.banquet_hall': 'Banquet Hall',
-      'services.banquet_hall_desc': 'Banquet hall for memorial events. Large capacity, full service.',
-      'services.metal_letters': 'Metal Letter Inscriptions',
-      'services.metal_letters_desc': 'Creation of metal letter inscriptions on graves. High-quality metal letters.',
-      'services.cemetery_decoration': 'Cemetery Decoration',
-      'services.cemetery_decoration_desc': 'We offer grave decoration, high-quality stone+stone painting, metal inscriptions, cemetery accessories',
-      'services.grave_excavation': 'Grave Excavation',
-      'services.grave_excavation_desc': 'Professional grave excavation and preparation. Obtaining all necessary permits.',
       'services.hearse_service': 'Hearse Service',
-      'services.hearse_service_desc': 'Hearse service 24/7. Modern hearses, professional drivers.',
-      'services.burial_filter': 'Burial Filter',
-      'services.burial_filter_desc': 'Preparation and installation of burial filters. Quality materials, durable construction.',
+      'services.marshutka': 'Minibus',
+      'services.hall': 'Hall',
+      'services.cemetery_decoration': 'Cemetery Decoration',
+      'services.grave_stones_painting': 'Grave Stones, Stone Painting',
+      'services.grave_excavation': 'Grave Excavation',
+      'services.cemetery_accessories': 'Cemetery Accessories',
+      'services.lifting_machine': 'Lifting Machine',
 
       // Products
       'products.coffins': 'Coffins',
-      'products.coffins_desc': 'High-quality coffins from 350 GEL. Any style you prefer - Georgian, Ukrainian, Italian.',
       'products.shrouds': 'Shrouds',
-      'products.shrouds_desc': 'Traditional and modern shrouds. Natural materials, handcrafted work.',
       'products.refrigeration': 'Refrigeration',
-      'products.refrigeration_desc': 'Coffin refrigeration, American and standard models for long-term preservation.',
-      'products.hearse': 'Hearse',
-      'products.hearse_desc': 'Modern hearses with 24/7 service',
-      'products.coffins_long': 'Our coffins represent quality wooden coffins with natural materials. Luxury class coffins, economy class coffins and standard coffins - in all price categories.',
-      'products.shrouds_long': 'Shrouds - we offer cotton shrouds with natural materials, silk shrouds with quality fabric and artificial fabric shrouds with durable materials.',
-      'products.refrigeration_long': 'Refrigerators - our coffin-refrigerators with combined function. Stationary refrigerators with large capacity and mobile refrigerators for transportation.',
-      'products.hearse_long': 'Hearse - our modern hearse fleet is ready at any time. Modern hearses latest models and luxury class hearses with highest comfort. Transportation in any direction.',
+      'products.cemetery_accessories': 'Cemetery Accessories',
       'header.phone': '+995 599 069 898',
 
       // Common SEO Terms
@@ -839,7 +889,7 @@ export class LanguageService {
       'funeral_planning.start_planning': 'Start Planning',
       'funeral_planning.plan_funeral': 'Plan Funeral',
 
-      'funeral_planning.cta_description': 'When a person is going through their most difficult moment, it is important to have a reliable, responsible, and caring team by their side. That is exactly what we are.',
+      'funeral_planning.cta_description': 'When a person is going through life\'s most difficult moment, it is important to have a reliable, responsible, and caring team by their side. That is exactly what we are.',
 
       // Why Choose Us Section
       'why_choose.title': 'Why Choose Ritual Service?',
@@ -919,7 +969,7 @@ export class LanguageService {
       'products.categories_title': 'Product Categories',
       'products.types_title': 'Product Types',
       'products.gallery_title': 'Photo Gallery',
-      'products.related_title': 'Similar Products',
+      'products.related_title': 'Other Products',
       'products.details_title': 'In Detail',
       'products.features_title': 'Our Advantages',
       
@@ -927,7 +977,7 @@ export class LanguageService {
       'products.coffins_keywords': 'Coffins - sasaxleebi',
       'products.shrouds_keywords': 'Shrouds - sudarebi',
       'products.refrigeration_keywords': 'Refrigeration - macivrеbi',
-      'products.hearse_keywords': 'Hearse - katafalki',
+      'products.cemetery_accessories_keywords': 'Cemetery Accessories - sasapleos akseesuarebi',
       
       // Product Categories
       'products.coffins.wooden': 'Wooden coffins',
@@ -945,10 +995,10 @@ export class LanguageService {
       'products.refrigeration.mobile': 'Mobile refrigeration',
       'products.refrigeration.special': 'Special refrigeration',
       
-      'products.hearse.modern': 'Modern hearses',
-      'products.hearse.luxury': 'Luxury class hearses',
-      'products.hearse.standard': 'Standard hearses',
-      'products.hearse.special': 'Special hearses',
+      'products.cemetery_accessories.crosses': 'Crosses',
+      'products.cemetery_accessories.flower_structures': 'Flower Structures',
+      'products.cemetery_accessories.candles': 'Candles',
+      'products.cemetery_accessories.marble_accessories': 'Marble Accessories',
       
       // Product Features
       'products.coffins.features.natural': 'Wooden coffins with natural materials',
@@ -966,11 +1016,11 @@ export class LanguageService {
       'products.refrigeration.features.mobile': 'Mobile refrigeration for transportation',
       'products.refrigeration.features.special': 'Special refrigeration for extended storage',
       
-      'products.hearse.features.modern': 'Modern hearses with latest models',
-      'products.hearse.features.luxury': 'Luxury class hearses with highest comfort',
-      'products.hearse.features.standard': 'Standard hearses with reliable quality',
-      'products.hearse.features.special': 'Special hearses for individual requirements',
-      'products.hearse.process_title': 'Hearse Service Process',
+      'products.cemetery_accessories.features.crosses': 'Crosses (marble and wood) — traditional and modern forms, various sizes and designs',
+      'products.cemetery_accessories.features.flower_structures': 'Flower structures — metal, stone or ceramic, which provide constant cleanliness and peace at the grave',
+      'products.cemetery_accessories.features.candles': 'Candles — simple and ornamental variants that maintain warmth and prayer space for months',
+      'products.cemetery_accessories.features.marble_accessories': 'Marble accessories — stone lanterns, memorial stone boards, borders and other elements, adapted to the grave design',
+      'products.cemetery_accessories.process_title': 'Cemetery Accessories Selection',
       
       // Contact CTA
       'products.contact_now': 'Contact us now - we are by your side 24 hours a day',
@@ -1017,8 +1067,90 @@ export class LanguageService {
       // Product Hero Keywords
       'products.coffins.hero_keywords': 'Quality wooden coffins with natural materials. Luxury class coffins and economy class coffins in all price categories.',
       'products.shrouds.hero_keywords': 'Cotton shrouds with natural materials. Silk shrouds with quality fabric and artificial fabric shrouds with durable materials.',
-      'products.refrigeration.hero_keywords': 'Coffin-refrigerators with combined function. Stationary refrigerators with large capacity and mobile refrigerators for transportation.',
-      'products.hearse.hero_keywords': 'Professional hearse service. Modern hearses latest models 24/7. Transportation in any direction.',
+      
+      // Shrouds Product Detail Translations
+      'products.shrouds.hero_description_1': 'Funeral bureau Ritual Service offers shrouds, shroud is an integral part of Christian tradition — it covers the deceased as a sign of peace and holiness.',
+      'products.shrouds.hero_description_2': 'We offer: traditional and soft fabric shrouds, with cross, image or minimalist design, various sizes and price categories, on-site delivery before burial.',
+      'products.shrouds.types_section_title': 'Shroud is not just a covering — it is a symbol of faith and the final journey.',
+      'products.shrouds.types.traditional': 'Traditional',
+      'products.shrouds.types.traditional_materials': 'Shrouds made of soft fabric with cross and image.',
+      'products.shrouds.types.minimalist': 'Minimalist',
+      'products.shrouds.types.minimalist_materials': 'Minimalist design shrouds with quality fabric.',
+      'products.shrouds.types.special': 'Special',
+      'products.shrouds.types.special_materials': 'Special design shrouds for individual requirements.',
+      'products.shrouds.consultation_text_1': 'If you don\'t know how to choose — our consultant will help you with the selection.',
+      'products.shrouds.consultation_text_2': 'On-site delivery is available in Tbilisi and regions. Contact us for detailed information at',
+      'products.refrigeration.hero_keywords': 'Funeral Bureau Ritual Service offers high-quality coffin refrigeration that ensures temporary preservation of the deceased before burial.',
+      'products.cemetery_accessories.hero_keywords': 'Funeral Bureau Ritual Service offers cemetery accessories. Accessories create a complete, clean and organized environment where relatives can express respect with dignity.',
+      
+      // Coffins Product Detail Translations
+      'products.coffins.seo_header': 'Coffins - sasaxleebi in Tbilisi with quality materials',
+      'products.coffins.hero_description_1': 'Funeral bureau Ritual Service offers fully organized and dignified services.',
+      'products.coffins.hero_description_2': 'In our bureau you can purchase high-quality coffins of various designs that meet both traditional and modern requirements.',
+      'products.coffins.types_section_title': 'Our bureau offers Georgian, Italian and Ukrainian coffins',
+      'products.coffins.types.georgian': 'Georgian',
+      'products.coffins.types.georgian_materials': 'Materials - beech, chestnut, oak, walnut, pine.',
+      'products.coffins.types.italian': 'Italian',
+      'products.coffins.types.italian_materials': 'Materials - beech, chestnut, oak, walnut, pine',
+      'products.coffins.types.ukrainian': 'Ukrainian',
+      'products.coffins.types.ukrainian_materials': 'Materials - pine.',
+      'products.coffins.consultation_text_1': 'If you don\'t know how to choose — our consultant will help you with the selection.',
+      'products.coffins.consultation_text_2': 'On-site delivery is available in Tbilisi and regions. Contact us for details at',
+      'products.coffins.seo_keywords': 'sasaxleebi, wooden coffins, luxury class coffins',
+      
+      // Other Product SEO Headers
+      'products.shrouds.seo_header': 'Shrouds - sudarebi with natural materials',
+      'products.refrigeration.seo_header': 'Refrigeration - sasaxle macivrebi coffin-refrigerators',
+      'products.cemetery_accessories.seo_header': 'Cemetery Accessories - sasapleos akseesuarebi with quality materials',
+      
+      // Related Products
+      'products.related_products_title': 'Other Products',
+      
+      // Other Product SEO Keywords
+      'products.shrouds.seo_keywords': 'sudarebi, cotton shrouds, silk shrouds',
+      'products.refrigeration.seo_keywords': 'macivrеbi, sasaxle-macivrеbi',
+      'products.cemetery_accessories.seo_keywords': 'sasapleos akseesuarebi, crosses, flower structures, candles',
+      
+      // Refrigeration Types Section
+      'products.refrigeration.types_section_title': 'We offer two types of coffin refrigeration',
+      'products.refrigeration.types.american': 'American Refrigerator',
+      'products.refrigeration.types.american_description': 'American refrigerator - high-quality coffin refrigerator that ensures temporary preservation of the deceased before burial.',
+      'products.refrigeration.types.standard': 'Standard Refrigerator',
+      'products.refrigeration.types.standard_description': 'Standard refrigerator - reliable and quality refrigerator with price and coffin style differences.',
+      'products.refrigeration.consultation_text_1': 'The difference between these types is price and coffin style.',
+      'products.refrigeration.consultation_text_2': 'We can deliver coffin refrigeration to any location in Tbilisi or regions. For detailed information contact us at',
+      
+      // Cemetery Accessories Product Detail Translations
+      'products.cemetery_accessories.hero_description_1': 'Funeral Bureau Ritual Service offers cemetery accessories. Accessories create a complete, clean and organized environment where relatives can express respect with dignity.',
+      'products.cemetery_accessories.hero_description_2': '',
+      'products.cemetery_accessories.types_section_title': 'We offer',
+      'products.cemetery_accessories.types.crosses': 'Crosses',
+      'products.cemetery_accessories.types.crosses_materials': 'Marble and wood crosses — traditional and modern forms, various sizes and designs.',
+      'products.cemetery_accessories.types.flower_structures': 'Flower Structures',
+      'products.cemetery_accessories.types.flower_structures_materials': 'Metal, stone or ceramic structures that provide constant cleanliness and peace at the grave.',
+      'products.cemetery_accessories.types.candles': 'Candlesticks',
+      'products.cemetery_accessories.types.candles_materials': 'Simple and ornamental variants that maintain warmth and prayer space for months.',
+      'products.cemetery_accessories.types.marble_accessories': 'Marble Accessories',
+      'products.cemetery_accessories.types.marble_accessories_materials': 'Stone lanterns, memorial stone boards, borders and other elements, adapted to the grave design.',
+      'products.cemetery_accessories.why_choose_title': 'Why should you choose our product?',
+      'products.cemetery_accessories.why_choose.quality': '✔ Quality, durable materials — resistance to weather and time',
+      'products.cemetery_accessories.why_choose.variety': '✔ Variety of choice — traditional and individual designs',
+      'products.cemetery_accessories.why_choose.consultation': '✔ Help in right choice — consultation from specialists',
+      'products.cemetery_accessories.why_choose.delivery': '✔ On-site delivery and installation in Tbilisi and regions',
+      'products.cemetery_accessories.final_message': '',
+      'products.cemetery_accessories.consultation_text_1': 'Enhance the memorial appearance with details that remain as signs of holiness and love for many years.',
+      'products.cemetery_accessories.consultation_text_2': 'Contact us for details',
+      
+      // Coffin Types Section
+      'coffin_types.title': 'Our bureau offers Georgian, Italian and Ukrainian coffins',
+      'coffin_types.georgian': 'Georgian',
+      'coffin_types.italian': 'Italian',
+      'coffin_types.ukrainian': 'Ukrainian',
+      'coffin_types.georgian_desc': 'Coffins made from beech, chestnut, oak, walnut, pine materials',
+      'coffin_types.italian_desc': 'Coffins made from beech, chestnut, oak, walnut, pine materials',
+      'coffin_types.ukrainian_desc': 'Coffins made from pine materials',
+      'coffin_types.consultation_text': 'If you don\'t know how to choose — our consultant will help you with the selection.',
+      'coffin_types.delivery_text': 'On-site delivery is available in Tbilisi and regions. Contact us for details at',
       
       // Service Categories
       'services.category.primary': 'Primary Services',
@@ -1128,7 +1260,14 @@ export class LanguageService {
       'services.colored_photo.description': 'Colored photo production. Quality photos for long-term storage.',
 
       'services.metal_letters.title': 'Metal Letter Inscriptions',
-      'services.metal_letters.description': 'Metal letter inscriptions. Long-lasting and dignified inscriptions with metal letters.'
+      'services.metal_letters.description': 'Metal letter inscriptions. Long-lasting and dignified inscriptions with metal letters.',
+      
+      // New service translations for breadcrumb
+      'services.embalming_dressing_service.title': 'Embalming, Makeup, Dressing',
+      'services.microbus_service.title': 'Minibus',
+      'services.hall_service.title': 'Hall',
+      'services.cemetery_decoration_service.title': 'Cemetery Decoration',
+      'services.grave_stones_service.title': 'Grave Stones, Stone Painting'
     },
 
     ru: {
@@ -1148,7 +1287,7 @@ export class LanguageService {
       'breadcrumb.coffins': 'Гробы',
       'breadcrumb.shrouds': 'Саваны',
       'breadcrumb.refrigeration': 'Холодильники',
-      'breadcrumb.hearse': 'Катафалк',
+      'breadcrumb.cemetery_accessories': 'Кладбищенские аксессуары',
       'breadcrumb.embalming': 'Бальзамирование',
       'breadcrumb.transportation': 'Перевозка',
       'breadcrumb.stone_engraving': 'Роспись на камне',
@@ -1171,48 +1310,27 @@ export class LanguageService {
       'home.ritual_house': 'Ритуальный дом',
       'home.saritualo_saxli': 'Центр ритуальных услуг',
 
-      // Services
-      'services.embalming': 'Бальзамирование',
-      'services.embalming_desc': 'Благоустроенное, уютное пространство для упокоения усопшего и проведения ритуальных церемоний',
-      'services.hearse': 'Услуги катафалка',
-      'services.hearse_desc': 'Услуги катафалка, в любом удобном для вас месте',
+      // Services - 14 Service Cards
+      'services.coffins': 'Гробы',
+      'services.coffin_refrigeration': 'Гробы-холодильники',
+      'services.shrouds': 'Саваны',
+      'services.embalming_dressing': 'Бальзамирование, грим, одевание',
       'services.transportation': 'Перевозка',
-      'services.transportation_desc': 'Перевозка усопшего по региону и за границу. Подготовка всех необходимых документов.',
-      'services.transportation_guest': 'Услуги маршрутки для перевозки гостей в любое место',
-      'services.stone_engraving': 'Роспись на камне',
-      'services.stone_engraving_desc': 'Профессиональная роспись на камне, изготовление цветного фото, надписи металлическими буквами.',
-      'services.grave_decoration': 'Благоустройство могил',
-      'services.grave_decoration_desc': 'Комплексное благоустройство могил, мемориальные работы, ландшафтный дизайн.',
-      'services.dressing': 'Одевание и подготовка',
-      'services.dressing_desc': 'Достойное одевание и подготовка усопшего опытными специалистами.',
       'services.mourning_hall': 'Траурный зал',
-      'services.mourning_hall_desc': 'Траурный зал с достойной обстановкой. Полное обслуживание, гибкий график.',
-      'services.banquet_hall': 'Банкетный зал',
-      'services.banquet_hall_desc': 'Банкетный зал для мемориальных мероприятий. Большая вместимость, полное обслуживание.',
-      'services.metal_letters': 'Надписи металлическими буквами',
-      'services.metal_letters_desc': 'Изготовление надписей металлическими буквами на могилах. Высококачественные металлические буквы.',
-      'services.cemetery_decoration': 'Благоустройство кладбища',
-      'services.cemetery_decoration_desc': 'Предлагаем благоустройство могил, высококачественный камень+роспись на камне, металлические надписи, кладбищенские аксессуары',
-      'services.grave_excavation': 'Рытье могилы',
-      'services.grave_excavation_desc': 'Профессиональное рытье и подготовка могилы. Получение всех необходимых разрешений.',
       'services.hearse_service': 'Услуги катафалка',
-      'services.hearse_service_desc': 'Услуги катафалка 24/7. Современные катафалки, профессиональные водители.',
-      'services.burial_filter': 'Погребальный фильтр',
-      'services.burial_filter_desc': 'Подготовка и установка погребальных фильтров. Качественные материалы, прочная конструкция.',
+      'services.marshutka': 'Маршрутка',
+      'services.hall': 'Зал',
+      'services.cemetery_decoration': 'Благоустройство кладбища',
+      'services.grave_stones_painting': 'Надгробные камни, роспись на камне',
+      'services.grave_excavation': 'Рытье могилы',
+      'services.cemetery_accessories': 'Кладбищенские аксессуары',
+      'services.lifting_machine': 'Подъемная машина',
 
       // Products
       'products.coffins': 'Гробы',
-      'products.coffins_desc': 'Качественные гробы от 350 лари. Любой стиль по вашему желанию - грузинский, украинский, итальянский.',
       'products.shrouds': 'Саваны',
-      'products.shrouds_desc': 'Традиционные и современные саваны. Натуральные материалы, ручная работа.',
       'products.refrigeration': 'Холодильники',
-      'products.refrigeration_desc': 'Гробы-холодильники, американские и стандартные модели для длительного хранения.',
-      'products.hearse': 'Катафалк',
-      'products.hearse_desc': 'Современные катафалки с обслуживанием 24/7',
-      'products.coffins_long': 'Наши гробы представляют собой качественные деревянные гробы из натуральных материалов. Гробы люкс класса, гробы эконом класса и стандартные гробы - во всех ценовых категориях.',
-      'products.shrouds_long': 'Саваны - мы предлагаем хлопковые саваны из натуральных материалов, шелковые саваны из качественной ткани и саваны из искусственной ткани с прочными материалами.',
-      'products.refrigeration_long': 'Холодильники - наши гробы-холодильники с комбинированной функцией. Стационарные холодильники с большой вместимостью и мобильные холодильники для транспортировки.',
-      'products.hearse_long': 'Катафалк - наш современный парк катафалков готов в любое время. Современные катафалки последние модели и катафалки люкс класса с высшим комфортом. Перевозка в любом направлении.',
+      'products.cemetery_accessories': 'Кладбищенские аксессуары',
       'header.phone': '+995 599 069 898',
 
       // Common SEO Terms
@@ -1483,7 +1601,7 @@ export class LanguageService {
       'products.categories_title': 'Категории продукции',
       'products.types_title': 'Типы продукции',
       'products.gallery_title': 'Фото галерея',
-      'products.related_title': 'Похожие продукты',
+      'products.related_title': 'Другие продукты',
       'products.details_title': 'Подробно',
       'products.features_title': 'Наши преимущества',
       
@@ -1491,7 +1609,7 @@ export class LanguageService {
       'products.coffins_keywords': 'Гробы - sasaxleebi',
       'products.shrouds_keywords': 'Саваны - sudarebi',
       'products.refrigeration_keywords': 'Холодильники - macivrеbi',
-      'products.hearse_keywords': 'Катафалк - katafalki',
+      'products.cemetery_accessories_keywords': 'Кладбищенские аксессуары - sasapleos akseesuarebi',
       
       // Product Categories
       'products.coffins.wooden': 'Деревянные гробы',
@@ -1509,10 +1627,10 @@ export class LanguageService {
       'products.refrigeration.mobile': 'Мобильные холодильники',
       'products.refrigeration.special': 'Специальные холодильники',
       
-      'products.hearse.modern': 'Современные катафалки',
-      'products.hearse.luxury': 'Катафалки люкс класса',
-      'products.hearse.standard': 'Стандартные катафалки',
-      'products.hearse.special': 'Специальные катафалки',
+      'products.cemetery_accessories.crosses': 'Кресты',
+      'products.cemetery_accessories.flower_structures': 'Цветочные конструкции',
+      'products.cemetery_accessories.candles': 'Свечи',
+      'products.cemetery_accessories.marble_accessories': 'Мраморные аксессуары',
       
       // Product Features
       'products.coffins.features.natural': 'Деревянные гробы с натуральными материалами',
@@ -1530,11 +1648,11 @@ export class LanguageService {
       'products.refrigeration.features.mobile': 'Мобильные холодильники для перевозки',
       'products.refrigeration.features.special': 'Специальные холодильники для длительного хранения',
       
-      'products.hearse.features.modern': 'Современные катафалки с последними моделями',
-      'products.hearse.features.luxury': 'Катафалки люкс класса с высшим комфортом',
-      'products.hearse.features.standard': 'Стандартные катафалки с надежным качеством',
-      'products.hearse.features.special': 'Специальные катафалки для индивидуальных требований',
-      'products.hearse.process_title': 'Процесс обслуживания катафалка',
+      'products.cemetery_accessories.features.crosses': 'Кресты (мраморные и деревянные) — традиционные и современные формы, различные размеры и дизайн',
+      'products.cemetery_accessories.features.flower_structures': 'Цветочные конструкции — металлические, каменные или керамические, которые обеспечивают постоянную чистоту и покой на могиле',
+      'products.cemetery_accessories.features.candles': 'Свечи — простые и орнаментальные варианты, которые месяцами сохраняют тепло и пространство для молитвы',
+      'products.cemetery_accessories.features.marble_accessories': 'Мраморные аксессуары — каменные фонари, мемориальные каменные доски, бордюры и другие элементы, адаптированные к дизайну могилы',
+      'products.cemetery_accessories.process_title': 'Выбор кладбищенских аксессуаров',
       
       // Contact CTA
       'products.contact_now': 'Свяжитесь с нами сейчас - мы рядом 24 часа в сутки',
@@ -1581,8 +1699,90 @@ export class LanguageService {
       // Product Hero Keywords
       'products.coffins.hero_keywords': 'Качественные деревянные гробы из натуральных материалов. Гробы люкс класса и гробы эконом класса во всех ценовых категориях.',
       'products.shrouds.hero_keywords': 'Хлопковые саваны из натуральных материалов. Шелковые саваны из качественной ткани и саваны из искусственной ткани с прочными материалами.',
-      'products.refrigeration.hero_keywords': 'Гробы-холодильники с комбинированной функцией. Стационарные холодильники с большой вместимостью и мобильные холодильники для транспортировки.',
-      'products.hearse.hero_keywords': 'Профессиональные услуги катафалка. Современные катафалки последние модели 24/7. Перевозка в любом направлении.',
+      
+      // Shrouds Product Detail Translations
+      'products.shrouds.hero_description_1': 'Похоронное бюро Ритуал Сервис предлагает саваны, саван является неотъемлемой частью христианской традиции — он покрывает усопшего как знак мира и святости.',
+      'products.shrouds.hero_description_2': 'Мы предлагаем: традиционные и мягкие тканевые саваны, с крестом, изображением или минималистичным дизайном, различные размеры и ценовые категории, доставка на место до похорон.',
+      'products.shrouds.types_section_title': 'Саван — это не просто покрывало — это символ веры и последнего пути.',
+      'products.shrouds.types.traditional': 'Традиционные',
+      'products.shrouds.types.traditional_materials': 'Саваны из мягкой ткани с крестом и изображением.',
+      'products.shrouds.types.minimalist': 'Минималистичные',
+      'products.shrouds.types.minimalist_materials': 'Минималистичные саваны с качественной тканью.',
+      'products.shrouds.types.special': 'Специальные',
+      'products.shrouds.types.special_materials': 'Саваны специального дизайна для индивидуальных требований.',
+      'products.shrouds.consultation_text_1': 'Если вы не знаете, как выбрать — наш консультант поможет вам с выбором.',
+      'products.shrouds.consultation_text_2': 'Доставка на место доступна в Тбилиси и регионах. Свяжитесь с нами для подробной информации по номеру',
+      'products.refrigeration.hero_keywords': 'Похоронное бюро Ритуальный сервис предлагает высококачественные гробы-холодильники, которые обеспечивают временное сохранение усопшего до захоронения.',
+      'products.cemetery_accessories.hero_keywords': 'Похоронное бюро Ритуал Сервис предлагает кладбищенские аксессуары. Аксессуары создают полную, чистую и организованную среду, где родственники могут с достоинством выразить уважение.',
+      
+      // Coffins Product Detail Translations
+      'products.coffins.seo_header': 'Гробы - sasaxleebi в Тбилиси с качественными материалами',
+      'products.coffins.hero_description_1': 'Похоронное бюро Ритуал Сервис предлагает полностью организованные и достойные услуги.',
+      'products.coffins.hero_description_2': 'В нашем бюро вы можете приобрести высококачественные гробы различных дизайнов, которые отвечают как традиционным, так и современным требованиям.',
+      'products.coffins.types_section_title': 'Наше бюро предлагает грузинские, итальянские и украинские гробы',
+      'products.coffins.types.georgian': 'Грузинские',
+      'products.coffins.types.georgian_materials': 'Материалы - бук, каштан, дуб, грецкий орех, сосна.',
+      'products.coffins.types.italian': 'Итальянские',
+      'products.coffins.types.italian_materials': 'Материалы - бук, каштан, дуб, грецкий орех, сосна',
+      'products.coffins.types.ukrainian': 'Украинские',
+      'products.coffins.types.ukrainian_materials': 'Материалы - сосна.',
+      'products.coffins.consultation_text_1': 'Если вы не знаете, как выбрать — наш консультант поможет вам с выбором.',
+      'products.coffins.consultation_text_2': 'Доставка на место доступна в Тбилиси и регионах. Свяжитесь с нами для получения подробной информации по номеру',
+      'products.coffins.seo_keywords': 'sasaxleebi, деревянные гробы, гробы люкс класса',
+      
+      // Other Product SEO Headers
+      'products.shrouds.seo_header': 'Саваны - sudarebi с натуральными материалами',
+      'products.refrigeration.seo_header': 'Холодильники - sasaxle macivrebi гробы-холодильники',
+      'products.cemetery_accessories.seo_header': 'Кладбищенские аксессуары - sasapleos akseesuarebi с качественными материалами',
+      
+      // Related Products
+      'products.related_products_title': 'Другие продукты',
+      
+      // Other Product SEO Keywords
+      'products.shrouds.seo_keywords': 'sudarebi, хлопковые саваны, шелковые саваны',
+      'products.refrigeration.seo_keywords': 'macivrеbi, sasaxle-macivrеbi',
+      'products.cemetery_accessories.seo_keywords': 'sasapleos akseesuarebi, кресты, цветочные конструкции, свечи',
+      
+      // Refrigeration Types Section
+      'products.refrigeration.types_section_title': 'Предлагаем два вида гробов-холодильников',
+      'products.refrigeration.types.american': 'Американский холодильник',
+      'products.refrigeration.types.american_description': 'Американский холодильник - высококачественный гроб-холодильник, который обеспечивает временное сохранение усопшего до захоронения.',
+      'products.refrigeration.types.standard': 'Стандартный холодильник',
+      'products.refrigeration.types.standard_description': 'Стандартный холодильник - надежный и качественный холодильник с различиями в цене и стиле гроба.',
+      'products.refrigeration.consultation_text_1': 'Разница между этими видами заключается в цене и стиле гроба.',
+      'products.refrigeration.consultation_text_2': 'Мы можем доставить гроб-холодильник в любое место в Тбилиси или регионах. Для получения подробной информации свяжитесь с нами по номеру',
+      
+      // Cemetery Accessories Product Detail Translations
+      'products.cemetery_accessories.hero_description_1': 'Похоронное бюро Ритуал Сервис предлагает кладбищенские аксессуары. Аксессуары создают полную, чистую и организованную среду, где родственники могут с достоинством выразить уважение.',
+      'products.cemetery_accessories.hero_description_2': '',
+      'products.cemetery_accessories.types_section_title': 'Мы предлагаем',
+      'products.cemetery_accessories.types.crosses': 'Кресты',
+      'products.cemetery_accessories.types.crosses_materials': 'Мраморные и деревянные кресты — традиционные и современные формы, различные размеры и дизайн.',
+      'products.cemetery_accessories.types.flower_structures': 'Цветочные конструкции',
+      'products.cemetery_accessories.types.flower_structures_materials': 'Металлические, каменные или керамические конструкции, которые обеспечивают постоянную чистоту и покой на могиле.',
+      'products.cemetery_accessories.types.candles': 'Подсвечники',
+      'products.cemetery_accessories.types.candles_materials': 'Простые и орнаментальные варианты, которые месяцами сохраняют тепло и пространство для молитвы.',
+      'products.cemetery_accessories.types.marble_accessories': 'Мраморные аксессуары',
+      'products.cemetery_accessories.types.marble_accessories_materials': 'Каменные фонари, мемориальные каменные доски, бордюры и другие элементы, адаптированные к дизайну могилы.',
+      'products.cemetery_accessories.why_choose_title': 'Почему стоит выбрать наш продукт?',
+      'products.cemetery_accessories.why_choose.quality': '✔ Качественные, прочные материалы — устойчивость к погоде и времени',
+      'products.cemetery_accessories.why_choose.variety': '✔ Разнообразие выбора — традиционные и индивидуальные дизайны',
+      'products.cemetery_accessories.why_choose.consultation': '✔ Помощь в правильном выборе — консультация специалистов',
+      'products.cemetery_accessories.why_choose.delivery': '✔ Доставка и установка на месте в Тбилиси и регионах',
+      'products.cemetery_accessories.final_message': '',
+      'products.cemetery_accessories.consultation_text_1': 'Улучшите внешний вид мемориала деталями, которые остаются знаками святости и любви на долгие годы.',
+      'products.cemetery_accessories.consultation_text_2': 'Свяжитесь с нами для деталей',
+      
+      // Coffin Types Section
+      'coffin_types.title': 'В нашем бюро представлены грузинские, итальянские и украинские гробы',
+      'coffin_types.georgian': 'Грузинские',
+      'coffin_types.italian': 'Итальянские',
+      'coffin_types.ukrainian': 'Украинские',
+      'coffin_types.georgian_desc': 'Гробы из бука, каштана, дуба, грецкого ореха, сосны',
+      'coffin_types.italian_desc': 'Гробы из бука, каштана, дуба, грецкого ореха, сосны',
+      'coffin_types.ukrainian_desc': 'Гробы из сосновых материалов',
+      'coffin_types.consultation_text': 'Если вы не знаете как выбрать — наш консультант поможет вам с выбором.',
+      'coffin_types.delivery_text': 'Доставка на место возможна в Тбилиси и регионах. Свяжитесь с нами для деталей по номеру',
       
       // Service Categories
       'services.category.primary': 'Основные услуги',
@@ -1692,7 +1892,14 @@ export class LanguageService {
       'services.colored_photo.description': 'Изготовление цветного фото. Качественные фотографии для длительного хранения.',
 
       'services.metal_letters.title': 'Надписи металлическими буквами',
-      'services.metal_letters.description': 'Надписи металлическими буквами. Долговечные и достойные надписи металлическими буквами.'
+      'services.metal_letters.description': 'Надписи металлическими буквами. Долговечные и достойные надписи металлическими буквами.',
+      
+      // New service translations for breadcrumb
+      'services.embalming_dressing_service.title': 'Бальзамирование, макияж, одевание',
+      'services.microbus_service.title': 'Маршрутка',
+      'services.hall_service.title': 'Зал',
+      'services.cemetery_decoration_service.title': 'Благоустройство кладбища',
+      'services.grave_stones_service.title': 'Надгробные камни, роспись на камне'
     }
   };
 

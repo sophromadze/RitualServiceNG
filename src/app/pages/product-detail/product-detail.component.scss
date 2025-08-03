@@ -16,7 +16,7 @@
 .product-hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: white;
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   position: relative;
   overflow: hidden;
   
@@ -28,7 +28,7 @@
     right: 0;
     bottom: 0;
     background: url('/images/orn1.png') repeat;
-    opacity: 0.05; // Reduced opacity for better text visibility
+    opacity: 0.05;
   }
   
   .hero-content {
@@ -37,14 +37,14 @@
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px; // Reduced from 60px
     align-items: center;
     position: relative;
     z-index: 2;
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 20px; // Reduced from 30px
       text-align: center;
       padding: 0 15px;
     }
@@ -52,38 +52,38 @@
   
   .hero-text {
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem; // Reduced from 3rem
       font-weight: 700;
-      margin-bottom: 20px;
+      margin-bottom: 15px; // Reduced from 20px
       line-height: 1.2;
-      color: #ffffff; // Explicit white color
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Added text shadow for better visibility
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       
       @media (max-width: 768px) {
-        font-size: 2rem;
-        margin-bottom: 15px;
+        font-size: 1.8rem; // Reduced from 2rem
+        margin-bottom: 12px; // Reduced from 15px
       }
       
       @media (max-width: 480px) {
-        font-size: 1.8rem;
+        font-size: 1.6rem; // Reduced from 1.8rem
       }
     }
     
     .hero-description {
-      font-size: 1.2rem;
+      font-size: 1rem; // Reduced from 1.2rem
       line-height: 1.6;
-      margin-bottom: 30px;
-      opacity: 0.95; // Increased opacity for better visibility
-      color: #f0f0f0; // Light gray for better contrast
+      margin-bottom: 20px; // Reduced from 30px
+      opacity: 0.95;
+      color: #f0f0f0;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
       
       @media (max-width: 768px) {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.9rem; // Reduced from 1rem
+        margin-bottom: 15px; // Reduced from 20px
       }
       
       @media (max-width: 480px) {
-        font-size: 0.9rem;
+        font-size: 0.85rem; // Reduced from 0.9rem
       }
       
       strong {
@@ -94,26 +94,26 @@
   }
   
   .product-keywords {
-    margin-bottom: 30px;
+    margin-bottom: 20px; // Reduced from 30px
     
     @media (max-width: 768px) {
-      margin-bottom: 20px;
+      margin-bottom: 15px; // Reduced from 20px
     }
     
     .keyword-content {
       p {
-        font-size: 1.1rem;
+        font-size: 0.95rem; // Reduced from 1.1rem
         line-height: 1.6;
-        opacity: 0.95; // Increased opacity for better visibility
-        color: #f0f0f0; // Light gray for better contrast
+        opacity: 0.95;
+        color: #f0f0f0;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         
         @media (max-width: 768px) {
-          font-size: 0.95rem;
+          font-size: 0.85rem; // Reduced from 0.95rem
         }
         
         @media (max-width: 480px) {
-          font-size: 0.85rem;
+          font-size: 0.8rem; // Reduced from 0.85rem
         }
         
         strong {
@@ -126,41 +126,41 @@
   
   .hero-cta {
     display: flex;
-    gap: 20px;
+    gap: 15px; // Reduced from 20px
     flex-wrap: wrap;
     
     @media (max-width: 768px) {
       justify-content: center;
-      gap: 15px;
+      gap: 12px; // Reduced from 15px
     }
     
     @media (max-width: 480px) {
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 10px; // Reduced from 12px
     }
     
     .btn {
-      padding: 15px 30px;
+      padding: 12px 24px; // Reduced from 15px 30px
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s ease;
+      transition: all 0.3s ease; // Restored transition for buttons
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1rem;
+      gap: 8px; // Reduced from 10px
+      font-size: 0.9rem; // Reduced from 1rem
       
       @media (max-width: 768px) {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        gap: 8px;
+        padding: 10px 20px; // Reduced from 12px 24px
+        font-size: 0.85rem; // Reduced from 0.9rem
+        gap: 6px; // Reduced from 8px
       }
       
       @media (max-width: 480px) {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-        gap: 6px;
+        padding: 8px 16px; // Reduced from 10px 20px
+        font-size: 0.8rem; // Reduced from 0.85rem
+        gap: 5px; // Reduced from 6px
         width: 100%;
         max-width: 280px;
         justify-content: center;
@@ -172,7 +172,7 @@
         
         &:hover {
           background: #ffed4e;
-          transform: translateY(-2px);
+          transform: translateY(-2px); // Restored hover effect for buttons
         }
       }
       
@@ -184,7 +184,7 @@
         &:hover {
           background: #ffd700;
           color: #1a1a1a;
-          transform: translateY(-2px);
+          transform: translateY(-2px); // Restored hover effect for buttons
         }
       }
     }
@@ -193,20 +193,771 @@
   .hero-image {
     img {
       width: 100%;
-      height: 400px;
+      height: 350px; // Reduced from 400px
       object-fit: cover;
       border-radius: 12px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); // Reduced shadow
       
       @media (max-width: 768px) {
-        height: 300px;
+        height: 250px; // Reduced from 300px
         border-radius: 8px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Reduced shadow
       }
       
       @media (max-width: 480px) {
-        height: 250px;
+        height: 200px; // Reduced from 250px
         border-radius: 6px;
+      }
+    }
+  }
+}
+
+// Coffin Types Section
+.coffin-types-section {
+  padding: 40px 0; // Reduced from 80px
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .coffin-types-content {
+    text-align: center;
+    
+    h2 {
+      font-size: 2rem; // Reduced from 2.5rem
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 30px; // Reduced from 50px
+      line-height: 1.3;
+      
+      @media (max-width: 768px) {
+        font-size: 1.6rem; // Reduced from 2rem
+        margin-bottom: 25px; // Reduced from 40px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.4rem; // Reduced from 1.8rem
+        margin-bottom: 20px; // Reduced from 30px
+      }
+    }
+  }
+  
+  .coffin-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; // Reduced from 30px
+    margin-bottom: 30px; // Reduced from 50px
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px; // Reduced from 25px
+      margin-bottom: 25px; // Reduced from 40px
+    }
+  }
+  
+  .coffin-type-item {
+    background: white;
+    padding: 25px 20px; // Reduced from 40px 30px
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+    border: 2px solid transparent;
+    text-align: center;
+    // No hover effects - these are non-interactive cards
+    
+    @media (max-width: 768px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 15px 12px; // Reduced from 30px 20px
+    }
+    
+    .coffin-type-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px; // Reduced from 15px
+      margin-bottom: 15px; // Reduced from 25px
+      
+      i {
+        color: #ffd700;
+        font-size: 1.5rem; // Reduced from 2rem
+        text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+      }
+      
+      h3 {
+        font-size: 1.5rem; // Reduced from 2rem
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        
+        @media (max-width: 768px) {
+          font-size: 1.3rem; // Reduced from 1.8rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1.2rem; // Reduced from 1.6rem
+        }
+      }
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      font-weight: 600;
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+      }
+    }
+  }
+  
+  .coffin-consultation {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 30px 25px; // Reduced from 50px 40px
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Reduced shadow
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      padding: 25px 20px; // Reduced from 40px 30px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      margin-bottom: 15px; // Reduced from 20px
+      color: #f0f0f0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+        margin-bottom: 12px; // Reduced from 15px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+        margin-bottom: 10px; // Reduced from 12px
+      }
+      
+      .phone-link {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem; // Reduced from 1.1rem
+        transition: color 0.3s ease; // Restored transition for phone link
+        
+        &:hover {
+          color: #ffed4e;
+          text-decoration: underline; // Restored hover effect for phone link
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 0.95rem
+        }
+      }
+    }
+  }
+}
+
+// Shroud Types Section
+.shroud-types-section {
+  padding: 40px 0; // Reduced from 80px
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .shroud-types-content {
+    text-align: center;
+    
+    h2 {
+      font-size: 2rem; // Reduced from 2.5rem
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 30px; // Reduced from 50px
+      line-height: 1.3;
+      
+      @media (max-width: 768px) {
+        font-size: 1.6rem; // Reduced from 2rem
+        margin-bottom: 25px; // Reduced from 40px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.4rem; // Reduced from 1.8rem
+        margin-bottom: 20px; // Reduced from 30px
+      }
+    }
+  }
+  
+  .shroud-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; // Reduced from 30px
+    margin-bottom: 30px; // Reduced from 50px
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px; // Reduced from 25px
+      margin-bottom: 25px; // Reduced from 40px
+    }
+  }
+  
+  .shroud-type-item {
+    background: white;
+    padding: 25px 20px; // Reduced from 40px 30px
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+    border: 2px solid transparent;
+    text-align: center;
+    // No hover effects - these are non-interactive cards
+    
+    @media (max-width: 768px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 15px 12px; // Reduced from 30px 20px
+    }
+    
+    .shroud-type-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px; // Reduced from 15px
+      margin-bottom: 15px; // Reduced from 25px
+      
+      i {
+        color: #ffd700;
+        font-size: 1.5rem; // Reduced from 2rem
+        text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+      }
+      
+      h3 {
+        font-size: 1.5rem; // Reduced from 2rem
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        
+        @media (max-width: 768px) {
+          font-size: 1.3rem; // Reduced from 1.8rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1.2rem; // Reduced from 1.6rem
+        }
+      }
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      font-weight: 600;
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+      }
+    }
+  }
+  
+  .shroud-consultation {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 30px 25px; // Reduced from 50px 40px
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Reduced shadow
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      padding: 25px 20px; // Reduced from 40px 30px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      margin-bottom: 15px; // Reduced from 20px
+      color: #f0f0f0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+        margin-bottom: 12px; // Reduced from 15px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+        margin-bottom: 10px; // Reduced from 12px
+      }
+      
+      .phone-link {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem; // Reduced from 1.1rem
+        transition: color 0.3s ease; // Restored transition for phone link
+        
+        &:hover {
+          color: #ffed4e;
+          text-decoration: underline; // Restored hover effect for phone link
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 0.95rem
+        }
+      }
+    }
+  }
+}
+
+// Refrigeration Types Section
+.refrigeration-types-section {
+  padding: 40px 0; // Reduced from 80px
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .refrigeration-types-content {
+    text-align: center;
+    
+    h2 {
+      font-size: 2rem; // Reduced from 2.5rem
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 30px; // Reduced from 50px
+      line-height: 1.3;
+      
+      @media (max-width: 768px) {
+        font-size: 1.6rem; // Reduced from 2rem
+        margin-bottom: 25px; // Reduced from 40px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.4rem; // Reduced from 1.8rem
+        margin-bottom: 20px; // Reduced from 30px
+      }
+    }
+  }
+  
+  .refrigeration-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; // Reduced from 30px
+    margin-bottom: 30px; // Reduced from 50px
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px; // Reduced from 25px
+      margin-bottom: 25px; // Reduced from 40px
+    }
+  }
+  
+  .refrigeration-type-item {
+    background: white;
+    padding: 25px 20px; // Reduced from 40px 30px
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+    border: 2px solid transparent;
+    text-align: center;
+    // No hover effects - these are non-interactive cards
+    
+    @media (max-width: 768px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 15px 12px; // Reduced from 30px 20px
+    }
+    
+    .refrigeration-type-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px; // Reduced from 15px
+      margin-bottom: 15px; // Reduced from 25px
+      
+      i {
+        color: #ffd700;
+        font-size: 1.5rem; // Reduced from 2rem
+        text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+      }
+      
+      h3 {
+        font-size: 1.5rem; // Reduced from 2rem
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        
+        @media (max-width: 768px) {
+          font-size: 1.3rem; // Reduced from 1.8rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1.2rem; // Reduced from 1.6rem
+        }
+      }
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      font-weight: 600;
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+      }
+    }
+  }
+  
+  .refrigeration-consultation {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 30px 25px; // Reduced from 50px 40px
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Reduced shadow
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      padding: 25px 20px; // Reduced from 40px 30px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      margin-bottom: 15px; // Reduced from 20px
+      color: #f0f0f0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+        margin-bottom: 12px; // Reduced from 15px
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+        margin-bottom: 10px; // Reduced from 12px
+      }
+      
+      .phone-link {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem; // Reduced from 1.1rem
+        transition: color 0.3s ease; // Restored transition for phone link
+        
+        &:hover {
+          color: #ffed4e;
+          text-decoration: underline; // Restored hover effect for phone link
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 0.95rem
+        }
+      }
+    }
+  }
+}
+
+// Cemetery Accessories Types Section
+.cemetery-accessories-types-section {
+  padding: 40px 0; // Reduced from 80px
+  background: #f8f9fa;
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .cemetery-accessories-types-content {
+    h2 {
+      font-size: 2rem; // Reduced from 2.5rem
+      font-weight: 700;
+      color: #1a1a1a;
+      text-align: center;
+      margin-bottom: 30px; // Reduced from 50px
+      
+      @media (max-width: 768px) {
+        font-size: 1.6rem; // Reduced from 2rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.4rem; // Reduced from 1.8rem
+      }
+    }
+    
+    .cemetery-accessories-types-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px; // Reduced from 30px
+      margin-bottom: 30px; // Reduced from 50px
+      
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 15px; // Reduced from 20px
+      }
+    }
+    
+    .cemetery-accessories-type-item {
+      background: white;
+      padding: 25px 20px; // Reduced from 40px 30px
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+      border: 2px solid transparent;
+      text-align: center;
+      // No hover effects - these are non-interactive cards
+      
+      @media (max-width: 768px) {
+        padding: 20px 15px; // Reduced from 35px 25px
+      }
+      
+      @media (max-width: 480px) {
+        padding: 15px 12px; // Reduced from 30px 20px
+      }
+      
+      .cemetery-accessories-type-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px; // Reduced from 15px
+        margin-bottom: 15px; // Reduced from 25px
+        
+        i {
+          color: #ffd700;
+          font-size: 1.5rem; // Reduced from 2rem
+          text-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+        }
+        
+        h3 {
+          font-size: 1.5rem; // Reduced from 2rem
+          font-weight: 700;
+          color: #1a1a1a;
+          margin: 0;
+          
+          @media (max-width: 768px) {
+            font-size: 1.3rem; // Reduced from 1.8rem
+          }
+          
+          @media (max-width: 480px) {
+            font-size: 1.2rem; // Reduced from 1.6rem
+          }
+        }
+      }
+      
+      p {
+        font-size: 1rem; // Reduced from 1.2rem
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        font-weight: 600;
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1.1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 1rem
+        }
+      }
+    }
+    
+    .cemetery-accessories-why-choose {
+      background: white;
+      padding: 30px 25px; // Reduced from 50px 40px
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+      margin-bottom: 30px; // Reduced from 50px
+      
+      @media (max-width: 768px) {
+        padding: 25px 20px; // Reduced from 40px 30px
+      }
+      
+      @media (max-width: 480px) {
+        padding: 20px 15px; // Reduced from 35px 25px
+      }
+      
+      h3 {
+        font-size: 1.6rem; // Reduced from 2rem
+        font-weight: 600;
+        color: #1a1a1a;
+        text-align: center;
+        margin-bottom: 20px; // Reduced from 30px
+        
+        @media (max-width: 768px) {
+          font-size: 1.4rem; // Reduced from 1.8rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1.3rem; // Reduced from 1.6rem
+        }
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0; // Reduced from 30px
+        text-align: center;
+        
+        li {
+          font-size: 1rem; // Reduced from 1.2rem
+          line-height: 1.6;
+          color: #333;
+          margin-bottom: 10px; // Reduced from 15px
+          font-weight: 500;
+          text-align: center;
+          
+          @media (max-width: 768px) {
+            font-size: 0.9rem; // Reduced from 1.1rem
+            margin-bottom: 8px; // Reduced from 12px
+          }
+          
+          @media (max-width: 480px) {
+            font-size: 0.85rem; // Reduced from 1rem
+            margin-bottom: 6px; // Reduced from 10px
+          }
+        }
+      }
+      
+      .final-message {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+        padding: 20px; // Reduced from 30px
+        border-radius: 12px;
+        text-align: center;
+        font-size: 1rem; // Reduced from 1.2rem
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 500;
+        
+        @media (max-width: 768px) {
+          padding: 15px; // Reduced from 25px
+          font-size: 0.9rem; // Reduced from 1.1rem
+        }
+        
+        @media (max-width: 480px) {
+          padding: 12px; // Reduced from 20px
+          font-size: 0.85rem; // Reduced from 1rem
+        }
+      }
+    }
+    
+    .cemetery-accessories-consultation {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      padding: 30px 25px; // Reduced from 50px 40px
+      border-radius: 15px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Reduced shadow
+      text-align: center;
+      
+      @media (max-width: 768px) {
+        padding: 25px 20px; // Reduced from 40px 30px
+      }
+      
+      @media (max-width: 480px) {
+        padding: 20px 15px; // Reduced from 35px 25px
+      }
+      
+      p {
+        font-size: 1rem; // Reduced from 1.2rem
+        line-height: 1.6;
+        margin-bottom: 15px; // Reduced from 20px
+        color: #f0f0f0;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1.1rem
+          margin-bottom: 12px; // Reduced from 15px
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 1rem
+          margin-bottom: 10px; // Reduced from 12px
+        }
+        
+        .phone-link {
+          color: #ffd700;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1rem; // Reduced from 1.1rem
+          transition: color 0.3s ease; // Restored transition for phone link
+          
+          &:hover {
+            color: #ffed4e;
+            text-decoration: underline; // Restored hover effect for phone link
+          }
+          
+          @media (max-width: 768px) {
+            font-size: 0.9rem; // Reduced from 1rem
+          }
+          
+          @media (max-width: 480px) {
+            font-size: 0.85rem; // Reduced from 0.95rem
+          }
+        }
       }
     }
   }
@@ -214,7 +965,7 @@
 
 // Product Details Section
 .product-details {
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   background: #f8f9fa;
   
   .container {
@@ -225,55 +976,55 @@
   
   .product-description {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px; // Reduced from 60px
     
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem; // Reduced from 2.5rem
       font-weight: 700;
       color: #1a1a1a;
-      margin-bottom: 20px;
+      margin-bottom: 15px; // Reduced from 20px
       
       @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.6rem; // Reduced from 2rem
       }
       
       @media (max-width: 480px) {
-        font-size: 1.8rem;
+        font-size: 1.4rem; // Reduced from 1.8rem
       }
     }
     
     p {
-      font-size: 1.1rem;
+      font-size: 1rem; // Reduced from 1.1rem
       color: #666;
       line-height: 1.7;
       max-width: 800px;
       margin: 0 auto;
       
       @media (max-width: 768px) {
-        font-size: 1rem;
+        font-size: 0.9rem; // Reduced from 1rem
       }
       
       @media (max-width: 480px) {
-        font-size: 0.95rem;
+        font-size: 0.85rem; // Reduced from 0.95rem
       }
     }
   }
   
   .product-features {
-    margin-bottom: 60px;
+    margin-bottom: 40px; // Reduced from 60px
     
     h3 {
-      font-size: 2rem;
+      font-size: 1.6rem; // Reduced from 2rem
       font-weight: 600;
       color: #1a1a1a;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 25px; // Reduced from 40px
     }
     
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      gap: 20px; // Reduced from 30px
       
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
@@ -282,22 +1033,17 @@
     
     .feature-item {
       background: white;
-      padding: 25px;
+      padding: 20px; // Reduced from 25px
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); // Reduced shadow
       display: flex;
       align-items: center;
-      gap: 15px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
+      gap: 12px; // Reduced from 15px
+      // No hover effects - these are non-interactive feature items
       
       i {
         color: #28a745;
-        font-size: 1.5rem;
+        font-size: 1.3rem; // Reduced from 1.5rem
         flex-shrink: 0;
       }
       
@@ -311,17 +1057,17 @@
   
   .product-types {
     h3 {
-      font-size: 2rem;
+      font-size: 1.6rem; // Reduced from 2rem
       font-weight: 600;
       color: #1a1a1a;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 25px; // Reduced from 40px
     }
     
     .types-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 15px; // Reduced from 20px
       
       @media (max-width: 768px) {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -330,117 +1076,112 @@
     
     .type-item {
       background: white;
-      padding: 20px;
+      padding: 15px; // Reduced from 20px
       border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Reduced shadow
       display: flex;
       align-items: center;
-      gap: 12px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-      }
+      gap: 10px; // Reduced from 12px
+      // No hover effects - these are non-interactive type items
       
       i {
         color: #ffd700;
-        font-size: 1.2rem;
+        font-size: 1.1rem; // Reduced from 1.2rem
         flex-shrink: 0;
       }
       
       span {
         color: #1a1a1a;
         font-weight: 500;
-        font-size: 0.95rem;
+        font-size: 0.9rem; // Reduced from 0.95rem
       }
     }
   }
   
   // Process Section for Hearse
   .product-process {
-    margin-top: 20px;
+    margin-top: 15px; // Reduced from 20px
     
     h3 {
-      font-size: 2rem;
+      font-size: 1.6rem; // Reduced from 2rem
       font-weight: 600;
       color: #1a1a1a;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px; // Reduced from 20px
     }
     
     .process-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 20px; // Reduced from 25px
       
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px; // Reduced from 20px
       }
     }
     
     .process-step {
       background: white;
-      padding: 30px;
+      padding: 20px; // Reduced from 30px
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); // Reduced shadow
       border-left: 4px solid #ffd700;
       position: relative;
       display: flex;
       align-items: flex-start;
-      gap: 20px;
+      gap: 15px; // Reduced from 20px
       
       @media (max-width: 768px) {
-        padding: 25px;
-        gap: 15px;
+        padding: 15px; // Reduced from 25px
+        gap: 12px; // Reduced from 15px
       }
       
       @media (max-width: 480px) {
-        padding: 20px;
-        gap: 12px;
+        padding: 12px; // Reduced from 20px
+        gap: 10px; // Reduced from 12px
       }
       
       .step-number {
         background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
         color: #1a1a1a;
-        width: 50px;
-        height: 50px;
+        width: 40px; // Reduced from 50px
+        height: 40px; // Reduced from 50px
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        font-size: 1.2rem;
+        font-size: 1rem; // Reduced from 1.2rem
         flex-shrink: 0;
-        box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+        box-shadow: 0 3px 6px rgba(255, 215, 0, 0.3); // Reduced shadow
         
         @media (max-width: 768px) {
-          width: 45px;
-          height: 45px;
-          font-size: 1.1rem;
+          width: 35px; // Reduced from 45px
+          height: 35px; // Reduced from 45px
+          font-size: 0.9rem; // Reduced from 1.1rem
         }
         
         @media (max-width: 480px) {
-          width: 40px;
-          height: 40px;
-          font-size: 1rem;
+          width: 30px; // Reduced from 40px
+          height: 30px; // Reduced from 40px
+          font-size: 0.85rem; // Reduced from 1rem
         }
       }
       
       p {
         color: #333;
-        font-size: 1rem;
+        font-size: 0.9rem; // Reduced from 1rem
         line-height: 1.6;
         margin: 0;
         font-weight: 500;
         
         @media (max-width: 768px) {
-          font-size: 0.95rem;
+          font-size: 0.85rem; // Reduced from 0.95rem
         }
         
         @media (max-width: 480px) {
-          font-size: 0.9rem;
+          font-size: 0.8rem; // Reduced from 0.9rem
         }
       }
     }
@@ -449,7 +1190,7 @@
 
 // Gallery Section
 .product-gallery {
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   background: white;
   
   .container {
@@ -459,17 +1200,17 @@
   }
   
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem; // Reduced from 2.5rem
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px; // Reduced from 50px
   }
   
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 15px; // Reduced from 20px
     
     @media (max-width: 768px) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -481,29 +1222,20 @@
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
+    // No hover effects - these are non-interactive gallery images
     
     img {
       width: 100%;
-      height: 250px;
+      height: 200px; // Reduced from 250px
       object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    &:hover img {
-      transform: scale(1.05);
+      // No transition or hover effects for gallery images
     }
   }
 }
 
 // Related Products Section
 .related-products {
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   background: #f8f9fa;
   
   .container {
@@ -513,17 +1245,17 @@
   }
   
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem; // Reduced from 2.5rem
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px; // Reduced from 50px
   }
   
   .related-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 20px; // Reduced from 30px
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -532,50 +1264,47 @@
   
   .related-item {
     background: white;
-    padding: 30px;
+    padding: 20px; // Reduced from 30px
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); // Reduced shadow
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; // Restored transition for related items (they have click action)
     display: flex;
     align-items: center;
     justify-content: space-between;
     
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px); // Restored hover effect for related items
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); // Restored hover shadow
       
       i {
-        transform: translateX(5px);
+        transform: translateX(5px); // Restored hover effect for arrow
       }
     }
     
     h4 {
-      font-size: 1.3rem;
+      font-size: 1.1rem; // Reduced from 1.3rem
       font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 8px;
+      margin-bottom: 0; // Removed margin since p is hidden
     }
     
     p {
-      color: #666;
-      font-size: 0.9rem;
-      margin: 0;
-      display: none; // Hide p tags in related products
+      display: none; // Hide paragraphs in related items
     }
     
     i {
       color: #ffd700;
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
+      font-size: 1.1rem; // Reduced from 1.2rem
+      transition: transform 0.3s ease; // Restored transition for arrow
     }
   }
 }
 
 // SEO Content Section (Hidden for better UX but kept for SEO)
 .seo-content-section {
-  display: none; /* Hidden for better user experience */
-  padding: 80px 0;
+  display: none;
+  padding: 40px 0; // Reduced from 80px
   background: white;
   
   .container {
@@ -586,29 +1315,29 @@
   
   .seo-content {
     background: #f8f9fa;
-    padding: 50px;
+    padding: 30px; // Reduced from 50px
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
     
     .product-seo-content {
       h3 {
-        font-size: 1.8rem;
+        font-size: 1.5rem; // Reduced from 1.8rem
         font-weight: 600;
         color: #1a1a1a;
-        margin-bottom: 20px;
+        margin-bottom: 15px; // Reduced from 20px
       }
       
       h4 {
-        font-size: 1.3rem;
+        font-size: 1.1rem; // Reduced from 1.3rem
         font-weight: 600;
         color: #333;
-        margin: 25px 0 15px 0;
+        margin: 20px 0 12px 0; // Reduced margins
       }
       
       p {
         color: #666;
         line-height: 1.7;
-        margin-bottom: 20px;
+        margin-bottom: 15px; // Reduced from 20px
         
         strong {
           color: #1a1a1a;
@@ -616,26 +1345,22 @@
       }
       
       ul {
-        margin: 15px 0;
+        margin: 12px 0; // Reduced from 15px
         padding-left: 20px;
         
         li {
           color: #666;
           line-height: 1.6;
-          margin-bottom: 8px;
+          margin-bottom: 6px; // Reduced from 8px
           
           strong {
             color: #1a1a1a;
           }
         }
       }
-      
-      // English text in SEO content is already hidden since the section has display: none
     }
   }
 }
-
-// Contact CTA Section - Removed as we're using the CTA component
 
 // SEO Keywords (Hidden)
 .seo-keywords {

@@ -121,10 +121,13 @@ export class BreadcrumbComponent implements OnInit {
           case 'refrigeration':
             label = this.translate('breadcrumb.refrigeration');
             break;
-          case 'hearse':
-            label = this.translate('breadcrumb.hearse');
+          case 'cemetery_accessories':
+            label = this.translate('breadcrumb.cemetery_accessories');
             break;
-          // Service-specific translations
+          case 'cemetery-accessories':
+            label = this.translate('breadcrumb.cemetery_accessories');
+            break;
+          // Service-specific translations - Legacy services
           case 'embalming':
             label = this.translate('breadcrumb.embalming');
             break;
@@ -160,6 +163,28 @@ export class BreadcrumbComponent implements OnInit {
             break;
           case 'funeral-planning':
             label = this.translate('breadcrumb.funeral_planning');
+            break;
+          // New service translations
+          case 'embalming-dressing':
+            label = this.translate('services.embalming_dressing_service.title') || 'ბალზამირება, გრიმი, ჩაცმა';
+            break;
+          case 'microbus':
+            label = this.translate('services.microbus_service.title') || 'მარშუტკა';
+            break;
+          case 'hall':
+            label = this.translate('services.hall_service.title') || 'დარბაზი';
+            break;
+          case 'cemetery-decoration':
+            label = this.translate('services.cemetery_decoration_service.title') || 'სასაფლაოს მოპირკეთება';
+            break;
+          case 'grave-stones':
+            label = this.translate('services.grave_stones_service.title') || 'საფლავის ქვები, ქვაზე ხატვა';
+            break;
+          case 'grave-preparation':
+            label = this.translate('services.grave_preparation_service.title') || 'სამარხის გაჭრა';
+            break;
+          case 'hearse':
+            label = this.translate('services.hearse_service.title') || 'კატაფალკის მომსახურება';
             break;
           // Legacy translations for backward compatibility
           case 'damkrdzalavi-biuro':

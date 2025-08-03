@@ -64,21 +64,15 @@
     
     <div class="services-grid">
       <div class="service-card" *ngFor="let service of serviceCards" 
-           (click)="navigateToService(service.url)">
-        <div class="card-image">
-          <img [src]="service.image" 
-               [alt]="translate(service.titleKey)"
-               loading="lazy">
-        </div>
-        <div class="card-content">
-          <h3>{{translate(service.titleKey)}}</h3>
-          <p>{{translate(service.descKey)}}</p>
-          <div class="keywords" [attr.aria-label]="service.keywords">
-            <small>{{service.keywords}}</small>
+           (click)="navigateToService(service.url)"
+           [style.background-image]="'url(' + service.image + ')'">
+        <div class="card-overlay">
+          <div class="card-content">
+            <h3>{{translate(service.titleKey)}}</h3>
+            <button class="btn btn-secondary" (click)="navigateToService(service.url)">
+              {{translate('common.learn_more')}}
+            </button>
           </div>
-          <button class="btn btn-secondary" (click)="navigateToService(service.url)">
-            {{translate('common.learn_more')}}
-          </button>
         </div>
       </div>
     </div>
@@ -176,8 +170,8 @@
         <p>
           {{translate('header.company_name')}} არის პროფესიონალური <strong>{{translate('home.funeral_home')}}</strong> და 
           <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}. ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა:
-          <strong>{{translate('services.embalming')}}</strong>, <strong>{{translate('services.hearse')}}</strong>, 
-          <strong>{{translate('services.stone_engraving')}}</strong>, <strong>{{translate('services.transportation')}}</strong>.
+                    <strong>{{translate('services.embalming_dressing')}}</strong>, <strong>{{translate('services.cemetery_accessories')}}</strong>,
+          <strong>{{translate('services.grave_stones_painting')}}</strong>, <strong>{{translate('services.transportation')}}</strong>.
         </p>
         
         <h4>ჩვენი მთავარი სერვისები:</h4>

@@ -91,18 +91,18 @@ export class ProductsComponent implements OnInit {
         ]
       },
       {
-        id: 'hearse',
-        titleKey: 'products.hearse',
-        descKey: 'products.hearse_desc',
-        url: `/${this.currentLanguage}/products/hearse`,
-        image: '/images/katafalkebi2.jpg',
-        keywords: 'კატაფალკი, katafalki, თანამედროვე კატაფალკები, ლუქს კლასის კატაფალკები',
-        types: ['თანამედროვე კატაფალკები', 'ლუქს კლასის კატაფალკები', 'სტანდარტული კატაფალკები'],
+        id: 'cemetery_accessories',
+        titleKey: 'products.cemetery_accessories',
+        descKey: 'products.cemetery_accessories_desc',
+        url: `/${this.currentLanguage}/products/cemetery-accessories`,
+        image: '/images/cemetery.jpg',
+        keywords: 'სასაფლაოს აქსესუარები, sasapleos akseesuarebi, ჯვრები, საყვავილე კონსტრუქციები, სასანთლეები',
+        types: ['ჯვრები', 'საყვავილე კონსტრუქციები', 'სასანთლეები', 'მარმარილოს აქსესუარები'],
         features: [
-          'products.hearse.features.modern',
-          'products.hearse.features.luxury',
-          'products.hearse.features.standard',
-          'products.hearse.features.special'
+          'products.cemetery_accessories.features.crosses',
+          'products.cemetery_accessories.features.flower_structures',
+          'products.cemetery_accessories.features.candles',
+          'products.cemetery_accessories.features.marble_accessories'
         ]
       }
     ];
@@ -110,9 +110,9 @@ export class ProductsComponent implements OnInit {
 
   private updateSEO(): void {
     const seoData = {
-              title: 'სარიტუალო პროდუქტები - სასახლეები, სუდარები, სასახლე მაცივრები, კატაფალკი | Ritual Service',
-        description: 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები (sasaxleebi), სუდარები (sudarebi), სასახლე მაცივრები (sasaxle macivrеbi), კატაფალკი (katafalki). ყველა პროდუქტი მზადაა 24/7.',
-        keywords: 'სარიტუალო პროდუქტები, სასახლეები, სუდარები, სასახლე მაცივრები, კატაფალკი, sasaxleebi, sudarebi, sasaxle macivrеbi, katafalki, ხის სასახლეები, ბამბის სუდარები, სასახლე-მაცივრები, თანამედროვე კატაფალკები'
+              title: 'სარიტუალო პროდუქტები - სასახლეები, სუდარები, სასახლე მაცივრები, სასაფლაოს აქსესუარები | Ritual Service',
+        description: 'სარიტუალო პროდუქტები უმაღლესი ხარისხით: სასახლეები (sasaxleebi), სუდარები (sudarebi), სასახლე მაცივრები (sasaxle macivrеbi), სასაფლაოს აქსესუარები (sasapleos akseesuarebi). ყველა პროდუქტი მზადაა 24/7.',
+        keywords: 'სარიტუალო პროდუქტები, სასახლეები, სუდარები, სასახლე მაცივრები, სასაფლაოს აქსესუარები, sasaxleebi, sudarebi, sasaxle macivrеbi, sasapleos akseesuarebi, ხის სასახლეები, ბამბის სუდარები, სასახლე-მაცივრები, ჯვრები, საყვავილე კონსტრუქციები'
     };
     
     this.seoService.updateSEO(seoData, this.currentLanguage);

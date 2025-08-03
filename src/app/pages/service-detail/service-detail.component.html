@@ -1,0 +1,146 @@
+<!-- SEO Header Section with Keywords -->
+<div class="seo-headers" *ngIf="serviceContent">
+    <h1>{{translate(serviceContent.titleKey)}}</h1>
+    <h2 class="seo-hidden">{{serviceContent.keywords.join(' - ')}}</h2>
+    <h3 class="seo-hidden">{{serviceContent.keywords.join(' - ')}}</h3>
+</div>
+
+<!-- Service Detail Hero Section -->
+<section class="service-detail-hero" *ngIf="serviceContent">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>{{translate(serviceContent.titleKey)}}</h1>
+            <p class="hero-description">{{translate(serviceContent.descKey)}}</p>
+            
+            <div class="hero-cta">
+                <a href="tel:+995599069898" class="btn btn-primary" (click)="callPhone()">
+                    <i class="fa-solid fa-phone-volume"></i> {{translate('header.call_24_7')}}
+                </a>
+                <a [routerLink]="['/'+currentLanguage+'/funeral-planning']" class="btn btn-secondary">
+                    {{translate('funeral_planning.start_planning')}}
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <img [src]="serviceContent.image" 
+                 [alt]="translate(serviceContent.titleKey)"
+                 loading="eager">
+        </div>
+    </div>
+</section>
+
+<!-- Service Detail Content -->
+<section class="service-detail-content" *ngIf="serviceContent">
+    <div class="container">
+        <!-- Service Description -->
+        <div class="service-description">
+            <h2>{{translate('services.detail_description')}}</h2>
+            <p>{{translate(serviceContent.longDescKey)}}</p>
+        </div>
+
+        <!-- Service Features -->
+        <div class="service-features" *ngIf="isServiceContentDefined() && serviceContent!.features.length > 0">
+            <h3>{{translate('services.features')}}</h3>
+            <div class="features-grid">
+                <div class="feature-item" *ngFor="let feature of serviceContent!.features">
+                    <i class="fa-solid fa-check-circle"></i>
+                    <span>{{translate(feature)}}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Process -->
+        <div class="service-process" *ngIf="isServiceContentDefined() && serviceContent!.process && serviceContent!.process.length > 0">
+            <h3>{{translate('services.process')}}</h3>
+            <div class="process-steps">
+                <ng-container *ngFor="let step of serviceContent!.process!; let i = index; trackBy: trackByIndex">
+                    <div class="process-step" *ngIf="step">
+                        <div class="step-number">{{i + 1}}</div>
+                        <div class="step-content">
+                            <p>{{translate(step)}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Gallery -->
+<section class="service-gallery" *ngIf="isServiceContentDefined() && serviceContent!.gallery.length > 1">
+    <div class="container">
+        <h3>{{translate('services.gallery')}}</h3>
+        <div class="gallery-grid">
+            <ng-container *ngFor="let image of serviceContent!.gallery; let i = index; trackBy: trackByIndex">
+                <div class="gallery-item" 
+                     *ngIf="image"
+                     (click)="openImageModal(image)">
+                    <img [src]="image" 
+                         [alt]="getGalleryImageAlt(i)"
+                         loading="lazy">
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<!-- Related Services -->
+<section class="related-services" *ngIf="isServiceContentDefined()">
+    <div class="container">
+        <h3>{{translate('services.related_services')}}</h3>
+        <div class="related-services-grid">
+            <ng-container *ngFor="let serviceKey of getAllServiceKeys()">
+                <div class="related-service-item" 
+                     *ngIf="serviceKey !== serviceType && servicesData[serviceKey]"
+                     (click)="navigateToService(serviceKey)">
+                    <h4>{{translate(servicesData[serviceKey].titleKey)}}</h4>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<!-- SEO Content Section -->
+<section class="seo-content-section" *ngIf="serviceContent">
+    <div class="container">
+        <div class="seo-content">
+            <h2>{{translate(serviceContent.titleKey)}} - {{translate('header.company_name')}}</h2>
+            
+            <div class="seo-text">
+                <h3>{{translate('services.seo_title')}}</h3>
+                <p>
+                    {{translate(serviceContent.longDescKey)}}
+                </p>
+                
+                <h4>{{translate('services.why_choose_us')}}</h4>
+                <ul>
+                    <li>{{translate('services.experience_20_years')}}</li>
+                    <li>{{translate('services.service_24_7')}}</li>
+                    <li>{{translate('services.professional_team')}}</li>
+                    <li>{{translate('services.individual_approach')}}</li>
+                </ul>
+
+                <h4>{{translate('services.contact_info')}}</h4>
+                <ul>
+                    <li><strong>{{translate('locations.gldani')}}</strong> - {{translate('locations.gldani_address')}}</li>
+                    <li><strong>{{translate('locations.dighomi')}}</strong> - {{translate('locations.dighomi_address')}}</li>
+                    <li><strong>{{translate('locations.jikia')}}</strong> - {{translate('locations.jikia_address')}}</li>
+                </ul>
+
+                <p>
+                    {{translate('services.seo_conclusion')}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA Section -->
+<app-cta></app-cta>
+
+<!-- Hidden SEO Keywords -->
+<div class="seo-keywords" aria-hidden="true" *ngIf="serviceContent">
+    <span *ngFor="let keyword of serviceContent.keywords">{{keyword}}</span>
+</div> 

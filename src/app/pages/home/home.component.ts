@@ -42,95 +42,88 @@ export class HomeComponent implements OnInit, OnDestroy {
   // Service cards with SEO-optimized URLs and keywords
   serviceCards = [
     {
-      titleKey: 'products.coffins',
-      descKey: 'products.coffins_desc',
-      url: '/products/coffins',
+      titleKey: 'services.coffins',
+      url: '/services#coffins',
       image: '/images/kuboebi2.jpg',
       keywords: 'სასახლეები, sasaxleebi, კუბოები'
     },
     {
-      titleKey: 'products.refrigeration',
-      descKey: 'products.refrigeration_desc',
-      url: '/products/refrigeration',
+      titleKey: 'services.coffin_refrigeration',
+      url: '/services#coffin-refrigeration',
       image: '/images/fridge1.jpeg',
-              keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
+      keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
     },
     {
-      titleKey: 'products.shrouds',
-      descKey: 'products.shrouds_desc',
-      url: '/products/shrouds',
+      titleKey: 'services.shrouds',
+      url: '/services#shrouds',
       image: '/images/shroud1.jpg',
       keywords: 'სუდარა, sudara, სუდარები'
     },
     {
-      titleKey: 'services.embalming',
-      descKey: 'services.embalming_desc',
-      url: '/services#embalming',
+      titleKey: 'services.embalming_dressing',
+      url: '/services#embalming-dressing',
       image: '/images/embalming.jpg',
-      keywords: 'ბალზამირება, balzamireba, მიცვალებულის მომზადება'
-    },
-    {
-      titleKey: 'services.dressing',
-      descKey: 'services.dressing_desc',
-      url: '/services#dressing',
-      image: '/images/suit.jpg',
-      keywords: 'მიცვალებულის ჩაცმა, micvalebulis chacma, მოწესრიგება'
+      keywords: 'ბალზამირება, balzamireba, მიცვალებულის ჩაცმა'
     },
     {
       titleKey: 'services.transportation',
-      descKey: 'services.transportation_desc',
-      url: '/services#transportation', 
+      url: '/services#transportation',
       image: '/images/microbus.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
-      titleKey: 'services.stone_engraving',
-      descKey: 'services.stone_engraving_desc',
-      url: '/services#stone-engraving',
-      image: '/images/stonepainting.jpg', 
-      keywords: 'ქვაზე ხატვა, qvaze xatva, საფლავის მოპირკეთება'
-    },
-    {
-      titleKey: 'services.grave_decoration',
-      descKey: 'services.grave_decoration_desc',
-      url: '/services#grave-decoration',
-      image: '/images/grave.jpg',
-      keywords: 'სამარხის მოწყობა, samarkhis motsqoba, საფლავის მოპირკეთება'
-    },
-    {
-      titleKey: 'services.banquet_hall',
-      descKey: 'services.banquet_hall_desc',
-      url: '/services#banquet-hall',
-      image: '/images/hall.jpg',
-      keywords: 'საბანკეტო დარბაზი, sabanketo darbazi, ბანკეტი'
-    },
-    {
       titleKey: 'services.mourning_hall',
-      descKey: 'services.mourning_hall_desc',
       url: '/services#mourning-hall',
       image: '/images/darbazebi1.jpg',
       keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, სამგლოვიარო დარბაზი'
     },
     {
-      titleKey: 'services.grave_excavation',
-      descKey: 'services.grave_excavation_desc',
-      url: '/services',
-      image: '/images/grave.jpg',
-      keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
-    },
-    {
       titleKey: 'services.hearse_service',
-      descKey: 'services.hearse_service_desc',
       url: '/services#hearse',
       image: '/images/katafalkebi2.jpg',
       keywords: 'კატაფალკის მომსახურება, katafalkis momserva, კატაფალკა'
     },
     {
-      titleKey: 'services.burial_filter',
-      descKey: 'services.burial_filter_desc',
-      url: '/services',
+      titleKey: 'services.marshutka',
+      url: '/services#marshutka',
+      image: '/images/marshutka.jpg',
+      keywords: 'მარშუტკა, marshutka, სტუმრების გადაყვანა'
+    },
+    {
+      titleKey: 'services.hall',
+      url: '/services#hall',
+      image: '/images/hall.jpg',
+      keywords: 'დარბაზი, darbazi, საბანკეტო დარბაზი'
+    },
+    {
+      titleKey: 'services.cemetery_decoration',
+      url: '/services#cemetery-decoration',
       image: '/images/grave.jpg',
-      keywords: 'ჩასასვენებელი ფილტი, chasasvenebeli filti, საფლავის ფილტი'
+      keywords: 'სასაფლაოს მოპირკეთება, sasaflaos mopirketeba, საფლავის მოპირკეთება'
+    },
+    {
+      titleKey: 'services.grave_stones_painting',
+      url: '/services#grave-stones-painting',
+      image: '/images/stonepainting.jpg',
+      keywords: 'საფლავის ქვები, saflavis qvebi, ქვაზე ხატვა'
+    },
+    {
+      titleKey: 'services.grave_excavation',
+      url: '/services#grave-excavation',
+      image: '/images/grave.jpg',
+      keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
+    },
+    {
+      titleKey: 'services.cemetery_accessories',
+      url: '/services#cemetery-accessories',
+      image: '/images/grave.jpg',
+      keywords: 'სასაფლაოს აქსესუარები, sasaflaos akseesuarebi, საფლავის აქსესუარები'
+    },
+    {
+      titleKey: 'services.lifting_machine',
+      url: '/services#lifting-machine',
+      image: '/images/liftingMachine.jpg',
+      keywords: 'ჩასასვენებელი ლიფტი, chasasvenebeli lifti, მწევი მანქანა'
     }
   ];
 
@@ -284,26 +277,26 @@ export class HomeComponent implements OnInit, OnDestroy {
       "availableService": [
         {
           "@type": "Service",
-          "name": this.languageService.translate('services.embalming'),
-          "description": this.languageService.translate('services.embalming_desc'),
+          "name": this.languageService.translate('services.embalming_dressing'),
+          "description": this.languageService.translate('services.embalming_service.description'),
           "url": `https://ritualservice.ge/${this.currentLanguage}/services/balzamireba`
         },
         {
           "@type": "Service", 
-          "name": this.languageService.translate('services.hearse'),
-          "description": this.languageService.translate('services.hearse_desc'),
+          "name": this.languageService.translate('services.hearse_service'),
+          "description": this.languageService.translate('services.hearse_service.description'),
           "url": `https://ritualservice.ge/${this.currentLanguage}/services/katafalka`
         },
         {
           "@type": "Service",
           "name": this.languageService.translate('services.transportation'),
-          "description": this.languageService.translate('services.transportation_desc'),
+          "description": this.languageService.translate('services.transportation_service.description'),
           "url": `https://ritualservice.ge/${this.currentLanguage}/services/gadasveneba`
         },
         {
           "@type": "Service",
-          "name": this.languageService.translate('services.stone_engraving'),
-          "description": this.languageService.translate('services.stone_engraving_desc'),
+          "name": this.languageService.translate('services.grave_stones_painting'),
+          "description": this.languageService.translate('services.stone_engraving_service.description'),
           "url": `https://ritualservice.ge/${this.currentLanguage}/services/qvaze-xatva`
         }
       ],

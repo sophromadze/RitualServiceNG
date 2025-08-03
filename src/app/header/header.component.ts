@@ -31,66 +31,60 @@ export class HeaderComponent implements OnInit, OnDestroy {
   navigation = {
     ka: {
       services: [
-        { name: 'აგენტის მომსახურება', url: '/ka/services#agent-service', keywords: 'agentic momsaxureba' },
-        { name: 'მიცვალებულის ჩაცმა', url: '/ka/services#dressing', keywords: 'micvalebulis chacma' },
-        { name: 'ბალზამირება', url: '/ka/services#embalming', keywords: 'balzamireba' },
-        { name: 'კატაფალკის მომსახურება', url: '/ka/services#hearse', keywords: 'katafalkis momsaxureba' },
-        { name: 'გადასვენება', url: '/ka/services#transportation', keywords: 'gadasveneba' },
-        { name: 'ქვაზე ხატვა', url: '/ka/services#stone-engraving', keywords: 'qvaze xatva' },
-        { name: 'საფლავის მოპირკეთება', url: '/ka/services#grave-decoration', keywords: 'mopirketeba' },
-        { name: 'საპანაშვიდე დარბაზი', url: '/ka/services#mourning-hall', keywords: 'sapanashvide darbazi' },
-        { name: 'საბანკეტო დარბაზი', url: '/ka/services#banquet-hall', keywords: 'sabanketo darbazi' },
-        { name: 'სამარხის გაჭრა', url: '/ka/services#grave-preparation', keywords: 'samarxis gacra' },
-        { name: 'ფერადი სურათის დამზადება', url: '/ka/services#colored-photo', keywords: 'feradi suratis damzadeba' },
-        { name: 'ლითონის ასოებით წარწერა', url: '/ka/services#metal-letters', keywords: 'litonis asoebit carcera' }
+        { name: 'ბალზამირება, გრიმი, ჩაცმა', url: '/ka/services/embalming-dressing', keywords: 'balzamireba grimi chacma' },
+        { name: 'გადასვენება', url: '/ka/services/transportation', keywords: 'gadasveneba' },
+        { name: 'საპანაშვიდე დარბაზი', url: '/ka/services/mourning-hall', keywords: 'sapanashvide darbazi' },
+        { name: 'კატაფალკის მომსახურება', url: '/ka/services/hearse', keywords: 'katafalkis momsaxureba' },
+        { name: 'მარშუტკა', url: '/ka/services/microbus', keywords: 'marshutka' },
+        { name: 'დარბაზი', url: '/ka/services/hall', keywords: 'darbazi' },
+        { name: 'სასაფლაოს მოპირკეთება', url: '/ka/services/cemetery-decoration', keywords: 'sasapleos mopirketeba' },
+        { name: 'საფლავის ქვები, ქვაზე ხატვა', url: '/ka/services/grave-stones', keywords: 'saplavis qvebi qvaze xatva' },
+        { name: 'სამარხის გაჭრა', url: '/ka/services/grave-preparation', keywords: 'samarxis gacra' },
+        { name: 'ჩასასვენებლი ლიფტი', url: '/ka/services/lifting-machine', keywords: 'chasasvenebli lifti' }
       ],
       products: [
         { name: 'სასახლეები', url: '/ka/products/coffins', keywords: 'sasaxleebi' },
-        { name: 'კატაფალკები', url: '/ka/products/hearse', keywords: 'katafalka' },
+        { name: 'სასაფლაოს აქსესუარები', url: '/ka/products/cemetery-accessories', keywords: 'sasapleos akseesuarebi' },
         { name: 'სუდარები', url: '/ka/products/shrouds', keywords: 'sudarebi, sudara' },
         { name: 'სასახლე მაცივრები', url: '/ka/products/refrigeration', keywords: 'sasaxle macivrebi' }
       ]
     },
     en: {
       services: [
-        { name: 'Agent Service', url: '/en/services#agent-service', keywords: 'agent service' },
-        { name: 'Dressing the Deceased', url: '/en/services#dressing', keywords: 'dressing deceased' },
-        { name: 'Embalming', url: '/en/services#embalming', keywords: 'embalming' },
-        { name: 'Hearse Service', url: '/en/services#hearse', keywords: 'hearse service' },
-        { name: 'Transportation', url: '/en/services#transportation', keywords: 'transportation' },
-        { name: 'Stone Engraving', url: '/en/services#stone-engraving', keywords: 'stone engraving' },
-        { name: 'Grave Decoration', url: '/en/services#grave-decoration', keywords: 'grave decoration' },
-        { name: 'Memorial Hall', url: '/en/services#mourning-hall', keywords: 'memorial hall' },
-        { name: 'Banquet Hall', url: '/en/services#banquet-hall', keywords: 'banquet hall' },
-        { name: 'Grave Digging', url: '/en/services#grave-preparation', keywords: 'grave digging' },
-        { name: 'Color Photo Production', url: '/en/services#colored-photo', keywords: 'color photo production' },
-        { name: 'Metal Letter Engraving', url: '/en/services#metal-letters', keywords: 'metal letter engraving' }
+        { name: 'Embalming, Makeup, Dressing', url: '/en/services/embalming-dressing', keywords: 'embalming makeup dressing' },
+        { name: 'Transportation', url: '/en/services/transportation', keywords: 'transportation' },
+        { name: 'Memorial Hall', url: '/en/services/mourning-hall', keywords: 'memorial hall' },
+        { name: 'Hearse Service', url: '/en/services/hearse', keywords: 'hearse service' },
+        { name: 'Microbus', url: '/en/services/microbus', keywords: 'microbus' },
+        { name: 'Hall', url: '/en/services/hall', keywords: 'hall' },
+        { name: 'Cemetery Decoration', url: '/en/services/cemetery-decoration', keywords: 'cemetery decoration' },
+        { name: 'Grave Stones, Stone Painting', url: '/en/services/grave-stones', keywords: 'grave stones stone painting' },
+        { name: 'Grave Digging', url: '/en/services/grave-preparation', keywords: 'grave digging' },
+        { name: 'Lifting Machine', url: '/en/services/lifting-machine', keywords: 'lifting machine' }
       ],
       products: [
         { name: 'Coffins', url: '/en/products/coffins', keywords: 'coffins' },
-        { name: 'Hearse', url: '/en/products/hearse', keywords: 'hearse' },
+        { name: 'Cemetery Accessories', url: '/en/products/cemetery-accessories', keywords: 'cemetery accessories' },
         { name: 'Shrouds', url: '/en/products/shrouds', keywords: 'shrouds' },
         { name: 'Refrigeration', url: '/en/products/refrigeration', keywords: 'refrigeration' }
       ]
     },
     ru: {
       services: [
-        { name: 'Агентское обслуживание', url: '/ru/services#agent-service', keywords: 'агентское обслуживание' },
-        { name: 'Одевание покойного', url: '/ru/services#dressing', keywords: 'одевание покойного' },
-        { name: 'Бальзамирование', url: '/ru/services#embalming', keywords: 'бальзамирование' },
-        { name: 'Услуги катафалка', url: '/ru/services#hearse', keywords: 'услуги катафалка' },
-        { name: 'Перевозка', url: '/ru/services#transportation', keywords: 'перевозка' },
-        { name: 'Роспись на камне', url: '/ru/services#stone-engraving', keywords: 'роспись на камне' },
-        { name: 'Благоустройство могил', url: '/ru/services#grave-decoration', keywords: 'благоустройство могил' },
-        { name: 'Поминальный зал', url: '/ru/services#mourning-hall', keywords: 'поминальный зал' },
-        { name: 'Банкетный зал', url: '/ru/services#banquet-hall', keywords: 'банкетный зал' },
-        { name: 'Копание могилы', url: '/ru/services#grave-preparation', keywords: 'копание могилы' },
-        { name: 'Изготовление цветных фотографий', url: '/ru/services#colored-photo', keywords: 'изготовление цветных фотографий' },
-        { name: 'Гравировка металлическими буквами', url: '/ru/services#metal-letters', keywords: 'гравировка металлическими буквами' }
+        { name: 'Бальзамирование, грим, одевание', url: '/ru/services/embalming-dressing', keywords: 'бальзамирование грим одевание' },
+        { name: 'Перевозка', url: '/ru/services/transportation', keywords: 'перевозка' },
+        { name: 'Поминальный зал', url: '/ru/services/mourning-hall', keywords: 'поминальный зал' },
+        { name: 'Услуги катафалка', url: '/ru/services/hearse', keywords: 'услуги катафалка' },
+        { name: 'Маршрутка', url: '/ru/services/microbus', keywords: 'маршрутка' },
+        { name: 'Зал', url: '/ru/services/hall', keywords: 'зал' },
+        { name: 'Благоустройство кладбища', url: '/ru/services/cemetery-decoration', keywords: 'благоустройство кладбища' },
+        { name: 'Надгробные камни, роспись на камне', url: '/ru/services/grave-stones', keywords: 'надгробные камни роспись на камне' },
+        { name: 'Копание могилы', url: '/ru/services/grave-preparation', keywords: 'копание могилы' },
+        { name: 'Подъемная машина', url: '/ru/services/lifting-machine', keywords: 'подъемная машина' }
       ],
       products: [
         { name: 'Гробы', url: '/ru/products/coffins', keywords: 'гробы' },
-        { name: 'Катафалк', url: '/ru/products/hearse', keywords: 'катафалк' },
+        { name: 'Кладбищенские аксессуары', url: '/ru/products/cemetery-accessories', keywords: 'кладбищенские аксессуары' },
         { name: 'Саваны', url: '/ru/products/shrouds', keywords: 'саваны' },
         { name: 'Холодильники', url: '/ru/products/refrigeration', keywords: 'холодильники' }
       ]
@@ -240,14 +234,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   getServicePath(url: string): string[] {
-    const urlParts = url.split('#');
-    const path = urlParts[0];
-    return [path];
+    // For new service URLs, return the full path
+    return [url];
   }
 
   getServiceFragment(url: string): string {
-    const urlParts = url.split('#');
-    return urlParts[1] || '';
+    // No fragments needed for new service URLs
+    return '';
   }
 
   isHomePage(): boolean {
