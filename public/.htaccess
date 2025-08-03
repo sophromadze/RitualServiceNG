@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Exception for sitemap.xml - serve it directly
+RewriteRule ^sitemap\.xml$ - [L]
+
 # Handle Angular routes - serve index.html for all routes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -20,13 +23,25 @@ RewriteRule . /index.csr.html [L]
     AddOutputFilterByType DEFLATE text/css
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
 </IfModule>
+
+# Set proper MIME types for XML files
+<IfModule mod_mime.c>
+    AddType application/xml .xml
+</IfModule>
+
+# Force XML content type for sitemap
+<Files "sitemap.xml">
+    ForceType application/xml
+</Files>
 
 # Browser caching
 <IfModule mod_expires.c>
     ExpiresActive on
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/xml "access plus 1 week"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
@@ -36,4 +51,4 @@ RewriteRule . /index.csr.html [L]
 </IfModule>
 
 # Prevent directory browsing
-Options -Indexes 
+Options -Indexes
