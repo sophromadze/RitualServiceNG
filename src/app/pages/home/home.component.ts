@@ -320,13 +320,25 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   getServiceUrl(serviceUrl: string): string {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return serviceUrl;
+    }
+    // For other languages, add language prefix
     return `/${this.currentLanguage}${serviceUrl}`;
   }
 
   navigateToService(serviceUrl: string): void {
     // Navigate to service or product detail pages
     const segments = serviceUrl.split('/').filter(s => s);
-    this.router.navigate([this.currentLanguage, ...segments]);
+    
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      this.router.navigate([...segments]);
+    } else {
+      // For other languages, add language prefix
+      this.router.navigate([this.currentLanguage, ...segments]);
+    }
   }
 
   callPhone(): void {
@@ -337,10 +349,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   goToServicePage(): void {
-    this.router.navigate([this.currentLanguage, 'services']);
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      this.router.navigate(['services']);
+    } else {
+      // For other languages, add language prefix
+      this.router.navigate([this.currentLanguage, 'services']);
+    }
   }
 
   goToPlanningPage(): void {
-    this.router.navigate([this.currentLanguage, 'funeral-planning']);
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      this.router.navigate(['funeral-planning']);
+    } else {
+      // For other languages, add language prefix
+      this.router.navigate([this.currentLanguage, 'funeral-planning']);
+    }
   }
 }

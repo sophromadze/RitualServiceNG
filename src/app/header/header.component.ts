@@ -31,23 +31,23 @@ export class HeaderComponent implements OnInit, OnDestroy {
   navigation = {
     ka: {
       services: [
-        { name: 'ბალზამირება, გრიმი, ჩაცმა', url: '/ka/services/embalming-dressing', keywords: 'balzamireba grimi chacma' },
-        { name: 'გადასვენება', url: '/ka/services/transportation', keywords: 'gadasveneba' },
-        { name: 'საპანაშვიდე დარბაზი', url: '/ka/services/mourning-hall', keywords: 'sapanashvide darbazi' },
-        { name: 'კატაფალკის მომსახურება', url: '/ka/services/hearse', keywords: 'katafalkis momsaxureba' },
-        { name: 'მარშუტკა', url: '/ka/services/microbus', keywords: 'marshutka' },
-        { name: 'დარბაზი', url: '/ka/services/hall', keywords: 'darbazi' },
-        { name: 'სასაფლაოს მოპირკეთება', url: '/ka/services/cemetery-decoration', keywords: 'sasapleos mopirketeba' },
-        { name: 'საფლავის ქვები, ქვაზე ხატვა', url: '/ka/services/grave-stones', keywords: 'saplavis qvebi qvaze xatva' },
-        { name: 'ლითონის წარწერები', url: '/ka/services/metal-letters', keywords: 'litonis tsartserebi' },
-        { name: 'სამარხის გაჭრა', url: '/ka/services/grave-preparation', keywords: 'samarxis gacra' },
-        { name: 'ჩასასვენებლი ლიფტი', url: '/ka/services/lifting-machine', keywords: 'chasasvenebli lifti' }
+        { name: 'ბალზამირება, გრიმი, ჩაცმა', url: '/services/embalming-dressing', keywords: 'balzamireba grimi chacma' },
+        { name: 'გადასვენება', url: '/services/transportation', keywords: 'gadasveneba' },
+        { name: 'საპანაშვიდე დარბაზი', url: '/services/mourning-hall', keywords: 'sapanashvide darbazi' },
+        { name: 'კატაფალკის მომსახურება', url: '/services/hearse', keywords: 'katafalkis momsaxureba' },
+        { name: 'მარშუტკა', url: '/services/microbus', keywords: 'marshutka' },
+        { name: 'დარბაზი', url: '/services/hall', keywords: 'darbazi' },
+        { name: 'სასაფლაოს მოპირკეთება', url: '/services/cemetery-decoration', keywords: 'sasapleos mopirketeba' },
+        { name: 'საფლავის ქვები, ქვაზე ხატვა', url: '/services/grave-stones', keywords: 'saplavis qvebi qvaze xatva' },
+        { name: 'ლითონის წარწერები', url: '/services/metal-letters', keywords: 'litonis tsartserebi' },
+        { name: 'სამარხის გაჭრა', url: '/services/grave-preparation', keywords: 'samarxis gacra' },
+        { name: 'ჩასასვენებლი ლიფტი', url: '/services/lifting-machine', keywords: 'chasasvenebli lifti' }
       ],
       products: [
-        { name: 'სასახლეები', url: '/ka/products/coffins', keywords: 'sasaxleebi' },
-        { name: 'სასაფლაოს აქსესუარები', url: '/ka/products/cemetery-accessories', keywords: 'sasapleos akseesuarebi' },
-        { name: 'სუდარები', url: '/ka/products/shrouds', keywords: 'sudarebi, sudara' },
-        { name: 'სასახლე მაცივრები', url: '/ka/products/refrigeration', keywords: 'sasaxle macivrebi' }
+        { name: 'სასახლეები', url: '/products/coffins', keywords: 'sasaxleebi' },
+        { name: 'სასაფლაოს აქსესუარები', url: '/products/cemetery-accessories', keywords: 'sasapleos akseesuarebi' },
+        { name: 'სუდარები', url: '/products/shrouds', keywords: 'sudarebi, sudara' },
+        { name: 'სასახლე მაცივრები', url: '/products/refrigeration', keywords: 'sasaxle macivrebi' }
       ]
     },
     en: {
@@ -246,8 +246,51 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return '';
   }
 
+  getServicesLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['services'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'services'];
+  }
+
+  getProductsLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['products'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'products'];
+  }
+
+  getAboutLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['about'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'about'];
+  }
+
+  getLocationsLink(): string[] {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return ['locations'];
+    }
+    // For other languages, add language prefix
+    return [this.currentLanguage, 'locations'];
+  }
+
   isHomePage(): boolean {
     const currentUrl = this.router.url;
+    
+    // For Georgian (default language), home page is just "/" or "/"
+    if (this.currentLanguage === 'ka') {
+      return currentUrl === '/' || currentUrl === '';
+    }
+    
+    // For other languages, home page includes language prefix
     return currentUrl === `/${this.currentLanguage}` || currentUrl === `/${this.currentLanguage}/`;
   }
 }

@@ -142,7 +142,7 @@ export class SeoService {
     const defaultLink = document.createElement('link');
     defaultLink.setAttribute('rel', 'alternate');
     defaultLink.setAttribute('hreflang', 'x-default');
-    defaultLink.setAttribute('href', `https://ritualservice.ge/ka${currentPath}`);
+    defaultLink.setAttribute('href', `https://ritualservice.ge${currentPath}`);
     document.head.appendChild(defaultLink);
   }
 

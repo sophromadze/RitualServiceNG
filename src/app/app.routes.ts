@@ -11,12 +11,9 @@ import { FuneralPlanningComponent } from './pages/funeral-planning/funeral-plann
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
-  // Redirect root to Georgian
-  { path: '', redirectTo: '/ka', pathMatch: 'full' },
-  
-  // Georgian routes (ka) - SEO optimized URLs
+  // Georgian routes (default) - no /ka prefix
   {
-    path: 'ka',
+    path: '',
     children: [
       { 
         path: '', 
@@ -297,6 +294,10 @@ export const routes: Routes = [
       }
     ]
   },
+
+  // Legacy /ka route - redirect to root for Georgian
+  { path: 'ka', redirectTo: '', pathMatch: 'full' },
+  { path: 'ka/:path*', redirectTo: ':path*', pathMatch: 'full' },
   
   // English routes (en)
   {

@@ -2241,9 +2241,9 @@ export class LanguageService {
           language = 'en';
         } else if (urlPath.startsWith('/ru')) {
           language = 'ru';
-        } else if (urlPath.startsWith('/ka')) {
-          language = 'ka';
         } else {
+          // Default to Georgian for root path and any other paths
+          language = 'ka';
           // Try to get from localStorage
           const savedLanguage = localStorage.getItem('selectedLanguage');
           if (savedLanguage && this.translations[savedLanguage]) {
@@ -2323,10 +2323,10 @@ export class LanguageService {
           keywords: 'დაკრძალვის სერვისები, ბალზამირება, კატაფალკები, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება',
           h1: 'სარიტუალო მომსახურება - დამკრძალავი ბიურო',
           services: [
-            { name: 'ბალზამირება', url: '/ka/services/balzamireba', desc: 'მიცვალებულის პროფესიონალური ბალზამირება' },
-            { name: 'კატაფალკები', url: '/ka/services/katafalka', desc: 'კატაფალკების მომსახურება ყველა მიმართულებით' },
-            { name: 'გადასვენება', url: '/ka/services/gadasveneba', desc: 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ' },
-            { name: 'ქვაზე ხატვა', url: '/ka/services/qvaze-xatva', desc: 'პროფესიონალური ქვაზე ხატვა და გრავიურა' }
+            { name: 'ბალზამირება', url: '/services/embalming', desc: 'მიცვალებულის პროფესიონალური ბალზამირება' },
+            { name: 'კატაფალკები', url: '/services/hearse', desc: 'კატაფალკების მომსახურება ყველა მიმართულებით' },
+            { name: 'გადასვენება', url: '/services/transportation', desc: 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ' },
+            { name: 'ქვაზე ხატვა', url: '/services/stone-engraving', desc: 'პროფესიონალური ქვაზე ხატვა და გრავიურა' }
           ]
         },
         en: {

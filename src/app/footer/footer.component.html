@@ -79,11 +79,11 @@
             <h4>{{translate('footer.quick_links')}}</h4>
                         <ul>
               <li><a [routerLink]="[currentLanguage]">{{translate('nav.home')}}</a></li>
-              <li><a [routerLink]="[currentLanguage, 'services']">{{translate('nav.services')}}</a></li>
-              <li><a [routerLink]="[currentLanguage, 'products']">{{translate('nav.products')}}</a></li>
-              <li><a [routerLink]="[currentLanguage, 'about']">{{translate('nav.about')}}</a></li>
-              <li><a [routerLink]="[currentLanguage, 'funeral-planning']">{{translate('funeral_planning.start_planning')}}</a></li>
-              <li><a [routerLink]="[currentLanguage, 'locations']">{{translate('nav.locations')}}</a></li>
+              <li><a [routerLink]="getServicesLink()">{{translate('nav.services')}}</a></li>
+              <li><a [routerLink]="getProductsLink()">{{translate('nav.products')}}</a></li>
+              <li><a [routerLink]="getAboutLink()">{{translate('nav.about')}}</a></li>
+              <li><a [routerLink]="getFuneralPlanningLink()">{{translate('funeral_planning.start_planning')}}</a></li>
+              <li><a [routerLink]="getLocationsLink()">{{translate('nav.locations')}}</a></li>
             </ul>
 
 

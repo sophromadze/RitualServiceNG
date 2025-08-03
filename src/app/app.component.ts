@@ -66,7 +66,8 @@ export class AppComponent implements OnInit, OnDestroy {
         language = 'en';
       } else if (urlPath.startsWith('/ru')) {
         language = 'ru';
-      } else if (urlPath.startsWith('/ka')) {
+      } else {
+        // Default to Georgian for root path and any other paths
         language = 'ka';
       }
 
@@ -104,8 +105,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private updateLanguageFromUrl(url: string): void {
     const segments = url.split('/');
-    if (segments.length > 1 && ['ka', 'en', 'ru'].includes(segments[1])) {
+    if (segments.length > 1 && ['en', 'ru'].includes(segments[1])) {
       this.languageService.setLanguage(segments[1]);
+    } else {
+      // Default to Georgian for root path and any other paths
+      this.languageService.setLanguage('ka');
     }
   }
 
@@ -176,13 +180,21 @@ export class AppComponent implements OnInit, OnDestroy {
     const currentPath = this.router.url;
     const pathSegments = currentPath.split('/').filter(segment => segment);
     
-    // Remove current language from path
+    // Remove current language from path if it exists
     if (pathSegments.length > 0 && ['ka', 'en', 'ru'].includes(pathSegments[0])) {
       pathSegments.shift();
     }
 
     // Navigate to new language path
-    const newPath = `/${language}${pathSegments.length > 0 ? '/' + pathSegments.join('/') : ''}`;
+    let newPath: string;
+    if (language === 'ka') {
+      // Georgian - no language prefix
+      newPath = `/${pathSegments.join('/')}`;
+    } else {
+      // English and Russian - with language prefix
+      newPath = `/${language}${pathSegments.length > 0 ? '/' + pathSegments.join('/') : ''}`;
+    }
+    
     this.router.navigateByUrl(newPath);
   }
 }

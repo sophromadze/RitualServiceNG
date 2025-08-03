@@ -281,6 +281,13 @@ export class ServicesComponent implements OnInit, OnDestroy {
     };
     
     const route = serviceRouteMap[serviceId] || serviceId;
-    this.router.navigate([`/${this.currentLanguage}/services/${route}`]);
+    
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      this.router.navigate([`/services/${route}`]);
+    } else {
+      // For other languages, add language prefix
+      this.router.navigate([`/${this.currentLanguage}/services/${route}`]);
+    }
   }
 }

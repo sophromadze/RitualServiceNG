@@ -37,7 +37,7 @@
           <div class="nav-item dropdown"
                (mouseenter)="isServicesDropdownOpen = true"
                (mouseleave)="isServicesDropdownOpen = false">
-            <a [routerLink]="[currentLanguage, 'services']" 
+            <a [routerLink]="getServicesLink()" 
                class="nav-link dropdown-toggle"
                [class.active]="isServicesDropdownOpen"
                [class.active-border]="isLinkActive('services')"
@@ -70,7 +70,7 @@
           <div class="nav-item dropdown"
                (mouseenter)="isProductsDropdownOpen = true"
                (mouseleave)="isProductsDropdownOpen = false">
-            <a [routerLink]="[currentLanguage, 'products']" 
+            <a [routerLink]="getProductsLink()" 
                class="nav-link dropdown-toggle"
                [class.active]="isProductsDropdownOpen"
                [class.active-border]="isLinkActive('products')"
@@ -100,14 +100,14 @@
           </div>
 
           <!-- Direct Navigation Links -->
-          <a [routerLink]="[currentLanguage, 'about']" 
+          <a [routerLink]="getAboutLink()" 
              class="nav-link"
              [class.active-border]="isLinkActive('about')"
              (click)="onLinkClick('about')">
             {{translate('nav.about')}}
           </a>
           
-          <a [routerLink]="[currentLanguage, 'locations']" 
+          <a [routerLink]="getLocationsLink()" 
              class="nav-link"
              [class.active-border]="isLinkActive('locations')"
              (click)="onLinkClick('locations')">

@@ -38,14 +38,30 @@ export class BreadcrumbComponent implements OnInit {
     
     this.breadcrumbs = [];
     
-    if (segments.length > 1) {
-      // Remove language segment
-      segments.shift();
-      
-      let currentUrl = `/${this.currentLanguage}`;
-      
-      segments.forEach((segment, index) => {
-        currentUrl += `/${segment}`;
+    // Handle Georgian (no language prefix) vs other languages
+    let startIndex = 0;
+    let currentUrl = '';
+    
+    if (this.currentLanguage === 'ka') {
+      // For Georgian, no language prefix, start from the first segment
+      startIndex = 0;
+      currentUrl = '';
+    } else {
+      // For other languages, skip the language segment and start building URL with language prefix
+      startIndex = 1;
+      currentUrl = `/${this.currentLanguage}`;
+    }
+    
+    if (segments.length > startIndex) {
+      // Process segments starting from the appropriate index
+      for (let i = startIndex; i < segments.length; i++) {
+        const segment = segments[i];
+        
+        if (this.currentLanguage === 'ka') {
+          currentUrl += `/${segment}`;
+        } else {
+          currentUrl += `/${segment}`;
+        }
         
         let label = segment;
         
@@ -81,7 +97,7 @@ export class BreadcrumbComponent implements OnInit {
               url: currentUrl
             });
             
-            return; // Skip the default push below
+            continue; // Skip the default push below
           } else {
             // Handle other fragments (services, etc.)
             const fragmentKey = `breadcrumb.${fragment.replace(/-/g, '_')}`;
@@ -110,6 +126,9 @@ export class BreadcrumbComponent implements OnInit {
             break;
           case 'locations':
             label = this.translate('nav.locations');
+            break;
+          case 'funeral-planning':
+            label = this.translate('breadcrumb.funeral_planning');
             break;
           // Product-specific translations
           case 'coffins':
@@ -161,9 +180,6 @@ export class BreadcrumbComponent implements OnInit {
           case 'colored-photo':
             label = this.translate('breadcrumb.colored_photo');
             break;
-          case 'funeral-planning':
-            label = this.translate('breadcrumb.funeral_planning');
-            break;
           // New service translations
           case 'embalming-dressing':
             label = this.translate('services.embalming_dressing_service.title') || 'ბალზამირება, გრიმი, ჩაცმა';
@@ -212,7 +228,7 @@ export class BreadcrumbComponent implements OnInit {
           label: label,
           url: currentUrl
         });
-      });
+      }
     }
   }
 

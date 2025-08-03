@@ -49,7 +49,7 @@ export class ProductsComponent implements OnInit {
         id: 'coffins',
         titleKey: 'products.coffins',
         descKey: 'products.coffins_desc',
-        url: `/${this.currentLanguage}/products/coffins`,
+        url: this.getProductUrl('coffins'),
         image: '/images/sasaxleebi2.jpg',
         keywords: 'სასახლეები, sasaxleebi, ხის სასახლეები, ლუქს კლასის სასახლეები',
         types: ['ხის სასახლეები', 'ლუქს კლასის სასახლეები', 'ეკონომ კლასის სასახლეები'],
@@ -64,7 +64,7 @@ export class ProductsComponent implements OnInit {
         id: 'shrouds',
         titleKey: 'products.shrouds',
         descKey: 'products.shrouds_desc',
-        url: `/${this.currentLanguage}/products/shrouds`,
+        url: this.getProductUrl('shrouds'),
         image: '/images/sudarebi2.jpg',
         keywords: 'სუდარები, sudarebi, ბამბის სუდარები, სილკის სუდარები',
         types: ['ბამბის სუდარები', 'სილკის სუდარები', 'ხელოვნური ქსოვილის სუდარები'],
@@ -79,7 +79,7 @@ export class ProductsComponent implements OnInit {
         id: 'refrigeration',
         titleKey: 'products.refrigeration',
         descKey: 'products.refrigeration_desc',
-        url: `/${this.currentLanguage}/products/refrigeration`,
+        url: this.getProductUrl('refrigeration'),
         image: '/images/fridge2.jpeg',
         keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
         types: ['სასახლე-მაცივრები', 'სტაციონარული მაცივრები', 'მობილური მაცივრები'],
@@ -94,7 +94,7 @@ export class ProductsComponent implements OnInit {
         id: 'cemetery_accessories',
         titleKey: 'products.cemetery_accessories',
         descKey: 'products.cemetery_accessories_desc',
-        url: `/${this.currentLanguage}/products/cemetery-accessories`,
+        url: this.getProductUrl('cemetery-accessories'),
         image: '/images/cemetery.jpg',
         keywords: 'სასაფლაოს აქსესუარები, sasapleos akseesuarebi, ჯვრები, საყვავილე კონსტრუქციები, სასანთლეები',
         types: ['ჯვრები', 'საყვავილე კონსტრუქციები', 'სასანთლეები', 'მარმარილოს აქსესუარები'],
@@ -124,6 +124,15 @@ export class ProductsComponent implements OnInit {
 
   navigateToProduct(url: string): void {
     this.router.navigateByUrl(url);
+  }
+
+  getProductUrl(productId: string): string {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return `/products/${productId}`;
+    }
+    // For other languages, add language prefix
+    return `/${this.currentLanguage}/products/${productId}`;
   }
 
   callPhone(): void {

@@ -606,6 +606,11 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
   }
 
   getServiceUrl(relatedService: string): string {
+    // For Georgian (default), don't add language prefix
+    if (this.currentLanguage === 'ka') {
+      return `/services/${relatedService}`;
+    }
+    // For other languages, add language prefix
     return `/${this.currentLanguage}/services/${relatedService}`;
   }
 
