@@ -16,7 +16,7 @@
 .service-detail-hero {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: white;
-  padding: 80px 0;
+  padding: 40px 0;
   position: relative;
   overflow: hidden;
   
@@ -183,184 +183,340 @@
 
 // Service Detail Content
 .service-detail-content {
-  padding: 80px 0;
-  background: #f8f9fa;
+  padding: 40px 0; // Reduced from 80px
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
   }
+}
+
+// Embalming-Dressing Special Content
+.embalming-dressing-content {
+  text-align: center;
   
-  .service-description {
-    text-align: center;
-    margin-bottom: 60px;
+  .preparation-header {
+    margin-bottom: 30px; // Reduced from 40px
     
-    h2 {
-      font-size: 2.5rem;
+    h3 {
+      font-size: 2rem; // Reduced from 2.5rem
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0;
+      line-height: 1.3;
+      
+      @media (max-width: 768px) {
+        font-size: 1.6rem; // Reduced from 2rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.4rem; // Reduced from 1.8rem
+      }
+    }
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; // Reduced from 30px
+    margin-bottom: 30px; // Reduced from 50px
+    
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 15px; // Reduced from 25px
+      margin-bottom: 25px; // Reduced from 40px
+    }
+  }
+  
+  .service-card {
+    background: white;
+    padding: 25px 20px; // Reduced from 40px 30px
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); // Reduced shadow
+    border: 2px solid transparent;
+    text-align: center;
+    // No hover effects - these are non-interactive cards
+    
+    @media (max-width: 768px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 15px 12px; // Reduced from 30px 20px
+    }
+    
+    .card-content {
+      span {
+        font-size: 1rem; // Reduced from 1.2rem
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        font-weight: 600;
+
+        strong {
+          color: #e74c3c;
+          font-weight: 700;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1.1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 1rem
+        }
+      }
+
+      .feature-header {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #e74c3c;
+        margin: 0 0 10px 0;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        
+        @media (max-width: 768px) {
+          font-size: 1rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
+      }
+
+      .feature-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        font-weight: 400;
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  .why-choose-section {
+    margin: 30px 0;
+    text-align: center;
+    
+    h4 {
+      font-size: 1.8rem;
       font-weight: 700;
       color: #1a1a1a;
       margin-bottom: 20px;
       
       @media (max-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
       
       @media (max-width: 480px) {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
+      }
+    }
+    
+    .why-choose-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      li {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 10px;
+        border-left: 4px solid #ffd700;
+        text-align: left;
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+          padding: 12px 15px;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem;
+          padding: 10px 12px;
+        }
+      }
+    }
+  }
+
+  .materials-methods-section {
+    margin: 30px 0;
+    text-align: center;
+    
+    .materials-methods-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      
+      li {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 10px;
+        border-left: 4px solid #ffd700;
+        text-align: left;
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem;
+          padding: 12px 15px;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem;
+          padding: 10px 12px;
+        }
+      }
+    }
+  }
+
+  .stone-painting-section {
+    margin: 30px 0;
+    text-align: center;
+    
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 1.3rem;
       }
     }
     
     p {
-      font-size: 1.1rem;
-      color: #666;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
       max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem;
+      }
+    }
+    
+    .painting-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
       margin: 0 auto;
       
-      @media (max-width: 768px) {
+      li {
         font-size: 1rem;
-      }
-      
-      @media (max-width: 480px) {
-        font-size: 0.95rem;
-      }
-    }
-  }
-  
-  .service-features {
-    margin-bottom: 60px;
-    
-    h3 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .feature-item {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-      
-      i {
-        color: #28a745;
-        font-size: 1.5rem;
-        flex-shrink: 0;
-      }
-      
-      span {
-        color: #1a1a1a;
-        font-weight: 500;
-        line-height: 1.4;
-      }
-    }
-  }
-  
-  .service-process {
-    h3 {
-      font-size: 2rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-    }
-    
-    .process-step {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      border-left: 4px solid #ffd700;
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-      
-      @media (max-width: 768px) {
-        padding: 25px;
-        gap: 15px;
-      }
-      
-      @media (max-width: 480px) {
-        padding: 20px;
-        gap: 12px;
-      }
-      
-      .step-number {
-        background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-        color: #1a1a1a;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1.2rem;
-        flex-shrink: 0;
-        box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+        line-height: 1.6;
+        color: #333;
+        padding: 15px 20px;
+        background: #fff;
+        border-radius: 10px;
+        border-left: 4px solid #e74c3c;
+        text-align: left;
         
         @media (max-width: 768px) {
-          width: 45px;
-          height: 45px;
-          font-size: 1.1rem;
+          font-size: 0.9rem;
+          padding: 12px 15px;
         }
         
         @media (max-width: 480px) {
-          width: 40px;
-          height: 40px;
-          font-size: 1rem;
+          font-size: 0.85rem;
+          padding: 10px 12px;
         }
       }
+    }
+  }
+  
+
+  
+  .final-message {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 30px 25px; // Reduced from 50px 40px
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // Reduced shadow
+    text-align: center;
+    
+    @media (max-width: 768px) {
+      padding: 25px 20px; // Reduced from 40px 30px
+    }
+    
+    @media (max-width: 480px) {
+      padding: 20px 15px; // Reduced from 35px 25px
+    }
+    
+    p {
+      font-size: 1rem; // Reduced from 1.2rem
+      line-height: 1.6;
+      margin-bottom: 15px; // Reduced from 20px
+      color: #f0f0f0;
       
-      .step-content {
-        p {
-          color: #333;
-          font-size: 1rem;
-          line-height: 1.6;
-          margin: 0;
-          font-weight: 500;
-          
-          @media (max-width: 768px) {
-            font-size: 0.95rem;
-          }
-          
-          @media (max-width: 480px) {
-            font-size: 0.9rem;
-          }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Reduced from 1.1rem
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 0.85rem; // Reduced from 1rem
+      }
+      
+      .phone-link {
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem; // Reduced from 1.1rem
+        transition: color 0.3s ease; // Restored transition for phone link
+        
+        &:hover {
+          color: #ffed4e;
+          text-decoration: underline; // Restored hover effect for phone link
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 0.9rem; // Reduced from 1rem
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 0.85rem; // Reduced from 0.95rem
         }
       }
     }
@@ -369,7 +525,7 @@
 
 // Gallery Section
 .service-gallery {
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   background: white;
   
   .container {
@@ -379,17 +535,17 @@
   }
   
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem; // Reduced from 2.5rem
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px; // Reduced from 50px
   }
   
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 15px; // Reduced from 20px
     
     @media (max-width: 768px) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -401,29 +557,20 @@
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
+    // No hover effects - these are non-interactive gallery images
     
     img {
       width: 100%;
-      height: 250px;
+      height: 200px; // Reduced from 250px
       object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-    
-    &:hover img {
-      transform: scale(1.05);
+      // No transition or hover effects for gallery images
     }
   }
 }
 
 // Related Services Section
 .related-services {
-  padding: 80px 0;
+  padding: 40px 0; // Reduced from 80px
   background: #f8f9fa;
   
   .container {
@@ -433,17 +580,17 @@
   }
   
   h3 {
-    font-size: 2.5rem;
+    font-size: 2rem; // Reduced from 2.5rem
     font-weight: 700;
     color: #1a1a1a;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px; // Reduced from 50px
   }
   
   .related-services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 20px; // Reduced from 30px
     
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -452,35 +599,39 @@
   
   .related-service-item {
     background: white;
-    padding: 30px;
+    padding: 20px; // Reduced from 30px
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); // Reduced shadow
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; // Restored transition for related items (they have click action)
     display: flex;
     align-items: center;
     justify-content: space-between;
     
     &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px); // Restored hover effect for related items
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); // Restored hover shadow
       
       i {
-        transform: translateX(5px);
+        transform: translateX(5px); // Restored hover effect for arrow
       }
     }
     
     h4 {
-      font-size: 1.3rem;
+      font-size: 1.1rem; // Reduced from 1.3rem
       font-weight: 600;
       color: #1a1a1a;
-      margin: 0;
+      margin-bottom: 0; // Removed margin since p is hidden
+    }
+    
+    p {
+      display: none; // Hide paragraphs in related items
     }
     
     i {
       color: #ffd700;
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
+      font-size: 1.1rem; // Reduced from 1.2rem
+      transition: transform 0.3s ease; // Restored transition for arrow
     }
   }
 }
@@ -488,7 +639,7 @@
 // SEO Content Section (Hidden for better UX but kept for SEO)
 .seo-content-section {
   display: none;
-  padding: 80px 0;
+  padding: 40px 0;
   background: white;
   
   .container {

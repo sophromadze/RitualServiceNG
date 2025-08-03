@@ -4,31 +4,20 @@
   
   <!-- Home Page - Georgian (default) -->
   <url>
-    <loc>https://ritualservice.ge/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://ritualservice.ge/ka/</loc>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/"/>
   </url>
 
-  <!-- Georgian Routes -->
-  <url>
-    <loc>https://ritualservice.ge/ka/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/"/>
-  </url>
-  
+  <!-- Services Pages -->
   <url>
     <loc>https://ritualservice.ge/ka/services/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/"/>
@@ -38,8 +27,207 @@
   </url>
   
   <url>
+    <loc>https://ritualservice.ge/ka/services/agent-service/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/agent-service/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/agent-service/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/agent-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/agent-service/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/dressing/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/dressing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/dressing/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/dressing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/dressing/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/embalming/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/embalming/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/embalming/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/embalming/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/embalming/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/hearse/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/hearse/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/hearse/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/hearse/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/hearse/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/transportation/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/transportation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/transportation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/transportation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/transportation/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/stone-engraving/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/stone-engraving/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/stone-engraving/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/stone-engraving/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/stone-engraving/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/grave-decoration/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/grave-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/grave-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/grave-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/grave-decoration/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/mourning-hall/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/mourning-hall/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/mourning-hall/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/mourning-hall/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/mourning-hall/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/banquet-hall/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/banquet-hall/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/banquet-hall/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/banquet-hall/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/banquet-hall/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/grave-preparation/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/grave-preparation/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/grave-preparation/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/grave-preparation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/grave-preparation/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/colored-photo/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/colored-photo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/colored-photo/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/colored-photo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/colored-photo/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/metal-letters/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/metal-letters/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/metal-letters/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/metal-letters/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/metal-letters/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/embalming-dressing/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/embalming-dressing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/embalming-dressing/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/embalming-dressing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/embalming-dressing/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/microbus/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/microbus/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/microbus/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/microbus/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/microbus/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/hall/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/hall/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/hall/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/hall/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/hall/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/cemetery-decoration/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/cemetery-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/cemetery-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/cemetery-decoration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/cemetery-decoration/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/grave-stones/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/grave-stones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/grave-stones/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/grave-stones/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/grave-stones/"/>
+  </url>
+  
+  <url>
+    <loc>https://ritualservice.ge/ka/services/lifting-machine/</loc>
+    <lastmod>2024-12-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/lifting-machine/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/lifting-machine/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/lifting-machine/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/services/lifting-machine/"/>
+  </url>
+
+  <!-- Products Pages -->
+  <url>
     <loc>https://ritualservice.ge/ka/products/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/"/>
@@ -50,7 +238,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ka/products/coffins/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/coffins/"/>
@@ -61,7 +249,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ka/products/shrouds/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/shrouds/"/>
@@ -72,7 +260,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ka/products/refrigeration/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/refrigeration/"/>
@@ -82,19 +270,20 @@
   </url>
   
   <url>
-    <loc>https://ritualservice.ge/ka/products/hearse/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <loc>https://ritualservice.ge/ka/products/cemetery-accessories/</loc>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/hearse/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/cemetery-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/cemetery-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/cemetery-accessories/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/cemetery-accessories/"/>
   </url>
-  
+
+  <!-- Other Pages -->
   <url>
     <loc>https://ritualservice.ge/ka/about/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/about/"/>
@@ -105,7 +294,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ka/locations/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/locations/"/>
@@ -116,7 +305,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ka/funeral-planning/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/funeral-planning/"/>
@@ -128,18 +317,18 @@
   <!-- English Routes -->
   <url>
     <loc>https://ritualservice.ge/en/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/"/>
   </url>
   
   <url>
     <loc>https://ritualservice.ge/en/services/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/"/>
@@ -150,7 +339,7 @@
   
   <url>
     <loc>https://ritualservice.ge/en/products/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/"/>
@@ -160,52 +349,8 @@
   </url>
   
   <url>
-    <loc>https://ritualservice.ge/en/products/coffins/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/coffins/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/en/products/shrouds/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/shrouds/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/en/products/refrigeration/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/refrigeration/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/en/products/hearse/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/hearse/"/>
-  </url>
-  
-  <url>
     <loc>https://ritualservice.ge/en/about/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/about/"/>
@@ -216,7 +361,7 @@
   
   <url>
     <loc>https://ritualservice.ge/en/locations/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/locations/"/>
@@ -227,7 +372,7 @@
   
   <url>
     <loc>https://ritualservice.ge/en/funeral-planning/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/funeral-planning/"/>
@@ -239,18 +384,18 @@
   <!-- Russian Routes -->
   <url>
     <loc>https://ritualservice.ge/ru/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/"/>
   </url>
   
   <url>
     <loc>https://ritualservice.ge/ru/services/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/services/"/>
@@ -261,7 +406,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ru/products/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/"/>
@@ -271,52 +416,8 @@
   </url>
   
   <url>
-    <loc>https://ritualservice.ge/ru/products/coffins/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/coffins/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/coffins/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/ru/products/shrouds/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/shrouds/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/shrouds/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/ru/products/refrigeration/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/refrigeration/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/refrigeration/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/ru/products/hearse/</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/products/hearse/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/ka/products/hearse/"/>
-  </url>
-  
-  <url>
     <loc>https://ritualservice.ge/ru/about/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/about/"/>
@@ -327,7 +428,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ru/locations/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/locations/"/>
@@ -338,7 +439,7 @@
   
   <url>
     <loc>https://ritualservice.ge/ru/funeral-planning/</loc>
-    <lastmod>2024-12-19</lastmod>
+    <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/ka/funeral-planning/"/>

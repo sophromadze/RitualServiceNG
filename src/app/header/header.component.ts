@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         { name: 'დარბაზი', url: '/ka/services/hall', keywords: 'darbazi' },
         { name: 'სასაფლაოს მოპირკეთება', url: '/ka/services/cemetery-decoration', keywords: 'sasapleos mopirketeba' },
         { name: 'საფლავის ქვები, ქვაზე ხატვა', url: '/ka/services/grave-stones', keywords: 'saplavis qvebi qvaze xatva' },
+        { name: 'ლითონის წარწერები', url: '/ka/services/metal-letters', keywords: 'litonis tsartserebi' },
         { name: 'სამარხის გაჭრა', url: '/ka/services/grave-preparation', keywords: 'samarxis gacra' },
         { name: 'ჩასასვენებლი ლიფტი', url: '/ka/services/lifting-machine', keywords: 'chasasvenebli lifti' }
       ],
@@ -59,6 +60,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         { name: 'Hall', url: '/en/services/hall', keywords: 'hall' },
         { name: 'Cemetery Decoration', url: '/en/services/cemetery-decoration', keywords: 'cemetery decoration' },
         { name: 'Grave Stones, Stone Painting', url: '/en/services/grave-stones', keywords: 'grave stones stone painting' },
+        { name: 'Metal Inscriptions', url: '/en/services/metal-letters', keywords: 'metal inscriptions' },
         { name: 'Grave Digging', url: '/en/services/grave-preparation', keywords: 'grave digging' },
         { name: 'Lifting Machine', url: '/en/services/lifting-machine', keywords: 'lifting machine' }
       ],
@@ -79,6 +81,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         { name: 'Зал', url: '/ru/services/hall', keywords: 'зал' },
         { name: 'Благоустройство кладбища', url: '/ru/services/cemetery-decoration', keywords: 'благоустройство кладбища' },
         { name: 'Надгробные камни, роспись на камне', url: '/ru/services/grave-stones', keywords: 'надгробные камни роспись на камне' },
+        { name: 'Надписи металлическими буквами', url: '/ru/services/metal-letters', keywords: 'надписи металлическими буквами' },
         { name: 'Копание могилы', url: '/ru/services/grave-preparation', keywords: 'копание могилы' },
         { name: 'Подъемная машина', url: '/ru/services/lifting-machine', keywords: 'подъемная машина' }
       ],

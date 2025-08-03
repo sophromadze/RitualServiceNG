@@ -216,6 +216,15 @@
   font-weight: 600;
 }
 
+/* Breadcrumb text responsive styling */
+.breadcrumb-text-short {
+  display: none;
+}
+
+.breadcrumb-text-full {
+  display: inline;
+}
+
 .breadcrumb-home i {
   font-size: 16px;
   color: #2c3e50;
@@ -286,6 +295,15 @@
   .breadcrumb {
     padding: 0;
     margin-bottom: 0;
+  }
+  
+  /* Show short text and hide full text on mobile */
+  .breadcrumb-text-short {
+    display: inline;
+  }
+  
+  .breadcrumb-text-full {
+    display: none;
   }
     
   .breadcrumb-list {

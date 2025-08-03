@@ -66,7 +66,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
     {
       id: 'hall',
       titleKey: 'services.hall',
-      descKey: 'services.hall.description',
+      descKey: 'services.hall_service.description',
       image: '/images/hall.jpg',
       keywords: 'დარბაზი, darbazi, hall'
     },
@@ -85,6 +85,13 @@ export class ServicesComponent implements OnInit, OnDestroy {
       keywords: 'საფლავის ქვები, ქვაზე ხატვა, saflavis qvebi, qvaze xatva'
     },
     {
+      id: 'metal-letters',
+      titleKey: 'services.metal_letters.title',
+      descKey: 'services.metal_letters.description',
+      image: '/images/metal-letters.jpg',
+      keywords: 'ლითონის წარწერები, litonis tsartserebi, metal inscriptions'
+    },
+    {
       id: 'grave-excavation',
       titleKey: 'services.grave_excavation',
       descKey: 'services.grave_excavation.description',
@@ -93,10 +100,10 @@ export class ServicesComponent implements OnInit, OnDestroy {
     },
     {
       id: 'lifting-machine',
-      titleKey: 'services.lifting_machine',
-      descKey: 'services.lifting_machine.description',
+      titleKey: 'services.lifting_machine_service.title',
+      descKey: 'services.lifting_machine_service.description',
       image: '/images/liftingMachine.jpg',
-      keywords: 'ჩასასვენებლი ლიფტი, chasasvenebli lifti, lifting machine'
+      keywords: 'ჩასასვენებელი ლიფტი, chasasvenebli lifti, lifting machine'
     }
   ];
 

@@ -43,85 +43,91 @@ export class HomeComponent implements OnInit, OnDestroy {
   serviceCards = [
     {
       titleKey: 'services.coffins',
-      url: '/services#coffins',
+      url: '/products/coffins',
       image: '/images/kuboebi2.jpg',
       keywords: 'სასახლეები, sasaxleebi, კუბოები'
     },
     {
       titleKey: 'services.coffin_refrigeration',
-      url: '/services#coffin-refrigeration',
+      url: '/products/refrigeration',
       image: '/images/fridge1.jpeg',
       keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
     },
     {
       titleKey: 'services.shrouds',
-      url: '/services#shrouds',
+      url: '/products/shrouds',
       image: '/images/shroud1.jpg',
       keywords: 'სუდარა, sudara, სუდარები'
     },
     {
       titleKey: 'services.embalming_dressing',
-      url: '/services#embalming-dressing',
+      url: '/services/embalming-dressing',
       image: '/images/embalming.jpg',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის ჩაცმა'
     },
     {
       titleKey: 'services.transportation',
-      url: '/services#transportation',
+      url: '/services/transportation',
       image: '/images/microbus.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.mourning_hall',
-      url: '/services#mourning-hall',
+      url: '/services/mourning-hall',
       image: '/images/darbazebi1.jpg',
       keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, სამგლოვიარო დარბაზი'
     },
     {
       titleKey: 'services.hearse_service',
-      url: '/services#hearse',
+      url: '/services/hearse',
       image: '/images/katafalkebi2.jpg',
       keywords: 'კატაფალკის მომსახურება, katafalkis momserva, კატაფალკა'
     },
     {
       titleKey: 'services.marshutka',
-      url: '/services#marshutka',
+      url: '/services/microbus',
       image: '/images/marshutka.jpg',
       keywords: 'მარშუტკა, marshutka, სტუმრების გადაყვანა'
     },
     {
       titleKey: 'services.hall',
-      url: '/services#hall',
+      url: '/services/hall',
       image: '/images/hall.jpg',
       keywords: 'დარბაზი, darbazi, საბანკეტო დარბაზი'
     },
     {
       titleKey: 'services.cemetery_decoration',
-      url: '/services#cemetery-decoration',
+      url: '/services/cemetery-decoration',
       image: '/images/grave.jpg',
       keywords: 'სასაფლაოს მოპირკეთება, sasaflaos mopirketeba, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.grave_stones_painting',
-      url: '/services#grave-stones-painting',
+      url: '/services/grave-stones',
       image: '/images/stonepainting.jpg',
       keywords: 'საფლავის ქვები, saflavis qvebi, ქვაზე ხატვა'
     },
     {
+      titleKey: 'services.metal_letters.title',
+      url: '/services/metal-letters',
+      image: '/images/metal-letters.jpg',
+      keywords: 'ლითონის წარწერები, litonis tsartserebi, metal inscriptions'
+    },
+    {
       titleKey: 'services.grave_excavation',
-      url: '/services#grave-excavation',
+      url: '/services/grave-preparation',
       image: '/images/grave.jpg',
       keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
     },
     {
       titleKey: 'services.cemetery_accessories',
-      url: '/services#cemetery-accessories',
+      url: '/products/cemetery-accessories',
       image: '/images/grave.jpg',
       keywords: 'სასაფლაოს აქსესუარები, sasaflaos akseesuarebi, საფლავის აქსესუარები'
     },
     {
       titleKey: 'services.lifting_machine',
-      url: '/services#lifting-machine',
+      url: '/services/lifting-machine',
       image: '/images/liftingMachine.jpg',
       keywords: 'ჩასასვენებელი ლიფტი, chasasvenebeli lifti, მწევი მანქანა'
     }
@@ -318,15 +324,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   navigateToService(serviceUrl: string): void {
-    // Handle anchor navigation for services
-    if (serviceUrl.includes('#')) {
-      const [path, fragment] = serviceUrl.split('#');
-      const segments = path.split('/').filter(s => s);
-      this.router.navigate([this.currentLanguage, ...segments], { fragment: fragment });
-    } else {
-      // Regular navigation for products
-      this.router.navigate([this.currentLanguage, ...serviceUrl.split('/').filter(s => s)]);
-    }
+    // Navigate to service or product detail pages
+    const segments = serviceUrl.split('/').filter(s => s);
+    this.router.navigate([this.currentLanguage, ...segments]);
   }
 
   callPhone(): void {

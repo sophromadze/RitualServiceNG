@@ -8,7 +8,8 @@
              [class.disabled]="isHomePage()"
              (click)="onHomeClick($event)">
             <i class="fa-solid fa-home"></i>
-            <span>{{translate('nav.home')}}</span>
+            <span class="breadcrumb-text-full">{{translate('nav.home')}}</span>
+            <span class="breadcrumb-text-short">{{translate('nav.home_short')}}</span>
           </a>
         </li>
         <li class="breadcrumb-item" *ngFor="let crumb of breadcrumbs; let last = last">

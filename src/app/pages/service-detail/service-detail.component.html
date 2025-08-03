@@ -33,35 +33,291 @@
 <!-- Service Detail Content -->
 <section class="service-detail-content" *ngIf="serviceContent">
     <div class="container">
-        <!-- Service Description -->
-        <div class="service-description">
-            <h2>{{translate('services.detail_description')}}</h2>
-            <p>{{translate(serviceContent.longDescKey)}}</p>
-        </div>
+        <!-- Special Content for Embalming-Dressing Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'embalming-dressing'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
 
-        <!-- Service Features -->
-        <div class="service-features" *ngIf="isServiceContentDefined() && serviceContent!.features.length > 0">
-            <h3>{{translate('services.features')}}</h3>
-            <div class="features-grid">
-                <div class="feature-item" *ngFor="let feature of serviceContent!.features">
-                    <i class="fa-solid fa-check-circle"></i>
-                    <span>{{translate(feature)}}</span>
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
             </div>
         </div>
 
-        <!-- Service Process -->
-        <div class="service-process" *ngIf="isServiceContentDefined() && serviceContent!.process && serviceContent!.process.length > 0">
-            <h3>{{translate('services.process')}}</h3>
-            <div class="process-steps">
-                <ng-container *ngFor="let step of serviceContent!.process!; let i = index; trackBy: trackByIndex">
-                    <div class="process-step" *ngIf="step">
-                        <div class="step-number">{{i + 1}}</div>
-                        <div class="step-content">
-                            <p>{{translate(step)}}</p>
-                        </div>
+        <!-- Special Content for Transportation Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'transportation'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
                     </div>
-                </ng-container>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Microbus Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'microbus'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Hearse Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'hearse'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Mourning Hall Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'mourning-hall'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Hall Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'hall'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Lifting Machine Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'lifting-machine'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Grave Preparation Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'grave-preparation'">
+            <!-- Service Details Header -->
+            <div class="service-details-header">
+                <h3>{{translate('services.grave_preparation_service.service_details_header')}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Metal Letters Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'metal-letters'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+                       <!-- Materials and Methods Section -->
+           <div class="materials-methods-section" *ngIf="serviceType === 'metal-letters'">
+               <h3>{{translate('services.metal_letters_service.process_1')}}</h3>
+               <ul class="materials-methods-list">
+                   <li>{{translate('services.metal_letters_service.materials_methods_1')}}</li>
+                   <li>{{translate('services.metal_letters_service.materials_methods_2')}}</li>
+                   <li>{{translate('services.metal_letters_service.materials_methods_3')}}</li>
+               </ul>
+           </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Cemetery Decoration Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'cemetery-decoration'">
+            <!-- Full Preparation Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate(serviceContent!.process[0])}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features; let i = index">
+                    <div class="card-content">
+                        <h4 class="feature-header">{{translate(feature)}}</h4>
+                        <p class="feature-description">{{translate(getFeatureDescription(i))}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-section" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <h4>{{translate('services.cemetery_decoration_service.why_choose_header')}}</h4>
+                <ul class="why-choose-list">
+                    <li>{{translate('services.cemetery_decoration_service.professionalism')}}</li>
+                    <li>{{translate('services.cemetery_decoration_service.affordable_prices')}}</li>
+                    <li>{{translate('services.cemetery_decoration_service.reliability')}}</li>
+                    <li>{{translate('services.cemetery_decoration_service.georgia_wide')}}</li>
+                    <li>{{translate('services.cemetery_decoration_service.timely_completion')}}</li>
+                </ul>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <p>{{translate(serviceContent!.process[1])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
+            </div>
+        </div>
+
+        <!-- Special Content for Grave Stones Service -->
+        <div class="embalming-dressing-content" *ngIf="serviceType === 'grave-stones'">
+            <!-- Our Products Include Header -->
+            <div class="preparation-header" *ngIf="serviceContent!.process && serviceContent!.process.length > 0">
+                <h3>{{translate('services.grave_stones_service.our_products_header')}}</h3>
+            </div>
+
+            <!-- Service Cards -->
+            <div class="service-cards" *ngIf="serviceContent!.features.length > 0">
+                <div class="service-card" *ngFor="let feature of serviceContent!.features">
+                    <div class="card-content">
+                        <span>{{translate(feature)}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stone Painting Section -->
+            <div class="stone-painting-section" *ngIf="serviceContent!.process && serviceContent!.process.length > 1">
+                <h4>{{translate(serviceContent!.process[0])}}</h4>
+                <p>{{translate(serviceContent!.process[1])}}</p>
+                <ul class="painting-features">
+                    <li>{{translate('services.grave_stones_service.painting_feature_1')}}</li>
+                    <li>{{translate('services.grave_stones_service.painting_feature_2')}}</li>
+                    <li>{{translate('services.grave_stones_service.painting_feature_3')}}</li>
+                </ul>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="why-choose-section" *ngIf="serviceContent!.process && serviceContent!.process.length > 2">
+                <h4>{{translate('services.grave_stones_service.why_choose_header')}}</h4>
+                <ul class="why-choose-list">
+                    <li>{{translate('services.grave_stones_service.professionalism')}}</li>
+                    <li>{{translate('services.grave_stones_service.individual_approach')}}</li>
+                    <li>{{translate('services.grave_stones_service.quality_materials')}}</li>
+                    <li>{{translate('services.grave_stones_service.high_standards')}}</li>
+                    <li>{{translate('services.grave_stones_service.convenient_service')}}</li>
+                </ul>
+            </div>
+
+            <!-- Final Message -->
+            <div class="final-message" *ngIf="serviceContent!.process && serviceContent!.process.length > 2">
+                <p>{{translate(serviceContent!.process[2])}} <a href="tel:+995599069898" class="phone-link">+995 599 06 98 98</a></p>
             </div>
         </div>
     </div>
@@ -90,11 +346,11 @@
     <div class="container">
         <h3>{{translate('services.related_services')}}</h3>
         <div class="related-services-grid">
-            <ng-container *ngFor="let serviceKey of getAllServiceKeys()">
+            <ng-container *ngFor="let service of getCurrentServices()">
                 <div class="related-service-item" 
-                     *ngIf="serviceKey !== serviceType && servicesData[serviceKey]"
-                     (click)="navigateToService(serviceKey)">
-                    <h4>{{translate(servicesData[serviceKey].titleKey)}}</h4>
+                     *ngIf="service.url !== serviceType"
+                     (click)="navigateToService(service.url)">
+                    <h4>{{service.name}}</h4>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </ng-container>
