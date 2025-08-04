@@ -24,6 +24,31 @@
   </div>
 </main>
 
+<!-- Services Section with Keywords -->
+<section id="services-section" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{translate('seo.funeral_services')}}</h2>
+      <p>{{translate('services.description')}}</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of serviceCards" 
+           (click)="navigateToService(service.url)"
+           [style.background-image]="'url(' + service.image + ')'">
+        <div class="card-overlay">
+          <div class="card-content">
+            <h3>{{translate(service.titleKey)}}</h3>
+            <button class="btn btn-secondary" (click)="navigateToService(service.url)">
+              {{translate('common.learn_more')}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- What Makes Us Different Section -->
 <section id="what-makes-us-different" class="what-makes-us-section">
   <div class="container">
@@ -47,31 +72,6 @@
           <img src="/images/care1.png" alt="ზრუნვა" class="feature-icon">
           <h3>{{translate('what_makes_us.care.title')}}</h3>
           <p>{{translate('what_makes_us.care.desc')}}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Services Section with Keywords -->
-<section id="services-section" class="services-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>{{translate('seo.funeral_services')}}</h2>
-      <p>{{translate('services.description')}}</p>
-    </div>
-    
-    <div class="services-grid">
-      <div class="service-card" *ngFor="let service of serviceCards" 
-           (click)="navigateToService(service.url)"
-           [style.background-image]="'url(' + service.image + ')'">
-        <div class="card-overlay">
-          <div class="card-content">
-            <h3>{{translate(service.titleKey)}}</h3>
-            <button class="btn btn-secondary" (click)="navigateToService(service.url)">
-              {{translate('common.learn_more')}}
-            </button>
-          </div>
         </div>
       </div>
     </div>
