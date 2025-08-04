@@ -433,12 +433,5 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     console.log('Opening image modal:', image);
   }
 
-  getFuneralPlanningLink(): string[] {
-    // For Georgian (default), don't add language prefix
-    if (this.currentLanguage === 'ka') {
-      return ['funeral-planning'];
-    }
-    // For other languages, add language prefix
-    return [this.currentLanguage, 'funeral-planning'];
-  }
+
 }

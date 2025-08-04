@@ -357,13 +357,5 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  goToPlanningPage(): void {
-    // For Georgian (default), don't add language prefix
-    if (this.currentLanguage === 'ka') {
-      this.router.navigate(['funeral-planning']);
-    } else {
-      // For other languages, add language prefix
-      this.router.navigate([this.currentLanguage, 'funeral-planning']);
-    }
-  }
+
 }

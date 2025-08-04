@@ -13,6 +13,3 @@
 /locations
 /en/locations
 /ru/locations
-/funeral-planning
-/en/funeral-planning
-/ru/funeral-planning 

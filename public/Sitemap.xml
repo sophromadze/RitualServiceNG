@@ -303,16 +303,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/locations/"/>
   </url>
   
-  <url>
-    <loc>https://ritualservice.ge/funeral-planning/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/funeral-planning/"/>
-  </url>
+
 
   <!-- English Routes -->
   <url>
@@ -370,16 +361,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/locations/"/>
   </url>
   
-  <url>
-    <loc>https://ritualservice.ge/en/funeral-planning/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/funeral-planning/"/>
-  </url>
+
 
   <!-- Russian Routes -->
   <url>
@@ -437,15 +419,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/locations/"/>
   </url>
   
-  <url>
-    <loc>https://ritualservice.ge/ru/funeral-planning/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/funeral-planning/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/funeral-planning/"/>
-  </url>
+
 
 </urlset>

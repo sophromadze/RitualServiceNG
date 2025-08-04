@@ -7,7 +7,6 @@ import { ServiceDetailComponent } from './pages/service-detail/service-detail.co
 import { AboutComponent } from './pages/about/about.component';
 
 import { LocationsComponent } from './pages/locations/locations.component';
-import { FuneralPlanningComponent } from './pages/funeral-planning/funeral-planning.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
@@ -282,15 +281,6 @@ export const routes: Routes = [
           description: 'რიტუალ სერვისის ფილიალები თბილისში: გლდანი, დიღომი, ჯიქია. ადვილად მისაწვდომი ლოკაციები.',
           keywords: 'ფილიალები, თბილისის ფილიალები, გლდანი, დიღომი, ჯიქია, დამკრძალავი ბიურო ადგილმდებარეობა'
         }
-      },
-      { 
-        path: 'funeral-planning', 
-        component: FuneralPlanningComponent,
-        data: { 
-          title: 'დაკრძალვის დაგეგმვა - პროფესიონალური დაგეგმვა | რიტუალ სერვისი',
-          description: 'დაკრძალვის პროფესიონალური დაგეგმვა. უფასო კონსულტაცია, ნაბიჯ-ნაბიჯ გზამკვლევი, ყველა საჭირო დოკუმენტი.',
-          keywords: 'დაკრძალვის დაგეგმვა, dakrdzalvis dagegmva, უფასო კონსულტაცია, რიტუალური დაგეგმვა, დამკრძალავი ბიურო'
-        }
       }
     ]
   },
@@ -345,16 +335,7 @@ export const routes: Routes = [
       { path: 'products/refrigeration', component: ProductDetailComponent, data: { product: 'refrigeration' }},
       { path: 'products/cemetery-accessories', component: ProductDetailComponent, data: { product: 'cemetery_accessories' }},
       { path: 'about', component: AboutComponent },
-      { path: 'locations', component: LocationsComponent },
-      { 
-        path: 'funeral-planning', 
-        component: FuneralPlanningComponent,
-        data: { 
-          title: 'Funeral Planning - Professional Planning Services | Ritual Service',
-          description: 'Professional funeral planning services. Free consultation, step-by-step guide, all necessary documents.',
-          keywords: 'funeral planning, professional planning, free consultation, ritual planning, funeral home'
-        }
-      }
+      { path: 'locations', component: LocationsComponent }
     ]
   },
   
@@ -404,16 +385,7 @@ export const routes: Routes = [
       { path: 'products/refrigeration', component: ProductDetailComponent, data: { product: 'refrigeration' }},
       { path: 'products/cemetery-accessories', component: ProductDetailComponent, data: { product: 'cemetery_accessories' }},
       { path: 'about', component: AboutComponent },
-      { path: 'locations', component: LocationsComponent },
-      { 
-        path: 'funeral-planning', 
-        component: FuneralPlanningComponent,
-        data: { 
-          title: 'Планирование похорон - Профессиональное планирование | Ритуал Сервис',
-          description: 'Профессиональные услуги по планированию похорон. Бесплатная консультация, пошаговое руководство, все необходимые документы.',
-          keywords: 'планирование похорон, профессиональное планирование, бесплатная консультация, ритуальное планирование, похоронный дом'
-        }
-      }
+      { path: 'locations', component: LocationsComponent }
     ]
   },
   

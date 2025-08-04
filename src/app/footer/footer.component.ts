@@ -81,14 +81,7 @@ export class FooterComponent {
     return [this.currentLanguage, 'locations'];
   }
 
-  getFuneralPlanningLink(): string[] {
-    // For Georgian (default), don't add language prefix
-    if (this.currentLanguage === 'ka') {
-      return ['funeral-planning'];
-    }
-    // For other languages, add language prefix
-    return [this.currentLanguage, 'funeral-planning'];
-  }
+
 
   getHomeLink(): string[] {
     // For Georgian (default), don't add language prefix

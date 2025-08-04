@@ -160,8 +160,6 @@ export class BreadcrumbComponent implements OnInit {
         return this.translate('nav.contact');
       case 'locations':
         return this.translate('nav.locations');
-      case 'funeral-planning':
-        return this.translate('breadcrumb.funeral_planning');
       // Product-specific translations
       case 'coffins':
         return this.translate('breadcrumb.coffins');
