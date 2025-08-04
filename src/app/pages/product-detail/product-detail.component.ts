@@ -48,7 +48,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/darbazebi1.jpg',
         '/images/darbazebi2.jpg'
       ],
-      keywords: ['სასახლეები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
+      keywords: ['სასახლე კუბოები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
       relatedProducts: ['shrouds', 'refrigeration', 'cemetery_accessories'],
       features: [
         'products.coffins_feature_1',
@@ -94,7 +94,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
         '/images/macivrebi.jpg',
         '/images/macivrebi2.jpg'
       ],
-              keywords: ['სასახლე მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
+              keywords: ['სასახლე კუბო მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'cemetery_accessories'],
       features: [
         'products.refrigeration_feature_1',
@@ -151,7 +151,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
   private productTranslations = {
     ka: {
       // Coffins
-      'products.coffins': 'სასახლეები',
+      'products.coffins': 'სასახლე კუბოები',
       'products.coffins_desc': 'ხარისხიანი სასახლეები ბუნებრივი მასალებით',
       'products.coffins_long': 'ჩვენი სასახლეები წარმოადგენს ხარისხიან ხის სასახლეებს ბუნებრივი მასალებით. ლუქს კლასის სასახლეები, ეკონომ კლასის სასახლეები და სტანდარტული სასახლეები - ყველა ფასის კატეგორიაში.',
       'products.coffins_feature_1': 'ხის სასახლეები ბუნებრივი მასალებით',
@@ -169,7 +169,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       'products.shrouds_feature_4': 'სპეციალური დიზაინის სუდარები ინდივიდუალური მიდგომით',
 
       // Refrigeration
-      'products.refrigeration': 'სასახლე მაცივრები',
+      'products.refrigeration': 'სასახლე კუბო მაცივრები',
       'products.refrigeration_desc': 'სასახლე-მაცივრები და სტაციონარული მაცივრები',
       'products.refrigeration_long': 'სასახლე მაცივრები - ჩვენი სასახლე-მაცივრები კომბინირებული ფუნქციით. სტაციონარული მაცივრები დიდი ტევადობით და მობილური მაცივრები ტრანსპორტირებისთვის.',
       'products.refrigeration_feature_1': 'სასახლე-მაცივრები კომბინირებული ფუნქციით',

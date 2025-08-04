@@ -2,7 +2,7 @@
   <div class="container">
     <p>{{translate('funeral_planning.cta_description')}}</p>
     <div class="cta-buttons">
-      <a class="btn btn-primary" (click)="callPhone()">
+      <a class="btn btn-primary" href="tel:+995557556116" (click)="callPhone(); $event.preventDefault()">
         <i class="fa-solid fa-phone-volume"></i> {{translate('header.phone')}}
       </a>
     </div>

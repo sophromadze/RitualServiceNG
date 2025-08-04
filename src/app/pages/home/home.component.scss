@@ -49,10 +49,12 @@
   font-size: 20px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
+
 
 .cta-buttons {
   display: flex;
@@ -173,7 +175,7 @@
 
 .section-header p {
   font-size: 18px;
-  color: #6c757d;
+  color: #495057;
   margin: 0 auto;
 }
 
@@ -292,7 +294,7 @@
 
 .diff-feature p {
   text-align: center;
-  color: #5e5e5e;
+  color: #495057;
   margin: 0;
   line-height: 1.5;
 }
@@ -377,7 +379,7 @@
 .rs-description-content p {
   font-size: 16px;
   line-height: 1.8;
-  color: #6c757d;
+  color: #495057;
   margin-bottom: 32px;
   text-align: justify;
 }
@@ -447,7 +449,7 @@
 .why-rs-title p {
   font-size: 18px;
   line-height: 1.8;
-  color: #6c757d;
+  color: #495057;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -504,7 +506,7 @@
   flex-shrink: 0;
 }
 
-.why-rs-feature h4 {
+.why-rs-feature h3 {
   font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -514,7 +516,7 @@
 }
 
 .why-rs-feature p {
-  color: #6c757d;
+  color: #495057;
   line-height: 1.7;
   font-size: 14px;
   margin: 0;
@@ -627,7 +629,7 @@
 }
 
 .seo-content p {
-  color: #6c757d;
+  color: #495057;
   line-height: 1.6;
   margin-bottom: 16px;
 }
@@ -638,7 +640,7 @@
 }
 
 .seo-content li {
-  color: #6c757d;
+  color: #495057;
   margin-bottom: 8px;
   line-height: 1.6;
 }
@@ -646,6 +648,41 @@
 .seo-content strong {
   color: #2c3e50;
   font-weight: 600;
+}
+
+/* Additional SEO Keywords Section */
+.seo-keywords-section {
+  padding: 30px 0;
+  background: #f1f3f4;
+  border-top: 1px solid #e9ecef;
+}
+
+.keywords-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.keywords-content h3 {
+  font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.keywords-content p {
+  font-family: 'Noto Sans Georgian', 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.keywords-content strong {
+  color: #e74c3c;
+  font-weight: 700;
 }
 
 /* Responsive Design */

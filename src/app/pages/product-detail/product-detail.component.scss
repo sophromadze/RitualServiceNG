@@ -67,6 +67,23 @@
       @media (max-width: 480px) {
         font-size: 1.6rem; // Reduced from 1.8rem
       }
+      
+      &.hero-subtitle {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 8px;
+        opacity: 0.9;
+        color: #f0f0f0;
+        
+        @media (max-width: 768px) {
+          font-size: 1.1rem;
+          margin-bottom: 6px;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 1rem;
+        }
+      }
     }
     
     .hero-description {

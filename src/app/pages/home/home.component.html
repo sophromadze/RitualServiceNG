@@ -1,19 +1,17 @@
 <!-- SEO-focused hidden headings for better keyword indexing -->
-<h1 class="seo-hidden">{{translate('home.funeral_home')}} - {{translate('header.company_name')}}</h1>
-<h2 class="seo-hidden">{{translate('home.damkrdzalavi_biuro')}}</h2>
-<h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}}</h3>
+<h1 class="seo-hidden">{{translate('home.funeral_home')}} - {{translate('header.company_name')}} - დამკრძალავი ბიურო თბილისში</h1>
+<h2 class="seo-hidden">damkrdzalavi biuro tbilisshi - hermesi ritualebi</h2>
+<h3 class="seo-hidden">{{translate('home.ritual_house')}} - {{translate('home.saritualo_saxli')}} - დამკრძალავი ბიურო</h3>
 
-
-
-<!-- Hero Section -->
+<!-- Hero Section with Keywords -->
 <main class="hero-section">
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-brand">Ritual Service</div>
-      <h1>{{translate('home.funeral_home')}}</h1>
+      <div class="hero-brand">Ritual Service - {{translate('home.funeral_bureau')}}</div>
+      <h1>{{translate('home.funeral_bureau_tbilisi')}}</h1>
       <h2>{{translate('home.subtitle')}}</h2>
       <div class="cta-buttons">
-        <a class="btn btn-primary" (click)="callPhone()">
+        <a class="btn btn-primary" href="tel:+995557556116" (click)="callPhone(); $event.preventDefault()">
           <i class="fa-solid fa-phone-volume"></i> +995 557 55 61 16
         </a>
       </div>
@@ -25,7 +23,7 @@
 <section id="services-section" class="services-section">
   <div class="container">
     <div class="section-header">
-      <h2>{{translate('seo.funeral_services')}}</h2>
+      <h2>{{translate('seo.funeral_services')}} - {{translate('home.funeral_bureau_services')}}</h2>
       <p>{{translate('services.description')}}</p>
     </div>
     
@@ -51,7 +49,7 @@
   <div class="container">
     <div class="diff-container">
       <div class="diff-head">
-        <h3>{{translate('what_makes_us.title')}}</h3>
+        <h3>{{translate('what_makes_us.title')}} - {{translate('home.funeral_bureau_tbilisi')}}</h3>
         <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
       </div>
       <div class="diff-content">
@@ -68,7 +66,7 @@
         <div class="diff-feature">
           <img src="/images/care1.png" alt="ზრუნვა" class="feature-icon">
           <h3>{{translate('what_makes_us.care.title')}}</h3>
-          <p>{{translate('what_makes_us.care.desc')}}</p>
+          <p>{{translate('what_makes_us.care.desc')}} - {{translate('home.funeral_bureau')}}</p>
         </div>
       </div>
     </div>
@@ -81,7 +79,7 @@
     <div class="rs-description">
       <div class="rs-description-img"></div>
       <div class="rs-description-content">
-        <h3>{{translate('ritual_service.title')}}</h3>
+        <h3>{{translate('ritual_service.title')}} - {{translate('home.funeral_bureau_tbilisi')}}</h3>
         <img src="/images/orn2.png" alt="საორნამენტო ელემენტი" class="ornament">
         <p>{{translate('ritual_service.description')}}</p>
         <button class="btn btn-primary" (click)="goToServicePage()">
@@ -93,14 +91,12 @@
   </div>
 </section>
 
-
-
 <!-- Why Choose Us Section -->
 <section id="why-choose-us" class="why-choose-section">
   <div class="container">
     <div class="why-rs-container">
       <div class="why-rs-title">
-        <h2>{{translate('why_choose_ritual.title')}}</h2>
+        <h2>{{translate('why_choose_ritual.title')}} - {{translate('home.funeral_bureau')}}</h2>
         <p>{{translate('why_choose_ritual.subtitle')}}</p>
       </div>
       
@@ -108,42 +104,42 @@
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.full_service.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.full_service.title')}}</h3>
           </div>
           <p>{{translate('why_choose_ritual.full_service.desc')}}</p>
         </div>
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.peaceful_environment.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.peaceful_environment.title')}}</h3>
           </div>
-          <p>{{translate('why_choose_ritual.peaceful_environment.desc')}}</p>
+          <p>{{translate('why_choose_ritual.peaceful_environment.desc')}} - {{translate('home.funeral_bureau')}}</p>
         </div>
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.compassion_support.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.compassion_support.title')}}</h3>
           </div>
           <p>{{translate('why_choose_ritual.compassion_support.desc')}}</p>
         </div>
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.experience_trust.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.experience_trust.title')}}</h3>
           </div>
           <p>{{translate('why_choose_ritual.experience_trust.desc')}}</p>
         </div>
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.years_experience.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.years_experience.title')}}</h3>
           </div>
-          <p>{{translate('why_choose_ritual.years_experience.desc')}}</p>
+          <p>{{translate('why_choose_ritual.years_experience.desc')}} - {{translate('home.funeral_bureau_tbilisi')}}</p>
         </div>
         <div class="why-rs-feature">
           <div class="feature-header">
             <span class="checkmark">✔️</span>
-            <h4>{{translate('why_choose_ritual.support_24_7.title')}}</h4>
+            <h3>{{translate('why_choose_ritual.support_24_7.title')}}</h3>
           </div>
           <p>{{translate('why_choose_ritual.support_24_7.desc')}}</p>
         </div>
@@ -159,61 +155,80 @@
 <section class="seo-content-section seo-hidden">
   <div class="container">
     <div class="seo-content">
-      <h2>{{translate('home.ritual_house')}} - სარიტუალო სახლი მომსახურება</h2>
+      <h2>{{translate('home.ritual_house')}} - სარიტუალო სახლი მომსახურება - დამკრძალავი ბიურო თბილისში</h2>
       
       <div class="seo-text">
-        <h3>{{translate('home.funeral_home')}} {{translate('locations.tbilisi_branches')}}</h3>
+        <h3>{{translate('home.funeral_home')}} {{translate('locations.tbilisi_branches')}} - damkrdzalavi biuro tbilisshi</h3>
         <p>
           {{translate('header.company_name')}} არის პროფესიონალური <strong>{{translate('home.funeral_home')}}</strong> და 
-          <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}. ჩვენ გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა:
-                    <strong>{{translate('services.embalming_dressing')}}</strong>, <strong>{{translate('services.cemetery_accessories')}}</strong>,
+          <strong>{{translate('home.ritual_house')}}</strong> {{translate('locations.tbilisi_branches')}}. <strong>დამკრძალავი ბიურო თბილისში</strong> - 
+          <strong>damkrdzalavi biuro tbilisshi</strong> გთავაზობთ სრულ კომპლექს <strong>hermesi</strong> და <strong>ritualebi</strong> მომსახურებისა:
+          <strong>{{translate('services.embalming_dressing')}}</strong>, <strong>{{translate('services.cemetery_accessories')}}</strong>,
           <strong>{{translate('services.grave_stones_painting')}}</strong>, <strong>{{translate('services.transportation')}}</strong>.
         </p>
         
-        <h4>ჩვენი მთავარი სერვისები:</h4>
+        <h4>ჩვენი მთავარი სერვისები - დამკრძალავი ბიურო:</h4>
         <ul>
-          <li><strong>მიცვალებულის ჩაცმა</strong> - პროფესიონალური მომზადება</li>
-          <li><strong>ბალზამირება</strong> - balzamireba თანამედროვე მეთოდებით</li>
-          <li><strong>კატაფალკა</strong> - katafalka მომსახურება 24/7</li>
-          <li><strong>ქვაზე ხატვა</strong> - qvaze xatva და ხელოვნური მუშაობა</li>
-          <li><strong>საფლავის მოპირკეთება</strong> - mopirketeba კომპლექსური</li>
-          <li><strong>გადასვენება</strong> - gadasveneba რაიონში და საზღვარგარეთ</li>
-          <li><strong>ფერადი სურათის დამზადება</strong> მაღალი ხარისხით</li>
-          <li><strong>ლითონის ასოებით წარწერა</strong> ღირსეული</li>
+          <li><strong>მიცვალებულის ჩაცმა</strong> - პროფესიონალური მომზადება - hermesi</li>
+          <li><strong>ბალზამირება</strong> - balzamireba თანამედროვე მეთოდებით - ritualebi</li>
+          <li><strong>კატაფალკა</strong> - katafalka მომსახურება 24/7 - damkrdzalavi biuro</li>
+          <li><strong>ქვაზე ხატვა</strong> - qvaze xatva და ხელოვნური მუშაობა - დამკრძალავი ბიურო</li>
+          <li><strong>საფლავის მოპირკეთება</strong> - mopirketeba კომპლექსური - damkrdzalavi biuro tbilisshi</li>
+          <li><strong>გადასვენება</strong> - gadasveneba რაიონში და საზღვარგარეთ - hermesi ritualebi</li>
+          <li><strong>ფერადი სურათის დამზადება</strong> მაღალი ხარისხით - დამკრძალავი ბიურო</li>
+          <li><strong>ლითონის ასოებით წარწერა</strong> ღირსეული - ritualebi</li>
         </ul>
 
-        <h4>სარიტუალო პროდუქცია:</h4>
+        <h4>სარიტუალო პროდუქცია - damkrdzalavi biuro:</h4>
         <ul>
-          <li><strong>სასახლეები</strong> - sasaxleebi ყველა სტილში</li>
-          <li><strong>სუდარები</strong> - sudarebi ტრადიციული და თანამედროვე</li>
-          <li><strong>სუდარა</strong> - sudara ხარისხიანი მასალებით</li>
-          <li><strong>სასახლე მაცივრები</strong> - სასახლე-მაცივრები</li>
+          <li><strong>სასახლეები</strong> - sasaxleebi ყველა სტილში - დამკრძალავი ბიურო თბილისში</li>
+          <li><strong>სუდარები</strong> - sudarebi ტრადიციული და თანამედროვე - hermesi</li>
+          <li><strong>სუდარა</strong> - sudara ხარისხიანი მასალებით - ritualebi</li>
+          <li><strong>სასახლე მაცივრები</strong> - სასახლე-მაცივრები - damkrdzalavi biuro tbilisshi</li>
         </ul>
 
-        <h4>ფილიალები თბილისში:</h4>
+        <h4>ფილიალები თბილისში - დამკრძალავი ბიურო:</h4>
         <ul>
-          <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა</li>
-          <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა</li>
-          <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა</li>
+          <li><strong>გლდანი</strong> - 4 გრ. ოშკელის ქუჩა - damkrdzalavi biuro</li>
+          <li><strong>დიღომი</strong> - 14 ნოდარ ბოხუას ქუჩა - დამკრძალავი ბიურო თბილისში</li>
+          <li><strong>ჯიქია</strong> - 96 ალექსანდრე იოსელიანის ქუჩა - hermesi ritualebi</li>
         </ul>
 
-        <h4>რატომ ვართ ლიდერები:</h4>
+        <h4>რატომ ვართ ლიდერები - damkrdzalavi biuro tbilisshi:</h4>
         <ul>
-          <li>20 წლიანი გამოცდილება <strong>დაკრძალვის</strong> სფეროში</li>
-          <li><strong>სამგლოვიარო ცერემონიების</strong> ორგანიზება</li>
-          <li><strong>დასაფლავების მომსახურება</strong> ყველა დონეზე</li>
-          <li><strong>საპანაშვიდე დარბაზი</strong> - samgloviaro დარბაზი</li>
-          <li><strong>საბანკეტო დარბაზი</strong> ღირსეული პირობებით</li>
-          <li>24/7 <strong>დამკრძალავი</strong> მომსახურება</li>
+          <li>20 წლიანი გამოცდილება <strong>დაკრძალვის</strong> სფეროში - დამკრძალავი ბიურო</li>
+          <li><strong>სამგლოვიარო ცერემონიების</strong> ორგანიზება - hermesi</li>
+          <li><strong>დასაფლავების მომსახურება</strong> ყველა დონეზე - ritualebi</li>
+          <li><strong>საპანაშვიდე დარბაზი</strong> - samgloviaro დარბაზი - damkrdzalavi biuro</li>
+          <li><strong>საბანკეტო დარბაზი</strong> ღირსეული პირობებით - დამკრძალავი ბიურო თბილისში</li>
+          <li>24/7 <strong>დამკრძალავი</strong> მომსახურება - hermesi ritualebi</li>
         </ul>
 
         <p>
           ჩვენი <strong>სარიტუალო სახლი</strong> (saritualo saxli) უზრუნველყოფს <strong>მიცვალებულის</strong> 
-          ღირსეულ მომსახურებას. <strong>{{translate('home.damkrdzalavi_biuro')}}</strong> {{translate('header.company_name')}} - თქვენი დანდობილი პარტნერი 
-          რთულ დროს. დაგვიკავშირდით <strong>{{translate('header.phone')}}</strong> - ჩვენ ვართ 24 საათის განმავლობაში 
-          თქვენი გვერდით.
+          ღირსეულ მომსახურებას. <strong>{{translate('home.damkrdzalavi_biuro')}}</strong> {{translate('header.company_name')}} - 
+          <strong>დამკრძალავი ბიურო თბილისში</strong> - <strong>damkrdzalavi biuro tbilisshi</strong> - თქვენი დანდობილი პარტნერი 
+          რთულ დროს. <strong>hermesi</strong> და <strong>ritualebi</strong> მომსახურება 24/7. დაგვიკავშირდით 
+          <strong>{{translate('header.phone')}}</strong> - ჩვენ ვართ 24 საათის განმავლობაში თქვენი გვერდით.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Additional SEO Keywords Section -->
+<section class="seo-keywords-section seo-hidden">
+  <div class="container">
+    <div class="keywords-content">
+      <h3>დამკრძალავი ბიურო თბილისში - damkrdzalavi biuro tbilisshi</h3>
+      <p>
+        <strong>დამკრძალავი ბიურო</strong> თბილისში - <strong>damkrdzalavi biuro</strong> tbilisshi. 
+        პროფესიონალური <strong>hermesi</strong> და <strong>ritualebi</strong> მომსახურება. 
+        <strong>დამკრძალავი ბიურო თბილისში</strong> - <strong>damkrdzalavi biuro tbilisshi</strong> 
+        გთავაზობთ სრულ კომპლექს სარიტუალო მომსახურებისა. <strong>hermesi</strong> და <strong>ritualebi</strong> 
+        პროფესიონალური მომსახურება 24/7. <strong>დამკრძალავი ბიურო</strong> - <strong>damkrdzalavi biuro</strong> 
+        თბილისში - თქვენი დანდობილი პარტნერი.
+      </p>
     </div>
   </div>
 </section>
@@ -226,4 +241,10 @@
   <span>sapanashvide</span>
   <span>dasaflaveba</span>
   <span>samgloviaro</span>
+  <span>damkrdzalavi biuro tbilisshi</span>
+  <span>დამკრძალავი ბიურო თბილისში</span>
+  <span>damkrdzalavi biuro</span>
+  <span>დამკრძალავი ბიურო</span>
+  <span>hermesi</span>
+  <span>ritualebi</span>
 </div>
