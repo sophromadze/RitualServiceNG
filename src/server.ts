@@ -6,6 +6,67 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import { readFileSync } from 'node:fs';
 
+// Define valid routes for 404 checking
+const validRoutes = [
+  '/',
+  '/en',
+  '/ru',
+  '/about',
+  '/en/about',
+  '/ru/about',
+  '/services',
+  '/en/services',
+  '/ru/services',
+  '/products',
+  '/en/products',
+  '/ru/products',
+  '/locations',
+  '/en/locations',
+  '/ru/locations',
+  '/404'
+];
+
+// Add all service detail routes
+const serviceRoutes = [
+  '/services/agent-service',
+  '/services/dressing',
+  '/services/embalming',
+  '/services/hearse',
+  '/services/transportation',
+  '/services/stone-engraving',
+  '/services/grave-decoration',
+  '/services/mourning-hall',
+  '/services/banquet-hall',
+  '/services/grave-preparation',
+  '/services/colored-photo',
+  '/services/metal-letters',
+  '/services/embalming-dressing',
+  '/services/microbus',
+  '/services/hall',
+  '/services/cemetery-decoration',
+  '/services/grave-stones',
+  '/services/lifting-machine'
+];
+
+// Add all product detail routes
+const productRoutes = [
+  '/products/coffins',
+  '/products/shrouds',
+  '/products/refrigeration',
+  '/products/cemetery-accessories'
+];
+
+// Add English and Russian versions
+const allValidRoutes = [
+  ...validRoutes,
+  ...serviceRoutes,
+  ...productRoutes,
+  ...serviceRoutes.map(route => `/en${route}`),
+  ...serviceRoutes.map(route => `/ru${route}`),
+  ...productRoutes.map(route => `/en${route}`),
+  ...productRoutes.map(route => `/ru${route}`)
+];
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
@@ -25,6 +86,18 @@ export function app(): express.Express {
   // All regular routes use Angular Universal
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
+    
+    // Check if the route is valid
+    const cleanUrl = originalUrl.split('?')[0]; // Remove query parameters
+    const isValidRoute = allValidRoutes.includes(cleanUrl) || 
+                        cleanUrl.startsWith('/en/') || 
+                        cleanUrl.startsWith('/ru/') ||
+                        cleanUrl === '/404';
+
+    if (!isValidRoute) {
+      // Return 404 status for invalid routes
+      res.status(404);
+    }
 
     renderApplication(
       () => import('./main.server').then(m => m.default()),

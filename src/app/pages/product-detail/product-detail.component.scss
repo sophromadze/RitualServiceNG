@@ -14,22 +14,23 @@
 
 // Hero Section
 .product-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: #2d2d2d;
   color: white;
   padding: 40px 0; // Reduced from 80px
   position: relative;
   overflow: hidden;
   
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/images/orn1.png') repeat;
-    opacity: 0.05;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: url('/images/orn1.png') repeat;
+  //   opacity: 0.05;
+  // }
   
   .hero-content {
     max-width: 1200px;
@@ -343,7 +344,8 @@
   }
   
   .coffin-consultation {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #2d2d2d;
     padding: 30px 25px; // Reduced from 50px 40px
     border-radius: 15px;
     color: white;
@@ -512,7 +514,8 @@
   }
   
   .shroud-consultation {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #2d2d2d;
     padding: 30px 25px; // Reduced from 50px 40px
     border-radius: 15px;
     color: white;
@@ -681,7 +684,8 @@
   }
   
   .refrigeration-consultation {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background: #2d2d2d;
     padding: 30px 25px; // Reduced from 50px 40px
     border-radius: 15px;
     color: white;
@@ -924,7 +928,8 @@
     }
     
     .cemetery-accessories-consultation {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      background: #2d2d2d;
       padding: 30px 25px; // Reduced from 50px 40px
       border-radius: 15px;
       color: white;

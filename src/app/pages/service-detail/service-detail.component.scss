@@ -14,22 +14,23 @@
 
 // Hero Section
 .service-detail-hero {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  // background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  background: #2d2d2d;
   color: white;
   padding: 40px 0;
   position: relative;
   overflow: hidden;
   
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('/images/orn1.png') repeat;
-    opacity: 0.05;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background: url('/images/orn1.png') repeat;
+  //   opacity: 0.1;
+  // }
   
   .hero-content {
     max-width: 1200px;
