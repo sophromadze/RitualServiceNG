@@ -7,7 +7,20 @@
 }
 
 .footer-main {
-  padding: 96px 0 64px;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/orn1.png') repeat;
+    opacity: 0.08;
+  }
 }
 
 .footer-content {
@@ -27,11 +40,30 @@
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
+  z-index: 1;
+}
+
+.footer-brand-link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {    
+    h3 {
+      color: #f39c12;
+    }
+  }
 }
 
 .footer-logo img {
   width: 60px;
   height: 60px;
+  transition: transform 0.3s ease;
 }
 
 .footer-logo h3 {
@@ -349,7 +381,11 @@
 
 @media (max-width: 768px) {
   .footer-main {
-    padding: 64px 0 48px;
+    padding: 30px 0;
+
+    &::before {
+      background-size: 350px 70px;
+    }
   }
   
   .footer-content {
@@ -412,7 +448,7 @@
 
 @media (max-width: 480px) {
   .footer-main {
-    padding: 48px 0 24px;
+    padding: 20px 0;
   }
   
   .footer-logo {

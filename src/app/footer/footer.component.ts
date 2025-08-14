@@ -91,4 +91,13 @@ export class FooterComponent {
     // For other languages, add language prefix
     return [this.currentLanguage];
   }
+
+  onHomeClick(): void {
+    // Navigate to home and scroll to top
+    this.router.navigate(this.getHomeLink()).then(() => {
+      if (isPlatformBrowser(this.platformId)) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
 }

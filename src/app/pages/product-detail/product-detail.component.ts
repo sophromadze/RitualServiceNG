@@ -13,7 +13,6 @@ interface ProductContent {
   descKey: string;
   longDescKey: string;
   image: string;
-  gallery: string[];
   keywords: string[];
   relatedProducts: string[];
   features: string[];
@@ -42,12 +41,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.coffins',
       descKey: 'products.coffins_desc',
       longDescKey: 'products.coffins_long',
-      image: '/images/sasaxleebi2.jpg',
-      gallery: [
-        '/images/sasaxleebi2.jpg',
-        '/images/darbazebi1.jpg',
-        '/images/darbazebi2.jpg'
-      ],
+      image: '/images/kuboebi-2.jpeg',
       keywords: ['სასახლე კუბოები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
       relatedProducts: ['shrouds', 'refrigeration', 'cemetery_accessories'],
       features: [
@@ -69,13 +63,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.shrouds',
       descKey: 'products.shrouds_desc',
       longDescKey: 'products.shrouds_long',
-      image: '/images/sudarebi2.jpg',
-      gallery: [
-        '/images/sudarebi2.jpg',
-        '/images/shroud1.jpg',
-        '/images/shroud2.jpg',
-        '/images/shroud3.jpg'
-      ],
+      image: '/images/sudarebi.png',
       keywords: ['სუდარები', 'sudarebi', 'ბამბის სუდარები', 'shrouds'],
       relatedProducts: ['coffins', 'refrigeration', 'cemetery_accessories'],
       features: [],
@@ -87,14 +75,8 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.refrigeration',
       descKey: 'products.refrigeration_desc',
       longDescKey: 'products.refrigeration_long',
-      image: '/images/fridge2.jpeg',
-      gallery: [
-        '/images/fridge1.jpeg',
-        '/images/fridge2.jpeg',
-        '/images/macivrebi.jpg',
-        '/images/macivrebi2.jpg'
-      ],
-              keywords: ['სასახლე კუბო მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
+      image: '/images/kubo-macivrebi.png',
+      keywords: ['სასახლე კუბო მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'cemetery_accessories'],
       features: [
         'products.refrigeration_feature_1',
@@ -115,13 +97,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.cemetery_accessories',
       descKey: 'products.cemetery_accessories_desc',
       longDescKey: 'products.cemetery_accessories_long',
-      image: '/images/cemetery.jpg',
-      gallery: [
-        '/images/cemetery.jpg',
-        '/images/grave.jpg',
-        '/images/tomb.jpg',
-        '/images/stonepainting.jpg'
-      ],
+      image: '/images/sasaflaos-aqsesuarebi.jpg',
       keywords: ['სასაფლაოს აქსესუარები', 'sasapleos akseesuarebi', 'ჯვრები', 'jvrebi', 'საყვავილე კონსტრუქციები', 'saqvaile konstrukciebi'],
       relatedProducts: ['coffins', 'shrouds', 'refrigeration'],
       features: [
@@ -422,16 +398,5 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
     
     window.location.href = 'tel:+995557556116';
   }
-
-  getGalleryImageAlt(index: number): string {
-    if (!this.productContent) return '';
-    return `${this.translate(this.productContent.titleKey)} - ${index + 1}`;
-  }
-
-  openImageModal(image: string): void {
-    // Implementation for image modal
-    console.log('Opening image modal:', image);
-  }
-
 
 }

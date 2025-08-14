@@ -43,43 +43,43 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       titleKey: 'services.coffins',
       url: '/products/coffins',
-      image: '/images/kuboebi2.jpg',
+      image: '/images/kuboebi-2.jpeg',
       keywords: 'სასახლეები, sasaxleebi, კუბოები'
     },
     {
       titleKey: 'services.coffin_refrigeration',
       url: '/products/refrigeration',
-      image: '/images/fridge1.jpeg',
+      image: '/images/kubo-macivrebi.png',
       keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
     },
     {
       titleKey: 'services.shrouds',
       url: '/products/shrouds',
-      image: '/images/shroud1.jpg',
+      image: '/images/sudarebi.png',
       keywords: 'სუდარა, sudara, სუდარები'
     },
     {
       titleKey: 'services.embalming_dressing',
       url: '/services/embalming-dressing',
-      image: '/images/embalming.jpg',
+      image: '/images/balzamireba.png',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის ჩაცმა'
     },
     {
       titleKey: 'services.transportation',
       url: '/services/transportation',
-      image: '/images/microbus.jpg',
+      image: '/images/gadasveneba.jpg',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.mourning_hall',
       url: '/services/mourning-hall',
-      image: '/images/darbazebi1.jpg',
+      image: '/images/sapanashvide-darbazi.jpg',
       keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, სამგლოვიარო დარბაზი'
     },
     {
       titleKey: 'services.hearse_service',
       url: '/services/hearse',
-      image: '/images/katafalkebi2.jpg',
+      image: '/images/katafalka.jpg',
       keywords: 'კატაფალკის მომსახურება, katafalkis momserva, კატაფალკა'
     },
     {
@@ -91,43 +91,43 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       titleKey: 'services.hall',
       url: '/services/hall',
-      image: '/images/hall.jpg',
+      image: '/images/sabanketo-darbazi.jpg',
       keywords: 'დარბაზი, darbazi, საბანკეტო დარბაზი'
     },
     {
       titleKey: 'services.cemetery_decoration',
       url: '/services/cemetery-decoration',
-      image: '/images/grave.jpg',
+      image: '/images/sasaflao.jpg',
       keywords: 'სასაფლაოს მოპირკეთება, sasaflaos mopirketeba, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.grave_stones_painting',
       url: '/services/grave-stones',
-      image: '/images/stonepainting.jpg',
+      image: '/images/qvaze-xatva.png',
       keywords: 'საფლავის ქვები, saflavis qvebi, ქვაზე ხატვა'
     },
     {
       titleKey: 'services.metal_letters.title',
       url: '/services/metal-letters',
-      image: '/images/metal-letters.jpg',
+      image: '/images/litonis-warwerebi.jpg',
       keywords: 'ლითონის წარწერები, litonis tsartserebi, metal inscriptions'
     },
     {
       titleKey: 'services.grave_excavation',
       url: '/services/grave-preparation',
-      image: '/images/grave.jpg',
+      image: '/images/samarxis-gachra.jpg',
       keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
     },
     {
       titleKey: 'services.cemetery_accessories',
       url: '/products/cemetery-accessories',
-      image: '/images/grave.jpg',
+      image: '/images/sasaflaos-aqsesuarebi.jpg',
       keywords: 'სასაფლაოს აქსესუარები, sasaflaos akseesuarebi, საფლავის აქსესუარები'
     },
     {
       titleKey: 'services.lifting_machine',
       url: '/services/lifting-machine',
-      image: '/images/liftingMachine.jpg',
+      image: '/images/chasasvenebeli-lifti.jpg',
       keywords: 'ჩასასვენებელი ლიფტი, chasasvenebeli lifti, მწევი მანქანა'
     }
   ];

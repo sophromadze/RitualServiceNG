@@ -321,24 +321,6 @@
     </div>
 </section>
 
-<!-- Service Gallery -->
-<section class="service-gallery" *ngIf="isServiceContentDefined() && serviceContent!.gallery.length > 1">
-    <div class="container">
-        <h3>{{translate('services.gallery')}}</h3>
-        <div class="gallery-grid">
-            <ng-container *ngFor="let image of serviceContent!.gallery; let i = index; trackBy: trackByIndex">
-                <div class="gallery-item" 
-                     *ngIf="image"
-                     (click)="openImageModal(image)">
-                    <img [src]="image" 
-                         [alt]="getGalleryImageAlt(i)"
-                         loading="lazy">
-                </div>
-            </ng-container>
-        </div>
-    </div>
-</section>
-
 <!-- Related Services -->
 <section class="related-services" *ngIf="isServiceContentDefined()">
     <div class="container">

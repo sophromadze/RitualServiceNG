@@ -13,7 +13,6 @@ interface ServiceContent {
   descKey: string;
   longDescKey: string;
   image: string;
-  gallery: string[];
   keywords: string[];
   relatedServices: string[];
   features: string[];
@@ -36,322 +35,12 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
 
   // Service content with heavy SEO keyword focus
   servicesData: { [key: string]: ServiceContent } = {
-    'agent-service': {
-      id: 'agent-service',
-      titleKey: 'services.agent_service.title',
-      descKey: 'services.agent_service.description',
-      longDescKey: 'services.agent_service.long_description',
-      image: '/images/agent.jpg',
-      gallery: [
-        '/images/agent.jpg',
-        '/images/agent2.jpg',
-        '/images/agent3.jpg'
-      ],
-      keywords: ['აგენტის მომსახურება', 'agent service', 'damkrdzalavi biuro'],
-      relatedServices: ['dressing', 'embalming', 'hearse'],
-      features: [
-        'services.agent_service.feature_1',
-        'services.agent_service.feature_2',
-        'services.agent_service.feature_3',
-        'services.agent_service.feature_4'
-      ],
-      process: [
-        'services.agent_service.process_1',
-        'services.agent_service.process_2',
-        'services.agent_service.process_3'
-      ]
-    },
-    
-    'dressing': {
-      id: 'dressing',
-      titleKey: 'services.dressing_service.title',
-      descKey: 'services.dressing_service.description',
-      longDescKey: 'services.dressing_service.long_description',
-      image: '/images/suit.jpg',
-      gallery: [
-        '/images/suit.jpg',
-        '/images/dressing1.jpg',
-        '/images/dressing2.jpg'
-      ],
-      keywords: ['მიცვალებულის ჩაცმა', 'micvalebulis chacma', 'dressing service'],
-      relatedServices: ['agent-service', 'embalming', 'hearse'],
-      features: [
-        'services.dressing_service.feature_1',
-        'services.dressing_service.feature_2',
-        'services.dressing_service.feature_3',
-        'services.dressing_service.feature_4'
-      ],
-      process: [
-        'services.dressing_service.process_1',
-        'services.dressing_service.process_2',
-        'services.dressing_service.process_3'
-      ]
-    },
-
-    'embalming': {
-      id: 'embalming',
-      titleKey: 'services.embalming_service.title',
-      descKey: 'services.embalming_service.description',
-      longDescKey: 'services.embalming_service.long_description',
-      image: '/images/embalming.jpg',
-      gallery: [
-        '/images/embalming.jpg',
-        '/images/embalming1.jpg',
-        '/images/embalming2.jpg'
-      ],
-      keywords: ['ბალზამირება', 'balzamireba', 'embalming service'],
-      relatedServices: ['dressing', 'hearse', 'transportation'],
-      features: [
-        'services.embalming_service.feature_1',
-        'services.embalming_service.feature_2',
-        'services.embalming_service.feature_3',
-        'services.embalming_service.feature_4'
-      ],
-      process: [
-        'services.embalming_service.process_1',
-        'services.embalming_service.process_2',
-        'services.embalming_service.process_3'
-      ]
-    },
-
-    'hearse': {
-      id: 'hearse',
-      titleKey: 'services.hearse_service.title',
-      descKey: 'services.hearse_service.description',
-      longDescKey: 'services.hearse_service.description',
-      image: '/images/katafalkebi.jpg',
-      gallery: [
-        '/images/katafalkebi.jpg',
-        '/images/katafalki1.jpg',
-        '/images/katafalki2.jpg'
-      ],
-      keywords: ['კატაფალკა', 'katafalka', 'hearse service'],
-      relatedServices: ['embalming', 'transportation', 'mourning-hall'],
-      features: [
-        'services.hearse_service.specialized_vehicle',
-        'services.hearse_service.service_georgia'
-      ],
-      process: [
-        'services.hearse_service.care_respect_header',
-        'services.hearse_service.final_message'
-      ]
-    },
-
-    'transportation': {
-      id: 'transportation',
-      titleKey: 'services.transportation_service.title',
-      descKey: 'services.transportation_service.description',
-      longDescKey: 'services.transportation_service.description',
-      image: '/images/transfer.jpg',
-      gallery: [
-        '/images/transfer.jpg',
-        '/images/transportation1.jpg',
-        '/images/transportation2.jpg'
-      ],
-      keywords: ['გადასვენება', 'gadasveneba', 'transportation service'],
-      relatedServices: ['hearse', 'embalming', 'grave-preparation'],
-      features: [
-        'services.transportation_service.specialized_vehicle',
-        'services.transportation_service.hygienic_conditions',
-        'services.transportation_service.24_7_call',
-        'services.transportation_service.reliable_service'
-      ],
-      process: [
-        'services.transportation_service.full_preparation_header',
-        'services.transportation_service.final_message'
-      ]
-    },
-
-    'stone-engraving': {
-      id: 'stone-engraving',
-      titleKey: 'services.stone_engraving_service.title',
-      descKey: 'services.stone_engraving_service.description',
-      longDescKey: 'services.stone_engraving_service.long_description',
-      image: '/images/stonepainting.jpg',
-      gallery: [
-        '/images/stonepainting.jpg',
-        '/images/stone1.jpg',
-        '/images/stone2.jpg'
-      ],
-      keywords: ['ქვაზე ხატვა', 'qvaze xatva', 'stone engraving'],
-      relatedServices: ['grave-decoration', 'colored-photo', 'metal-letters'],
-      features: [
-        'services.stone_engraving_service.feature_1',
-        'services.stone_engraving_service.feature_2',
-        'services.stone_engraving_service.feature_3',
-        'services.stone_engraving_service.feature_4'
-      ],
-      process: [
-        'services.stone_engraving_service.process_1',
-        'services.stone_engraving_service.process_2',
-        'services.stone_engraving_service.process_3'
-      ]
-    },
-
-    'grave-decoration': {
-      id: 'grave-decoration',
-      titleKey: 'services.grave_decoration_service.title',
-      descKey: 'services.grave_decoration_service.description',
-      longDescKey: 'services.grave_decoration_service.long_description',
-      image: '/images/grave.jpg',
-      gallery: [
-        '/images/grave.jpg',
-        '/images/grave1.jpg',
-        '/images/grave2.jpg'
-      ],
-      keywords: ['საფლავის მოპირკეთება', 'mopirketeba', 'grave decoration'],
-      relatedServices: ['stone-engraving', 'grave-preparation', 'colored-photo'],
-      features: [
-        'services.grave_decoration_service.feature_1',
-        'services.grave_decoration_service.feature_2',
-        'services.grave_decoration_service.feature_3',
-        'services.grave_decoration_service.feature_4'
-      ],
-      process: [
-        'services.grave_decoration_service.process_1',
-        'services.grave_decoration_service.process_2',
-        'services.grave_decoration_service.process_3'
-      ]
-    },
-
-    'mourning-hall': {
-      id: 'mourning-hall',
-      titleKey: 'services.mourning_hall_service.title',
-      descKey: 'services.mourning_hall_service.description',
-      longDescKey: 'services.mourning_hall_service.description',
-      image: '/images/hall.jpg',
-      gallery: [
-        '/images/hall.jpg',
-        '/images/hall1.jpg',
-        '/images/hall2.jpg'
-      ],
-      keywords: ['საპანაშვიდე დარბაზი', 'sapanashvide darbazi', 'mourning hall'],
-      relatedServices: ['hearse', 'banquet-hall', 'embalming'],
-      features: [
-        'services.mourning_hall_service.rest_card',
-        'services.mourning_hall_service.guests_card',
-        'services.mourning_hall_service.tradition_card',
-        'services.mourning_hall_service.infrastructure_card'
-      ],
-      process: [
-        'services.mourning_hall_service.full_preparation_header',
-        'services.mourning_hall_service.final_message'
-      ]
-    },
-
-    'banquet-hall': {
-      id: 'banquet-hall',
-      titleKey: 'services.banquet_hall_service.title',
-      descKey: 'services.banquet_hall_service.description',
-      longDescKey: 'services.banquet_hall_service.long_description',
-      image: '/images/hall.jpg',
-      gallery: [
-        '/images/hall.jpg',
-        '/images/banquet1.jpg',
-        '/images/banquet2.jpg'
-      ],
-      keywords: ['საბანკეტო დარბაზი', 'sabanketo darbazi', 'banquet hall'],
-      relatedServices: ['mourning-hall', 'hearse', 'transportation'],
-      features: [
-        'services.banquet_hall_service.feature_1',
-        'services.banquet_hall_service.feature_2',
-        'services.banquet_hall_service.feature_3',
-        'services.banquet_hall_service.feature_4'
-      ],
-      process: [
-        'services.banquet_hall_service.process_1',
-        'services.banquet_hall_service.process_2',
-        'services.banquet_hall_service.process_3'
-      ]
-    },
-
-    'grave-preparation': {
-      id: 'grave-preparation',
-      titleKey: 'services.grave_preparation_service.title',
-      descKey: 'services.grave_preparation_service.description',
-      longDescKey: 'services.grave_preparation_service.long_description',
-      image: '/images/grave.jpg',
-      gallery: [
-        '/images/grave.jpg',
-        '/images/preparation1.jpg',
-        '/images/preparation2.jpg'
-      ],
-      keywords: ['საფლავის მომზადება', 'saflavis momzadeba', 'grave preparation'],
-      relatedServices: ['grave-decoration', 'transportation', 'stone-engraving'],
-      features: [
-        'services.grave_preparation_service.feature_1',
-        'services.grave_preparation_service.feature_2',
-        'services.grave_preparation_service.feature_3',
-        'services.grave_preparation_service.feature_4'
-      ],
-      process: [
-        'services.grave_preparation_service.process_1',
-        'services.grave_preparation_service.process_2'
-      ]
-    },
-
-    'colored-photo': {
-      id: 'colored-photo',
-      titleKey: 'services.colored_photo_service.title',
-      descKey: 'services.colored_photo_service.description',
-      longDescKey: 'services.colored_photo_service.long_description',
-      image: '/images/stonepainting.jpg',
-      gallery: [
-        '/images/stonepainting.jpg',
-        '/images/photo1.jpg',
-        '/images/photo2.jpg'
-      ],
-      keywords: ['ფერადი სურათი', 'feradi surati', 'colored photo'],
-      relatedServices: ['stone-engraving', 'metal-letters', 'grave-decoration'],
-      features: [
-        'services.colored_photo_service.feature_1',
-        'services.colored_photo_service.feature_2',
-        'services.colored_photo_service.feature_3',
-        'services.colored_photo_service.feature_4'
-      ],
-      process: [
-        'services.colored_photo_service.process_1',
-        'services.colored_photo_service.process_2',
-        'services.colored_photo_service.process_3'
-      ]
-    },
-
-    'metal-letters': {
-      id: 'metal-letters',
-      titleKey: 'services.metal_letters_service.title',
-      descKey: 'services.metal_letters_service.description',
-      longDescKey: 'services.metal_letters_service.long_description',
-      image: '/images/stonepainting.jpg',
-      gallery: [
-        '/images/stonepainting.jpg',
-        '/images/metal1.jpg',
-        '/images/metal2.jpg'
-      ],
-      keywords: ['ლითონის წარწერები', 'litonis tsartserebi', 'metal inscriptions'],
-      relatedServices: ['stone-engraving', 'colored-photo', 'grave-decoration'],
-      features: [
-        'services.metal_letters_service.feature_1',
-        'services.metal_letters_service.feature_2',
-        'services.metal_letters_service.feature_3',
-        'services.metal_letters_service.feature_4'
-      ],
-      process: [
-        'services.metal_letters_service.process_1',
-        'services.metal_letters_service.process_2'
-      ]
-    },
-
     'embalming-dressing': {
       id: 'embalming-dressing',
       titleKey: 'services.embalming_dressing_service.title',
       descKey: 'services.embalming_dressing_service.description',
       longDescKey: 'services.embalming_dressing_service.description',
-      image: '/images/embalming.jpg',
-      gallery: [
-        '/images/embalming.jpg',
-        '/images/suit.jpg',
-        '/images/dressing1.jpg'
-      ],
+      image: '/images/balzamireba.png',
       keywords: ['ბალზამირება, გრიმი, ჩაცმა', 'balzamireba, grimi, chacma', 'embalming makeup dressing'],
       relatedServices: ['hearse', 'transportation', 'mourning-hall'],
       features: [
@@ -365,17 +54,70 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       ]
     },
 
+    'transportation': {
+      id: 'transportation',
+      titleKey: 'services.transportation_service.title',
+      descKey: 'services.transportation_service.description',
+      longDescKey: 'services.transportation_service.description',
+      image: '/images/gadasveneba.jpg',
+      keywords: ['გადასვენება', 'gadasveneba', 'transportation service'],
+      relatedServices: ['hearse', 'embalming-dressing', 'grave-preparation'],
+      features: [
+        'services.transportation_service.specialized_vehicle',
+        'services.transportation_service.hygienic_conditions',
+        'services.transportation_service.24_7_call',
+        'services.transportation_service.reliable_service'
+      ],
+      process: [
+        'services.transportation_service.full_preparation_header',
+        'services.transportation_service.final_message'
+      ]
+    },
+
+    'mourning-hall': {
+      id: 'mourning-hall',
+      titleKey: 'services.mourning_hall_service.title',
+      descKey: 'services.mourning_hall_service.description',
+      longDescKey: 'services.mourning_hall_service.description',
+      image: '/images/sapanashvide-darbazi.jpg',
+      keywords: ['საპანაშვიდე დარბაზი', 'sapanashvide darbazi', 'mourning hall'],
+      relatedServices: ['hearse', 'hall', 'embalming-dressing'],
+      features: [
+        'services.mourning_hall_service.rest_card',
+        'services.mourning_hall_service.guests_card',
+        'services.mourning_hall_service.tradition_card',
+        'services.mourning_hall_service.infrastructure_card'
+      ],
+      process: [
+        'services.mourning_hall_service.full_preparation_header',
+        'services.mourning_hall_service.final_message'
+      ]
+    },
+
+    'hearse': {
+      id: 'hearse',
+      titleKey: 'services.hearse_service.title',
+      descKey: 'services.hearse_service.description',
+      longDescKey: 'services.hearse_service.description',
+      image: '/images/katafalka.jpg',
+      keywords: ['კატაფალკა', 'katafalka', 'hearse service'],
+      relatedServices: ['embalming-dressing', 'transportation', 'mourning-hall'],
+      features: [
+        'services.hearse_service.specialized_vehicle',
+        'services.hearse_service.service_georgia'
+      ],
+      process: [
+        'services.hearse_service.care_respect_header',
+        'services.hearse_service.final_message'
+      ]
+    },
+
     'microbus': {
       id: 'microbus',
       titleKey: 'services.microbus_service.title',
       descKey: 'services.microbus_service.description',
       longDescKey: 'services.microbus_service.long_description',
       image: '/images/marshutka.jpg',
-      gallery: [
-        '/images/marshutka.jpg',
-        '/images/microbus1.jpg',
-        '/images/microbus2.jpg'
-      ],
       keywords: ['მარშუტკა', 'marshutka', 'microbus service'],
       relatedServices: ['transportation', 'hearse', 'mourning-hall'],
       features: [
@@ -395,14 +137,9 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.hall_service.title',
       descKey: 'services.hall_service.description',
       longDescKey: 'services.hall_service.long_description',
-      image: '/images/hall.jpg',
-      gallery: [
-        '/images/hall.jpg',
-        '/images/saritualo-darbazi.jpg',
-        '/images/saritualo-darbazi-2.jpg'
-      ],
+      image: '/images/sabanketo-darbazi.jpg',
       keywords: ['დარბაზი', 'darbazi', 'hall service'],
-      relatedServices: ['mourning-hall', 'banquet-hall', 'transportation'],
+      relatedServices: ['mourning-hall', 'embalming-dressing', 'transportation'],
       features: [
         'services.hall_service.feature_1',
         'services.hall_service.feature_2',
@@ -420,20 +157,15 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.cemetery_decoration_service.title',
       descKey: 'services.cemetery_decoration_service.description',
       longDescKey: 'services.cemetery_decoration_service.description',
-      image: '/images/grave.jpg',
-      gallery: [
-        '/images/grave.jpg',
-        '/images/cemetery1.jpg',
-        '/images/cemetery2.jpg'
-      ],
+      image: '/images/sasaflao.jpg',
       keywords: ['სასაფლაოს მოპირკეთება', 'sasapleos mopirketeba', 'cemetery decoration'],
-      relatedServices: ['grave-decoration', 'grave-stones', 'grave-preparation'],
-              features: [
-          'services.cemetery_decoration_service.high_quality_materials_header',
-          'services.cemetery_decoration_service.individual_approach_header',
-          'services.cemetery_decoration_service.full_spectrum_header',
-          'services.cemetery_decoration_service.long_term_result_header'
-        ],
+      relatedServices: ['grave-stones', 'grave-preparation', 'embalming-dressing'],
+      features: [
+        'services.cemetery_decoration_service.high_quality_materials_header',
+        'services.cemetery_decoration_service.individual_approach_header',
+        'services.cemetery_decoration_service.full_spectrum_header',
+        'services.cemetery_decoration_service.long_term_result_header'
+      ],
       process: [
         'services.cemetery_decoration_service.full_preparation_header',
         'services.cemetery_decoration_service.final_message'
@@ -445,14 +177,9 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.grave_stones_service.title',
       descKey: 'services.grave_stones_service.description',
       longDescKey: 'services.grave_stones_service.long_description',
-      image: '/images/stonepainting.jpg',
-      gallery: [
-        '/images/stonepainting.jpg',
-        '/images/grave-stones1.jpg',
-        '/images/grave-stones2.jpg'
-      ],
+      image: '/images/qvaze-xatva.png',
       keywords: ['საფლავის ქვები, ქვაზე ხატვა', 'saflavis qvebi, qvaze xatva', 'grave stones stone painting'],
-      relatedServices: ['stone-engraving', 'cemetery-decoration', 'grave-decoration'],
+      relatedServices: ['cemetery-decoration', 'grave-preparation', 'embalming-dressing'],
       features: [
         'services.grave_stones_service.feature_1',
         'services.grave_stones_service.feature_2',
@@ -466,17 +193,52 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       ]
     },
 
+    'metal-letters': {
+      id: 'metal-letters',
+      titleKey: 'services.metal_letters_service.title',
+      descKey: 'services.metal_letters_service.description',
+      longDescKey: 'services.metal_letters_service.long_description',
+      image: '/images/litonis-warwerebi.jpg',
+      keywords: ['ლითონის წარწერები', 'litonis tsartserebi', 'metal inscriptions'],
+      relatedServices: ['grave-stones', 'cemetery-decoration', 'grave-preparation'],
+      features: [
+        'services.metal_letters_service.feature_1',
+        'services.metal_letters_service.feature_2',
+        'services.metal_letters_service.feature_3',
+        'services.metal_letters_service.feature_4'
+      ],
+      process: [
+        'services.metal_letters_service.process_1',
+        'services.metal_letters_service.process_2'
+      ]
+    },
+
+    'grave-preparation': {
+      id: 'grave-preparation',
+      titleKey: 'services.grave_preparation_service.title',
+      descKey: 'services.grave_preparation_service.description',
+      longDescKey: 'services.grave_preparation_service.long_description',
+      image: '/images/samarxis-gachra.jpg',
+      keywords: ['საფლავის მომზადება', 'saflavis momzadeba', 'grave preparation'],
+      relatedServices: ['cemetery-decoration', 'transportation', 'grave-stones'],
+      features: [
+        'services.grave_preparation_service.feature_1',
+        'services.grave_preparation_service.feature_2',
+        'services.grave_preparation_service.feature_3',
+        'services.grave_preparation_service.feature_4'
+      ],
+      process: [
+        'services.grave_preparation_service.process_1',
+        'services.grave_preparation_service.process_2'
+      ]
+    },
+
     'lifting-machine': {
       id: 'lifting-machine',
       titleKey: 'services.lifting_machine_service.title',
       descKey: 'services.lifting_machine_service.description',
       longDescKey: 'services.lifting_machine_service.long_description',
-      image: '/images/liftingMachine.jpg',
-      gallery: [
-        '/images/liftingMachine.jpg',
-        '/images/lifting1.jpg',
-        '/images/lifting2.jpg'
-      ],
+      image: '/images/chasasvenebeli-lifti.jpg',
       keywords: ['ჩასასვენებლი ლიფტი', 'chasasvenebli lifti', 'lifting machine'],
       relatedServices: ['grave-preparation', 'transportation', 'cemetery-decoration'],
       features: [
@@ -625,19 +387,6 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     window.location.href = 'tel:+995557556116';
   }
 
-  getGalleryImageAlt(index: number): string {
-    if (!this.serviceContent) return '';
-    return `${this.translate(this.serviceContent.titleKey)} - ${index + 1}`;
-  }
-
-  openImageModal(image: string): void {
-    // Only run if we're in the browser
-    if (!isPlatformBrowser(this.platformId)) return;
-    
-    // Implementation for image modal
-    console.log('Opening image modal:', image);
-  }
-
   // Type guard to ensure serviceContent is defined
   isServiceContentDefined(): boolean {
     return this.serviceContent !== undefined && this.serviceContent !== null;
@@ -701,8 +450,6 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
   getCurrentServices() {
     return this.navigation[this.currentLanguage as keyof typeof this.navigation]?.services || this.navigation.ka.services;
   }
-
-
 
   // Get all service keys for related services section
   getAllServiceKeys(): string[] {

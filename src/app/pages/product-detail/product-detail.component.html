@@ -234,21 +234,6 @@
     </div>
   </section>
   
-  <!-- Gallery Section -->
-  <section class="product-gallery" *ngIf="productContent?.gallery">
-    <div class="container">
-      <h3>{{translate('products.gallery_title')}}</h3>
-      <div class="gallery-grid">
-        <div class="gallery-item" *ngFor="let image of productContent?.gallery; let i = index">
-          <img [src]="image" 
-               [alt]="getGalleryImageAlt(i)"
-               loading="lazy"
-               (click)="openImageModal(image)">
-        </div>
-      </div>
-    </div>
-  </section>
-  
   <!-- Related Products -->
   <section class="related-products" *ngIf="productContent?.relatedProducts">
     <div class="container">

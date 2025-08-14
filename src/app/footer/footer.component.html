@@ -6,8 +6,13 @@
           <!-- Company Info -->
           <div class="footer-section company-info">
             <div class="footer-logo">
-              <img src="/images/logo.png" alt="რიტუალ სერვისი - დამკრძალავი ბიურო">
-              <h3>{{translate('header.company_name')}}</h3>
+              <a [routerLink]="getHomeLink()" 
+                 class="footer-brand-link"
+                 [attr.aria-label]="translate('header.company_name')"
+                 (click)="onHomeClick()">
+                <img src="/images/logo.png" alt="რიტუალ სერვისი - დამკრძალავი ბიურო">
+                <h3>{{translate('header.company_name')}}</h3>
+              </a>
             </div>
             <p class="company-description">
               <strong>{{translate('home.funeral_home')}}</strong> {{translate('header.company_name')}} - 

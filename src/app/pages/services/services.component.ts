@@ -32,28 +32,28 @@ export class ServicesComponent implements OnInit, OnDestroy {
       id: 'embalming-dressing',
       titleKey: 'services.embalming_dressing',
       descKey: 'services.embalming_dressing.description',
-      image: '/images/embalming.jpg',
+      image: '/images/balzamireba.png',
       keywords: 'ბალზამირება, გრიმი, ჩაცმა, balzamireba, grimi, chacma'
     },
     {
       id: 'transportation',
       titleKey: 'services.transportation',
       descKey: 'services.transportation.description',
-      image: '/images/transfer.jpg',
+      image: '/images/gadasveneba.jpg',
       keywords: 'გადასვენება, gadasveneba, transportation'
     },
     {
       id: 'mourning-hall',
       titleKey: 'services.mourning_hall',
       descKey: 'services.mourning_hall.description',
-      image: '/images/hall.jpg',
+      image: '/images/sapanashvide-darbazi.jpg',
       keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, mourning hall'
     },
     {
       id: 'hearse-service',
       titleKey: 'services.hearse_service',
       descKey: 'services.hearse_service.description',
-      image: '/images/katafalkebi.jpg',
+      image: '/images/katafalka.jpg',
       keywords: 'კატაფალკის მომსახურება, katafalkis momsaxureba, hearse service'
     },
     {
@@ -67,42 +67,42 @@ export class ServicesComponent implements OnInit, OnDestroy {
       id: 'hall',
       titleKey: 'services.hall',
       descKey: 'services.hall_service.description',
-      image: '/images/hall.jpg',
+      image: '/images/sabanketo-darbazi.jpg',
       keywords: 'დარბაზი, darbazi, hall'
     },
     {
       id: 'cemetery-decoration',
       titleKey: 'services.cemetery_decoration',
       descKey: 'services.cemetery_decoration.description',
-      image: '/images/grave.jpg',
+      image: '/images/sasaflao.jpg',
       keywords: 'სასაფლაოს მოპირკეთება, sasapleos mopirketeba, cemetery decoration'
     },
     {
       id: 'grave-stones-painting',
       titleKey: 'services.grave_stones_painting',
       descKey: 'services.grave_stones_painting.description',
-      image: '/images/stonepainting.jpg',
+      image: '/images/qvaze-xatva.png',
       keywords: 'საფლავის ქვები, ქვაზე ხატვა, saflavis qvebi, qvaze xatva'
     },
     {
       id: 'metal-letters',
       titleKey: 'services.metal_letters.title',
       descKey: 'services.metal_letters.description',
-      image: '/images/metal-letters.jpg',
+      image: '/images/litonis-warwerebi.jpg',
       keywords: 'ლითონის წარწერები, litonis tsartserebi, metal inscriptions'
     },
     {
       id: 'grave-excavation',
       titleKey: 'services.grave_excavation',
       descKey: 'services.grave_excavation.description',
-      image: '/images/grave.jpg',
+      image: '/images/samarxis-gachra.jpg',
       keywords: 'სამარხის გაჭრა, samarxis gachra, grave excavation'
     },
     {
       id: 'lifting-machine',
       titleKey: 'services.lifting_machine_service.title',
       descKey: 'services.lifting_machine_service.description',
-      image: '/images/liftingMachine.jpg',
+      image: '/images/chasasvenebeli-lifti.jpg',
       keywords: 'ჩასასვენებელი ლიფტი, chasasvenebli lifti, lifting machine'
     }
   ];

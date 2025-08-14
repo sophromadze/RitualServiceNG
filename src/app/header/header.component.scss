@@ -50,6 +50,12 @@
 /* Brand Section */
 .navbar-brand {
   flex-shrink: 0;
+
+  &:hover {    
+    span {
+      color: #f39c12;
+    }
+  }
 }
 
 .brand-link {
@@ -404,6 +410,10 @@
 
 /* Responsive Design */
 @media (max-width: 1135px) {
+  .site-header::before{
+    background-size: 250px 55px;
+  }
+
   .navbar-container {
     padding: 12px 5px;
     gap: 5px;

@@ -50,7 +50,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.coffins',
         descKey: 'products.coffins_desc',
         url: this.getProductUrl('coffins'),
-        image: '/images/sasaxleebi2.jpg',
+        image: '/images/kuboebi-2.jpeg',
         keywords: 'სასახლეები, sasaxleebi, ხის სასახლეები, ლუქს კლასის სასახლეები',
         types: ['ხის სასახლეები', 'ლუქს კლასის სასახლეები', 'ეკონომ კლასის სასახლეები'],
         features: [
@@ -65,7 +65,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.shrouds',
         descKey: 'products.shrouds_desc',
         url: this.getProductUrl('shrouds'),
-        image: '/images/sudarebi2.jpg',
+        image: '/images/sudarebi.png',
         keywords: 'სუდარები, sudarebi, ბამბის სუდარები, სილკის სუდარები',
         types: ['ბამბის სუდარები', 'სილკის სუდარები', 'ხელოვნური ქსოვილის სუდარები'],
         features: [
@@ -80,7 +80,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.refrigeration',
         descKey: 'products.refrigeration_desc',
         url: this.getProductUrl('refrigeration'),
-        image: '/images/fridge2.jpeg',
+        image: '/images/kubo-macivrebi.png',
         keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები, სტაციონარული მაცივრები',
         types: ['სასახლე-მაცივრები', 'სტაციონარული მაცივრები', 'მობილური მაცივრები'],
         features: [
@@ -95,7 +95,7 @@ export class ProductsComponent implements OnInit {
         titleKey: 'products.cemetery_accessories',
         descKey: 'products.cemetery_accessories_desc',
         url: this.getProductUrl('cemetery-accessories'),
-        image: '/images/cemetery.jpg',
+        image: '/images/sasaflaos-aqsesuarebi.jpg',
         keywords: 'სასაფლაოს აქსესუარები, sasapleos akseesuarebi, ჯვრები, საყვავილე კონსტრუქციები, სასანთლეები',
         types: ['ჯვრები', 'საყვავილე კონსტრუქციები', 'სასანთლეები', 'მარმარილოს აქსესუარები'],
         features: [
