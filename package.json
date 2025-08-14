@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:deploy": "bash build-deploy.sh",
+    "build:deploy:win": "build-deploy.bat",
     "build:ssr": "ng build --configuration production",
     "serve:ssr": "node dist/ritual-service-ng/server/server.mjs",
     "dev:ssr": "ng serve --ssr",
