@@ -40,7 +40,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.embalming_dressing_service.title',
       descKey: 'services.embalming_dressing_service.description',
       longDescKey: 'services.embalming_dressing_service.description',
-      image: '/images/balzamireba.png',
+      image: '/images/balzamireba.webp',
       keywords: ['ბალზამირება, გრიმი, ჩაცმა', 'balzamireba, grimi, chacma', 'embalming makeup dressing'],
       relatedServices: ['hearse', 'transportation', 'mourning-hall'],
       features: [
@@ -59,7 +59,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.transportation_service.title',
       descKey: 'services.transportation_service.description',
       longDescKey: 'services.transportation_service.description',
-      image: '/images/gadasveneba.jpg',
+      image: '/images/gadasveneba.webp',
       keywords: ['გადასვენება', 'gadasveneba', 'transportation service'],
       relatedServices: ['hearse', 'embalming-dressing', 'grave-preparation'],
       features: [
@@ -79,7 +79,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.mourning_hall_service.title',
       descKey: 'services.mourning_hall_service.description',
       longDescKey: 'services.mourning_hall_service.description',
-      image: '/images/sapanashvide-darbazi.jpg',
+      image: '/images/sapanashvide-darbazi.webp',
       keywords: ['საპანაშვიდე დარბაზი', 'sapanashvide darbazi', 'mourning hall'],
       relatedServices: ['hearse', 'hall', 'embalming-dressing'],
       features: [
@@ -99,7 +99,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.hearse_service.title',
       descKey: 'services.hearse_service.description',
       longDescKey: 'services.hearse_service.description',
-      image: '/images/katafalka.jpg',
+      image: '/images/katafalka.webp',
       keywords: ['კატაფალკა', 'katafalka', 'hearse service'],
       relatedServices: ['embalming-dressing', 'transportation', 'mourning-hall'],
       features: [
@@ -117,7 +117,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.microbus_service.title',
       descKey: 'services.microbus_service.description',
       longDescKey: 'services.microbus_service.long_description',
-      image: '/images/marshutka.jpg',
+      image: '/images/marshutka.webp',
       keywords: ['მარშუტკა', 'marshutka', 'microbus service'],
       relatedServices: ['transportation', 'hearse', 'mourning-hall'],
       features: [
@@ -137,7 +137,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.hall_service.title',
       descKey: 'services.hall_service.description',
       longDescKey: 'services.hall_service.long_description',
-      image: '/images/sabanketo-darbazi.jpg',
+      image: '/images/sabanketo-darbazi.webp',
       keywords: ['დარბაზი', 'darbazi', 'hall service'],
       relatedServices: ['mourning-hall', 'embalming-dressing', 'transportation'],
       features: [
@@ -157,7 +157,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.cemetery_decoration_service.title',
       descKey: 'services.cemetery_decoration_service.description',
       longDescKey: 'services.cemetery_decoration_service.description',
-      image: '/images/sasaflao.jpg',
+      image: '/images/sasaflao.webp',
       keywords: ['სასაფლაოს მოპირკეთება', 'sasapleos mopirketeba', 'cemetery decoration'],
       relatedServices: ['grave-stones', 'grave-preparation', 'embalming-dressing'],
       features: [
@@ -177,7 +177,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.grave_stones_service.title',
       descKey: 'services.grave_stones_service.description',
       longDescKey: 'services.grave_stones_service.long_description',
-      image: '/images/qvaze-xatva.png',
+      image: '/images/qvaze-xatva.webp',
       keywords: ['საფლავის ქვები, ქვაზე ხატვა', 'saflavis qvebi, qvaze xatva', 'grave stones stone painting'],
       relatedServices: ['cemetery-decoration', 'grave-preparation', 'embalming-dressing'],
       features: [
@@ -198,7 +198,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.metal_letters_service.title',
       descKey: 'services.metal_letters_service.description',
       longDescKey: 'services.metal_letters_service.long_description',
-      image: '/images/litonis-warwerebi.jpg',
+      image: '/images/litonis-warwerebi.webp',
       keywords: ['ლითონის წარწერები', 'litonis tsartserebi', 'metal inscriptions'],
       relatedServices: ['grave-stones', 'cemetery-decoration', 'grave-preparation'],
       features: [
@@ -218,7 +218,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.grave_preparation_service.title',
       descKey: 'services.grave_preparation_service.description',
       longDescKey: 'services.grave_preparation_service.long_description',
-      image: '/images/samarxis-gachra.jpg',
+      image: '/images/samarxis-gachra.webp',
       keywords: ['საფლავის მომზადება', 'saflavis momzadeba', 'grave preparation'],
       relatedServices: ['cemetery-decoration', 'transportation', 'grave-stones'],
       features: [
@@ -238,7 +238,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       titleKey: 'services.lifting_machine_service.title',
       descKey: 'services.lifting_machine_service.description',
       longDescKey: 'services.lifting_machine_service.long_description',
-      image: '/images/chasasvenebeli-lifti.jpg',
+      image: '/images/chasasvenebeli-lifti.webp',
       keywords: ['ჩასასვენებლი ლიფტი', 'chasasvenebli lifti', 'lifting machine'],
       relatedServices: ['grave-preparation', 'transportation', 'cemetery-decoration'],
       features: [

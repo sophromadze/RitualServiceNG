@@ -43,91 +43,91 @@ export class HomeComponent implements OnInit, OnDestroy {
     {
       titleKey: 'services.coffins',
       url: '/products/coffins',
-      image: '/images/kuboebi-2.jpeg',
+      image: '/images/kuboebi-2.webp',
       keywords: 'სასახლეები, sasaxleebi, კუბოები'
     },
     {
       titleKey: 'services.coffin_refrigeration',
       url: '/products/refrigeration',
-      image: '/images/kubo-macivrebi.png',
+      image: '/images/kubo-macivrebi.webp',
       keywords: 'სასახლე მაცივრები, sasaxle macivrebi, სასახლე-მაცივრები'
     },
     {
       titleKey: 'services.shrouds',
       url: '/products/shrouds',
-      image: '/images/sudarebi.png',
+      image: '/images/sudarebi.webp',
       keywords: 'სუდარა, sudara, სუდარები'
     },
     {
       titleKey: 'services.embalming_dressing',
       url: '/services/embalming-dressing',
-      image: '/images/balzamireba.png',
+      image: '/images/balzamireba.webp',
       keywords: 'ბალზამირება, balzamireba, მიცვალებულის ჩაცმა'
     },
     {
       titleKey: 'services.transportation',
       url: '/services/transportation',
-      image: '/images/gadasveneba.jpg',
+      image: '/images/gadasveneba.webp',
       keywords: 'გადასვენება, gadasveneba, ტრანსპორტირება'
     },
     {
       titleKey: 'services.mourning_hall',
       url: '/services/mourning-hall',
-      image: '/images/sapanashvide-darbazi.jpg',
+      image: '/images/sapanashvide-darbazi.webp',
       keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, სამგლოვიარო დარბაზი'
     },
     {
       titleKey: 'services.hearse_service',
       url: '/services/hearse',
-      image: '/images/katafalka.jpg',
+      image: '/images/katafalka.webp',
       keywords: 'კატაფალკის მომსახურება, katafalkis momserva, კატაფალკა'
     },
     {
       titleKey: 'services.marshutka',
       url: '/services/microbus',
-      image: '/images/marshutka.jpg',
+      image: '/images/marshutka.webp',
       keywords: 'მარშუტკა, marshutka, სტუმრების გადაყვანა'
     },
     {
       titleKey: 'services.hall',
       url: '/services/hall',
-      image: '/images/sabanketo-darbazi.jpg',
+      image: '/images/sabanketo-darbazi.webp',
       keywords: 'დარბაზი, darbazi, საბანკეტო დარბაზი'
     },
     {
       titleKey: 'services.cemetery_decoration',
       url: '/services/cemetery-decoration',
-      image: '/images/sasaflao.jpg',
+      image: '/images/sasaflao.webp',
       keywords: 'სასაფლაოს მოპირკეთება, sasaflaos mopirketeba, საფლავის მოპირკეთება'
     },
     {
       titleKey: 'services.grave_stones_painting',
       url: '/services/grave-stones',
-      image: '/images/qvaze-xatva.png',
+      image: '/images/qvaze-xatva.webp',
       keywords: 'საფლავის ქვები, saflavis qvebi, ქვაზე ხატვა'
     },
     {
       titleKey: 'services.metal_letters.title',
       url: '/services/metal-letters',
-      image: '/images/litonis-warwerebi.jpg',
+      image: '/images/litonis-warwerebi.webp',
       keywords: 'ლითონის წარწერები, litonis tsartserebi, metal inscriptions'
     },
     {
       titleKey: 'services.grave_excavation',
       url: '/services/grave-preparation',
-      image: '/images/samarxis-gachra.jpg',
+      image: '/images/samarxis-gachra.webp',
       keywords: 'სამარხის გაჭრა, samarkhis gachra, საფლავის გაჭრა'
     },
     {
       titleKey: 'services.cemetery_accessories',
       url: '/products/cemetery-accessories',
-      image: '/images/sasaflaos-aqsesuarebi.jpg',
+      image: '/images/sasaflaos-aqsesuarebi.webp',
       keywords: 'სასაფლაოს აქსესუარები, sasaflaos akseesuarebi, საფლავის აქსესუარები'
     },
     {
       titleKey: 'services.lifting_machine',
       url: '/services/lifting-machine',
-      image: '/images/chasasvenebeli-lifti.jpg',
+      image: '/images/chasasvenebeli-lifti.webp',
       keywords: 'ჩასასვენებელი ლიფტი, chasasvenebeli lifti, მწევი მანქანა'
     }
   ];
@@ -226,7 +226,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         "saritualo saxli"
       ],
       "url": `https://ritualservice.ge/${this.currentLanguage}`,
-      "logo": "https://ritualservice.ge/images/logo.png",
+      "logo": "https://ritualservice.ge/images/logo.webp",
       "image": "https://ritualservice.ge/images/logo300.png",
       "telephone": "+995557556116",
       "description": this.getSEODescription(),

@@ -177,7 +177,7 @@ export class SeoService {
         "Ritual Service Funeral Home"
       ],
       "url": "https://ritualservice.ge",
-      "logo": "https://ritualservice.ge/images/logo.png",
+      "logo": "https://ritualservice.ge/images/logo.webp",
       "image": "https://ritualservice.ge/images/logo300.png",
       "telephone": "+995557556116",
       "description": this.getMultiLanguageDescription(),

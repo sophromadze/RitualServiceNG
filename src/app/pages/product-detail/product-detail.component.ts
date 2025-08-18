@@ -41,7 +41,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.coffins',
       descKey: 'products.coffins_desc',
       longDescKey: 'products.coffins_long',
-      image: '/images/kuboebi-2.jpeg',
+      image: '/images/kuboebi-3.webp',
       keywords: ['სასახლე კუბოები', 'sasaxleebi', 'ხის სასახლეები', 'coffins'],
       relatedProducts: ['shrouds', 'refrigeration', 'cemetery_accessories'],
       features: [
@@ -63,7 +63,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.shrouds',
       descKey: 'products.shrouds_desc',
       longDescKey: 'products.shrouds_long',
-      image: '/images/sudarebi.png',
+      image: '/images/sudarebi.webp',
       keywords: ['სუდარები', 'sudarebi', 'ბამბის სუდარები', 'shrouds'],
       relatedProducts: ['coffins', 'refrigeration', 'cemetery_accessories'],
       features: [],
@@ -75,7 +75,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.refrigeration',
       descKey: 'products.refrigeration_desc',
       longDescKey: 'products.refrigeration_long',
-      image: '/images/kubo-macivrebi.png',
+      image: '/images/kubo-macivrebi.webp',
       keywords: ['სასახლე კუბო მაცივრები', 'sasaxle macivrеbi', 'სასახლე-მაცივრები', 'refrigeration'],
       relatedProducts: ['coffins', 'shrouds', 'cemetery_accessories'],
       features: [
@@ -97,7 +97,7 @@ export class ProductDetailComponent implements OnInit, OnDestroy {
       titleKey: 'products.cemetery_accessories',
       descKey: 'products.cemetery_accessories_desc',
       longDescKey: 'products.cemetery_accessories_long',
-      image: '/images/sasaflaos-aqsesuarebi.jpg',
+      image: '/images/sasaflaos-aqsesuarebi.webp',
       keywords: ['სასაფლაოს აქსესუარები', 'sasapleos akseesuarebi', 'ჯვრები', 'jvrebi', 'საყვავილე კონსტრუქციები', 'saqvaile konstrukciebi'],
       relatedProducts: ['coffins', 'shrouds', 'refrigeration'],
       features: [
