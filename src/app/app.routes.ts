@@ -391,5 +391,5 @@ export const routes: Routes = [
   
   // 404 page
   { path: '404', component: NotFoundComponent },
-  { path: '**', redirectTo: '/404' }
+  { path: '**', redirectTo: '' }
 ];
