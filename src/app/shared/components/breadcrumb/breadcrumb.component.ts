@@ -176,24 +176,18 @@ export class BreadcrumbComponent implements OnInit {
         return this.translate('breadcrumb.embalming');
       case 'transportation':
         return this.translate('breadcrumb.transportation');
-      case 'stone-engraving':
-        return this.translate('breadcrumb.stone_engraving');
-      case 'grave-decoration':
-        return this.translate('breadcrumb.grave_decoration');
+
       case 'dressing':
         return this.translate('breadcrumb.dressing');
       case 'mourning-hall':
         return this.translate('breadcrumb.mourning_hall');
-      case 'banquet-hall':
-        return this.translate('breadcrumb.banquet_hall');
+
       case 'metal-letters':
         return this.translate('breadcrumb.metal_letters');
-      case 'agent-service':
-        return this.translate('breadcrumb.agent_service');
+
       case 'lifting-machine':
         return this.translate('breadcrumb.lifting_machine');
-      case 'colored-photo':
-        return this.translate('breadcrumb.colored_photo');
+
       // New service translations
       case 'embalming-dressing':
         return this.translate('services.embalming_dressing_service.title') || 'ბალზამირება, გრიმი, ჩაცმა';

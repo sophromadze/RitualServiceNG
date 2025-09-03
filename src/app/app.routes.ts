@@ -32,36 +32,8 @@ export const routes: Routes = [
           keywords: 'დაკრძალვის სერვისები, ბალზამირება, კატაფალკა, ქვაზე ხატვა, გადასვენება, საპანაშვიდე დარბაზი, მიცვალებულის ჩაცმა'
         }
       },
-      { 
-        path: 'services/agent-service', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'agent-service',
-          title: 'აგენტის მომსახურება - რიტუალ სერვისი',
-          description: 'პროფესიონალური აგენტის მომსახურება დაკრძალვის ორგანიზებისთვის. 24/7 მომსახურება.',
-          keywords: 'აგენტის მომსახურება, agent service, damkrdzalavi biuro'
-        }
-      },
-      { 
-        path: 'services/dressing', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'dressing',
-          title: 'მიცვალებულის ჩაცმა - რიტუალ სერვისი',
-          description: 'პროფესიონალური მიცვალებულის ჩაცმა და მომზადება. ღირსეული მომსახურება.',
-          keywords: 'მიცვალებულის ჩაცმა, micvalebulis chacma, dressing service'
-        }
-      },
-      { 
-        path: 'services/embalming', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'embalming',
-          title: 'ბალზამირება - რიტუალ სერვისი',
-          description: 'პროფესიონალური ბალზამირება მიცვალებულის მომზადებისთვის. მაღალი ხარისხი.',
-          keywords: 'ბალზამირება, balzamireba, embalming service'
-        }
-      },
+
+
       { 
         path: 'services/hearse', 
         component: ServiceDetailComponent,
@@ -82,26 +54,7 @@ export const routes: Routes = [
           keywords: 'გადასვენება, gadasveneba, transportation service'
         }
       },
-      { 
-        path: 'services/stone-engraving', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'stone-engraving',
-          title: 'ქვაზე ხატვა - რიტუალ სერვისი',
-          description: 'ქვაზე ხატვის პროფესიონალური მომსახურება. მაღალი ხარისხი.',
-          keywords: 'ქვაზე ხატვა, qvaze xatva, stone engraving'
-        }
-      },
-      { 
-        path: 'services/grave-decoration', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'grave-decoration',
-          title: 'საფლავის მოპირკეთება - რიტუალ სერვისი',
-          description: 'საფლავის მოპირკეთების მომსახურება. ხარისხიანი მასალები.',
-          keywords: 'საფლავის მოპირკეთება, mopirketeba, grave decoration'
-        }
-      },
+
       { 
         path: 'services/mourning-hall', 
         component: ServiceDetailComponent,
@@ -112,16 +65,7 @@ export const routes: Routes = [
           keywords: 'საპანაშვიდე დარბაზი, sapanashvide darbazi, mourning hall'
         }
       },
-      { 
-        path: 'services/banquet-hall', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'banquet-hall',
-          title: 'საბანკეტო დარბაზი - რიტუალ სერვისი',
-          description: 'საბანკეტო დარბაზის მომსახურება. მემორიალური ღონისძიებები.',
-          keywords: 'საბანკეტო დარბაზი, sabanketo darbazi, banquet hall'
-        }
-      },
+
       { 
         path: 'services/grave-preparation', 
         component: ServiceDetailComponent,
@@ -132,16 +76,7 @@ export const routes: Routes = [
           keywords: 'საფლავის მომზადება, saflavis momzadeba, grave preparation'
         }
       },
-      { 
-        path: 'services/colored-photo', 
-        component: ServiceDetailComponent,
-        data: { 
-          service: 'colored-photo',
-          title: 'ფერადი სურათი - რიტუალ სერვისი',
-          description: 'ფერადი სურათის დამზადების მომსახურება. მაღალი ხარისხი.',
-          keywords: 'ფერადი სურათი, feradi surati, colored photo'
-        }
-      },
+
       { 
         path: 'services/metal-letters', 
         component: ServiceDetailComponent,
@@ -311,17 +246,15 @@ export const routes: Routes = [
           keywords: 'funeral services, embalming, hearse services, stone engraving, transportation, mourning hall, burial preparation'
         }
       },
-      { path: 'services/agent-service', component: ServiceDetailComponent, data: { service: 'agent-service' }},
-      { path: 'services/dressing', component: ServiceDetailComponent, data: { service: 'dressing' }},
-      { path: 'services/embalming', component: ServiceDetailComponent, data: { service: 'embalming' }},
+
       { path: 'services/hearse', component: ServiceDetailComponent, data: { service: 'hearse' }},
       { path: 'services/transportation', component: ServiceDetailComponent, data: { service: 'transportation' }},
-      { path: 'services/stone-engraving', component: ServiceDetailComponent, data: { service: 'stone-engraving' }},
-      { path: 'services/grave-decoration', component: ServiceDetailComponent, data: { service: 'grave-decoration' }},
+
+
       { path: 'services/mourning-hall', component: ServiceDetailComponent, data: { service: 'mourning-hall' }},
-      { path: 'services/banquet-hall', component: ServiceDetailComponent, data: { service: 'banquet-hall' }},
+
       { path: 'services/grave-preparation', component: ServiceDetailComponent, data: { service: 'grave-preparation' }},
-      { path: 'services/colored-photo', component: ServiceDetailComponent, data: { service: 'colored-photo' }},
+
       { path: 'services/metal-letters', component: ServiceDetailComponent, data: { service: 'metal-letters' }},
       { path: 'services/embalming-dressing', component: ServiceDetailComponent, data: { service: 'embalming-dressing' }},
       { path: 'services/microbus', component: ServiceDetailComponent, data: { service: 'microbus' }},
@@ -361,17 +294,15 @@ export const routes: Routes = [
           keywords: 'ритуальные услуги, бальзамирование, услуги катафалка, роспись на камне, перевозка покойного, траурный зал'
         }
       },
-      { path: 'services/agent-service', component: ServiceDetailComponent, data: { service: 'agent-service' }},
-      { path: 'services/dressing', component: ServiceDetailComponent, data: { service: 'dressing' }},
-      { path: 'services/embalming', component: ServiceDetailComponent, data: { service: 'embalming' }},
+
       { path: 'services/hearse', component: ServiceDetailComponent, data: { service: 'hearse' }},
       { path: 'services/transportation', component: ServiceDetailComponent, data: { service: 'transportation' }},
-      { path: 'services/stone-engraving', component: ServiceDetailComponent, data: { service: 'stone-engraving' }},
-      { path: 'services/grave-decoration', component: ServiceDetailComponent, data: { service: 'grave-decoration' }},
+
+
       { path: 'services/mourning-hall', component: ServiceDetailComponent, data: { service: 'mourning-hall' }},
-      { path: 'services/banquet-hall', component: ServiceDetailComponent, data: { service: 'banquet-hall' }},
+
       { path: 'services/grave-preparation', component: ServiceDetailComponent, data: { service: 'grave-preparation' }},
-      { path: 'services/colored-photo', component: ServiceDetailComponent, data: { service: 'colored-photo' }},
+
       { path: 'services/metal-letters', component: ServiceDetailComponent, data: { service: 'metal-letters' }},
       { path: 'services/embalming-dressing', component: ServiceDetailComponent, data: { service: 'embalming-dressing' }},
       { path: 'services/microbus', component: ServiceDetailComponent, data: { service: 'microbus' }},

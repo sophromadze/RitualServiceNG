@@ -2057,10 +2057,10 @@ export class LanguageService {
           keywords: 'დაკრძალვის სერვისები, ბალზამირება, კატაფალკები, ქვაზე ხატვა, გადასვენება, damkrdzalavi biuro, მიცვალებულის ჩაცმა, საფლავის მოპირკეთება',
           h1: 'სარიტუალო მომსახურება - დამკრძალავი ბიურო',
           services: [
-            { name: 'ბალზამირება', url: '/services/embalming', desc: 'მიცვალებულის პროფესიონალური ბალზამირება' },
+            { name: 'ბალზამირება, გრიმი, ჩაცმა', url: '/services/embalming-dressing', desc: 'პროფესიონალური ბალზამირება, გრიმი და მიცვალებულის ჩაცმა' },
             { name: 'კატაფალკები', url: '/services/hearse', desc: 'კატაფალკების მომსახურება ყველა მიმართულებით' },
             { name: 'გადასვენება', url: '/services/transportation', desc: 'მიცვალებულის გადასვენება რაიონში და საზღვარგარეთ' },
-            { name: 'ქვაზე ხატვა', url: '/services/stone-engraving', desc: 'პროფესიონალური ქვაზე ხატვა და გრავიურა' }
+
           ]
         },
         en: {
@@ -2069,10 +2069,10 @@ export class LanguageService {
           keywords: 'funeral services, embalming, hearse, stone engraving, transportation, funeral home, dressing and preparation, grave decoration',
           h1: 'Professional Funeral Services',
           services: [
-            { name: 'Embalming', url: '/en/services/embalming', desc: 'Professional embalming of the deceased' },
+            { name: 'Embalming, Makeup, Dressing', url: '/en/services/embalming-dressing', desc: 'Professional embalming, makeup and dressing of the deceased' },
             { name: 'Hearse Service', url: '/en/services/hearse', desc: 'Hearse services in all directions' },
             { name: 'Transportation', url: '/en/services/transportation', desc: 'Transportation locally and internationally' },
-            { name: 'Stone Engraving', url: '/en/services/stone-engraving', desc: 'Professional stone engraving and memorial work' }
+
           ]
         },
         ru: {
@@ -2081,10 +2081,10 @@ export class LanguageService {
           keywords: 'ритуальные услуги, бальзамирование, катафалк, роспись на камне, перевозка покойного, похоронный дом, одевание усопшего, благоустройство могил',
           h1: 'Профессиональные ритуальные услуги',
           services: [
-            { name: 'Бальзамирование', url: '/ru/services/embalming', desc: 'Профессиональное бальзамирование усопшего' },
+            { name: 'Бальзамирование, грим, одевание', url: '/ru/services/embalming-dressing', desc: 'Профессиональное бальзамирование, грим и одевание усопшего' },
             { name: 'Услуги катафалка', url: '/ru/services/hearse', desc: 'Услуги катафалка во всех направлениях' },
             { name: 'Перевозка', url: '/ru/services/transportation', desc: 'Перевозка по региону и за границу' },
-            { name: 'Роспись на камне', url: '/ru/services/stone-engraving', desc: 'Профессиональная роспись на камне и мемориальные работы' }
+
           ]
         }
       },

@@ -28,17 +28,10 @@ const validRoutes = [
 
 // Add all service detail routes
 const serviceRoutes = [
-  '/services/agent-service',
-  '/services/dressing',
-  '/services/embalming',
   '/services/hearse',
   '/services/transportation',
-  '/services/stone-engraving',
-  '/services/grave-decoration',
   '/services/mourning-hall',
-  '/services/banquet-hall',
   '/services/grave-preparation',
-  '/services/colored-photo',
   '/services/metal-letters',
   '/services/embalming-dressing',
   '/services/microbus',

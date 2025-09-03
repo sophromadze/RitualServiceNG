@@ -16,17 +16,10 @@
 /404
 
 # Service detail routes
-/services/agent-service
-/services/dressing
-/services/embalming
 /services/hearse
 /services/transportation
-/services/stone-engraving
-/services/grave-decoration
 /services/mourning-hall
-/services/banquet-hall
 /services/grave-preparation
-/services/colored-photo
 /services/metal-letters
 /services/embalming-dressing
 /services/microbus
@@ -36,17 +29,10 @@
 /services/lifting-machine
 
 # English service routes
-/en/services/agent-service
-/en/services/dressing
-/en/services/embalming
 /en/services/hearse
 /en/services/transportation
-/en/services/stone-engraving
-/en/services/grave-decoration
 /en/services/mourning-hall
-/en/services/banquet-hall
 /en/services/grave-preparation
-/en/services/colored-photo
 /en/services/metal-letters
 /en/services/embalming-dressing
 /en/services/microbus
@@ -56,17 +42,10 @@
 /en/services/lifting-machine
 
 # Russian service routes
-/ru/services/agent-service
-/ru/services/dressing
-/ru/services/embalming
 /ru/services/hearse
 /ru/services/transportation
-/ru/services/stone-engraving
-/ru/services/grave-decoration
 /ru/services/mourning-hall
-/ru/services/banquet-hall
 /ru/services/grave-preparation
-/ru/services/colored-photo
 /ru/services/metal-letters
 /ru/services/embalming-dressing
 /ru/services/microbus

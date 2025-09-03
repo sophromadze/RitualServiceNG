@@ -26,38 +26,8 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/"/>
   </url>
   
-  <url>
-    <loc>https://ritualservice.ge/services/agent-service/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/agent-service/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/agent-service/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/agent-service/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/agent-service/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/services/dressing/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/dressing/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/dressing/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/dressing/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/dressing/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/services/embalming/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/embalming/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/embalming/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/embalming/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/embalming/"/>
-  </url>
+
+
   
   <url>
     <loc>https://ritualservice.ge/services/hearse/</loc>
@@ -82,28 +52,6 @@
   </url>
   
   <url>
-    <loc>https://ritualservice.ge/services/stone-engraving/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/stone-engraving/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/stone-engraving/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/stone-engraving/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/stone-engraving/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/services/grave-decoration/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/grave-decoration/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/grave-decoration/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/grave-decoration/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/grave-decoration/"/>
-  </url>
-  
-  <url>
     <loc>https://ritualservice.ge/services/mourning-hall/</loc>
     <lastmod>2025-08-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -115,17 +63,6 @@
   </url>
   
   <url>
-    <loc>https://ritualservice.ge/services/banquet-hall/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/banquet-hall/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/banquet-hall/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/banquet-hall/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/banquet-hall/"/>
-  </url>
-  
-  <url>
     <loc>https://ritualservice.ge/services/grave-preparation/</loc>
     <lastmod>2025-08-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -134,17 +71,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/grave-preparation/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/grave-preparation/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/grave-preparation/"/>
-  </url>
-  
-  <url>
-    <loc>https://ritualservice.ge/services/colored-photo/</loc>
-    <lastmod>2025-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ka" href="https://ritualservice.ge/services/colored-photo/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ritualservice.ge/en/services/colored-photo/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://ritualservice.ge/ru/services/colored-photo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ritualservice.ge/services/colored-photo/"/>
   </url>
   
   <url>
