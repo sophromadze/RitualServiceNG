@@ -259,6 +259,19 @@
     gtag('js', new Date());
     gtag('config', 'G-125SWN391Z');
   </script>
+  
+  <!-- Prevent FOUC - Hide main content until Angular is ready -->
+  <style>
+    /* Hide main app content initially to prevent FOUC, but keep loading screen visible */
+    app-root .app-container {
+      display: none;
+    }
+    
+    /* Show main app content when Angular is ready */
+    app-root.angular-ready .app-container {
+      display: flex;
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>

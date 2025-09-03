@@ -45,16 +45,23 @@ export class AppComponent implements OnInit, OnDestroy {
     // Initialize language from URL or localStorage
     this.initializeLanguage();
     
-    // Set loading to false after app initialization
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 500);
-
     // Add Google Analytics tracking if in browser
     if (isPlatformBrowser(this.platformId)) {
       this.setupGoogleAnalytics();
       this.setupPhoneTraking();
     }
+
+    // Set loading to false after app initialization
+    setTimeout(() => {
+      this.isLoading = false;
+      // Ensure the app is visible after Angular loading
+      if (isPlatformBrowser(this.platformId)) {
+        const appRoot = document.querySelector('app-root');
+        if (appRoot) {
+          appRoot.classList.add('angular-ready');
+        }
+      }
+    }, 500);
   }
 
   private initializeLanguage(): void {
