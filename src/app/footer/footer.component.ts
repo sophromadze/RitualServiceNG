@@ -28,7 +28,7 @@ export class FooterComponent {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995557556116';
+    window.location.href = 'tel:+995555429710';
   }
 
   navigateToLocation(location: string): void {

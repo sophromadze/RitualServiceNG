@@ -1,37 +1,56 @@
 /* Home Page Component Styles */
 
+/* Critical CSS optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
   overflow: hidden;
-  background: url('/images/mainImage2.webp');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  // min-height: 500px;
-  padding: 150px 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    background: #000000;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
+  height: 65vh;
+  min-height: 400px;
+  padding: 80px 0;
+  will-change: transform;
 }
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  background: #000000;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -204,9 +223,6 @@
 }
 
 .service-card {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -215,6 +231,17 @@
   display: flex;
   flex-direction: column;
   min-height: 350px;
+}
+
+.service-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
 }
 
 .card-overlay {
@@ -228,6 +255,7 @@
   flex-direction: column;
   justify-content: flex-end;
   padding: 24px;
+  z-index: 2;
 }
 
 .card-content {
@@ -1111,11 +1139,11 @@
 
 }
 
-/* Animation for service cards */
+/* Optimized animations - reduced for better performance */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -1124,25 +1152,17 @@
 }
 
 .service-card {
-  animation: fadeInUp 0.6s ease-out;
+  animation: fadeInUp 0.3s ease-out;
+  will-change: transform;
 }
 
-.service-card:nth-child(1) { animation-delay: 0.1s; }
-.service-card:nth-child(2) { animation-delay: 0.2s; }
-.service-card:nth-child(3) { animation-delay: 0.3s; }
-.service-card:nth-child(4) { animation-delay: 0.4s; }
-.service-card:nth-child(5) { animation-delay: 0.5s; }
-.service-card:nth-child(6) { animation-delay: 0.6s; }
-
-/* Animation for feature cards */
-.feature-card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.feature-card:nth-child(1) { animation-delay: 0.1s; }
-.feature-card:nth-child(2) { animation-delay: 0.2s; }
-.feature-card:nth-child(3) { animation-delay: 0.3s; }
-.feature-card:nth-child(4) { animation-delay: 0.4s; }
+/* Reduced animation delays for faster rendering */
+.service-card:nth-child(1) { animation-delay: 0.05s; }
+.service-card:nth-child(2) { animation-delay: 0.1s; }
+.service-card:nth-child(3) { animation-delay: 0.15s; }
+.service-card:nth-child(4) { animation-delay: 0.2s; }
+.service-card:nth-child(5) { animation-delay: 0.25s; }
+.service-card:nth-child(6) { animation-delay: 0.3s; }
 
 /* Print styles */
 @media print {

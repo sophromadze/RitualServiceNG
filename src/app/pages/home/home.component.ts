@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   
   currentLanguage: string = 'ka';
   private subscriptions: Subscription = new Subscription();
+  private translateCache = new Map<string, string>();
 
   // Why choose us section with SEO keywords
   whyChooseUsFeatures = [
@@ -228,7 +229,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       "url": `https://ritualservice.ge/${this.currentLanguage}`,
       "logo": "https://ritualservice.ge/images/logo.webp",
       "image": "https://ritualservice.ge/images/logo300.png",
-      "telephone": "+995557556116",
+      "telephone": "+995555429710",
       "description": this.getSEODescription(),
       "address": [
         {
@@ -315,7 +316,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   // Methods for template
   translate(key: string): string {
-    return this.languageService.translate(key);
+    if (this.translateCache.has(key)) {
+      return this.translateCache.get(key)!;
+    }
+    const translation = this.languageService.translate(key);
+    this.translateCache.set(key, translation);
+    return translation;
+  }
+
+  trackByService(index: number, service: any): string {
+    return service.url;
   }
 
   getServiceUrl(serviceUrl: string): string {
@@ -344,7 +354,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995557556116';
+    window.location.href = 'tel:+995555429710';
   }
 
   goToServicePage(): void {

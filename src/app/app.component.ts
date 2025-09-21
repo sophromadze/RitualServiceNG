@@ -51,16 +51,17 @@ export class AppComponent implements OnInit, OnDestroy {
       this.setupPhoneTraking();
     }
 
+    // Mark Angular as ready to show the app
+    if (isPlatformBrowser(this.platformId)) {
+      const appRoot = document.querySelector('app-root');
+      if (appRoot) {
+        appRoot.classList.add('angular-ready');
+      }
+    }
+
     // Set loading to false after app initialization
     setTimeout(() => {
       this.isLoading = false;
-      // Ensure the app is visible after Angular loading
-      if (isPlatformBrowser(this.platformId)) {
-        const appRoot = document.querySelector('app-root');
-        if (appRoot) {
-          appRoot.classList.add('angular-ready');
-        }
-      }
     }, 500);
   }
 

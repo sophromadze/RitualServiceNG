@@ -254,6 +254,6 @@ export class BreadcrumbComponent implements OnInit {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.open('tel:+995557556116', '_self');
+    window.open('tel:+995555429710', '_self');
   }
 }

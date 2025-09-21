@@ -21,7 +21,7 @@ export class FloatingActionButtonsComponent {
   
   callPhone() {
     if (this.isBrowser) {
-      window.location.href = 'tel:+995557556116';
+      window.location.href = 'tel:+995555429710';
     }
   }
 
