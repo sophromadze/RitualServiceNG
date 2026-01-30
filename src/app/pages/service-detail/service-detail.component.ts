@@ -357,7 +357,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
       "provider": {
         "@type": "FuneralHome",
         "name": "Ritual Service",
-        "telephone": "+995555429710"
+        "telephone": "+995557556116"
       }
     };
   }
@@ -384,7 +384,7 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995555429710';
+    window.location.href = 'tel:+995557556116';
   }
 
   // Type guard to ensure serviceContent is defined

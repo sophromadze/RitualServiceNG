@@ -229,7 +229,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       "url": `https://ritualservice.ge/${this.currentLanguage}`,
       "logo": "https://ritualservice.ge/images/logo.webp",
       "image": "https://ritualservice.ge/images/logo300.png",
-      "telephone": "+995555429710",
+      "telephone": "+995557556116",
       "description": this.getSEODescription(),
       "address": [
         {
@@ -354,7 +354,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995555429710';
+    window.location.href = 'tel:+995557556116';
   }
 
   goToServicePage(): void {

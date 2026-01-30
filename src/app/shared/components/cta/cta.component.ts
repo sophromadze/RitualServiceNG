@@ -29,7 +29,7 @@ export class CtaComponent {
     // Only run if we're in the browser
     if (!isPlatformBrowser(this.platformId)) return;
     
-    window.location.href = 'tel:+995555429710';
+    window.location.href = 'tel:+995557556116';
   }
 
 

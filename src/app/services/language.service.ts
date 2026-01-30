@@ -113,7 +113,7 @@ export class LanguageService {
       
 
       
-      'header.phone': '+995 555 42 97 10',
+      'header.phone': '+995 555 755 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'დაკრძალვის სერვისები',
@@ -615,9 +615,9 @@ export class LanguageService {
       'services.microbus_service.final_message': 'დაგვიკავშირდით და ჩვენ ვიზრუნებთ სტუმართა მარტივ და უსაფრთხო გადაადგილებაზე. 24/7 გამოძახება.',
       'services.hall_service.title': 'დარბაზი',
       'services.hall_service.description': 'გთავაზობთ სრულად აღჭურვილ დარბაზს, სადაც შეგიძლიათ შეხვდეთ და მიიღოთ სტუმრები დაკრძალვის შემდეგ მშვიდ, მოწესრიგებულ და სოლიდურ გარემოში.',
-      'services.hall_service.long_description': 'გთავაზობთ სრულად აღჭურვილ დარბაზს, სადაც შეგიძლიათ შეხვდეთ და მიიღოთ სტუმრები დაკრძალვის შემდეგ მშვიდ, მოწესრიგებულ და სოლიდურ გარემოში. ჩვენი დარბაზი შექმნილია იმისთვის, რომ ეს მძიმე წუთებში შეძლოთ ყველა სერვისის ერთ სივრცეში მიღება. წინასწარ დაჯავშნა აუცილებელია დაგვიკავშირდით ნომერზე +995 555 42 97 10.',
+      'services.hall_service.long_description': 'გთავაზობთ სრულად აღჭურვილ დარბაზს, სადაც შეგიძლიათ შეხვდეთ და მიიღოთ სტუმრები დაკრძალვის შემდეგ მშვიდ, მოწესრიგებულ და სოლიდურ გარემოში. ჩვენი დარბაზი შექმნილია იმისთვის, რომ ეს მძიმე წუთებში შეძლოთ ყველა სერვისის ერთ სივრცეში მიღება. წინასწარ დაჯავშნა აუცილებელია დაგვიკავშირდით ნომერზე +995 557 55 61 16.',
       'services.hall_service.process_1': 'საბანკეტო დარბაზი',
-      'services.hall_service.process_2': 'ჩვენი დარბაზი შექმნილია იმისთვის, რომ ეს მძიმე წუთებში შეძლოთ ყველა სერვისის ერთ სივრცეში მიღება. წინასწარ დაჯავშნა აუცილებელია დაგვიკავშირდით ნომერზე +995 555 42 97 10.',
+      'services.hall_service.process_2': 'ჩვენი დარბაზი შექმნილია იმისთვის, რომ ეს მძიმე წუთებში შეძლოთ ყველა სერვისის ერთ სივრცეში მიღება. წინასწარ დაჯავშნა აუცილებელია დაგვიკავშირდით ნომერზე +995 557 55 61 16.',
       'services.hall_service.feature_1': 'კომფორტული სივრცე',
       'services.hall_service.feature_2': 'ყველა საჭირო ინფრასტრუქტურით უზრუნველყოფილი',
       'services.hall_service.feature_3': 'მოსახერხებელი მდებარეობა',
@@ -770,7 +770,7 @@ export class LanguageService {
       'products.shrouds': 'Shrouds',
       'products.refrigeration': 'Refrigeration',
       'products.cemetery_accessories': 'Cemetery Accessories',
-      'header.phone': '+995 555 42 97 10',
+      'header.phone': '+995 555 755 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'Funeral Services',
@@ -1273,9 +1273,9 @@ export class LanguageService {
       'services.microbus_service.final_message': 'Contact us and we will take care of easy and safe movement of guests. 24/7 call service.',
       'services.hall_service.title': 'Hall',
       'services.hall_service.description': 'We offer a fully equipped hall where you can meet and receive guests after the funeral in a peaceful, orderly, and dignified environment.',
-      'services.hall_service.long_description': 'We offer a fully equipped hall where you can meet and receive guests after the funeral in a peaceful, orderly, and dignified environment. Our hall is designed so that in these difficult moments you can receive all services in one space. Advance booking is required, contact us at +995 555 42 97 10.',
+      'services.hall_service.long_description': 'We offer a fully equipped hall where you can meet and receive guests after the funeral in a peaceful, orderly, and dignified environment. Our hall is designed so that in these difficult moments you can receive all services in one space. Advance booking is required, contact us at +995 557 55 61 16.',
       'services.hall_service.process_1': 'Banquet Hall',
-      'services.hall_service.process_2': 'Our hall is designed so that in these difficult moments you can receive all services in one space. Advance booking is required, contact us at +995 555 42 97 10.',
+      'services.hall_service.process_2': 'Our hall is designed so that in these difficult moments you can receive all services in one space. Advance booking is required, contact us at +995 557 55 61 16.',
       'services.hall_service.feature_1': 'Comfortable space',
       'services.hall_service.feature_2': 'Equipped with all necessary infrastructure',
       'services.hall_service.feature_3': 'Convenient location',
@@ -1396,7 +1396,7 @@ export class LanguageService {
       'products.shrouds': 'Саваны',
       'products.refrigeration': 'Холодильники',
       'products.cemetery_accessories': 'Кладбищенские аксессуары',
-      'header.phone': '+995 555 42 97 10',
+      'header.phone': '+995 555 755 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'Ритуальные услуги',
@@ -1899,9 +1899,9 @@ export class LanguageService {
       'services.microbus_service.final_message': 'Свяжитесь с нами, и мы позаботимся о легком и безопасном передвижении гостей. Вызов 24/7.',
       'services.hall_service.title': 'Зал',
       'services.hall_service.description': 'Мы предлагаем полностью оборудованный зал, где вы можете встретить и принять гостей после похорон в спокойной, упорядоченной и достойной обстановке.',
-      'services.hall_service.long_description': 'Мы предлагаем полностью оборудованный зал, где вы можете встретить и принять гостей после похорон в спокойной, упорядоченной и достойной обстановке. Наш зал создан для того, чтобы в эти тяжелые моменты вы могли получить все услуги в одном пространстве. Предварительное бронирование обязательно, свяжитесь с нами по номеру +995 555 42 97 10.',
+      'services.hall_service.long_description': 'Мы предлагаем полностью оборудованный зал, где вы можете встретить и принять гостей после похорон в спокойной, упорядоченной и достойной обстановке. Наш зал создан для того, чтобы в эти тяжелые моменты вы могли получить все услуги в одном пространстве. Предварительное бронирование обязательно, свяжитесь с нами по номеру +995 557 55 61 16.',
       'services.hall_service.process_1': 'Банкетный зал',
-      'services.hall_service.process_2': 'Наш зал создан для того, чтобы в эти тяжелые моменты вы могли получить все услуги в одном пространстве. Предварительное бронирование обязательно, свяжитесь с нами по номеру +995 555 42 97 10.',
+      'services.hall_service.process_2': 'Наш зал создан для того, чтобы в эти тяжелые моменты вы могли получить все услуги в одном пространстве. Предварительное бронирование обязательно, свяжитесь с нами по номеру +995 557 55 61 16.',
       'services.hall_service.feature_1': 'Комфортное пространство',
       'services.hall_service.feature_2': 'Обеспечено всей необходимой инфраструктурой',
       'services.hall_service.feature_3': 'Удобное расположение',
