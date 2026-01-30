@@ -198,7 +198,7 @@ export class LocationsComponent implements OnInit, OnDestroy, AfterViewInit {
             <p style="margin: 0 0 6px 0; font-size: 11px; color: #666;">Ritual Service</p>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
               <a onclick="window.location.href='tel:+995557556116'" style="color: #5184ed; display: flex; align-items: center; text-decoration: none; font-size: 11px; cursor: pointer;">
-                <i class="fa-solid fa-phone" style="margin-right: 4px;"></i>+995 555 755 61 16
+                <i class="fa-solid fa-phone" style="margin-right: 4px;"></i>+995 557 55 61 16
               </a>
               <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}" 
                  target="_blank" 

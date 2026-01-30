@@ -113,7 +113,7 @@ export class LanguageService {
       
 
       
-      'header.phone': '+995 555 755 61 16',
+      'header.phone': '+995 557 55 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'დაკრძალვის სერვისები',
@@ -770,7 +770,7 @@ export class LanguageService {
       'products.shrouds': 'Shrouds',
       'products.refrigeration': 'Refrigeration',
       'products.cemetery_accessories': 'Cemetery Accessories',
-      'header.phone': '+995 555 755 61 16',
+      'header.phone': '+995 557 55 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'Funeral Services',
@@ -1396,7 +1396,7 @@ export class LanguageService {
       'products.shrouds': 'Саваны',
       'products.refrigeration': 'Холодильники',
       'products.cemetery_accessories': 'Кладбищенские аксессуары',
-      'header.phone': '+995 555 755 61 16',
+      'header.phone': '+995 557 55 61 16',
 
       // Common SEO Terms
       'seo.funeral_services': 'Ритуальные услуги',
