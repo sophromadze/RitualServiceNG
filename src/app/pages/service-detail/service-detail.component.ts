@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -32,6 +32,22 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
   serviceType: string = '';
   serviceContent?: ServiceContent;
   private subscriptions: Subscription = new Subscription();
+
+  // Mourning hall hero image slider (6 images, change every 5s)
+  readonly mourningHallHeroImages: string[] = [
+    '/images/sapanashvide-darbazi.webp',
+    '/images/sapanashvide-darbazi-2.jpeg',
+    '/images/sapanashvide-darbazi-3.jpeg',
+    '/images/sapanashvide-darbazi-4.jpeg',
+    '/images/sapanashvide-darbazi-5.jpeg',
+    '/images/sapanashvide-darbazi-6.jpeg'
+  ];
+  currentMourningHallImageIndex = 0;
+  heroSliderFadeOut = false;
+  mourningHallModalOpen = false;
+  private mourningHallSliderInterval: ReturnType<typeof setInterval> | null = null;
+  private mourningHallFadeTimeout: ReturnType<typeof setTimeout> | null = null;
+  private mourningHallManualFadeTimeout: ReturnType<typeof setTimeout> | null = null;
 
   // Service content with heavy SEO keyword focus
   servicesData: { [key: string]: ServiceContent } = {
@@ -259,7 +275,8 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
     private router: Router,
     private seoService: SeoService,
     private languageService: LanguageService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -298,11 +315,96 @@ export class ServiceDetailComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
+    this.clearMourningHallSlider();
   }
 
   private loadServiceContent(): void {
+    this.clearMourningHallSlider();
     this.serviceContent = this.servicesData[this.serviceType];
     this.updateSEO();
+    if (this.serviceType === 'mourning-hall' && isPlatformBrowser(this.platformId)) {
+      this.startMourningHallSlider();
+    }
+  }
+
+  get mourningHallCurrentImage(): string {
+    return this.mourningHallHeroImages[this.currentMourningHallImageIndex] ?? this.mourningHallHeroImages[0];
+  }
+
+  goToPrevMourningHallImage($event: Event): void {
+    $event.stopPropagation();
+    if (this.mourningHallManualFadeTimeout) {
+      clearTimeout(this.mourningHallManualFadeTimeout);
+      this.mourningHallManualFadeTimeout = null;
+    }
+    this.heroSliderFadeOut = false;
+    this.currentMourningHallImageIndex = (this.currentMourningHallImageIndex - 1 + this.mourningHallHeroImages.length) % this.mourningHallHeroImages.length;
+    this.cdr.detectChanges();
+  }
+
+  goToNextMourningHallImage($event: Event): void {
+    $event.stopPropagation();
+    if (this.mourningHallManualFadeTimeout) {
+      clearTimeout(this.mourningHallManualFadeTimeout);
+      this.mourningHallManualFadeTimeout = null;
+    }
+    this.heroSliderFadeOut = false;
+    this.currentMourningHallImageIndex = (this.currentMourningHallImageIndex + 1) % this.mourningHallHeroImages.length;
+    this.cdr.detectChanges();
+  }
+
+  openMourningHallModal(): void {
+    if (this.serviceType === 'mourning-hall' && isPlatformBrowser(this.platformId)) {
+      this.mourningHallModalOpen = true;
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  closeMourningHallModal(): void {
+    this.mourningHallModalOpen = false;
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = '';
+    }
+  }
+
+  modalPrevImage($event: Event): void {
+    $event.stopPropagation();
+    this.currentMourningHallImageIndex = (this.currentMourningHallImageIndex - 1 + this.mourningHallHeroImages.length) % this.mourningHallHeroImages.length;
+  }
+
+  modalNextImage($event: Event): void {
+    $event.stopPropagation();
+    this.currentMourningHallImageIndex = (this.currentMourningHallImageIndex + 1) % this.mourningHallHeroImages.length;
+  }
+
+  private startMourningHallSlider(): void {
+    const autoAdvanceIntervalMs = 10000;
+    this.mourningHallSliderInterval = setInterval(() => {
+      this.heroSliderFadeOut = false;
+      this.currentMourningHallImageIndex = (this.currentMourningHallImageIndex + 1) % this.mourningHallHeroImages.length;
+      this.cdr.detectChanges();
+    }, autoAdvanceIntervalMs);
+  }
+
+  private clearMourningHallSlider(): void {
+    if (this.mourningHallSliderInterval) {
+      clearInterval(this.mourningHallSliderInterval);
+      this.mourningHallSliderInterval = null;
+    }
+    if (this.mourningHallFadeTimeout) {
+      clearTimeout(this.mourningHallFadeTimeout);
+      this.mourningHallFadeTimeout = null;
+    }
+    if (this.mourningHallManualFadeTimeout) {
+      clearTimeout(this.mourningHallManualFadeTimeout);
+      this.mourningHallManualFadeTimeout = null;
+    }
+    this.currentMourningHallImageIndex = 0;
+    this.heroSliderFadeOut = false;
+    this.mourningHallModalOpen = false;
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.overflow = '';
+    }
   }
 
   private updateSEO(): void {

@@ -6,13 +6,13 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^(www\.)?ritualservice\.ge$ [NC]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Set index.csr.html as the default document
-DirectoryIndex index.csr.html index.html
+# Set index.html as the default document
+DirectoryIndex index.html
 
-# Handle Angular routing - redirect all requests to index.csr.html
+# Handle Angular routing - redirect all requests to index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.csr.html [L]
+RewriteRule . /index.html [L]
 
 # Enable compression
 <IfModule mod_deflate.c>

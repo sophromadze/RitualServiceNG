@@ -20,13 +20,44 @@
             </div>
         </div>
         
-        <div class="hero-image">
-            <img [src]="serviceContent.image" 
+        <div class="hero-image" [class.hero-image-slider]="serviceType === 'mourning-hall'">
+            <ng-container *ngIf="serviceType === 'mourning-hall'">
+              <button type="button" class="hero-slider-arrow hero-slider-arrow-left" (click)="goToPrevMourningHallImage($event)" aria-label="Previous image">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button type="button" class="hero-slider-arrow hero-slider-arrow-right" (click)="goToNextMourningHallImage($event)" aria-label="Next image">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <img [src]="mourningHallCurrentImage" 
+                   [alt]="translate(serviceContent.titleKey)"
+                   [class.fade-out]="heroSliderFadeOut"
+                   [class.hero-image-center-bottom]="currentMourningHallImageIndex === 4"
+                   loading="eager"
+                   (click)="openMourningHallModal()"
+                   class="hero-slider-clickable">
+            </ng-container>
+            <img *ngIf="serviceType !== 'mourning-hall'" [src]="serviceContent.image" 
                  [alt]="translate(serviceContent.titleKey)"
                  loading="eager">
         </div>
     </div>
 </section>
+
+<!-- Mourning hall image modal (full-size view) -->
+<div class="hero-image-modal" *ngIf="serviceType === 'mourning-hall' && mourningHallModalOpen" (click)="closeMourningHallModal()" role="dialog" aria-modal="true" aria-label="Image gallery">
+  <button type="button" class="hero-image-modal-close" (click)="closeMourningHallModal()" aria-label="Close">
+    <i class="fa-solid fa-times"></i>
+  </button>
+  <button type="button" class="hero-image-modal-arrow hero-image-modal-prev" (click)="modalPrevImage($event)" aria-label="Previous image">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+  <div class="hero-image-modal-content" (click)="$event.stopPropagation()">
+    <img [src]="mourningHallCurrentImage" [alt]="translate(serviceContent?.titleKey || '')">
+  </div>
+  <button type="button" class="hero-image-modal-arrow hero-image-modal-next" (click)="modalNextImage($event)" aria-label="Next image">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
 
 <!-- Service Detail Content -->
 <section class="service-detail-content" *ngIf="serviceContent">
